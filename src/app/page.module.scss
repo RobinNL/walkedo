@@ -1,0 +1,32 @@
+@import "styles/variables";
+@import "styles/maps";
+@import "styles/functions";
+
+.main {
+    padding-top: $global-navbar-height;
+}
+
+.heroImageInner {
+    object-fit: cover;
+    object-position: 0% 60%;
+}
+
+.heroImage {
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+}
+
+.pageContainer {
+    padding: spacing(32);
+}
+
+.container {
+    max-width: $container-width;
+    margin: 0 auto;
+}
+
+.halfImage {
+    width: 50vw;
+    height: 400px;
+}

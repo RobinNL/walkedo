@@ -1,0 +1,7 @@
+// Responsive control
+
+@each $width-symbol, $width in $common-widths {
+    .width--#{$width-symbol} {
+        width: $width;
+    }
+}

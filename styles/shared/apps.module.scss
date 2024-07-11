@@ -1,0 +1,28 @@
+.appIconBackdrop {
+  padding: spacing(12);
+  width: 140px;
+  height: 140px;
+  background-color: #fff;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  align-items: center;
+  border-radius: 26px;
+  box-shadow: 1px 1px 5px 3px #ddd;
+}
+
+.downloadAppButtonWrapper {
+  // total button width + 12
+  width: 302px;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+}
+
+@media screen and (min-width: 768px) {
+
+  .downloadAppButtonWrapper {
+    justify-content: space-between;
+  }
+
+}

@@ -1,0 +1,9 @@
+/// Usage color(orange)
+@function spacing($spacing-key) {
+    @each $spacing-symbol, $spacing in $spacings {
+        @if $spacing-symbol == $spacing-key {
+            @return $spacing;
+        }
+    }
+    @return map-get($spacings, 0);
+}

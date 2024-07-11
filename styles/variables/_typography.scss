@@ -1,0 +1,32 @@
+$font-sizes: (
+    h1: 42px,
+    h2: 33px,
+    h3: 26px,
+    h4: 20px,
+    h5: 16px,
+    h6: 12px,
+    p: 16px,
+);
+
+$font-lineheights: (
+        h1: 50px,
+        h2: 41px,
+        h3: 39px,
+        h4: 26px,
+        h5: 24px,
+        h6: 20px,
+        p: 24px,
+);
+
+$font-weights: (
+    light: 300,
+    normal: 400,
+    medium: 500,
+    bold: 700,
+);
+
+$font-transforms: (
+    capitalize: capitalize,
+    uppercase: uppercase,
+    lowercase: lowercase,
+);

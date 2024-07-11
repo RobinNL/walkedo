@@ -1,0 +1,64 @@
+h1, h2, h3 {
+  font-family: proxima-nova, sans-serif;
+  font-weight: 700;
+  color: color(text);
+  font-style: normal;
+}
+
+p, a, li, ul, code, h4, h5, h6, span, table {
+  font-family: proxima-nova, sans-serif;
+  font-weight: 400;
+  color: color(text);
+  line-height: 26px;
+  font-style: normal;
+}
+
+h1 {
+  font-size: font-size(h1);
+  line-height: line-height(h1);
+}
+
+h2 {
+  font-size: font-size(h2);
+  line-height: line-height(h2);
+}
+
+h3 {
+  font-size: font-size(h3);
+  line-height: line-height(h2);
+}
+
+h4 {
+  font-size: font-size(h4);
+  line-height: line-height(h4);
+}
+
+h5 {
+  font-size: font-size(h5);
+  line-height: line-height(h5);
+}
+
+h6 {
+  font-size: font-size(h6);
+  line-height: line-height(h6);
+}
+
+p, li, ul, a, span, table, tr, td {
+  font-size: font-size(p);
+  line-height: line-height(p);
+}
+
+// REG
+//font-family: effra,sans-serif;
+//font-weight: 400;
+//font-style: normal;
+
+// BOLD
+//font-family: effra,sans-serif;
+//font-weight: 700;
+//font-style: normal;
+
+// HEAVY
+//font-family: effra,sans-serif;
+//font-weight: 900;
+//font-style: normal;

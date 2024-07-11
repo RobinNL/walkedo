@@ -1,0 +1,15 @@
+@import "styles/variables";
+@import "styles/maps";
+@import "styles/functions";
+
+.footer {
+    display: flex;
+    padding: spacing(32);
+    background: color(accentBackground);
+    color: color(white);
+}
+
+.footerContainer {
+    max-width: $container-width;
+    width: 100%;
+}

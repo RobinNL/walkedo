@@ -1,0 +1,20 @@
+$colors: (
+  // System
+        success: #65e765,
+        warning: #f6b73c,
+        error: #eb3223,
+  // Color scheme
+        primary: rgb(57, 75, 65),
+  // Neutral colors
+        text: #fff,
+        black: #000000,
+        white: #ffffff,
+  // Contrast ladder
+        contrast-250: #333333,
+        contrast-200: #666666,
+        contrast-150: #cccccc,
+        contrast-100: #ececec,
+        contrast-50: #f8f8f8,
+        background: rgb(36, 49, 43),
+        accentBackground: rgb(30, 42, 30),
+);

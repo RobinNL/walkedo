@@ -1,0 +1,9 @@
+/// Usage color(orange)
+@function breakpoint($size-key) {
+    @each $size-symbol, $size in $breakpoints {
+        @if $size == $size-symbol {
+            @return $size;
+        }
+    }
+    @return map-get($breakpoints, xs);
+}

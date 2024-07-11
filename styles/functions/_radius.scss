@@ -1,0 +1,9 @@
+/// Usage color(orange)
+@function radius($radius-key) {
+    @each $radius-symbol, $radius in $radius {
+        @if $radius == $radius-symbol {
+            @return $radius;
+        }
+    }
+    @return map-get($radius, regular);
+}

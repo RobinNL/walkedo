@@ -1,0 +1,21 @@
+/// Create utility bg--, color-- and fill classes for every color
+@each $color-symbol, $color in $colors {
+    .bg--#{"" + $color-symbol} {
+        background-color: $color;
+    }
+
+    .color--#{"" + $color-symbol} {
+        color: $color;
+    }
+
+    .fill--#{"" + $color-symbol} {
+        fill: $color;
+    }
+}
+
+///// Create utility background types. background: transparent, background: inherit etc.
+//@each $background-type-symbol, $background in $backgroundTypes {
+//    .bg--#{"" + $background-type-symbol} {
+//        background: $background;
+//    }
+//}

@@ -1,0 +1,29 @@
+/// Usage font-size(h2)
+@function font-size($symbol) {
+    @each $font-size-symbol, $font-size-value in $font-sizes {
+        @if $symbol == $font-size-symbol {
+            @return $font-size-value;
+        }
+    }
+    @return map-get($font-sizes, p);
+}
+
+/// Usage font-weight(bold)
+@function font-weight($symbol) {
+    @each $font-weight-symbol, $font-weight-value in $font-weights {
+        @if $symbol == $font-weight-symbol {
+            @return $font-weight-value;
+        }
+    }
+    @return map-get($font-weights, normal);
+}
+
+/// Usage line-height(h1)
+@function line-height($symbol) {
+    @each $line-height-font-symbol, $line-height-value in $font-lineheights {
+        @if $symbol == $line-height-font-symbol {
+            @return $line-height-value;
+        }
+    }
+    @return map-get($font-lineheights, normal);
+}

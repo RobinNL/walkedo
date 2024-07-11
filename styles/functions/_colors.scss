@@ -1,0 +1,9 @@
+/// Usage color(orange)
+@function color($color-key) {
+    @each $color-symbol, $color in $colors {
+        @if $color-key == $color-symbol {
+            @return $color;
+        }
+    }
+    @return map-get($colors, black);
+}
