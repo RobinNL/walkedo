@@ -19,3 +19,9 @@
     }
 
 }
+
+.disabledButton {
+    background: color(contrast-50);
+    color: color(contrast-150);
+    cursor: not-allowed;
+}

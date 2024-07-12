@@ -1,0 +1,37 @@
+@import "styles/variables";
+@import "styles/maps";
+@import "styles/functions";
+
+.docSectionExplain {
+    flex: 3;
+}
+
+.docSectionDownload {
+  flex: 1;
+  padding: 0 spacing(20)
+}
+
+.docWrapper {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.docList {
+  padding-left: 0;
+
+  li {
+    list-style-type: none;
+    padding: spacing(12);
+  }
+
+}
+
+.docDownloadBtn {
+    background-color: color(white);
+    padding: spacing(12);
+    color: color(black);
+    display: block;
+    text-align: center;
+    width: 100%;
+    border-radius: radius(regular);
+}

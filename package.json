@@ -11,8 +11,10 @@
   },
   "dependencies": {
     "next": "14.2.4",
+    "nodemailer": "^6.9.14",
     "react": "^18",
     "react-dom": "^18",
+    "react-grid-gallery": "^1.0.1",
     "sass": "^1.77.6"
   },
   "devDependencies": {

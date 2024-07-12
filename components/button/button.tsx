@@ -1,17 +1,12 @@
 export interface ButtonProps {
     label: string;
+    disabled: boolean;
 }
 
 import Styles from './button.module.scss';
 
 export const WalkedoButton = (props: ButtonProps) => {
 
-    const style = {
-        button: {
-            padding: '12px',
-        }
-    }
-
-    return (<button className={Styles.button}>{ props.label }</button>)
+    return (<button disabled={props.disabled} className={ `${Styles.button} ${props.disabled ? Styles.disabledButton : ''}`}>{ props.label }</button>)
 
 }

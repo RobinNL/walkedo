@@ -1,0 +1,102 @@
+@import "styles/variables";
+@import "styles/maps";
+@import "styles/functions";
+
+.heroImageInner {
+  object-fit: cover;
+  object-position: 0% 60%;
+}
+
+.benefitListIcon {
+  margin-right: spacing(20);
+}
+
+.benefitList {
+  padding-left: 0;
+
+  li {
+    display: flex;
+    list-style-type: none;
+    padding: spacing(20) 0 spacing(20) spacing(32);
+    border-bottom: 1px solid color(contrast-50);
+  }
+
+}
+
+.contentHero {
+  margin-top: spacing(64);
+}
+
+.stepsCard {
+  width: calc(50% - 24px);
+  position: relative;
+  margin: spacing(12);
+  background-color: color(primary);
+  border-radius: radius(regular);
+  padding: spacing(32);
+}
+
+.stepsContent {
+  display: flex;
+  margin: 0 -12px 0 -12px;
+  flex-wrap: wrap;
+}
+
+.heroIntroBlock {
+  max-width: 768px;
+  margin: 0 auto;
+  padding-bottom: 64px;
+}
+
+.header {
+  margin-top: spacing(64);
+  text-align: center;
+  background-image: conic-gradient(#f3ec78, #af4261);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.stepHeader {
+  display: flex;
+}
+
+.stepCircle {
+  top: spacing(12);
+  left: spacing(12);
+  background: color(accent);
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  margin-right: spacing(12);
+  border-radius: radius(round);
+  align-items: center;
+  justify-content: center;
+
+  p {
+    font-size: 20px;
+    color: color(black);
+  }
+
+}
+
+.heroImage {
+  height: 700px;
+  position: relative;
+  overflow: hidden;
+}
+
+.contentRow {
+  display: flex;
+  justify-content: space-between;
+}
+
+.arnhemMapBlock {
+  background-color: color(accentBackground);
+  padding: spacing(20);
+  border-radius: radius(regular);
+  max-width: 500px;
+}
+
+.contentBlock {
+  max-width: 768px;
+}

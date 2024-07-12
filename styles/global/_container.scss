@@ -19,3 +19,8 @@ a {
 .no-scroll {
   overflow: hidden;
 }
+
+.container {
+  max-width: $container-width;
+  margin: 0 auto;
+}

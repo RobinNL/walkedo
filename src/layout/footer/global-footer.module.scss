@@ -3,13 +3,85 @@
 @import "styles/functions";
 
 .footer {
-    display: flex;
+    margin-top: 200px;
     padding: spacing(32);
+    position: relative;
     background: color(accentBackground);
     color: color(white);
+}
+
+.footerMainSection {
+    width: 100%;
+    text-align: center;
+    margin-bottom: spacing(12);
+    padding-bottom: spacing(32);
+    border-bottom: 1px solid color(background-accent);
+
 }
 
 .footerContainer {
     max-width: $container-width;
     width: 100%;
+}
+
+.footerDogImage {
+    position: absolute;
+    right: spacing(20);
+    top: -200px;
+}
+
+.footerWrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.footerLabel {
+    font-weight: 700;
+    margin-bottom: -8px;
+}
+
+.footerValue {
+    margin-bottom: spacing(12);
+}
+
+.footerSection {
+    width: 25%;
+    padding: spacing(12);
+}
+
+.footerHeader {
+    text-align: center;
+}
+
+.footerList {
+    padding-left: 0;
+
+    li {
+        list-style-type: none;
+    }
+
+}
+
+.linksList {
+    padding-left: 0;
+
+    li {
+        margin-bottom: spacing(12);
+        list-style-type: none;
+    }
+
+}
+
+
+.socialMediaList {
+    margin: 0;
+    padding-left: 0;
+
+    li {
+        float: left;
+        margin-right: spacing(12);
+        list-style-type: none;
+    }
+
 }
