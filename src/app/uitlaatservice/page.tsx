@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import Image from "next/image";
 import Styles from "./uitlaatservice.module.scss";
@@ -8,8 +8,6 @@ import Link from "next/link";
 import { Gallery } from "react-grid-gallery";
 
 export default function Page() {
-
-    const router = useRouter();
 
     const images = [
         {

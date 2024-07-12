@@ -1,5 +1,3 @@
-'use client'
-
 import Image from "next/image";
 import Styles from "./aanmelden.module.scss";
 import { useRouter } from "next/navigation";

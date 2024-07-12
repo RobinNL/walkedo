@@ -4,7 +4,7 @@
 
 .heroImageInner {
   object-fit: cover;
-  object-position: 0% 90%;
+  object-position: 0% 50%;
 }
 
 .benefitListIcon {
@@ -21,6 +21,11 @@
     border-bottom: 1px solid color(contrast-50);
   }
 
+}
+
+.mainHeroContentWrap {
+  max-width: 768px;
+  margin: 0 auto;
 }
 
 .opvangDisclaimer {
@@ -54,27 +59,8 @@
   -webkit-text-fill-color: transparent;
 }
 
-.stepHeader {
-  display: flex;
-}
-
 .heroImage {
   height: 700px;
   position: relative;
   overflow: hidden;
-}
-
-.contentRow {
-  display: flex;
-  position: relative;
-  justify-content: space-between;
-}
-
-.opvangHondImage {
-  width: calc(50% - 24px);
-  position: relative;
-}
-
-.contentBlock {
-  max-width: 768px;
 }

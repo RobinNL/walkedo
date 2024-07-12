@@ -1,5 +1,3 @@
-'use server';
-
 import matter from 'gray-matter';
 import path from 'path';
 import moment from 'moment';

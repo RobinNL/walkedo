@@ -7,8 +7,6 @@ export async function POST(request) {
     const password = process.env.NEXT_PUBLIC_EMAIL_PASSWORD;
     const myEmail = process.env.NEXT_PUBLIC_PERSONAL_EMAIL;
 
-    console.log(username);
-
     const transporter = nodemailer.createTransport({
         host: "smtp.mail.me.com",
         port: 587,
