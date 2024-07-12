@@ -1,0 +1,66 @@
+@import "styles/variables";
+@import "styles/maps";
+@import "styles/functions";
+
+.heroImageInner {
+  object-fit: cover;
+  object-position: 0% 50%;
+}
+
+.benefitListIcon {
+  margin-right: spacing(20);
+}
+
+.benefitList {
+  padding-left: 0;
+
+  li {
+    display: flex;
+    list-style-type: none;
+    padding: spacing(20) 0 spacing(20) spacing(32);
+    border-bottom: 1px solid color(contrast-50);
+  }
+
+}
+
+.mainHeroContentWrap {
+  max-width: 768px;
+  margin: 0 auto;
+}
+
+.opvangDisclaimer {
+  padding: spacing(12) spacing(32);
+  max-width: 768px;
+  margin: 0 auto;
+  background-color: color(accent);
+  border-radius: radius(regular);
+  margin-top :spacing(64);
+
+  h2, h3, h4, h5, h6, p {
+    color: color(black);
+  }
+}
+
+.contentHero {
+  margin-top: spacing(64);
+}
+
+.heroIntroBlock {
+  max-width: 768px;
+  margin: 0 auto;
+  padding-bottom: 64px;
+}
+
+.header {
+  margin-top: spacing(64);
+  text-align: center;
+  background-image: conic-gradient(#f3ec78, #af4261);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.heroImage {
+  height: 700px;
+  position: relative;
+  overflow: hidden;
+}

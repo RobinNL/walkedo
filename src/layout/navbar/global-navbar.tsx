@@ -98,11 +98,14 @@ export const GlobalNavbar = (props: GlobalNavbarProps) => {
                         <li className={`${activeItem.indexOf('/northern-inuit-dog') !== -1 ? Styles.navbarItemActive : Styles.navbarItem}`}>
                             <Link href='/northern-Inuit'>Northern Inuit Dog</Link>
                         </li>
+                        <li className={`${activeItem.indexOf('/northern-inuit-dog') !== -1 ? Styles.navbarItemActive : Styles.navbarItem}`}>
+                            <Link href='/nieuws'>Nieuws</Link>
+                        </li>
                     </ul>
                 </div>
 
                 <div className={Styles.navbarSignupSection} onClick={() => signup()}>
-                    <WalkedoButton label={'Aanmelden'} />
+                    <WalkedoButton label={'Aanmelden'}/>
                 </div>
 
             </div>

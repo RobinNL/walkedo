@@ -1,6 +1,6 @@
 import { useRouter } from "next/navigation";
 import getPostMetadata from "../../../utils/getPostMetaData";
-import Styles from "@/app/northern-Inuit/norhern-inuit.module.scss";
+import Styles from "@/app/nieuws/nieuws.module.scss";
 import Image from "next/image";
 
 export default async function Page() {
@@ -16,17 +16,19 @@ export default async function Page() {
             </div>
             <div className={'container'}>
 
-                <h1 className={Styles.header}>Northern Inuit Dog</h1>
+                <h1 className={Styles.header}>Nieuws</h1>
 
                 <p className={Styles.mainHeroContentWrap}>
-                    Dit prachtige ras is nog heel onbekend wereldwijd en al helemaal in Nederland. De honden zijn heel sociaal,
-                    gaan goed in groepen en andere honden. Het ras is vooral bekend van de TV serie Game of Thrones. Ik wil graag dat meer mensen het ras leren kennen.
+                    Hier komt nieuws
                 </p>
 
                 <div>
 
                 </div>
 
+                <p>
+                    {JSON.stringify(postMetadata)}
+                </p>
             </div>
         </main>
     );
