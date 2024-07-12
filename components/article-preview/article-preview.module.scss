@@ -1,0 +1,25 @@
+@import "styles/variables";
+@import "styles/maps";
+@import "styles/functions";
+
+.articleThumbnail {
+    width: 100%;
+}
+
+.articleTitle {
+    margin-top: spacing(16);
+    margin-bottom: -(line-height(p)) / 2;
+}
+
+.articleWrapper {
+    cursor: pointer;
+    margin-bottom: spacing(32);
+}
+
+.articleBody {
+    color: color(text);
+}
+
+.articlePreviewByline {
+    color: color(contrast-200);
+}
