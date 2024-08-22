@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "../../styles/globals.scss";
 import Styles from './page.module.scss';
-import GlobalNavbar from "@/layout/navbar/global-navbar";
+import GlobalNavbar from "@/layout/desktop-navbar/global-navbar";
 import GlobalFooter from "@/layout/footer/global-footer";
+import MobileNavbar from "@/layout/mobile-navbar/mobile-navbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,7 +21,8 @@ export default function RootLayout({
   return (
     <html lang="nl">
       <body className={inter.className}>
-        <GlobalNavbar />
+        <GlobalNavbar className={Styles.desktopNav} />
+        <MobileNavbar className={Styles.mobileNav} />
         <main className={Styles.main}>
           {children}
         </main>

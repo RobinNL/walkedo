@@ -1,0 +1,183 @@
+@import "styles/variables";
+@import "styles/maps";
+@import "styles/functions";
+
+$zIndexMobileDropdown: 1;
+$zIndexMobileMainMenu: 2;
+
+$animationMobileDuration: 0.5s;
+
+.navbar {
+    width: 100%;
+    height: $global-navbar-height;
+    position: fixed;
+    z-index: 9999;
+    display: flex;
+    background-color: color(primary);
+    justify-content: center;
+}
+
+.brandingWrapper {
+    display: flex;
+    cursor: pointer;
+    flex-direction: column;
+}
+
+.brandingText {
+    margin-right: spacing(12);
+    font-size: font-size(h3);
+    background-image: conic-gradient(#f3ec78, #af4261);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.navbarSignupSection {
+    width: 100%;
+    padding: spacing(32);
+    border-bottom: 1px solid color(contrast-100);
+}
+
+.navbarSignupSectionDescription {
+    margin-bottom: spacing(32);
+    margin-top: -16px;
+}
+
+.navbarMobileMenuHeader {
+    text-align:center;
+}
+
+.subBrandingText {
+    margin-right: spacing(12);
+    font-size: font-size(h4);
+    background-image: conic-gradient(#f3ec78, #af4261);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.mobileNavbarLink {
+    height: spacing(40);
+    cursor: pointer;
+
+    a {
+        color: color(text);
+        text-decoration: none;
+    }
+}
+
+.socialIcon {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+}
+
+.brandingWrapperOuter {
+    display: flex;
+    align-items: center;
+}
+
+.navbarItemActive {
+    a {
+        color: color(primary);
+    }
+}
+
+.navbarList {
+    width: 100%;
+    max-width: $container-width;
+    margin: 0;
+    padding: 0 0 spacing(20) 0;
+    li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style-type: none;
+    }
+}
+
+.navbarListSection {
+    width: 100%;
+    padding: 0 spacing(20);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/**
+Mobile Menu
+ */
+.mobileFoldoutMenu {
+    opacity: 0;
+    position: fixed;
+    transition: all 0.2s ease-in-out;
+    pointer-events: none;
+}
+
+.appearElement {
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+    transform: translateY(-30px);
+}
+
+.appearFirst {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.1s;
+}
+
+.appearSecond {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.3s;
+}
+
+.mobileFoldoutMenu.mobileFoldoutMenuOpen {
+    display: flex;
+    opacity: 1;
+    flex-direction: column;
+    pointer-events: auto;
+    align-items: center;
+    top: $global-navbar-height;
+    left: 0;
+    z-index: 9900;
+    background-color: color(primary);
+    height: 100%;
+    width: 100%;
+}
+
+
+
+/**
+Hamburger Lines
+ */
+
+.navbarHamburgerLine {
+    width: 40px;
+    height: 4px;
+    display: flex;
+    transform: translateX(0px);
+    transition: transform 0.3s ease-in-out;
+    margin-bottom: spacing(8);
+    background-color: color(white);
+    border-radius: radius(round);
+}
+
+.navbarHamburger {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbarHamburgerLineTop {
+    transform: translateX(-8px);
+}
+
+.navbarHamburgerLineMiddle {
+    transform: translateX(-20px);
+}
+
+.navbarHamburgerLineBottom {
+    transform: translateX(-32px);
+}
+
+/**
+End hamburger lines
+ */

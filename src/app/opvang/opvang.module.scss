@@ -67,7 +67,14 @@
 .contentRow {
   display: flex;
   position: relative;
+  flex-direction: column;
   justify-content: space-between;
+}
+
+@media screen and (min-width: 995px) {
+  .contentRow {
+    flex-direction: row;
+  }
 }
 
 .opvangHondImage {

@@ -2,24 +2,22 @@
 @import "styles/maps";
 @import "styles/functions";
 
-.articleThumbnail {
+.blogPostTitle {
+    margin-bottom: 0;
+}
+
+.blogPostDate {
+    margin-top: 4px;
+    margin-bottom: spacing(20);
+}
+
+.blogPostImage {
     width: 100%;
+    position: relative;
+    height: 250px;
 }
 
-.articleTitle {
-    margin-top: spacing(16);
-    margin-bottom: -(line-height(p)) / 2;
-}
-
-.articleWrapper {
-    cursor: pointer;
-    margin-bottom: spacing(32);
-}
-
-.articleBody {
-    color: color(text);
-}
-
-.articlePreviewByline {
-    color: color(contrast-200);
+.blogCard {
+    background-color: color(contrast-50);
+    padding: 0 spacing(12) spacing(12) spacing(12);
 }

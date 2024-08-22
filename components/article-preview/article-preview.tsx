@@ -1,27 +1,27 @@
-import Link from "next/link";
-import {ArticleMeta} from "../shared/blog.interface";
-import Style from "./article-preview.module.scss";
-import {FunctionComponent} from "react";
-import Styles from "@/pages/blog/slug.module.scss";
+import { ArticleMeta } from "../shared/blog.interface";
+import React, { FunctionComponent } from "react";
+import Styles from "./article-preview.module.scss";
+import Image from "next/image";
 
 export interface ArticlePreviewProps {
-    article: ArticleMeta;
+    post: ArticleMeta;
     className: any;
+    baseUrl: string;
     key: number;
-    children?: any;
 }
 
-export const ArticlePreview: FunctionComponent<ArticlePreviewProps> = ({article, className}) => {
+export const ArticlePreview: FunctionComponent<ArticlePreviewProps> = ({post, baseUrl, className}) => {
 
     return (
-            <div className={`${className} ${Style.articleWrapper}`}>
-                <Link href={`/blog/${article.slug}`}>
-                <img className={Style.articleThumbnail} src={article.thumbnail} />
-                <h3 className={Style.articleTitle}>{article.title}</h3>
-                <p className={Style.articlePreviewByline}>Published on {article.date}</p>
-                <p className={Style.articleBody}>{article.description}</p>
-                </Link>
-            </div>
+        <div key={post.title} className={`${Styles.blogCard} ${className ? className : ''}`}>
+            <a href={`${baseUrl}/${post.slug}`}>
+                <h3 className={Styles.blogPostTitle}>{post.title}</h3>
+                <p className={Styles.blogPostDate}>Geplaatst op: {post.date}</p>
+                <div className={Styles.blogPostImage}>
+                    <Image src={post.thumbnail} fill={true} alt={''}/>
+                </div>
+            </a>
+        </div>
     )
 
 }

@@ -1,0 +1,15 @@
+@import "styles/variables";
+@import "styles/maps";
+@import "styles/functions";
+
+.blogPostImage {
+  width: 100%;
+  position: relative;
+  height: 500px;
+}
+
+.blogPostContainer {
+  max-width: 768px;
+  margin: 0 auto;
+  padding: 0 $container-horizontal-spacing;
+}

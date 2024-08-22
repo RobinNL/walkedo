@@ -22,5 +22,6 @@ a {
 
 .container {
   max-width: $container-width;
+  padding: 0 $container-horizontal-spacing 0 $container-horizontal-spacing;
   margin: 0 auto;
 }

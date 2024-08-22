@@ -1,0 +1,99 @@
+@import "styles/variables";
+@import "styles/maps";
+@import "styles/functions";
+
+$zIndexMobileDropdown: 1;
+$zIndexMobileMainMenu: 2;
+
+$animationMobileDuration: 0.5s;
+
+.navbar {
+    width: 100%;
+    height: $global-navbar-height;
+    position: fixed;
+    z-index: 9999;
+    display: flex;
+    background-color: color(primary);
+    justify-content: center;
+}
+
+.brandingWrapper {
+    display: flex;
+    cursor: pointer;
+    flex-direction: column;
+}
+
+.brandingText {
+    margin-right: spacing(12);
+    font-size: font-size(h3);
+    background-image: conic-gradient(#f3ec78, #af4261);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.subBrandingText {
+    margin-right: spacing(12);
+    font-size: font-size(h4);
+    background-image: conic-gradient(#f3ec78, #af4261);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.navbarItem {
+
+    a {
+        color: color(text);
+        font-weight: 500;
+        text-decoration: none;
+    }
+}
+
+.socialIcon {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+}
+
+.navbarItemActive {
+    a {
+        color: color(primary);
+    }
+}
+
+.navbarList {
+    width: 100%;
+    max-width: $container-width;
+    margin: 0;
+    display: none;
+    padding: 0 spacing(20);
+    li {
+        height: $global-navbar-height;
+        display: flex;
+        justify-content: center;
+        margin-right: spacing(32);
+        align-items: center;
+        list-style-type: none;
+    }
+}
+
+.navbarListSection {
+    display: flex;
+    justify-content: center;
+}
+
+.navbarSignupSection {
+    margin-right: spacing(16);
+    display: block;
+    align-content: center;
+    justify-content: center;
+}
+
+.navbarContainer {
+    max-width: $container-width;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbarList {
+    display: flex;
+}

@@ -3,7 +3,7 @@
 import fs from 'fs'
 import matter from 'gray-matter'
 
-export default async function getPostMetadata(basePath) {
+export default async function getPostMetadata(basePath: string) {
     const folder = basePath + '/'
     const files = fs.readdirSync(folder)
     const markdownPosts = files.filter(file => file.endsWith('.md'))

@@ -1,12 +1,10 @@
-import Image from "next/image";
+'use client'
 import Styles from "./aanmelden.module.scss";
-import { useRouter } from "next/navigation";
 import { WalkedoButton } from "../../../components/button/button";
 import { FormEvent, SetStateAction, useState } from "react";
+import { Sriracha } from "next/dist/compiled/@next/font/dist/google";
 
 export default function Page() {
-
-    const router = useRouter();
 
     const [firstName, setFirstName] = useState('');
     const [lastName, setlastName] = useState('');

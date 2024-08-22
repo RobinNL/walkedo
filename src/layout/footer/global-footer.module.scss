@@ -32,6 +32,7 @@
 
 .footerWrapper {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     width: 100%;
 }
@@ -46,8 +47,14 @@
 }
 
 .footerSection {
-    width: 25%;
+    width: 100%;
     padding: spacing(12);
+}
+
+@media screen and (min-width: 768px) {
+    .footerWrapper {
+        flex-direction: row;
+    }
 }
 
 .footerHeader {

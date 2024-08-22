@@ -3,6 +3,8 @@
 import Image from "next/image";
 import Styles from "./page.module.scss";
 import { useRouter } from "next/navigation";
+import React from "react";
+import Link from "next/link";
 
 export default function Home() {
 
@@ -15,26 +17,58 @@ export default function Home() {
             </div>
             <div className={Styles.pageContainer}>
                 <div className={Styles.container}>
-                    <h2>Jouw hond komt op de eerste plek</h2>
-                    <p>Walkedo is een hondenuitlaatservice, kennel en meer op een adres. Een contactpunt met
+
+                    <h1 className={Styles.indexHeader}>Hondenservices in Arnhem noord</h1>
+
+                    <p className={Styles.indexTextWrap}>Walkedo is een hondenuitlaatservice, kennel en meer op een
+                        adres. Een contactpunt met
                         persoonlijke aandacht voor je hond. Zo loopt je hond in kleine groepen,
-                        en is er regelmatig plek voor (langdurige) opvang van je hond als je zelf op vakantie gaat.
+                        en is er regelmatig plek voor (langdurige) opvang van je hond als je zelf op vakantie
+                        gaat.
                         Ontdek onze services en neem vrijblijvend contact op voor een kennismakingsgesprek.
                     </p>
+
                 </div>
 
                 <div className={Styles.container}>
-                    <h2>Honden uitlaatservice</h2>
-                    <div>
-                        <div className={Styles.halfImage}>
-                            <Image src={'/images/dogs-in-group'} fill={true} />
+
+                    <div className={Styles.serviceSection}>
+
+                        <div className={Styles.serviceTextSection}>
+                            <h3>Uitlaten</h3>
+
+                            <p className={Styles.serviceTextBlock}>Laat je hond een of meerdere malen per week door mij ophalen. We lopen een uur met een
+                                groep
+                                van maximaal 6 andere honden die goed bij je eigen hond past.
+                                Na de wandeling breng ik je hond weer terug. Een uitlaatservice geeft je hond kans om
+                                lekker
+                                te spelen.</p>
+                            <Link className={Styles.learnMoreLink} href={'/uitlaatservice'}>Ontdek de Uitlaatservice</Link>
                         </div>
-                        <p>
-                            Boek een of meerdere slots per week zodat je hond lekker kan wandelen met de groep. Ik loop
-                            maximaal 6 honden per groep en heb speciale groepen zoals de puppy groep.
-                            Elke groep is zorgvuldig samengesteld zodat je hond minder lang in de bus zit en in een
-                            groep komt met honden waar hij of zij goed mee kan spelen.
-                        </p>
+                    </div>
+
+                    <div className={Styles.serviceSection}>
+
+                        <div className={Styles.serviceTextSection}>
+                            <h3>Northern Inuit Dog</h3>
+
+                            <p className={Styles.serviceTextBlock}>Dit unieke ras is bij Walkedo als eerste in Nederland. Ik verwacht een groep pups te
+                                hebben in de toekomst. Leer dit unieke ras kennen en schrijf je vrijblijvend in voor de
+                                wachtlijst. Zodra het concreet wordt heb je dan als eerste de kans om een plekje te
+                                reserveren en eigenaar te worden van een beste vriend uit dit unieke ras!</p>
+                            <Link className={Styles.learnMoreLink} href={'/northern-inuit-dog'}>Ontdek de Northern Inuit Dog</Link>
+                        </div>
+                    </div>
+
+                    <div className={Styles.serviceSection}>
+
+                        <div className={Styles.serviceTextSection}>
+                            <h3>Opvang</h3>
+
+                            <p className={Styles.serviceTextBlock}>Iedereen gaat wel eens op vakantie of is een hele dag weg voor het werk. Klanten van Walkedo kunnen gebruik maken van de dagopvang en
+                            hun honden lekker laten spelen en rasen in een kennel van 25 vierkantemeters. De honden van de dagopvang gaan automatisch mee met de uitlaatservice. Meld je vandaag nog aan voor een gezellige kennismaking!</p>
+                            <Link className={Styles.learnMoreLink} href={'/opvang'}>Ontdek opvang</Link>
+                        </div>
                     </div>
 
                 </div>

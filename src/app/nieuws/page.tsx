@@ -1,11 +1,18 @@
-import { useRouter } from "next/navigation";
 import getPostMetadata from "../../../utils/getPostMetaData";
 import Styles from "@/app/nieuws/nieuws.module.scss";
 import Image from "next/image";
+import React from "react";
+import { ArticlePreview } from "../../../components/article-preview/article-preview";
 
 export default async function Page() {
 
-    const postMetadata = await getPostMetadata('articles')
+    const posts = await getPostMetadata('articles/news')
+
+    const renderPostSlug = (post: any) => {
+        return (
+            <ArticlePreview baseUrl={'nieuws'} post={post} key={post.title} className={Styles.blogPreviewCard} />
+        )
+    }
 
     return (
         <main>
@@ -18,17 +25,13 @@ export default async function Page() {
 
                 <h1 className={Styles.header}>Nieuws</h1>
 
-                <p className={Styles.mainHeroContentWrap}>
-                    Hier komt nieuws
-                </p>
+                <p className={Styles.mainHeroContentWrap}>Blijf op de hoogte van het laatste Walkedo nieuws</p>
 
-                <div>
-
+                <div className={Styles.blogWrapper}>
+                    {
+                        posts.map(post => renderPostSlug(post))
+                    }
                 </div>
-
-                <p>
-                    {JSON.stringify(postMetadata)}
-                </p>
             </div>
         </main>
     );

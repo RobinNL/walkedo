@@ -11,10 +11,58 @@
     object-position: 0% 60%;
 }
 
+.indexHeader {
+    background-image: conic-gradient(#f3ec78, #af4261);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+}
+
 .heroImage {
-    height: 700px;
+    height: 400px;
     position: relative;
     overflow: hidden;
+}
+
+.indexTextWrap {
+    margin: 0 auto;
+    max-width: 768px;
+}
+
+.serviceSection {
+    border-top: 3px solid color(contrast-50);
+    padding-top: spacing(64);
+    max-width: 992px;
+    margin: 0 auto;
+    margin-top: spacing(64);
+}
+
+.serviceTextSection {
+    max-width: 468px;
+    margin: 0 auto;
+}
+
+.serviceTextBlock {
+    margin-bottom: spacing(32);
+}
+
+.learnMoreLink {
+    color: color(white);
+    margin-top: spacing(32);
+    background-color: color(contrast-50);
+    padding: spacing(12) spacing(20);
+    border-radius: radius(regular);
+}
+
+.indexDescriptionWrapper {
+    display: flex;
+    max-width: 768px;
+    margin: 0 auto;
+    flex-direction: row;
+
+    div {
+        width: 50%;
+    }
 }
 
 .pageContainer {
@@ -29,4 +77,24 @@
 .halfImage {
     width: 50vw;
     height: 400px;
+}
+
+.desktopNav {
+    display: none;
+}
+
+.mobileNav {
+    display: flex;
+}
+
+
+@media screen and (min-width: 955px) {
+
+    .desktopNav {
+        display:flex;
+    }
+
+    .mobileNav {
+        display: none;
+    }
 }
