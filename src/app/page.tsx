@@ -56,7 +56,7 @@ export default function Home() {
             <div className={Styles.pageContainer}>
                 <div className={Styles.container}>
 
-                    <h1 className={Styles.indexHeader}>Hondenservice Arnhem</h1>
+                    <h1 className={Styles.indexHeader}>Hondenservice Arnhem Noord</h1>
 
                     <h3 className={Styles.indexDescriptionWrapper}>
                         Ontdek waar je interesse in hebt en meld je aan voor een vrijblijvende kennismaking. Jouw hond
@@ -80,7 +80,7 @@ export default function Home() {
                                     goed bij je eigen hond passen. Zo heb ik een speciale Labradoodle groep, "de
                                     walkadoodles", en een puppy groep op vrijdag.
                                     Na de wandeling breng ik je hond weer terug. Een uitlaatservice geeft je hond
-                                    kans om lekker te spelen en te socialiseren.</p>
+                                    kans om lekker te spelen en te socialiseren. De uitlaatservice rijdt in Arnhem Noord, Schaarsbergen en omstreken.</p>
                                 <Link className={Styles.learnMoreLink} href={'/uitlaatservice'}>
                                     <span className={Styles.learnMoreLinkText}>
                                         Uitlaatservice Arnhem Noord
