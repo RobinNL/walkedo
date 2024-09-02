@@ -29,8 +29,8 @@ export default function Home() {
             <div className={Styles.heroSignupBtn}>
                 <div className={Styles.heroSignupInner}>
                     <h2 className={Styles.heroSignupTitle}>Met hart voor je hond</h2>
-                    <p className={Styles.heroSignupDescription}>Laat je hond de mooiste plekjes van Arnhem ontdekken met een groep waar ze zich helemaal thuis
-                        voelen. En ga met een gerusthart op vakantie, net als je viervoeter.</p>
+                    <p className={Styles.heroSignupDescription}>Laat je viervoeter de mooiste plekjes van Arnhem ontdekken met een groep waar je hond zich helemaal thuis
+                        voelt. En ga met een gerusthart op vakantie met de opvangservice.</p>
                     <div className={Styles.heroSignupInnerBtn}>
                         <WalkedoButton label={'Aanmelden'} disabled={false}/>
                     </div>

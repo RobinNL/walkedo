@@ -35,15 +35,15 @@ export const GlobalFooter = (props: GlobalFooterProps) => {
                     <ul className={Styles.footerList}>
                         <li>
                             <p className={Styles.footerLabel}>Adres</p>
-                            <p className={Styles.footerValue}>Karmelitessenlaan 26, 6816PK Arnhem</p>
+                            <a target={'_blank'} href={'https://www.google.nl/maps/place/Walkedo/@52.0084452,5.8730795,17z/data=!3m1!4b1!4m6!3m5!1s0x47c7a5a334f48edf:0xee9a916b22e0d222!8m2!3d52.0084452!4d5.8756598!16s%2Fg%2F11c1tbzw9c?entry=ttu&g_ep=EgoyMDI0MDgyNy4wIKXMDSoASAFQAw%3D%3D'} className={Styles.footerValue}>Karmelitessenlaan 26, 6816PK Arnhem</a>
                         </li>
                         <li>
                             <p className={Styles.footerLabel}>KVK</p>
-                            <p className={Styles.footerValue}>91522765</p>
+                            <a href={"https://www.kvk.nl/bestellen/#/91522765000057195412"} target={'_blank'} className={Styles.footerValue}>91522765</a>
                         </li>
                         <li>
                             <p className={Styles.footerLabel}>Email</p>
-                            <p className={Styles.footerValue}>woof@walkedo.com</p>
+                            <a href={"mailto:woof@walkedo.com"} target={'_blank'} className={Styles.footerValue}>woof@walkedo.com</a>
                         </li>
                     </ul>
 
@@ -83,12 +83,16 @@ export const GlobalFooter = (props: GlobalFooterProps) => {
 
                     <ul className={Styles.socialMediaList}>
                         <li>
-                            <Image src={'/images/socials/instagram.svg'} width={60} height={60}
-                                   alt={'instagram afbeelding'}/>
+                            <a href={"https://www.instagram.com/walkedohus"} target={"_blank"}>
+                                <Image src={'/images/socials/instagram.svg'} width={60} height={60}
+                                       alt={'instagram afbeelding'}/>
+                            </a>
                         </li>
                         <li>
-                            <Image src={'/images/socials/facebook.svg'} width={60} height={60}
-                                   alt={'facebook afbeelding'}/>
+                            <a href={"https://www.facebook.com/walkedo"} target={"_blank"}>
+                                <Image src={'/images/socials/facebook.svg'} width={60} height={60}
+                                       alt={'facebook afbeelding'}/>
+                            </a>
                         </li>
                     </ul>
 

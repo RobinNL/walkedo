@@ -31,6 +31,10 @@
   border-radius: radius(regular);
   margin-top :spacing(64);
 
+  h3 {
+    margin-top: spacing(8);
+  }
+
   h2, h3, h4, h5, h6, p {
     color: color(black);
   }

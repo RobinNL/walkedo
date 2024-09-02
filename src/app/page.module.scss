@@ -2,9 +2,9 @@
 @import "styles/maps";
 @import "styles/functions";
 
-.main {
-  padding-top: $global-navbar-height;
-}
+//.main {
+//  padding-top: $global-navbar-0;
+//}
 
 .heroImageInner {
   object-fit: cover;
@@ -40,7 +40,7 @@
 
 .indexTextWrap {
   margin: 0 auto;
-  max-width: 768px;
+  columns: 2;
 }
 
 .heroVideo {
@@ -68,7 +68,6 @@
 }
 
 .heroSignupDescription {
-  font-weight: 700;
   text-shadow: 2px 2px 10px color(black);
 }
 

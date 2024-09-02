@@ -64,53 +64,59 @@ export const GlobalNavbar = (props: GlobalNavbarProps) => {
     }
 
     return (
-        <nav className={`${Styles.navbar} ${props.className}`}>
+        <>
+            <nav className={`${Styles.navbar} ${props.className}`}>
 
-            <div className={Styles.navbarContainer}>
+                <div className={Styles.navbarContainer}>
 
-                <div className={Styles.navbarListSection}>
-                    <ul className={Styles.navbarList}>
-                        <li>
-                            <a href={'/'}>
-                                <div>
-                                    <Image src={'/images/logo.png'} width={69} height={100} alt={'Walkedo logo'}/>
+                    <div className={Styles.navbarListSection}>
+                        <ul className={Styles.navbarList}>
+                            <li>
+                                <a href={'/'}>
+                                    <div>
+                                        <Image src={'/images/logo.png'} width={48} height={70} alt={'Walkedo logo'}/>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <div className={Styles.brandingWrapper} onClick={() => brandingPressed()}>
+                                    <span className={Styles.brandingText}>Walkedo</span>
+                                    <span className={Styles.subBrandingText}>Hondenservice</span>
                                 </div>
-                            </a>
-                        </li>
-                        <li>
-                            <div className={Styles.brandingWrapper} onClick={() => brandingPressed()}>
-                                <span className={Styles.brandingText}>Walkedo</span>
-                                <span className={Styles.subBrandingText}>Hondenservice</span>
-                            </div>
-                        </li>
-                    </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div className={Styles.navbarListSection}>
+                        <ul className={Styles.navbarList}>
+                            <li className={`${activeItem === '/' ? Styles.navbarItemActive : Styles.navbarItem}`}>
+                                <Link href='/uitlaatservice'>Uitlaatservice</Link>
+                            </li>
+                            <li className={`${activeItem.indexOf('/opvang') !== -1 ? Styles.navbarItemActive : Styles.navbarItem}`}>
+                                <Link href='/opvang'>Opvang</Link>
+                            </li>
+                            <li className={`${activeItem.indexOf('/northern-inuit-dog') !== -1 ? Styles.navbarItemActive : Styles.navbarItem}`}>
+                                <Link href='/northern-Inuit-dog'>Northern Inuit Dog</Link>
+                            </li>
+                            <li className={`${activeItem.indexOf('/nieuws') !== -1 ? Styles.navbarItemActive : Styles.navbarItem}`}>
+                                <Link href='/nieuws'>Nieuws</Link>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div className={Styles.navbarSignupSection} onClick={() => signup()}>
+                        <WalkedoButton label={'Aanmelden'}/>
+                    </div>
+
                 </div>
 
-                <div className={Styles.navbarListSection}>
-                    <ul className={Styles.navbarList}>
-                        <li className={`${activeItem === '/' ? Styles.navbarItemActive : Styles.navbarItem}`}>
-                            <Link href='/uitlaatservice'>Uitlaatservice</Link>
-                        </li>
-                        <li className={`${activeItem.indexOf('/opvang') !== -1 ? Styles.navbarItemActive : Styles.navbarItem}`}>
-                            <Link href='/opvang'>Opvang</Link>
-                        </li>
-                        <li className={`${activeItem.indexOf('/northern-inuit-dog') !== -1 ? Styles.navbarItemActive : Styles.navbarItem}`}>
-                            <Link href='/northern-Inuit-dog'>Northern Inuit Dog</Link>
-                        </li>
-                        <li className={`${activeItem.indexOf('/nieuws') !== -1 ? Styles.navbarItemActive : Styles.navbarItem}`}>
-                            <Link href='/nieuws'>Nieuws</Link>
-                        </li>
-                    </ul>
-                </div>
+                {/**/}
+            </nav>
 
-                <div className={Styles.navbarSignupSection} onClick={() => signup()}>
-                    <WalkedoButton label={'Aanmelden'}/>
-                </div>
+            <div className={Styles.navbarShadow}>
 
             </div>
-
-            {/**/}
-        </nav>
+        </>
     )
 
 }
