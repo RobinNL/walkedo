@@ -17,10 +17,21 @@ export default function Home() {
 
     return (
         <div>
+            {/*<div className={Styles.heroImage}*/}
+            {/*     style={{height: width.current > 1920 ? 1080 : width.current * 0.5625 + 'px'}}>*/}
+            {/*    <video width={width.current > 1920 ? '1920px' : width.current + 'px'}*/}
+            {/*           height={(width.current > 1920 ? '1080px' : width.current * 0.5625) + 'px'}*/}
+            {/*           className={Styles.heroVideo} controls={false} controlsList={"nodownload"} loop={true}*/}
+            {/*           muted={true} preload="auto" autoPlay={true}>*/}
+            {/*        <source src="/videos/walkedo-intro.mp4" type="video/mp4"/>*/}
+            {/*        <Image sizes='max-width: 100vw' className={Styles.heroImageInner} fill={true}*/}
+            {/*               src={'/images/walking-dogs-hero.jpg'}/>*/}
+            {/*    </video>*/}
+            {/*</div>*/}
             <div className={Styles.heroImage}
-                 style={{height: width.current > 1920 ? 1080 : width.current * 0.5625 + 'px'}}>
-                <video width={width.current > 1920 ? '1920px' : width.current + 'px'}
-                       height={(width.current > 1920 ? '1080px' : width.current * 0.5625) + 'px'}
+                 style={{height: width.current * 0.5625 + 'px'}}>
+                <video width={width.current + 'px'}
+                       height={(width.current * 0.5625) + 'px'}
                        className={Styles.heroVideo} controls={false} controlsList={"nodownload"} loop={true}
                        muted={true} preload="auto" autoPlay={true}>
                     <source src="/videos/walkedo-intro.mp4" type="video/mp4"/>
@@ -69,7 +80,7 @@ export default function Home() {
                                     goed bij je eigen hond passen. Zo heb ik een speciale Labradoodle groep, "de
                                     walkadoodles", en een puppy groep op vrijdag.
                                     Na de wandeling breng ik je hond weer terug. Een uitlaatservice geeft je hond
-                                    kans om lekker te spelenx en te socialiseren.</p>
+                                    kans om lekker te spelen en te socialiseren.</p>
                                 <Link className={Styles.learnMoreLink} href={'/uitlaatservice'}>
                                     <span className={Styles.learnMoreLinkText}>
                                         Uitlaatservice Arnhem Noord
@@ -109,10 +120,7 @@ export default function Home() {
                                 <h3>Voor een dag, een week of een vakantieperiode.</h3>
 
                                 <p className={Styles.serviceTextBlock}>Iedereen gaat wel eens op vakantie of is een hele
-                                    dag weg voor het werk. Klanten van Walkedo kunnen gebruik maken van de dagopvang en
-                                    hun honden lekker laten spelen en rasen in een kennel van 25 vierkantemeters. De
-                                    honden van de dagopvang gaan automatisch mee met de uitlaatservice. Meld je vandaag
-                                    nog aan voor een gezellige kennismaking!</p>
+                                    dag weg voor het werk. Klanten van Walkedo kunnen gebruik maken van de opvangservice. Laat je honden lekker lekker laten spelen en rasen in een kennel van 25 vierkantemeters terwijl je gezin van een vakantie geniet. De honden van de opvang gaan automatisch mee met de uitlaatservice.</p>
                                 <Link className={Styles.learnMoreLink} href={'/opvang'}>
                                      <span className={Styles.learnMoreLinkText}>
                                         Opvangservice
@@ -125,6 +133,23 @@ export default function Home() {
                     </div>
                 </div>
 
+                <div className={Styles.serviceSectionImageRow}>
+                    <div className={Styles.serviceSectionImage}>
+                        <Image objectFit={'cover'} fill={true}
+                               src={'/images/opvang/opvang-1.jpeg'}
+                               alt={'hond in het gras'}/>
+                    </div>
+                    <div className={Styles.serviceSectionImage}>
+                        <Image objectFit={'cover'} fill={true}
+                               src={'/images/opvang/opvang-4.jpeg'}
+                               alt={'hond in het gras'} className={Styles.serviceSectionImage}/>
+                    </div>
+                    <div className={Styles.serviceSectionImage}>
+                        <Image objectFit={'cover'} fill={true}
+                               src={'/images/opvang/opvang-2.jpeg'}
+                               alt={'hond in het gras'} className={Styles.serviceSectionImage}/>
+                    </div>
+                </div>
 
                 <div className={Styles.container}>
 
