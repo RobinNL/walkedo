@@ -126,21 +126,38 @@
 .serviceSectionImageRow {
   height: 600px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   width: 100%;
   position: relative;
 }
 
 .northernInuitDogImage {
   display: flex;
+  max-width: 1920px;
+  position: relative;
+  max-height: 1080px;
+  height: 1080px;
+  width: 100%;
   margin: 0 auto;
 }
 
 .serviceSectionImage {
-  width: 33.3%;
+  width: 100%;
   display: flex;
   position: relative;
   height: 600px;
+}
+
+@media screen and (min-width: 768px) {
+
+  .serviceSectionImage {
+    width: 33.3%;
+  }
+
+  .serviceSectionImageRow {
+    flex-direction: row;
+  }
+
 }
 
 .serviceTextBlock {

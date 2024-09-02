@@ -153,10 +153,11 @@ export default function Home() {
                     </div>
                 </div>
 
-                <Image width={1920} height={1440}
-                       className={Styles.northernInuitDogImage}
-                       src={'/images/inuit-dog/northern-inuit-dog-beach.jpeg'}
-                       alt={'Northern Inuit dog strand'}/>
+                <div className={Styles.northernInuitDogImage}>
+                    <Image objectFit={'cover'} fill={true}
+                           src={'/images/inuit-dog/northern-inuit-dog-beach.jpeg'}
+                           alt={'Northern Inuit dog strand'}/>
+                </div>
 
             </div>
 
