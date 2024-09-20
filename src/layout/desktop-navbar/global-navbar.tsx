@@ -2,10 +2,9 @@
 
 import Styles from './global-navbar.module.scss';
 import Image from 'next/image';
-import {useRouter} from 'next/navigation'
-import React, { useEffect, useState } from "react";
-import { Icon } from "../../../components/icon/icon";
-import { Button, WalkedoButton } from "../../../components/button/button";
+import { useRouter } from 'next/navigation'
+import React, { useState } from "react";
+import { WalkedoButton } from "../../../components/button/button";
 import Link from "next/link";
 
 export interface GlobalNavbarProps {

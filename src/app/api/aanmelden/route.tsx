@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 
 const nodemailer = require('nodemailer');
 
-export async function POST(request) {
+export async function POST(request: any) {
     const username = process.env.NEXT_PUBLIC_EMAIL_USERNAME;
     const password = process.env.NEXT_PUBLIC_EMAIL_PASSWORD;
     const myEmail = process.env.NEXT_PUBLIC_PERSONAL_EMAIL;
@@ -50,6 +50,6 @@ export async function POST(request) {
 }
 
 
-export async function GET(): any {
+export async function GET(): Promise<any> {
     return new NextResponse('ping');
 }

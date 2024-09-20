@@ -19,14 +19,14 @@ export default function Page() {
     const [error, setError] = useState(false);
 
     const doSetFormVal = (val: FormEvent<HTMLInputElement | HTMLTextAreaElement>, stateChanger: SetStateAction<any>) => {
-        stateChanger(val.target?.value)
+        stateChanger((val.target as any).value)
     }
 
     const formIsValid = () => {
         return (firstName !== '' && lastName !== '' && email !== '' && address !== '' && dogSummary !== '')
     }
 
-    const submitForm = async (event) => {
+    const submitForm = async (event: any) => {
         event.preventDefault();
         // Collect the form inputs and send using node-mailer
         setLoading(true);
@@ -88,7 +88,7 @@ export default function Page() {
                     <div className={Styles.formGroup}>
                         <label className={Styles.formLabel}>Korte beschijving hond(en)</label>
                         <textarea className={Styles.formField} required={true}
-                                  onInput={(val) => doSetFormVal(val, setDogSummary)} type='text'
+                                  onInput={(val) => doSetFormVal(val, setDogSummary)}
                                   placeholder={'Wat maakt jouw hond uniek'}/>
                     </div>
 

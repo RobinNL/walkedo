@@ -35,7 +35,7 @@ export default function Home() {
                        className={Styles.heroVideo} controls={false} controlsList={"nodownload"} loop={true}
                        muted={true} preload="auto" autoPlay={true}>
                     <source src="/videos/walkedo-intro.mp4" type="video/mp4"/>
-                    <Image sizes='max-width: 100vw' className={Styles.heroImageInner} fill={true}
+                    <Image alt={'honden op een veld'} sizes='max-width: 100vw' className={Styles.heroImageInner} fill={true}
                            src={'/images/walking-dogs-hero.jpg'}/>
                 </video>
             </div>
@@ -46,9 +46,10 @@ export default function Home() {
                         ontdekken met een groep waar je hond zich helemaal thuis
                         voelt. En ga met een gerusthart op vakantie met de opvangservice.</p>
                     <div className={Styles.heroSignupIconWrapper}>
-                        <Image className={Styles.heroSignupIconIcon} src={'fonts/icons/chevron-down.svg'} width={30}
+                        <Image className={Styles.heroSignupIconIcon} alt={'pijl naar beneden'} src={'fonts/icons/chevron-down.svg'} width={30}
                                height={30}/>
                         <Image className={`${Styles.heroSignupIconIcon} ${Styles.heroSignupIconIconBottom}`}
+                               alt={'pijl naar beneden'}
                                src={'fonts/icons/chevron-down.svg'} width={30} height={30}/>
                     </div>
                 </div>
@@ -77,15 +78,15 @@ export default function Home() {
                                 <p>Laat je hond een of meerdere malen per week
                                     door
                                     mij ophalen. We lopen een uur met een groep van maximaal 6 andere honden die
-                                    goed bij je eigen hond passen. Zo heb ik een speciale Labradoodle groep, "de
-                                    walkadoodles", en een puppy groep op vrijdag.
+                                    goed bij je eigen hond passen. Zo heb ik een speciale Labradoodle groep, &quotde
+                                    walkadoodles&quot, en een puppy groep op vrijdag.
                                     Na de wandeling breng ik je hond weer terug. Een uitlaatservice geeft je hond
                                     kans om lekker te spelen en te socialiseren. De uitlaatservice rijdt in Arnhem Noord, Schaarsbergen en omstreken.</p>
                                 <Link className={Styles.learnMoreLink} href={'/uitlaatservice'}>
                                     <span className={Styles.learnMoreLinkText}>
                                         Uitlaatservice Arnhem Noord
                                     </span>
-                                    <Image className={Styles.learnMoreLinkIcon} src={'/fonts/icons/arrow-right.svg'}
+                                    <Image alt={'pijl naar rechts'} className={Styles.learnMoreLinkIcon} src={'/fonts/icons/arrow-right.svg'}
                                            height={20} width={20}/>
                                 </Link>
                             </div>
@@ -126,6 +127,7 @@ export default function Home() {
                                         Opvangservice
                                     </span>
                                     <Image className={Styles.learnMoreLinkIcon} src={'/fonts/icons/arrow-right.svg'}
+                                           alt={'pijl naar rechts'}
                                            height={20} width={20}/>
                                 </Link>
                             </div>
@@ -171,6 +173,7 @@ export default function Home() {
                                         Northern Inuit Dog
                                     </span>
                                     <Image className={Styles.learnMoreLinkIcon} src={'/fonts/icons/arrow-right.svg'}
+                                           alt={'pijl naar rechts'}
                                            height={20} width={20}/>
                                 </Link>
                             </div>

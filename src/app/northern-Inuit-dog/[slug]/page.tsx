@@ -7,7 +7,7 @@ import Image from "next/image";
 import Styles from "./page.module.scss";
 import { WalkedoButton } from "../../../../components/button/button";
 
-function getPostContent(slug) {
+function getPostContent(slug: string) {
     const folder = 'articles/northern-inuit/'
     const file = folder + `${slug}.md`
     const content = fs.readFileSync(file, 'utf8')
@@ -22,7 +22,7 @@ export const generateStaticParams = async () => {
     return posts.map((post) => ({ category: post.category, title: post.title, date: post.date, thumbnail: post.thumbnail, slug: post.slug }))
 }
 
-export default function page(props) {
+export default function page(props: any) {
 
     const slug = props.params.slug
     const post = getPostContent(slug)

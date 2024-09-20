@@ -1,10 +1,9 @@
-import { ArticleMeta } from "../shared/blog.interface";
 import React, { FunctionComponent } from "react";
 import Styles from "./article-preview.module.scss";
 import Image from "next/image";
 
 export interface ArticlePreviewProps {
-    post: ArticleMeta;
+    post: any;
     className: any;
     baseUrl: string;
     key: number;
