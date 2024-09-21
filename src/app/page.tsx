@@ -9,7 +9,7 @@ import { WalkedoButton } from "../../components/button/button";
 
 export default function Home() {
 
-    const width = useRef(window.innerWidth);
+    const width = useRef(typeof window !== 'undefined' ? window.innerWidth : 1200)
 
     console.log(width);
 
