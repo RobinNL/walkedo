@@ -28,7 +28,7 @@ export default async function Page() {
                 <p className={Styles.mainHeroContentWrap}>
                     Dit prachtige ras is nog heel onbekend wereldwijd en al helemaal in Nederland. De honden zijn heel
                     sociaal, gaan goed in groepen en andere honden. Het ras is vooral bekend van de TV serie Game of Thrones. Omdat wij een nesje Northern Inuit hondjes verwachten kan jij je aanmelden voor
-                    de inschrijflijst. Om het ras beter te leren kennen kan je hier wat artikelen lezen over de Northern Inuit Dog.
+                    de wachtlijst. Om het ras beter te leren kennen kan je hier wat artikelen lezen over de Northern Inuit Dog.
                 </p>
 
                 <div className={Styles.blogWrapper}>

@@ -26,9 +26,9 @@ export async function POST(request: any) {
 
         console.log(body);
         const mail = await transporter.sendMail({
-            from: body.firstName + body.lastName,
+            from: myEmail,
             to: myEmail,
-            replyTo: body.email,
+            respondTo: body.email,
             subject: 'Walkedo aanmelding',
             html: `
             <p>Naam: ${body.firstName} ${body.lastName} </p>

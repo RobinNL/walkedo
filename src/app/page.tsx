@@ -2,23 +2,25 @@
 
 import Image from "next/image";
 import Styles from "./page.module.scss";
-import { useRouter } from "next/navigation";
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Link from "next/link";
-import { WalkedoButton } from "../../components/button/button";
 
 export default function Home() {
 
-    const width = useRef(typeof window !== 'undefined' ? window.innerWidth : { current: 1200 });
+    const width = useRef(typeof window !== 'undefined' ? window.innerWidth : { current: 600 });
 
-    const router = useRouter();
+    const [videoHeight, setVideoHeight] = useState(width.current as number * 0.5625);
+
+    useEffect(() => {
+        setVideoHeight(width.current as number > 768 ? width.current as number * 0.5625 : width.current as number * 0.7625);
+    }, [width])
 
     return (
         <div>
             <div className={Styles.heroImage}
-                 style={{height: width.current as number < 768 ? width.current as number * 0.5625 + 100 + 'px' : width.current as number * 0.5625 + 'px'}}>
+                 style={{height: videoHeight + 'px'}}>
                 <video width={width.current + 'px'}
-                       height={(width.current as number * 0.5625) + 'px'}
+                       height={videoHeight + 'px'}
                        className={Styles.heroVideo} controls={false} controlsList={"nodownload"} loop={true}
                        muted={true} preload="auto" autoPlay={true}>
                     <source src="/videos/walkedo-intro.mp4" type="video/mp4"/>
@@ -29,9 +31,7 @@ export default function Home() {
             <div className={Styles.heroSignupBtn}>
                 <div className={Styles.heroSignupInner}>
                     <h2 className={Styles.heroSignupTitle}>Met hart voor je hond</h2>
-                    <p className={Styles.heroSignupDescription}>Laat je viervoeter de mooiste plekjes van Arnhem
-                        ontdekken met een groep waar je hond zich helemaal thuis
-                        voelt. En ga met een gerusthart op vakantie met de opvangservice.</p>
+                    <p className={Styles.heroSignupDescription}>Laat je viervoeter de mooiste plekjes van Arnhem ontdekken met een groep waar hij zich helemaal thuis voelt. En ga met een gerust hart op vakantie met de opvangservice.</p>
                     <div className={Styles.heroSignupIconWrapper}>
                         <Image className={Styles.heroSignupIconIcon} alt={'pijl naar beneden'} src={'fonts/icons/chevron-down.svg'} width={30}
                                height={30}/>
@@ -47,8 +47,8 @@ export default function Home() {
                     <h1 className={Styles.indexHeader}>Hondenservice Arnhem Noord</h1>
 
                     <h3 className={Styles.indexDescriptionWrapper}>
-                        Ontdek waar je interesse in hebt en meld je aan voor een vrijblijvende kennismaking. Jouw hond
-                        is mijn klant en ik kan niet wachten op onze eerste kennismaking.
+                        Ontdek waar je interesse in hebt en meld je aan voor een vrijblijvend kennismakingsgesprek.
+                        Jouw hond is mijn klant en laten we er samen een mooie ervaring van maken.
                     </h3>
 
                 </div>
@@ -62,13 +62,8 @@ export default function Home() {
                                 <h2 className={Styles.serviceHeader}>Uitlaatservice</h2>
                                 <h3>Lekker de energie kwijt en socialiseren met andere honden.</h3>
 
-                                <p>Laat je hond een of meerdere malen per week
-                                    door
-                                    mij ophalen. We lopen een uur met een groep van maximaal 6 andere honden die
-                                    goed bij je eigen hond passen. Zo heb ik een speciale Labradoodle groep, &quotde
-                                    walkadoodles&quot, en een puppy groep op vrijdag.
-                                    Na de wandeling breng ik je hond weer terug. Een uitlaatservice geeft je hond
-                                    kans om lekker te spelen en te socialiseren. De uitlaatservice rijdt in Arnhem Noord, Schaarsbergen en omstreken.</p>
+                                <p>Laat je hond èèn of meerder malen per week  door mij ophalen. Honden lopen minimaal een uur en zitten maximaal een uur in de bus. Per groep zijn er zes vaste slots beschikbaar. En zijn er twee slots beschikbaar voor honden die in de opvang zitten of voor klanten die niet uitkomen met het reguliere uitlaten van de hond. De honden groepen worden zorgvuldig samen gesteld. Zo is een puppygroep op vrijdag en zelfs een volledige doodle groep. Om die reistijd klein te houden is mijn werkgebied beperkt tot Arnhem Noord, Schaarsbergen en omstreken.
+                                </p>
                                 <Link className={Styles.learnMoreLink} href={'/uitlaatservice'}>
                                     <span className={Styles.learnMoreLinkText}>
                                         Uitlaatservice Arnhem Noord
@@ -107,8 +102,7 @@ export default function Home() {
                                 <h2 className={Styles.serviceHeader}>Opvangservice</h2>
                                 <h3>Voor een dag, een week of een vakantieperiode.</h3>
 
-                                <p className={Styles.serviceTextBlock}>Iedereen gaat wel eens op vakantie of is een hele
-                                    dag weg voor het werk. Klanten van Walkedo kunnen gebruik maken van de opvangservice. Laat je honden lekker lekker laten spelen en rasen in een kennel van 25 vierkantemeters terwijl je gezin van een vakantie geniet. De honden van de opvang gaan automatisch mee met de uitlaatservice.</p>
+                                <p className={Styles.serviceTextBlock}>Iedereen gaat er wel eens op uit en hoe leuk het ook is om op vakantie te gaan met je hond, toch wil je wel eens even wat anders.Klanten van Walkedo kunnen gebruik per januari 2025 gebruik maken van de opvangservice. Laat je honden lekker razen en spelen in een kennel van 25 vierkante meter terwijl jij en je gezin van een vakantie geniet. De honden van de opvang gaan automatisch mee met de uitlaatservice.</p>
                                 <Link className={Styles.learnMoreLink} href={'/opvang'}>
                                      <span className={Styles.learnMoreLinkText}>
                                         Opvangservice
@@ -149,12 +143,7 @@ export default function Home() {
                                 <h2 className={Styles.serviceHeader}>Northern Inuit Dog</h2>
                                 <h3>Een uniek ras bekend uit Game of Thrones en nu in Nederland.</h3>
 
-                                <p className={Styles.serviceTextBlock}>Dit unieke ras is bij Walkedo als eerste in
-                                    Nederland. Ik verwacht een groep pups te
-                                    hebben in de toekomst. Leer dit unieke ras kennen en schrijf je vrijblijvend in voor
-                                    de
-                                    wachtlijst. Zodra het concreet wordt heb je dan als eerste de kans om een plekje te
-                                    reserveren en eigenaar te worden van een beste vriend uit dit unieke ras!</p>
+                                <p className={Styles.serviceTextBlock}>Dit unieke ras is bij de Walkedo kennel als eerste in Nederland. Leer dit prachtige ras kennen. We verwachten een roedel pups in de toekomst, schrijf je vrijblijvend in voor de wachtlijst. Zodra het concreet wordt heb je als eerste de kans om een plekje te reserveren en eigenaar te worden van een beste vriend uit dit unieke prachtige ras.</p>
                                 <Link className={Styles.learnMoreLink} href={'/northern-Inuit-dog'}>
                                      <span className={Styles.learnMoreLinkText}>
                                         Northern Inuit Dog

@@ -2,10 +2,6 @@
 @import "styles/maps";
 @import "styles/functions";
 
-//.main {
-//  padding-top: $global-navbar-0;
-//}
-
 .heroImageInner {
   object-fit: cover;
   object-position: 0% 60%;
@@ -262,6 +258,16 @@
   height: 400px;
 }
 
+@media screen and (min-width: 768px) {
+  .heroSignupInner {
+    display: flex;
+  }
+}
+
+/**
+NAVIGATION
+ */
+
 .desktopNav {
   display: none;
 }
@@ -278,11 +284,5 @@
 
   .mobileNav {
     display: none;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .heroSignupInner {
-    display: flex;
   }
 }

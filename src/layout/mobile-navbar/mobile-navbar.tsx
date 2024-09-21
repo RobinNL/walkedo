@@ -107,7 +107,7 @@ export const MobileNavbar = (props: GlobalNavbarProps) => {
                             <a onClick={() => navigated('/opvang')}>Opvang</a>
                         </li>
                         <li className={`${activeItem.indexOf('/northern-inuit-dog') !== -1 ? Styles.navbarItemActive : Styles.mobileNavbarLink}`}>
-                            <a onClick={() => navigated('/northern-inuit-dog')}>Northern Inuit Dog</a>
+                            <a onClick={() => navigated('/northern-inuit-dog')}>Northern Inuit</a>
                         </li>
                         <li className={`${activeItem.indexOf('/nieuws') !== -1 ? Styles.navbarItemActive : Styles.mobileNavbarLink}`}>
                             <a onClick={() => navigated('/nieuws')}>Nieuws</a>

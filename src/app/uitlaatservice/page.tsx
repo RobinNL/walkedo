@@ -2,10 +2,11 @@
 
 import Image from "next/image";
 import Styles from "./uitlaatservice.module.scss";
-import { useRouter } from "next/navigation";
-import { WalkedoButton } from "../../../components/button/button";
 import Link from "next/link";
 import { Gallery } from "react-grid-gallery";
+import React from "react";
+import Head from "next/head";
+import { formatHTMLTitle } from "@/app/shared/page-seo-title";
 
 export default function Page() {
 
@@ -74,6 +75,9 @@ export default function Page() {
 
     return (
         <main>
+            <Head>
+                <title>{formatHTMLTitle({ title: 'Uitlaatservice Arnhem Noord' })}</title>
+            </Head>
             <div className={Styles.heroImage}>
                 <Image sizes='max-width: 100vw' className={Styles.heroImageInner} fill={true}
                        alt={'honden in arnhem'}
@@ -85,11 +89,8 @@ export default function Page() {
                 <div className={Styles.heroIntroBlock}>
                     <h1 className={Styles.header}>Honden uitlaatservice</h1>
 
-                    <p>Voor een vast bedrag per wandeling loop ik een of meerdere keren met je hond in een van de leuke
-                        Walkedo groepen. We reserveren van tevoren
-                        vaste tijdslots zodat je zeker weet wanneer je hond wordt opgehaald. Minder zorgen voor jou en
-                        een blije hond die thuis op je wacht of je weer
-                        thuis begroet. Ontdek alle voordelen van onze uitlaatservice.</p>
+                    <p>Voor een vast bedrag van 13.50 per wandeling loop ik èèn of meerdere keren met je hond in een vaan de leuke Walkedo groepen. We reserveren van tevoren vaste tijds slots zodat je zeker weet wanneer je hond wordt opgehaald. minder zorgen voor jou en een blije hond die thuis op je wacht of je thuis weer begroet.. Ontdek alle voordelen van de uitlaatservice.
+                    </p>
                 </div>
 
                 <div className={Styles.contentRow}>
@@ -108,17 +109,17 @@ export default function Page() {
                             <li>
                                 <Image src={'/images/dog-paw.svg'} className={Styles.benefitListIcon}
                                        alt={'honden poot'} width={20} height={20}/>
-                                Korte reistijden omdat ik enkel loop in Arnhem en zorgvuldig de groepen samenstel
+                                Korte reistijden
                             </li>
                             <li>
                                 <Image src={'/images/dog-paw.svg'} className={Styles.benefitListIcon}
                                        alt={'honden poot'} width={20} height={20}/>
-                                Speciale puppy groep
+                                Speciale puppygroepen
                             </li>
                             <li>
                                 <Image src={'/images/dog-paw.svg'} className={Styles.benefitListIcon}
                                        alt={'honden poot'} width={20} height={20}/>
-                                Vaste tijdslots en groepen
+                                Zorgvuldig samengestelde groepen waaronder de walkedoodle
                             </li>
                             <li>
                                 <Image src={'/images/dog-paw.svg'} className={Styles.benefitListIcon}
