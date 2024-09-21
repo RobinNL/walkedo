@@ -23,9 +23,16 @@
   position: relative;
   background-color: #15201a;
   display: flex;
+  padding-top: $global-navbar-height;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+}
+
+@media (screen and min-width: 768px) {
+    .heroImage {
+      padding-top: 0;
+    }
 }
 
 .heroImageMobile {
@@ -262,7 +269,6 @@
 .mobileNav {
   display: flex;
 }
-
 
 @media screen and (min-width: 955px) {
 

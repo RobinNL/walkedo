@@ -82,14 +82,17 @@ export const MobileNavbar = (props: GlobalNavbarProps) => {
                         <span
                             className={`${mobileMenuActive ? Styles.navbarHamburgerLineMiddle : ''} ${Styles.navbarHamburgerLine}`}></span>
                         <span
-                            className={`${mobileMenuActive ? Styles.navbarHamburgerLineBottom: ''} ${Styles.navbarHamburgerLine}`}></span>
+                            className={`${mobileMenuActive ? Styles.navbarHamburgerLineBottom : ''} ${Styles.navbarHamburgerLine}`}></span>
                     </div>
                 </div>
             </nav>
 
-            <div className={`${Styles.mobileFoldoutMenu} ${props.className} ${mobileMenuActive ? Styles.mobileFoldoutMenuOpen : null}`}>
-                <div className={`${Styles.navbarSignupSection} ${Styles.appearElement} ${mobileMenuActive ? Styles.appearFirst : ''}`}>
-                    <p className={Styles.navbarSignupSectionDescription}>Meld je aan voor een kennismaking waarin we samen kunnen kijken wat het beste past bij je hond.</p>
+            <div
+                className={`${Styles.mobileFoldoutMenu} ${props.className} ${mobileMenuActive ? Styles.mobileFoldoutMenuOpen : null}`}>
+                <div
+                    className={`${Styles.navbarSignupSection} ${Styles.appearElement} ${mobileMenuActive ? Styles.appearFirst : ''}`}>
+                    <p className={Styles.navbarSignupSectionDescription}>Meld je aan voor een kennismaking waarin we
+                        samen kunnen kijken wat het beste past bij je hond.</p>
                     <div onClick={() => navigated('/aanmelden')}>
                         <WalkedoButton fullWidth={true} label={'Aanmelden'}/>
                     </div>
@@ -113,7 +116,9 @@ export const MobileNavbar = (props: GlobalNavbarProps) => {
                 </div>
 
             </div>
+            <div className={Styles.navbarShadow}>
 
+            </div>
         </>
     )
 

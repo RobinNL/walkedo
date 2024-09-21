@@ -9,29 +9,16 @@ import { WalkedoButton } from "../../components/button/button";
 
 export default function Home() {
 
-    const width = useRef(typeof window !== 'undefined' ? window.innerWidth : 1200)
-
-    console.log(width);
+    const width = useRef(typeof window !== 'undefined' ? window.innerWidth : { current: 1200 });
 
     const router = useRouter();
 
     return (
         <div>
-            {/*<div className={Styles.heroImage}*/}
-            {/*     style={{height: width.current > 1920 ? 1080 : width.current * 0.5625 + 'px'}}>*/}
-            {/*    <video width={width.current > 1920 ? '1920px' : width.current + 'px'}*/}
-            {/*           height={(width.current > 1920 ? '1080px' : width.current * 0.5625) + 'px'}*/}
-            {/*           className={Styles.heroVideo} controls={false} controlsList={"nodownload"} loop={true}*/}
-            {/*           muted={true} preload="auto" autoPlay={true}>*/}
-            {/*        <source src="/videos/walkedo-intro.mp4" type="video/mp4"/>*/}
-            {/*        <Image sizes='max-width: 100vw' className={Styles.heroImageInner} fill={true}*/}
-            {/*               src={'/images/walking-dogs-hero.jpg'}/>*/}
-            {/*    </video>*/}
-            {/*</div>*/}
             <div className={Styles.heroImage}
-                 style={{height: width.current * 0.5625 + 'px'}}>
+                 style={{height: width.current as number < 768 ? width.current as number * 0.5625 + 100 + 'px' : width.current as number * 0.5625 + 'px'}}>
                 <video width={width.current + 'px'}
-                       height={(width.current * 0.5625) + 'px'}
+                       height={(width.current as number * 0.5625) + 'px'}
                        className={Styles.heroVideo} controls={false} controlsList={"nodownload"} loop={true}
                        muted={true} preload="auto" autoPlay={true}>
                     <source src="/videos/walkedo-intro.mp4" type="video/mp4"/>

@@ -3,7 +3,7 @@
 import Styles from './global-navbar.module.scss';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation'
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { WalkedoButton } from "../../../components/button/button";
 import Link from "next/link";
 
