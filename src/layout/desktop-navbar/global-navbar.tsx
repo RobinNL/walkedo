@@ -97,6 +97,9 @@ export const GlobalNavbar = (props: GlobalNavbarProps) => {
                             <li className={`${activeItem.indexOf('/northern-inuit-dog') !== -1 ? Styles.navbarItemActive : Styles.navbarItem}`}>
                                 <Link href='/northern-Inuit-dog'>Northern Inuit</Link>
                             </li>
+                            <li className={`${activeItem.indexOf('/casting') !== -1 ? Styles.navbarItemActive : Styles.navbarItem}`}>
+                                <Link href='/casting'>Casting</Link>
+                            </li>
                             <li className={`${activeItem.indexOf('/nieuws') !== -1 ? Styles.navbarItemActive : Styles.navbarItem}`}>
                                 <Link href='/nieuws'>Nieuws</Link>
                             </li>

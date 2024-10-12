@@ -1,0 +1,63 @@
+@import "styles/variables";
+@import "styles/maps";
+@import "styles/functions";
+
+.heroImageInner {
+  object-fit: cover;
+  object-position: 0% 50%;
+}
+
+.contentHero {
+  margin-top: spacing(64);
+}
+
+.subHeader {
+  text-align: center;
+}
+
+.heroIntroBlock {
+  max-width: 768px;
+  margin: 0 auto;
+  padding-bottom: 64px;
+}
+
+.signupBtn {
+  display: block;
+  padding-top: spacing(32);
+}
+
+.header {
+  margin-top: spacing(64);
+  text-align: center;
+  background-image: conic-gradient(#f3ec78, #af4261);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.heroImage {
+  height: 700px;
+  position: relative;
+  overflow: hidden;
+}
+
+.contentRow {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@media screen and (min-width: 995px) {
+  .contentRow {
+    flex-direction: row;
+  }
+}
+
+.opvangHondImage {
+  width: calc(50% - 24px);
+  position: relative;
+}
+
+.contentBlock {
+  max-width: 768px;
+}

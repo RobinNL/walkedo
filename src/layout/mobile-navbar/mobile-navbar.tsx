@@ -109,6 +109,9 @@ export const MobileNavbar = (props: GlobalNavbarProps) => {
                         <li className={`${activeItem.indexOf('/northern-inuit-dog') !== -1 ? Styles.navbarItemActive : Styles.mobileNavbarLink}`}>
                             <a onClick={() => navigated('/northern-inuit-dog')}>Northern Inuit</a>
                         </li>
+                        <li className={`${activeItem.indexOf('/casting') !== -1 ? Styles.navbarItemActive : Styles.mobileNavbarLink}`}>
+                            <a onClick={() => navigated('/casting')}>Casting</a>
+                        </li>
                         <li className={`${activeItem.indexOf('/nieuws') !== -1 ? Styles.navbarItemActive : Styles.mobileNavbarLink}`}>
                             <a onClick={() => navigated('/nieuws')}>Nieuws</a>
                         </li>
