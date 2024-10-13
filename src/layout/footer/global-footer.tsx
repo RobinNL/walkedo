@@ -13,7 +13,7 @@ export const GlobalFooter = (props: GlobalFooterProps) => {
     return (
         <footer className={Styles.footer}>
 
-            <Image src={'images/dog-silhouette/dog-silhouette-group.svg'} className={Styles.footerDogImage} width={1920 / 3} height={787 / 3}
+            <Image src={'/images/dog-silhouette/dog-silhouette-group.svg'} className={Styles.footerDogImage} width={1920 / 3} height={787 / 3}
                    alt={'silhouette van honden'}/>
 
 

@@ -1,0 +1,11 @@
+@import "styles/variables";
+@import "styles/maps";
+@import "styles/functions";
+
+.notHereContainer {
+    top: $global-navbar-height;
+    padding: spacing(64);
+    text-align: center;
+    position: relative;
+
+}

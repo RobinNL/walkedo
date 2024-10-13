@@ -17,7 +17,7 @@ export const ArticlePreview: FunctionComponent<ArticlePreviewProps> = ({post, ba
                 <h3 className={Styles.blogPostTitle}>{post.title}</h3>
                 <p className={Styles.blogPostDate}>Geplaatst op: {post.date}</p>
                 <div className={Styles.blogPostImage}>
-                    <Image src={post.thumbnail} fill={true} alt={''}/>
+                    <Image src={post.thumbnail} objectFit={'cover'} fill={true} alt={''}/>
                 </div>
             </a>
         </div>

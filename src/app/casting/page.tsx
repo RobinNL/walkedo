@@ -107,7 +107,7 @@ export default function Page() {
 
                 <div className={Styles.heroIntroBlock}>
                     <h1 className={Styles.header}>Casting</h1>
-                    <h2 className={Styles.subHeader}>Camera, Actie en Woef!</h2>
+                    <h2 className={Styles.subHeader}>Licht, Camera, Walkedo!</h2>
                     <p>
                         Heb je een hond nodig met het uiterlijk van een wolf voor je productie, film, muziekvideo, foto of marketing campagne? Walkedo kan je helpen met de Northern Inuit Dog.
                         Deze honden hebben een hele aantrekkelijke look omdat ze op een wolf lijken. Zo zijn ze ook gebruikt bij de productie Game Of Thrones.
