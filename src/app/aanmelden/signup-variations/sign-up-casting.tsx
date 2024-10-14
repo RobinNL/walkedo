@@ -20,6 +20,15 @@ export default function SignUpCasting() {
         stateChanger((val.target as any).value)
     }
 
+    const resetForm = () => {
+        setFirstName('');
+        setlastName('');
+        setEmail('');
+        setPhoneNr('');
+        setAddress('');
+        setProjectSummary('');
+    }
+
     const formIsValid = () => {
         return (firstName !== '' && lastName !== '' && email !== '' && address !== '' && projectSummary !== '')
     }
@@ -35,6 +44,7 @@ export default function SignUpCasting() {
         setLoading(false);
         if (response.status === 200) {
             setSuccess(true);
+            resetForm();
         } else {
             setError(true);
         }
@@ -53,38 +63,39 @@ export default function SignUpCasting() {
 
                         <div className={Styles.formGroup}>
                             <label className={Styles.formLabel}>Voornaam</label>
-                            <input className={Styles.formField} onInput={(val) => doSetFormVal(val, setFirstName)}
+                            <input className={Styles.formField} value={firstName} onInput={(val) => doSetFormVal(val, setFirstName)}
                                    required={true} type='text' placeholder={'Voornaam'}/>
                         </div>
 
                         <div className={Styles.formGroup}>
                             <label className={Styles.formLabel}>Achternaam</label>
-                            <input className={Styles.formField} onInput={(val) => doSetFormVal(val, setlastName)}
+                            <input className={Styles.formField} value={lastName} onInput={(val) => doSetFormVal(val, setlastName)}
                                    required={true} type='text' placeholder={'Achternaam'}/>
                         </div>
 
                         <div className={Styles.formGroup}>
                             <label className={Styles.formLabel}>Email</label>
-                            <input className={Styles.formField} onInput={(val) => doSetFormVal(val, setEmail)}
+                            <input className={Styles.formField} value={email} onInput={(val) => doSetFormVal(val, setEmail)}
                                    required={true} type='email' placeholder={'Email'}/>
                         </div>
 
                         <div className={Styles.formGroup}>
                             <label className={Styles.formLabel}>Telefoon nummer</label>
-                            <input className={Styles.formField} onInput={(val) => doSetFormVal(val, setPhoneNr)}
+                            <input className={Styles.formField} value={phoneNr} onInput={(val) => doSetFormVal(val, setPhoneNr)}
                                    type='tel'
                                    placeholder={'Telefoon nummer'}/>
                         </div>
 
                         <div className={Styles.formGroup}>
                             <label className={Styles.formLabel}>Adres</label>
-                            <input className={Styles.formField} onInput={(val) => doSetFormVal(val, setAddress)}
+                            <input className={Styles.formField} value={address} onInput={(val) => doSetFormVal(val, setAddress)}
                                    required={true} type='text'
                                    placeholder={'Bijvoorbeeld hondenlaan 2, 1111HD Arnhem'}/>
                         </div>
                         <div className={Styles.formGroup}>
                             <label className={Styles.formLabel}>Beschijving project</label>
                             <textarea className={Styles.formField} required={true}
+                                      value={projectSummary}
                                       onInput={(val) => doSetFormVal(val, setProjectSummary)}
                                       placeholder={'Beschrijf kort het project waar je een hond voor zoekt'}/>
                         </div>
@@ -93,7 +104,7 @@ export default function SignUpCasting() {
 
                         {
                             success ?
-                                <div><p>Woef! We hebben je aanmelding ontvangen. Hopelijk tot snel :)</p></div> : null
+                                <div><p>Woef! Het script is al praktisch geschreven. We hebben je aanmelding ontvangen en nemen contact met je op</p></div> : null
                         }
 
 

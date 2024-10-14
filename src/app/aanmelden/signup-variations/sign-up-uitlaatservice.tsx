@@ -9,7 +9,6 @@ export default function SignUpUitlaatService() {
     const [phoneNr, setPhoneNr] = useState('');
     const [address, setAddress] = useState('');
     const [dogSummary, setDogSummary] = useState('');
-    const [projectSummary, setProjectSummary] = useState('');
 
     // States
     const [loading, setLoading] = useState(false);
@@ -18,6 +17,15 @@ export default function SignUpUitlaatService() {
 
     const doSetFormVal = (val: FormEvent<HTMLInputElement | HTMLTextAreaElement>, stateChanger: SetStateAction<any>) => {
         stateChanger((val.target as any).value)
+    }
+
+    const resetForm = () => {
+        setFirstName('');
+        setlastName('');
+        setEmail('');
+        setPhoneNr('');
+        setAddress('');
+        setDogSummary('');
     }
 
     const formIsValid = () => {
@@ -42,6 +50,7 @@ export default function SignUpUitlaatService() {
         setLoading(false);
         if (response.status === 200) {
             setSuccess(true);
+            resetForm();
         } else {
             setError(true);
         }
@@ -61,39 +70,39 @@ export default function SignUpUitlaatService() {
 
                     <div className={Styles.formGroup}>
                         <label className={Styles.formLabel}>Voornaam</label>
-                        <input className={Styles.formField} onInput={(val) => doSetFormVal(val, setFirstName)}
+                        <input className={Styles.formField} value={firstName} onInput={(val) => doSetFormVal(val, setFirstName)}
                                required={true} type='text' placeholder={'Voornaam'}/>
                     </div>
 
                     <div className={Styles.formGroup}>
                         <label className={Styles.formLabel}>Achternaam</label>
-                        <input className={Styles.formField} onInput={(val) => doSetFormVal(val, setlastName)}
+                        <input className={Styles.formField} value={lastName} onInput={(val) => doSetFormVal(val, setlastName)}
                                required={true} type='text' placeholder={'Achternaam'}/>
                     </div>
 
                     <div className={Styles.formGroup}>
                         <label className={Styles.formLabel}>Email</label>
-                        <input className={Styles.formField} onInput={(val) => doSetFormVal(val, setEmail)}
+                        <input className={Styles.formField} value={email} onInput={(val) => doSetFormVal(val, setEmail)}
                                required={true} type='email' placeholder={'Email'}/>
                     </div>
 
                     <div className={Styles.formGroup}>
                         <label className={Styles.formLabel}>Telefoon nummer</label>
-                        <input className={Styles.formField} onInput={(val) => doSetFormVal(val, setPhoneNr)}
+                        <input className={Styles.formField} value={phoneNr} onInput={(val) => doSetFormVal(val, setPhoneNr)}
                                type='tel'
                                placeholder={'Telefoon nummer'}/>
                     </div>
 
                     <div className={Styles.formGroup}>
                         <label className={Styles.formLabel}>Adres</label>
-                        <input className={Styles.formField} onInput={(val) => doSetFormVal(val, setAddress)}
+                        <input className={Styles.formField} value={address} onInput={(val) => doSetFormVal(val, setAddress)}
                                required={true} type='text'
                                placeholder={'Bijvoorbeeld hondenlaan 2, 1111HD Arnhem'}/>
                     </div>
 
                     <div className={Styles.formGroup}>
                         <label className={Styles.formLabel}>Korte beschijving hond(en)</label>
-                        <textarea className={Styles.formField} required={true}
+                        <textarea className={Styles.formField} value={dogSummary} required={true}
                                   onInput={(val) => doSetFormVal(val, setDogSummary)}
                                   placeholder={'Wat maakt jouw hond uniek'}/>
                     </div>
