@@ -7,38 +7,9 @@
   object-position: 0% 50%;
 }
 
-.benefitListIcon {
-  margin-right: spacing(20);
-}
-
-.benefitList {
-  padding-left: 0;
-
-  li {
-    display: flex;
-    list-style-type: none;
-    padding: spacing(20) 0 spacing(20) spacing(32);
-    border-bottom: 1px solid color(contrast-50);
-  }
-
-}
-
 .mainHeroContentWrap {
   max-width: 768px;
   margin: 0 auto;
-}
-
-.opvangDisclaimer {
-  padding: spacing(12) spacing(32);
-  max-width: 768px;
-  margin: 0 auto;
-  background-color: color(accent);
-  border-radius: radius(regular);
-  margin-top :spacing(64);
-
-  h2, h3, h4, h5, h6, p {
-    color: color(black);
-  }
 }
 
 .contentHero {
@@ -65,22 +36,54 @@
   overflow: hidden;
 }
 
-.blogPreviewCard {
-  width: 100%;
-  margin: 0 0 spacing(20) 0;
+.contentRow {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: spacing(64);
+  justify-content: space-between;
 }
 
-.blogWrapper {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  margin: spacing(64) -12px 0 -12px;
+.asideBlock {
+  padding: spacing(20);
+  width: 100%;
+  height: 500px;
+  position: relative;
+  max-width: 768px;
 }
+
+.asideBlockImage {
+  width: 100%;
+  height: 300px;
+}
+
+.contentBlock {
+  max-width: 768px;
+  width: 100%;
+}
+
+.puppyContainer {
+  max-width: 768px;
+  margin: 0 auto;
+  padding-top: spacing(32);
+  padding-bottom: spacing(64);
+}
+
+.puppyContainerCta {
+  top: spacing(32);
+  position: relative;
+}
+
 
 @media screen and (min-width: 768px) {
   .blogPreviewCard {
     width: calc(50% - 24px);
     margin: spacing(8);
+  }
+
+  .contentRow {
+    align-items: center;
+    flex-direction: row;
   }
 
   .blogWrapper {

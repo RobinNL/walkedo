@@ -68,7 +68,7 @@ export const MobileNavbar = (props: GlobalNavbarProps) => {
                     className={`${Styles.navbarSignupSection} ${Styles.appearElement} ${mobileMenuActive ? Styles.appearFirst : ''}`}>
                     <p className={Styles.navbarSignupSectionDescription}>Meld je aan voor een kennismaking waarin we
                         samen kunnen kijken wat het beste past bij je hond.</p>
-                    <div onClick={() => navigated('/aanmelden')}>
+                    <div onClick={() => navigated('/aanmelden?service=uitlaten')}>
                         <WalkedoButton fullWidth={true} label={'Aanmelden'}/>
                     </div>
                 </div>

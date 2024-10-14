@@ -18,7 +18,7 @@ $animationMobileDuration: 0.5s;
     justify-content: center;
 }
 
-@media screen and (min-width: 995px) {
+@media screen and (min-width: $navbar-breakpoint-to-desktop) {
     .navbar {
         display: none;
     }

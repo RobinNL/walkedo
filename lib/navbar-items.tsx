@@ -8,7 +8,7 @@ export const NavbarItems: { label: string; uri: string; }[] = [
         uri: '/opvang'
     },
     {
-        label: 'Northern Inuit Dog',
+        label: 'Northern Inuit',
         uri: '/northern-Inuit-dog'
     },
     {

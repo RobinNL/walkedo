@@ -22,7 +22,8 @@ export const GlobalNavbar = (props: GlobalNavbarProps) => {
     }
 
     const signup = () => {
-        router.push('/aanmelden');
+        setActiveItem('');
+        router.push('/aanmelden?service=uitlaten');
     }
 
     return (
@@ -40,7 +41,7 @@ export const GlobalNavbar = (props: GlobalNavbarProps) => {
                                     </div>
                                 </a>
                             </li>
-                            <li>
+                            <li className={Styles.navbarNoMargin}>
                                 <div className={Styles.brandingWrapper} onClick={() => brandingPressed()}>
                                     <span className={Styles.brandingText}>Walkedo</span>
                                     <span className={Styles.subBrandingText}>Hondenservice</span>

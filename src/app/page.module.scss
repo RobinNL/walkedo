@@ -276,7 +276,8 @@ NAVIGATION
   display: flex;
 }
 
-@media screen and (min-width: 955px) {
+// Navbar control
+@media screen and (min-width: $navbar-breakpoint-to-desktop) {
 
   .desktopNav {
     display: flex;

@@ -117,7 +117,7 @@ export default function Page() {
                         producties waarbij je een fantasy richting op wilt. Ze hebben een lief karakter en kunnen dit ook uitstralen, maar indien nodig kunnen ze ook vijandig en scherp uit de ogen kijken.
                         De honden zijn ongeveer 60cm schofthoogte en heel snel en dynamisch voor actie gedreven scenes.
                     </p>
-                    <Link href={'/aanmelden?target=casting'} className={Styles.signupBtn}>
+                    <Link href={'/aanmelden?service=casting'} className={Styles.signupBtn}>
                         <WalkedoButton fullWidth={true} label={'Contact opnemen'} />
                     </Link>
                 </div>

@@ -29,13 +29,13 @@ export async function POST(request: any) {
             from: myEmail,
             to: myEmail,
             respondTo: body.email,
-            subject: 'Walkedo aanmelding',
+            subject: 'Walkedo Puppy - Aanmelding',
             html: `
             <p>Naam: ${body.firstName} ${body.lastName} </p>
             <p>Email: ${body.email} </p>
             <p>Telefoon: ${body.phoneNr} </p>
             <p>Adres: ${body.address} </p>
-            <p>Over de honden: ${body.dogSummary} </p>
+            <p>Eigenaar: ${body.owner} </p>
             `,
         })
         return Response.json({message: 'Success'}, {status: 200});

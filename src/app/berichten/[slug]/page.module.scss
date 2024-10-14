@@ -28,7 +28,8 @@
 }
 
 .articleFooterCard {
-  padding: spacing(12);
-  border-radius: radius(regular);
-  background-color: color(background)
+  padding: spacing(64) 0;
+  text-align: center;
+  margin-top: spacing(64);
+  border-top: 1px solid color(contrast-50);
 }

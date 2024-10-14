@@ -43,7 +43,6 @@ export default async function Post({
                     <div dangerouslySetInnerHTML={{__html: html}}/>
                 </article>
                 <div className={InnerStyle.articleFooterCard}>
-                    <p>Kom regelmatig terug op de website voor het laatste nieuws.</p>
                     <Link href={'/nieuws'}>
                         <WalkedoButton label={'Meer nieuws bekijken'} />
                     </Link>
