@@ -13,12 +13,13 @@ export const ArticlePreview: FunctionComponent<ArticlePreviewProps> = ({post, ba
 
     return (
         <div key={post.title} className={`${Styles.blogCard} ${className ? className : ''}`}>
-            <a href={`${baseUrl}/${post.slug}`}>
-                <h3 className={Styles.blogPostTitle}>{post.title}</h3>
-                <p className={Styles.blogPostDate}>Geplaatst op: {post.date}</p>
-                <div className={Styles.blogPostImage}>
-                    <Image src={post.thumbnail} objectFit={'cover'} fill={true} alt={''}/>
-                </div>
+            <a href={`berichten/${post.id}`} className={Styles.blogCardInner}>
+                <span className={Styles.blogCardInner}>
+                    <Image src={'/images/dog-paw.svg'} className={Styles.blogPostImagePreview}
+                           alt={'honden poot'} width={20} height={20}/>
+                    <p className={Styles.blogPostTitle}>{post.title}</p>
+                </span>
+                <p className={Styles.blogPostDate}>{post.date}</p>
             </a>
         </div>
     )

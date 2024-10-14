@@ -80,6 +80,16 @@ $animationMobileDuration: 0.5s;
     }
 }
 
+.mobileNavbarLinkActive {
+    height: spacing(40);
+    cursor: pointer;
+
+    a {
+        color: color(accent);
+        text-decoration: none;
+    }
+}
+
 .socialIcon {
     display: flex;
     transition: transform 0.3s ease-in-out;
@@ -123,7 +133,7 @@ Mobile Menu
 .mobileFoldoutMenu {
     opacity: 0;
     position: fixed;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.3s ease-in-out;
     pointer-events: none;
 }
 
@@ -142,7 +152,7 @@ Mobile Menu
 .appearSecond {
     opacity: 1;
     transform: translateY(0);
-    transition-delay: 0.3s;
+    transition-delay: 0.2s;
 }
 
 .mobileFoldoutMenu.mobileFoldoutMenuOpen {

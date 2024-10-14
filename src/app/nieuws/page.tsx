@@ -1,12 +1,13 @@
-import getPostMetadata from "../../../utils/getPostMetaData";
+
 import Styles from "@/app/nieuws/nieuws.module.scss";
 import Image from "next/image";
 import React from "react";
 import { ArticlePreview } from "../../../components/article-preview/article-preview";
+import { getAllPosts } from "../../../lib/blog-posts";
 
 export default async function Page() {
 
-    const posts = await getPostMetadata('articles/news')
+    const posts = await getAllPosts();
 
     const renderPostSlug = (post: any) => {
         return (
@@ -19,7 +20,7 @@ export default async function Page() {
             <div className={Styles.heroImage}>
                 <Image sizes='max-width: 100vw' className={Styles.heroImageInner} fill={true}
                        alt={'honden in arnhem'}
-                       src={'/images/inuit-dog/northern-inuit.jpeg'}/>
+                       src={'/images/news/news.jpeg'}/>
             </div>
             <div className={'container'}>
 
@@ -29,7 +30,7 @@ export default async function Page() {
 
                 <div className={Styles.blogWrapper}>
                     {
-                        posts.map(post => renderPostSlug(post))
+                        posts.map((post: any) => renderPostSlug(post))
                     }
                 </div>
             </div>

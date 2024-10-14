@@ -3,21 +3,27 @@
 @import "styles/functions";
 
 .blogPostTitle {
-    margin-bottom: 0;
+    font-weight: 700;
+    margin: 0;
 }
 
 .blogPostDate {
-    margin-top: 4px;
-    margin-bottom: spacing(20);
+    margin: 0;
 }
 
-.blogPostImage {
-    width: 100%;
-    position: relative;
-    height: 400px;
+.blogPostImagePreview {
+    margin-right: spacing(20);
+}
+
+.blogCardInner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: spacing(12) 0;
 }
 
 .blogCard {
-    background-color: color(contrast-50);
-    padding: 0 spacing(12) spacing(12) spacing(12);
+    border-top: 1px solid color(contrast-50);
+    padding: 0 spacing(12);
+    border-bottom: 1px solid color(contrast-50);
 }

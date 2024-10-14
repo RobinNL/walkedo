@@ -14,13 +14,21 @@
   padding: 0 $container-horizontal-spacing;
 }
 
-.inuitDogBlogPostFooterCard {
-  padding: spacing(12) spacing(32);
-  background-color: color(contrast-50);
-  border-radius: radius(regular);
-  margin-top: spacing(64);
+.articleContainer {
+  max-width: 768px;
+  margin:0 auto;
 }
 
-.inuitDogBlogPostFooterHeader {
-  margin: spacing(4) 0 spacing(20) 0;
+.articleHeader {
+  color: color(accent);
+}
+
+.articleDate {
+  margin-top: -12px;
+}
+
+.articleFooterCard {
+  padding: spacing(12);
+  border-radius: radius(regular);
+  background-color: color(background)
 }

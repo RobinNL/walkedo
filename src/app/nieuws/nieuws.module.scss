@@ -9,6 +9,7 @@
 
 .mainHeroContentWrap {
   margin-top: -12px;
+  margin-bottom: spacing(32);
   text-align: center;
 }
 
@@ -23,7 +24,8 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  margin: spacing(64) -12px 0 -12px;
+  margin: 0 auto;
+  max-width: 768px;
 }
 
 .categoryLink {
@@ -65,16 +67,4 @@
 .blogPreviewCard {
   width: 100%;
   margin: 0 0 spacing(20) 0;
-}
-
-@media screen and (min-width: 768px) {
-  .blogPreviewCard {
-    width: calc(50% - 24px);
-    margin: spacing(8);
-  }
-
-  .blogWrapper {
-    display: flex;
-    flex-direction: row;
-  }
 }

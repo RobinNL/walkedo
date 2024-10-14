@@ -4,6 +4,7 @@ import { useRouter } from "next/navigation";
 import { WalkedoButton } from "../../../components/button/button";
 import Link from "next/link";
 import { Gallery } from "react-grid-gallery";
+import { WalkedoList } from "../../../components/list/list";
 
 export default function Page() {
 
@@ -94,33 +95,16 @@ export default function Page() {
                     <div className={Styles.contentBlock}>
                         <h3>Alle voordelen op een rijtje</h3>
                         <p>Laat je hond voor een korte of langere tijdsduur logeren. Je hond gaat dan automatisch ook mee met de groep, en kan zowel buiten als binnen verblijven tijdens het verblijf.</p>
-                        <ul className={Styles.benefitList}>
-                            <li>
-                                <Image src={'/images/dog-paw.svg'} className={Styles.benefitListIcon}
-                                       alt={'honden poot'} width={20} height={20}/>
-                                Een weekend of je gehele vakantie
-                            </li>
-                            <li>
-                                <Image src={'/images/dog-paw.svg'} className={Styles.benefitListIcon}
-                                       alt={'honden poot'} width={20} height={20}/>
-                                Voor een vast bedrag per dag
-                            </li>
-                            <li>
-                                <Image src={'/images/dog-paw.svg'} className={Styles.benefitListIcon}
-                                       alt={'honden poot'} width={20} height={20}/>
-                                Je hond heeft voldoende gezelschap
-                            </li>
-                            <li>
-                                <Image src={'/images/dog-paw.svg'} className={Styles.benefitListIcon}
-                                       alt={'honden poot'} width={20} height={20}/>
-                                Je hond gaat automatisch elke werkdag mee met de uitlaatgroep
-                            </li>
-                            <li>
-                                <Image src={'/images/dog-paw.svg'} className={Styles.benefitListIcon}
-                                       alt={'honden poot'} width={20} height={20}/>
-                                Je hond kan zowel buiten als binnen verblijven
-                            </li>
-                        </ul>
+                        <WalkedoList items={
+                            [
+                                'Een weekend of je gehele vakantie',
+                                'Voor een vast bedrag per dag',
+                                'Je hond heeft voldoende gezelschap',
+                                'Je hond gaat automatisch elke werkdag mee met de uitlaatgroep',
+                                'Je hond kan zowel buiten als binnen verblijven'
+
+                            ]
+                        } />
                     </div>
 
                     <div className={Styles.opvangHondImage}>

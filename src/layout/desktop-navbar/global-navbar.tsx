@@ -6,6 +6,7 @@ import { useRouter } from 'next/navigation'
 import React, { useRef, useState } from "react";
 import { WalkedoButton } from "../../../components/button/button";
 import Link from "next/link";
+import { NavbarItems } from "../../../lib/navbar-items";
 
 export interface GlobalNavbarProps {
     className: any;
@@ -16,46 +17,8 @@ export const GlobalNavbar = (props: GlobalNavbarProps) => {
     const router = useRouter();
     const [activeItem, setActiveItem] = useState('');
 
-    const [mobileMenuActivated, setMobileMenuActivated] = useState(false);
-
-    const [mobileMenuActive, setMobileMenuActive] = useState(false);
-
     const brandingPressed = () => {
         router.push('/');
-    }
-
-    // const socialIcons = () => {
-    //     return (
-    //         <li>
-    //             <a href={'https://www.twitter.com/theluciapp'} className={Styles.socialIcon} target={'_blank'}
-    //                rel={'noreferrer'}>
-    //                 <Icon name={'x'} width={'26px'} className={Styles.navbarSocialIcon} height={'26px'}/>
-    //             </a>
-    //             <a href={'https://www.threads.net/@theluciapp'} target={'_blank'} rel={'noreferrer'}
-    //                className={`${Styles.navbarSocialSpacingLeft} ${Styles.socialIcon}`}>
-    //                 <Icon name={'threads'} width={'26px'} className={Styles.navbarSocialIcon} height={'26px'}/>
-    //             </a>
-    //             <a href={'https://www.facebook.com/profile.php?id=100090560054765'} target={'_blank'} rel={'noreferrer'}
-    //                className={`${Styles.navbarSocialSpacingLeft} ${Styles.socialIcon}`}>
-    //                 <Icon name={'facebook'} width={'26px'} className={Styles.navbarSocialIcon} height={'26px'}/>
-    //             </a>
-    //             <a href={'https://www.youtube.com/channel/UCp44gSnuRfK7xupMKxCOT4Q'} target={'_blank'}
-    //                rel={'noreferrer'}
-    //                className={`${Styles.navbarSocialSpacingLeft} ${Styles.socialIcon}`}>
-    //                 <Icon name={'youtube'} width={'26px'} className={Styles.navbarSocialIcon} height={'26px'}/>
-    //             </a>
-    //             <a href={'https://www.tiktok.com/@theluciapp'} target={'_blank'} rel={'noreferrer'}
-    //                className={`${Styles.navbarSocialSpacingLeft} ${Styles.socialIcon}`}>
-    //                 <Icon name={'tiktok'} width={'26px'} className={Styles.navbarSocialIcon} height={'26px'}/>
-    //             </a>
-    //         </li>
-    //     )
-    // }
-
-    const toggleMobileMenu = () => {
-        setMobileMenuActive(!mobileMenuActive);
-        setMobileMenuActivated(true);
-        document.body.classList.toggle('no-scroll', !mobileMenuActive);
     }
 
     const signup = () => {
@@ -88,21 +51,14 @@ export const GlobalNavbar = (props: GlobalNavbarProps) => {
 
                     <div className={Styles.navbarListSection}>
                         <ul className={Styles.navbarList}>
-                            <li className={`${activeItem === '/' ? Styles.navbarItemActive : Styles.navbarItem}`}>
-                                <Link href='/uitlaatservice'>Uitlaatservice</Link>
-                            </li>
-                            <li className={`${activeItem.indexOf('/opvang') !== -1 ? Styles.navbarItemActive : Styles.navbarItem}`}>
-                                <Link href='/opvang'>Opvang</Link>
-                            </li>
-                            <li className={`${activeItem.indexOf('/northern-inuit-dog') !== -1 ? Styles.navbarItemActive : Styles.navbarItem}`}>
-                                <Link href='/northern-Inuit-dog'>Northern Inuit</Link>
-                            </li>
-                            <li className={`${activeItem.indexOf('/casting') !== -1 ? Styles.navbarItemActive : Styles.navbarItem}`}>
-                                <Link href='/casting'>Casting</Link>
-                            </li>
-                            <li className={`${activeItem.indexOf('/nieuws') !== -1 ? Styles.navbarItemActive : Styles.navbarItem}`}>
-                                <Link href='/nieuws'>Nieuws</Link>
-                            </li>
+                            {
+                                NavbarItems.map(item => (
+                                    <li key={item.label} className={`${activeItem === item.uri ? Styles.navbarItemActive : Styles.navbarItem}`}
+                                        onClick={() => setActiveItem(item.uri)}>
+                                        <Link href={item.uri}>{item.label}</Link>
+                                    </li>
+                                ))
+                            }
                         </ul>
                     </div>
 

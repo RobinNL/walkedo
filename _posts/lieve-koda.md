@@ -1,7 +1,7 @@
 ---
-title: "Lieve Koda"
-date: "2024-10-13"
-thumbnail: "/images/blog/lieve-koda.jpg"
+title: Lieve Koda
+date: 2024-10-13
+image: /images/blog/lieve-koda.jpg
 ---
 
 Lieve Koda,

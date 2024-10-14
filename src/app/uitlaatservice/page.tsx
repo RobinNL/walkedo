@@ -7,6 +7,7 @@ import { Gallery } from "react-grid-gallery";
 import React from "react";
 import Head from "next/head";
 import { formatHTMLTitle } from "@/app/shared/page-seo-title";
+import { WalkedoList } from "../../../components/list/list";
 
 export default function Page() {
 
@@ -100,33 +101,13 @@ export default function Page() {
                         <p>Walkedo is een exclusieve hondenuitlaatservice. Wij hanteren kleinere groepen dan de meeste
                             partijen zodat je hond minder lang in de auto zit en meer persoonlijke aandacht krijgt
                             tijdens de wandeling. Ontdek alle voordelen van de Walkedo hondenuitlaatservice.</p>
-                        <ul className={Styles.benefitList}>
-                            <li>
-                                <Image src={'/images/dog-paw.svg'} className={Styles.benefitListIcon}
-                                       alt={'honden poot'} width={20} height={20}/>
-                                Kleine groepen van 6 tot 8 honden
-                            </li>
-                            <li>
-                                <Image src={'/images/dog-paw.svg'} className={Styles.benefitListIcon}
-                                       alt={'honden poot'} width={20} height={20}/>
-                                Korte reistijden
-                            </li>
-                            <li>
-                                <Image src={'/images/dog-paw.svg'} className={Styles.benefitListIcon}
-                                       alt={'honden poot'} width={20} height={20}/>
-                                Speciale puppygroepen
-                            </li>
-                            <li>
-                                <Image src={'/images/dog-paw.svg'} className={Styles.benefitListIcon}
-                                       alt={'honden poot'} width={20} height={20}/>
-                                Zorgvuldig samengestelde groepen waaronder de walkedoodle
-                            </li>
-                            <li>
-                                <Image src={'/images/dog-paw.svg'} className={Styles.benefitListIcon}
-                                       alt={'honden poot'} width={20} height={20}/>
-                                Extra services zoals opvang als je op vakantie gaat
-                            </li>
-                        </ul>
+                        <WalkedoList items={[
+                            'Kleine groepen van 6 tot 8 honden',
+                            'Korte reistijden',
+                            'Speciale puppygroepen',
+                            'Zorgvuldig samengestelde groepen waaronder de walkedoodle',
+                            'Extra services zoals opvang als je op vakantie gaat'
+                        ]} />
                     </div>
 
                     <div className={Styles.arnhemMapBlock}>

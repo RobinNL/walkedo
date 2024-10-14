@@ -7,22 +7,6 @@
   object-position: 0% 60%;
 }
 
-.benefitListIcon {
-  margin-right: spacing(20);
-}
-
-.benefitList {
-  padding-left: 0;
-
-  li {
-    display: flex;
-    list-style-type: none;
-    padding: spacing(20) 0 spacing(20) spacing(32);
-    border-bottom: 1px solid color(contrast-50);
-  }
-
-}
-
 .contentHero {
   margin-top: spacing(64);
 }

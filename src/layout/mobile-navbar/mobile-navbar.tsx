@@ -5,6 +5,8 @@ import Image from 'next/image';
 import { useRouter } from 'next/navigation'
 import React, { useState } from "react";
 import { WalkedoButton } from "../../../components/button/button";
+import { NavbarItems } from "../../../lib/navbar-items";
+import Link from "next/link";
 
 export interface GlobalNavbarProps {
     className: any;
@@ -21,40 +23,13 @@ export const MobileNavbar = (props: GlobalNavbarProps) => {
         router.push('/');
     }
 
-    // const socialIcons = () => {
-    //     return (
-    //         <li>
-    //             <a href={'https://www.twitter.com/theluciapp'} className={Styles.socialIcon} target={'_blank'}
-    //                rel={'noreferrer'}>
-    //                 <Icon name={'x'} width={'26px'} className={Styles.navbarSocialIcon} height={'26px'}/>
-    //             </a>
-    //             <a href={'https://www.threads.net/@theluciapp'} target={'_blank'} rel={'noreferrer'}
-    //                className={`${Styles.navbarSocialSpacingLeft} ${Styles.socialIcon}`}>
-    //                 <Icon name={'threads'} width={'26px'} className={Styles.navbarSocialIcon} height={'26px'}/>
-    //             </a>
-    //             <a href={'https://www.facebook.com/profile.php?id=100090560054765'} target={'_blank'} rel={'noreferrer'}
-    //                className={`${Styles.navbarSocialSpacingLeft} ${Styles.socialIcon}`}>
-    //                 <Icon name={'facebook'} width={'26px'} className={Styles.navbarSocialIcon} height={'26px'}/>
-    //             </a>
-    //             <a href={'https://www.youtube.com/channel/UCp44gSnuRfK7xupMKxCOT4Q'} target={'_blank'}
-    //                rel={'noreferrer'}
-    //                className={`${Styles.navbarSocialSpacingLeft} ${Styles.socialIcon}`}>
-    //                 <Icon name={'youtube'} width={'26px'} className={Styles.navbarSocialIcon} height={'26px'}/>
-    //             </a>
-    //             <a href={'https://www.tiktok.com/@theluciapp'} target={'_blank'} rel={'noreferrer'}
-    //                className={`${Styles.navbarSocialSpacingLeft} ${Styles.socialIcon}`}>
-    //                 <Icon name={'tiktok'} width={'26px'} className={Styles.navbarSocialIcon} height={'26px'}/>
-    //             </a>
-    //         </li>
-    //     )
-    // }
-
     const toggleMobileMenu = () => {
         setMobileMenuActive(!mobileMenuActive);
         document.body.classList.toggle('no-scroll', !mobileMenuActive);
     }
 
     const navigated = (uri: string) => {
+        setActiveItem(uri);
         toggleMobileMenu()
         router.push(uri);
     }
@@ -100,21 +75,14 @@ export const MobileNavbar = (props: GlobalNavbarProps) => {
                 <div className={`${Styles.appearElement} ${mobileMenuActive ? Styles.appearSecond : ''}`}>
                     <h3 className={Styles.navbarMobileMenuHeader}>Menu</h3>
                     <ul className={Styles.navbarList}>
-                        <li className={`${activeItem === '/' ? Styles.navbarItemActive : Styles.mobileNavbarLink}`}>
-                            <a onClick={() => navigated('/uitlaatservice')}>Uitlaatservice</a>
-                        </li>
-                        <li className={`${activeItem.indexOf('/opvang') !== -1 ? Styles.navbarItemActive : Styles.mobileNavbarLink}`}>
-                            <a onClick={() => navigated('/opvang')}>Opvang</a>
-                        </li>
-                        <li className={`${activeItem.indexOf('/northern-inuit-dog') !== -1 ? Styles.navbarItemActive : Styles.mobileNavbarLink}`}>
-                            <a onClick={() => navigated('/northern-inuit-dog')}>Northern Inuit</a>
-                        </li>
-                        <li className={`${activeItem.indexOf('/casting') !== -1 ? Styles.navbarItemActive : Styles.mobileNavbarLink}`}>
-                            <a onClick={() => navigated('/casting')}>Casting</a>
-                        </li>
-                        <li className={`${activeItem.indexOf('/nieuws') !== -1 ? Styles.navbarItemActive : Styles.mobileNavbarLink}`}>
-                            <a onClick={() => navigated('/nieuws')}>Nieuws</a>
-                        </li>
+                        {
+                            NavbarItems.map(item => (
+                                <li key={item.label} className={`${activeItem === item.uri ? Styles.mobileNavbarLinkActive : Styles.mobileNavbarLink}`}
+                                    onClick={() => navigated(item.uri)}>
+                                    <Link href={item.uri}>{item.label}</Link>
+                                </li>
+                            ))
+                        }
                     </ul>
                 </div>
 

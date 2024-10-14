@@ -71,7 +71,9 @@ $animationMobileDuration: 0.5s;
 
 .navbarItemActive {
     a {
-        color: color(primary);
+        color: color(accent);
+        font-weight: 500;
+        text-decoration: none;
     }
 }
 
