@@ -38,7 +38,7 @@ export async function POST(request: any) {
             <p>Adres: ${body.address} </p>
             <p>Project: ${body.projectSummary} </p>
             `,
-            }, (err, info) => {
+            }, (err: any, info: any) => {
                 if (err) {
                     reject(err);
                 } else {
