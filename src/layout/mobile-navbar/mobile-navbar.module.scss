@@ -27,6 +27,7 @@ $animationMobileDuration: 0.5s;
 .navbarShadow {
     filter: saturate(300%) brightness(120%) blur(10px);
     width: 100%;
+    top: 0;
     background-color: color(primaryTranslucent);
     height: $global-navbar-height-shadow;
     position: fixed;

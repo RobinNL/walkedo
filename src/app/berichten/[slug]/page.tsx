@@ -27,13 +27,13 @@ export default async function Post({
     params: { slug: string };
 }) {
     console.log(await getPostById(params.slug));
-    const {html, title, date} = await getPostById(params.slug);
+    const {html, title, date, image} = await getPostById(params.slug);
     return (
-        <main>
+        <div>
             <div className={Styles.heroImage}>
                 <Image sizes='max-width: 100vw' className={Styles.heroImageInner} fill={true}
-                       alt={'honden in arnhem'}
-                       src={'/images/news/news.jpeg'}/>
+                       alt={'Foto die het bericht beschrijft'}
+                       src={image}/>
             </div>
             <div className={'container'}>
 
@@ -48,7 +48,7 @@ export default async function Post({
                     </Link>
                 </div>
             </div>
-        </main>)
+        </div>)
 }
 
 // This function can statically allow nextjs to find all the posts that you have made, and statically generate them

@@ -92,6 +92,24 @@ export default function Page() {
             width: 1920,
             alt: 'Hond die in de camera kijkt',
             height: 1440
+        },
+        {
+            src: 'images/casting/koda-15.jpeg',
+            width: 1440,
+            alt: 'Honden die met elkaar spelen',
+            height: 1080
+        },
+        {
+            src: 'images/casting/koda-16.jpeg',
+            width: 836,
+            alt: 'Hond die omhoog kijkt met bal',
+            height: 1080
+        },
+        {
+            src: 'images/casting/koda-17.jpeg',
+            width: 810,
+            alt: 'Hond in de schaduw met laag hangende zon',
+            height: 1080
         }
     ]
 

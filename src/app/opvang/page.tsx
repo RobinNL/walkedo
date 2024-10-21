@@ -1,75 +1,8 @@
 import Image from "next/image";
 import Styles from "./opvang.module.scss";
-import { useRouter } from "next/navigation";
-import { WalkedoButton } from "../../../components/button/button";
-import Link from "next/link";
-import { Gallery } from "react-grid-gallery";
 import { WalkedoList } from "../../../components/list/list";
 
 export default function Page() {
-
-    const images = [
-        {
-            src: 'images/uitlaatservice/honden-1.png',
-            width: 1826,
-            alt: 'honden rennen en spelen op een veld in arnhem',
-            height: 1645
-        },
-        {
-            src: 'images/uitlaatservice/honden-2.png',
-            width: 1452,
-            alt: 'honden rennen en spelen op een veld in arnhem',
-            height: 1816
-        },
-        {
-            src: 'images/uitlaatservice/honden-3.png',
-            width: 1454,
-            alt: 'honden rennen en spelen op een veld in arnhem',
-            height: 1822
-        },
-        {
-            src: 'images/uitlaatservice/honden-4.png',
-            width: 1820,
-            alt: 'honden rennen en spelen op een veld in arnhem',
-            height: 1360
-        },
-        {
-            src: 'images/uitlaatservice/honden-5.png',
-            width: 1457,
-            alt: 'honden rennen en spelen op een veld in arnhem',
-            height: 1820
-        },
-        {
-            src: '/images/uitlaatservice/honden-6.png',
-            width: 1817,
-            alt: 'honden rennen en spelen op een veld in arnhem',
-            height: 1025
-        },
-        {
-            src: '/images/uitlaatservice/honden-7.png',
-            width: 1455,
-            alt: 'honden rennen en spelen op een veld in arnhem',
-            height: 1817
-        },
-        {
-            src: '/images/uitlaatservice/honden-8.png',
-            width: 1456,
-            alt: 'honden rennen en spelen op een veld in arnhem',
-            height: 1817
-        },
-        {
-            src: '/images/uitlaatservice/honden-9.png',
-            width: 1811,
-            alt: 'honden rennen en spelen op een veld in arnhem',
-            height: 1024
-        },
-        {
-            src: '/images/uitlaatservice/honden-10.png',
-            width: 1818,
-            alt: 'honden rennen en spelen op een veld in arnhem',
-            height: 1366
-        }
-    ]
 
     return (
         <main>
@@ -108,7 +41,7 @@ export default function Page() {
                     </div>
 
                     <div className={Styles.opvangHondImage}>
-                        <Image sizes='max-width: 100vw' fill={true} src={'/images/opvang/hond-genieten-zon.jpeg'}
+                        <Image sizes='max-width: 100vw' fill={true} src={'/images/opvang/koda-christmas-northern-inuit-dog.jpeg'}
                                alt={'Hond op de bank'}/>
                     </div>
 

@@ -60,6 +60,10 @@
 
 .heroImage {
   height: 700px;
+  max-width: 1920px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: $global-navbar-height;
   position: relative;
   overflow: hidden;
 }

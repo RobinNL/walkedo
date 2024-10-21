@@ -124,12 +124,12 @@ export default function Home() {
                     </div>
                     <div className={Styles.serviceSectionImage}>
                         <Image objectFit={'cover'} fill={true}
-                               src={'/images/opvang/opvang-4.jpeg'}
+                               src={'/images/opvang/opvang-2.jpeg'}
                                alt={'hond in het gras'} className={Styles.serviceSectionImage}/>
                     </div>
                     <div className={Styles.serviceSectionImage}>
                         <Image objectFit={'cover'} fill={true}
-                               src={'/images/opvang/opvang-2.jpeg'}
+                               src={'/images/opvang/opvang-3.jpeg'}
                                alt={'hond in het gras'} className={Styles.serviceSectionImage}/>
                     </div>
                 </div>
@@ -159,8 +159,8 @@ export default function Home() {
 
                 <div className={Styles.northernInuitDogImage}>
                     <Image objectFit={'cover'} fill={true}
-                           src={'/images/inuit-dog/northern-inuit-dog-beach.jpeg'}
-                           alt={'Northern Inuit dog strand'}/>
+                           src={'/images/inuit-dog/northern-inuit-grass.jpeg'}
+                           alt={'Northern Inuit dog in front of a christmas tree'}/>
                 </div>
 
             </div>

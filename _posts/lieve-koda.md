@@ -1,7 +1,7 @@
 ---
 title: Lieve Koda
 date: 2024-10-13
-image: /images/blog/lieve-koda.jpg
+image: /images/berichten/lieve-koda.jpg
 ---
 
 Lieve Koda,

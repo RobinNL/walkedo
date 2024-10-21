@@ -28,6 +28,7 @@ $animationMobileDuration: 0.5s;
     filter: saturate(300%) brightness(120%) blur(40px);
     width: 100%;
     background-color: color(primaryTranslucent);
+    top: 0;
     height: $global-navbar-height-shadow;
     position: fixed;
     z-index: 9998;

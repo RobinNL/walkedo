@@ -82,7 +82,7 @@ export default function Page() {
             <div className={Styles.heroImage}>
                 <Image sizes='max-width: 100vw' className={Styles.heroImageInner} fill={true}
                        alt={'honden in arnhem'}
-                       src={'/images/honden-uitgelaten-in-arnhem-noord.jpg'}/>
+                       src={'/images/uitlaatservice/walkedo-uitlaatservice.jpg'}/>
             </div>
 
             <div className={'container'}>
