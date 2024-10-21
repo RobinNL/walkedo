@@ -25,32 +25,20 @@ export async function POST(request: any) {
         const body = await request.json();
 
         console.log(body);
-        const success = await new Promise((resolve, reject) => {
-            transporter.sendMail({
-                from: myEmail,
-                to: myEmail,
-                respondTo: body.email,
-                subject: 'Walkedo Casting - Aanmelding',
-                html: `
+        const mail = await transporter.sendMail({
+            from: myEmail,
+            to: myEmail,
+            respondTo: body.email,
+            subject: 'Walkedo Casting - Aanmelding',
+            html: `
             <p>Naam: ${body.firstName} ${body.lastName} </p>
             <p>Email: ${body.email} </p>
             <p>Telefoon: ${body.phoneNr} </p>
             <p>Adres: ${body.address} </p>
             <p>Project: ${body.projectSummary} </p>
             `,
-            }, (err: any, info: any) => {
-                if (err) {
-                    reject(err);
-                } else {
-                    resolve(info);
-                }
-            })
-        });
-        if (success) {
-            return Response.json({message: 'Success'}, {status: 200});
-        } else {
-            return Response.json({message: 'Conflict'}, {status: 500});
-        }
+        })
+        return Response.json({message: 'Success'}, {status: 200});
 
     } catch (error) {
         console.log(error)
