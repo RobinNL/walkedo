@@ -8,6 +8,7 @@ import React from "react";
 import Link from "next/link";
 import { WalkedoButton } from "../../../../components/button/button";
 import { formatHTMLTitle } from "@/app/shared/page-seo-title";
+import { RenderDate } from "@/app/shared/render-data";
 
 export async function generateMetadata({
                                            params: {slug},
@@ -26,8 +27,9 @@ export default async function Post({
                                    }: {
     params: { slug: string };
 }) {
-    console.log(await getPostById(params.slug));
+
     const {html, title, date, image} = await getPostById(params.slug);
+
     return (
         <div>
             <div className={Styles.heroImage}>
@@ -39,7 +41,7 @@ export default async function Post({
 
                 <article className={InnerStyle.articleContainer}>
                     <h1 className={InnerStyle.articleHeader}>{title}</h1>
-                    <p className={InnerStyle.articleDate}>Geplaatst op {date}</p>
+                    <p className={InnerStyle.articleDate}>Geplaatst op {RenderDate({ date: date, short: false })}</p>
                     <div dangerouslySetInnerHTML={{__html: html}}/>
                 </article>
                 <div className={InnerStyle.articleFooterCard}>
