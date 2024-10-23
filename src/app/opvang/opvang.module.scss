@@ -59,16 +59,25 @@
   justify-content: space-between;
 }
 
+.opvangHondImage {
+  width: 100%;
+  height: 500px;
+  position: relative;
+}
+
 @media screen and (min-width: 995px) {
   .contentRow {
     flex-direction: row;
   }
+
+  .opvangHondImage {
+    height: 600px;
+  }
+
 }
 
-.opvangHondImage {
-  width: 100%;
-  aspect-ratio: 1/1;
-  position: relative;
+.opvangHondImageInner {
+  object-fit: cover;
 }
 
 .contentBlock {

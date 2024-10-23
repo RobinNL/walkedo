@@ -42,7 +42,11 @@ export default function Page() {
                     </div>
 
                     <div className={Styles.opvangHondImage}>
-                        <Image sizes='max-width: 100vw' fill={true} src={'/images/opvang/koda-christmas-northern-inuit-dog.jpeg'}
+                        <Image sizes='max-width: 100vw'
+                               objectPosition={'50% 50%'}
+                               fill={true}
+                               className={Styles.opvangHondImageInner}
+                               src={'/images/opvang/koda-christmas-northern-inuit-dog.jpeg'}
                                alt={'Hond op de bank'}/>
                     </div>
 
