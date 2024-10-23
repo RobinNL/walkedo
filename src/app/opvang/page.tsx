@@ -9,6 +9,7 @@ export default function Page() {
             <div className={Styles.heroImage}>
                 <Image sizes='max-width: 100vw' className={Styles.heroImageInner} fill={true}
                        alt={'honden in arnhem'}
+                       objectPosition={'80% 90%'}
                        src={'/images/opvang/hond-op-bank.png'}/>
             </div>
 

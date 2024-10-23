@@ -6,9 +6,7 @@ image: /images/berichten/lieve-koda.jpg
 
 Lieve Koda,
 
-Opeens stond je op het vliegveld in Nederland. Wat een feest voor ons maar voor jou was het wel even onduidelijk waar je nu was.
-
-Eerst was je in Canada bij lieve Michelle en je papa en mama. Al je zusjes en broertje waren al weg maar jij was nog niet oud genoeg om te vliegen.
+Opeens stond je op het vliegveld in Nederland. Wat een feest voor ons maar voor jou was het wel even onduidelijk waar je nu was. Eerst was je in Canada bij lieve Michelle en je papa en mama. Al je zusjes en broertje waren al weg maar jij was nog niet oud genoeg om te vliegen.
 
 The True Northern Inuit kennel uit Canada is waar je vandaan kwam. Je had wel 6 zusjes en één broertje. Er werd met veel liefde voor jullie gezorgd en wij hadden zo’n geluk dat we jouw konden uitkiezen.
 

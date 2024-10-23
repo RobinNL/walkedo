@@ -4,13 +4,20 @@
 
 .heroImageInner {
   object-fit: cover;
-  object-position: 0% 50%;
+  object-position: 50% 50%;
 }
 
 .mainHeroContentWrap {
   margin-top: -12px;
   margin-bottom: spacing(32);
   text-align: center;
+}
+
+.heroImage {
+  height: 700px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
 }
 
 .blogCategoriesHeader {

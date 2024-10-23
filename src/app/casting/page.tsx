@@ -117,6 +117,7 @@ export default function Page() {
         <main>
             <div className={Styles.heroImage}>
                 <Image sizes='max-width: 100vw' className={Styles.heroImageInner} fill={true}
+                       objectPosition={'50% 50%'}
                        alt={'De set van een film productie'}
                        src={'/images/casting/film-productie.jpg'}/>
             </div>

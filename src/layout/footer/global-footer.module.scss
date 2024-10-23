@@ -26,7 +26,7 @@
 
 .footerDogImage {
     position: absolute;
-    right: spacing(20);
+    right: -32px;
     top: -200px;
 }
 
@@ -92,6 +92,14 @@
         float: left;
         margin-right: spacing(12);
         list-style-type: none;
+    }
+
+}
+
+@media screen and (min-width: 768px) {
+
+    .footerDogImage {
+        right: spacing(20);
     }
 
 }

@@ -20,7 +20,7 @@ export const ArticlePreview: FunctionComponent<ArticlePreviewProps> = ({post, ba
                            alt={'honden poot'} width={20} height={20}/>
                     <p className={Styles.blogPostTitle}>{post.title}</p>
                 </span>
-                <p className={Styles.blogPostDate}>{RenderDate({ date: post.date, short: true })}</p>
+                {/*<p className={Styles.blogPostDate}>{RenderDate({ date: post.date, short: true })}</p>*/}
             </a>
         </div>
     )

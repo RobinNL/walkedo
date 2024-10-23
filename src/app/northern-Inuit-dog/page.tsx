@@ -23,6 +23,7 @@ export default async function Page() {
             <div className={Styles.heroImage}>
                 <Image sizes='max-width: 100vw' className={Styles.heroImageInner} fill={true}
                        alt={'honden in arnhem'}
+                       objectPosition={'50% 50%'}
                        src={'/images/inuit-dog/northern-inuit-sand.jpg'}/>
             </div>
             <div className={'container'}>

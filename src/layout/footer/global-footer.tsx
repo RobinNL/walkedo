@@ -55,11 +55,6 @@ export const GlobalFooter = (props: GlobalFooterProps) => {
 
                     <ul className={Styles.linksList}>
                         <li>
-                            <Link href={''}>
-                                Voorwaarden
-                            </Link>
-                        </li>
-                        <li>
                             <Link href={'/uitlaatservice'}>
                                 Honden Uitlaatservice
                             </Link>

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "../../styles/globals.scss";
+import "./globals.scss";
 import Styles from './page.module.scss';
 import GlobalNavbar from "@/layout/desktop-navbar/global-navbar";
 import GlobalFooter from "@/layout/footer/global-footer";

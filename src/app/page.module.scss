@@ -11,6 +11,8 @@
   background-image: linear-gradient(#f3ec78, #af4261);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  font-size: font-size(h2);
+  line-height: line-height(h2);
   text-align: center;
 }
 
@@ -28,6 +30,10 @@
 @media (screen and min-width: 768px) {
     .heroImage {
       padding-top: 0;
+    }
+
+    .indexHeader {
+      font-size: font-size(h1);
     }
 }
 
@@ -245,7 +251,7 @@
 }
 
 .pageContainer {
-  padding: spacing(32);
+  padding: spacing(12);
 }
 
 .container {
@@ -262,6 +268,11 @@
   .heroSignupInner {
     display: flex;
   }
+
+  .pageContainer {
+    padding: spacing(32);
+  }
+
 }
 
 /**

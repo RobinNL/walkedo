@@ -10,17 +10,20 @@ export default function Home() {
     const width = useRef(typeof window !== 'undefined' ? window.innerWidth : { current: 600 });
 
     const [videoHeight, setVideoHeight] = useState(width.current as number * 0.5625);
+    const [videoWidth, setVideoWidth]: [number, any] = useState(0);
 
     useEffect(() => {
         setVideoHeight(width.current as number > 768 ? width.current as number * 0.5625 : width.current as number * 0.7625);
+        setVideoWidth(width.current);
     }, [width])
 
     return (
         <div>
             <div className={Styles.heroImage}
-                 style={{height: videoHeight + 'px'}}>
-                <video width={width.current + 'px'}
+                 style={{height: videoHeight + 'px', width: videoWidth + 'px'}}>
+                <video width={videoWidth + 'px'}
                        height={videoHeight + 'px'}
+                       playsInline={true}
                        className={Styles.heroVideo} controls={false} controlsList={"nodownload"} loop={true}
                        muted={true} preload="auto" autoPlay={true}>
                     <source src="/videos/walkedo-intro.mp4" type="video/mp4"/>
@@ -159,6 +162,7 @@ export default function Home() {
 
                 <div className={Styles.northernInuitDogImage}>
                     <Image objectFit={'cover'} fill={true}
+                           objectPosition={'65%'}
                            src={'/images/inuit-dog/northern-inuit-grass.jpeg'}
                            alt={'Northern Inuit dog in front of a christmas tree'}/>
                 </div>
