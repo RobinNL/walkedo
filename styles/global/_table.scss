@@ -1,0 +1,20 @@
+table {
+  width: 100%;
+  margin-top: spacing(32);
+  border-collapse: collapse;
+  border-width: 1px;
+  border-color: color(contrast-50);
+  border-style: solid;
+  color: color(contrast-50);
+}
+
+td, th {
+  border-width: 1px;
+  border-color: color(contrast-50);
+  border-style: solid;
+  padding: spacing(12);
+}
+
+thead {
+  background-color: color(contrast-50);
+}
