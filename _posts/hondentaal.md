@@ -5,7 +5,6 @@ image: /images/berichten/hondentaal.jpg
 ---
 
 Geen één hond is hetzelfde, verschillen tussen rassen kunnen soms enorm zijn. Toch hebben alle honden een universele taal met elkaar maar ook met hun baasjes.
-Onzichtbaar
 
 We hebben wel eens in ons leven dingen die we moeten doen die ons wat stress kunnen opleveren. Je weet dat ze moeten gebeuren en als het dan klaar is, ontstaat er vaak een diep gevoel van opluchting. Een diepe zucht slaken is voor ons dan misschien figuurlijk bedoeld maar in theorie zou je het ook letterlijk kunnen doen.
 
@@ -20,5 +19,5 @@ Nog zo’n voorbeeld van non-verbale communicatie van een hond is hoe hij een an
 Normaal gedrag zou zijn dat een hond juist vanuit de zijkant een andere hond benaderd. Dat doet hij om aan te geven dat hij geen dreiging vormt. Ze snuffelen dan een beetje in de buurt en draaien zich dan opeens naar elkaar toe alsof ze elkaar nog niet hadden gezien.
 
 Dit is zo’n typisch voorbeeld van communicatie die wij haast niet zien. We denken gewoon hij is gewoon ergens aan het snuffelen. Maar eigenlijk geeft hij het signaal aan de andere hond dat hij juist toegankelijk is voor benadering.
-
+ 
 Van honden gedrag is veel online te vinden zoek eens naast de schattige sullige puppymemes ook eens daarna. Je zult verbaasd staan wat jouw hond eigenlijk allemaal niet onzichtbaar doet.

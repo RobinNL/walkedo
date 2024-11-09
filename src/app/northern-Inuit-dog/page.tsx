@@ -15,7 +15,7 @@ export default async function Page() {
         'Geen waakhond',
         'Intelligente honden',
         'Genieten van lange wandelingen',
-        'passen makkelijk in een roedel'
+        'Passen makkelijk in een roedel'
     ]
 
     return (
@@ -33,7 +33,7 @@ export default async function Page() {
                 <p className={Styles.mainHeroContentWrap}>
                     Dit prachtige ras is nog heel onbekend wereldwijd en al helemaal in Nederland. De honden zijn heel
                     sociaal, gaan goed in groepen en andere honden. Het ras is bekend van de TV serie Game of
-                    Thrones. De Northern Inuit Dog bestaat uit een kruising van een Siberische Huskey, Duitse Herder en Alaskan Malamute.
+                    Thrones. De Northern Inuit Dog bestaat uit een kruising van een Siberisch Huskey, Duitse Herder, Samojeed en Alaskan Malamute.
                     Er zit geen wolf DNA in de Northern Inuit Dog waardoor ze makkelijk de rol van een familie huisdier kunnen vervullen.
                 </p>
 

@@ -90,7 +90,7 @@ export default function Page() {
                 <div className={Styles.heroIntroBlock}>
                     <h1 className={Styles.header}>Honden uitlaatservice</h1>
 
-                    <p>Voor een vast bedrag van 13.50 per wandeling loop ik èèn of meerdere keren met je hond in een vaan de leuke Walkedo groepen. We reserveren van tevoren vaste tijds slots zodat je zeker weet wanneer je hond wordt opgehaald. minder zorgen voor jou en een blije hond die thuis op je wacht of je thuis weer begroet.. Ontdek alle voordelen van de uitlaatservice.
+                    <p>Voor een vast bedrag van 13.50 per wandeling loop ik èèn of meerdere keren met je hond in een van de leuke Walkedo groepen. We reserveren van tevoren vaste tijdslots zodat je zeker weet wanneer je hond wordt opgehaald. Minder zorgen voor jou en een blije hond die thuis op je wacht of je thuis weer begroet. Ontdek alle voordelen van de uitlaatservice.
                     </p>
                 </div>
 
@@ -180,8 +180,7 @@ export default function Page() {
                                 voor
                                 een proefwandeling zodat we samen alvast
                                 een band kunnen opbouwen. Deze wandeling kost een klein eenmalig bedrag. Als het na de
-                                wandeling aan beide kanten goed klikt dan kan je
-                                een strippenkaart aanschaffen en kunnen we een sleutelcontract opstellen.
+                                wandeling aan beide kanten goed klikt dan kan je lid worden en kunnen we een sleutelcontract opstellen.
                             </p>
 
                         </div>
@@ -192,14 +191,11 @@ export default function Page() {
                                 <div className={Styles.stepCircle}>
                                     <p>4</p>
                                 </div>
-                                Strippenkaart
+                                Abonnement
                             </h3>
 
-                            <p>Vanaf dit moment is je hond een vast onderdeel van de groep! Welkom :)
-                                Bij elke wandeling streep ik een wandeling af van de strippenkaart (kosten: 15,- per
-                                wandeling). Je hoeft niet thuis te zijn om mij of de hond weer in ontvangst te nemen.
-                                Zodra de strippenkaart is verlopen ontvang je een factuur voor de volgende
-                                strippenkaart.
+                            <p>Vanaf dit moment is je hond een vast onderdeel van de groep! Aan het begin van de maand zal er een vast bedrag afgeschreven worden afhankelijk
+                                van het aantal wandelingen per maand.
                             </p>
 
                         </div>

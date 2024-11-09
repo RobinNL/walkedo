@@ -129,23 +129,17 @@ export default function Page() {
                     <h2 className={Styles.subHeader}>Licht, Camera, Walkedo!</h2>
                     <p>
                         Heb je een hond nodig met het uiterlijk van een wolf voor je productie, film, muziekvideo, foto of marketing campagne? Walkedo kan je helpen met de Northern Inuit Dog.
-                        Deze honden hebben een hele aantrekkelijke look omdat ze op een wolf lijken. Zo zijn ze ook gebruikt bij de productie Game Of Thrones.
+                        Deze honden hebben een hele aantrekkelijke look omdat ze op een wolf lijken. Zo zijn ze ook gebruikt bij de productie van de TV Series Game Of Thrones.
                     </p>
                     <p>
-                        De Northern Inuit Dog is goed getraind en zijn ideal voor
-                        producties waarbij je een fantasy richting op wilt. Ze hebben een lief karakter en kunnen dit ook uitstralen, maar indien nodig kunnen ze ook vijandig en scherp uit de ogen kijken.
+                        De Northern Inuit Dog is goed getraind en zijn ideaal voor
+                        producties waarbij je een fantasy of middeleeuwse richting op wilt. Ze hebben een lief karakter en kunnen dit ook uitstralen, maar indien nodig kunnen ze ook vijandig en scherp uit de ogen kijken.
                         De honden zijn ongeveer 60cm schofthoogte en heel snel en dynamisch voor actie gedreven scenes.
                     </p>
                     <Link href={'/aanmelden?service=casting'} className={Styles.signupBtn}>
                         <WalkedoButton fullWidth={true} label={'Contact opnemen'} />
                     </Link>
                 </div>
-                {/*<div className={Styles.heroIntroBlock}>*/}
-                {/*    <h3>Northern Inuit Dog</h3>*/}
-                {/*    <p>Koda is een Northern Inuit Dog die heel geschikt is voor allerlei soorten producties. Ze is heel*/}
-                {/*        fotogeniek. Neem voor*/}
-                {/*        referentiemateriaal van andere honden contact met mij op.</p>*/}
-                {/*</div>*/}
             </div>
             <Gallery enableImageSelection={false} images={images}/>
         </main>

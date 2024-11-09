@@ -37,7 +37,7 @@ export const GlobalNavbar = (props: GlobalNavbarProps) => {
                             <li>
                                 <a href={'/'}>
                                     <div>
-                                        <Image src={'/images/logo.png'} width={48} height={70} alt={'Walkedo logo'}/>
+                                        <Image src={'/images/logo.svg'} width={48} height={70} alt={'Walkedo logo'}/>
                                     </div>
                                 </a>
                             </li>

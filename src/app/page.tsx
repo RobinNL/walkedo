@@ -65,7 +65,7 @@ export default function Home() {
                                 <h2 className={Styles.serviceHeader}>Uitlaatservice</h2>
                                 <h3>Lekker de energie kwijt en socialiseren met andere honden.</h3>
 
-                                <p>Laat je hond èèn of meerder malen per week  door mij ophalen. Honden lopen minimaal een uur en zitten maximaal een uur in de bus. Per groep zijn er zes vaste slots beschikbaar. En zijn er twee slots beschikbaar voor honden die in de opvang zitten of voor klanten die niet uitkomen met het reguliere uitlaten van de hond. De honden groepen worden zorgvuldig samen gesteld. Zo is een puppygroep op vrijdag en zelfs een volledige doodle groep. Om die reistijd klein te houden is mijn werkgebied beperkt tot Arnhem Noord, Schaarsbergen en omstreken.
+                                <p>Laat je hond èèn of meerdere malen per week  door mij ophalen. Honden lopen minimaal een uur en zitten maximaal een uur in de bus. Per groep zijn er zes vaste slots beschikbaar. En zijn er twee slots beschikbaar voor honden die in de opvang zitten of voor klanten die niet uitkomen met het reguliere uitlaten van de hond. De honden groepen worden zorgvuldig samengesteld. Zo is een puppygroep op vrijdag en zelfs een volledige doodle groep. Om die reistijd klein te houden is mijn werkgebied beperkt tot Arnhem Noord, Schaarsbergen en omstreken.
                                 </p>
                                 <Link className={Styles.learnMoreLink} href={'/uitlaatservice'}>
                                     <span className={Styles.learnMoreLinkText}>
@@ -105,7 +105,7 @@ export default function Home() {
                                 <h2 className={Styles.serviceHeader}>Opvangservice</h2>
                                 <h3>Voor een dag, een week of een vakantieperiode.</h3>
 
-                                <p className={Styles.serviceTextBlock}>Iedereen gaat er wel eens op uit en hoe leuk het ook is om op vakantie te gaan met je hond, toch wil je wel eens even wat anders.Klanten van Walkedo kunnen gebruik per januari 2025 gebruik maken van de opvangservice. Laat je honden lekker razen en spelen in een kennel van 25 vierkante meter terwijl jij en je gezin van een vakantie geniet. De honden van de opvang gaan automatisch mee met de uitlaatservice.</p>
+                                <p className={Styles.serviceTextBlock}>Iedereen gaat er wel eens op uit en hoe leuk het ook is om op vakantie te gaan met je hond, toch wil je wel eens even wat anders. Klanten van Walkedo kunnen gebruik per januari 2025 gebruik maken van de opvangservice. Laat je honden lekker razen en spelen in een kennel van 25 vierkante meter terwijl jij en je gezin van een vakantie geniet. De honden van de opvang gaan automatisch mee met de uitlaatservice.</p>
                                 <Link className={Styles.learnMoreLink} href={'/opvang'}>
                                      <span className={Styles.learnMoreLinkText}>
                                         Opvangservice

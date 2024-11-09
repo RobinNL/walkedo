@@ -43,7 +43,7 @@ export const MobileNavbar = (props: GlobalNavbarProps) => {
 
                     <a href={'/'}>
                         <div className={Styles.brandingWrapperOuter}>
-                            <Image src={'/images/logo.png'} width={69 / 1.3} height={100 / 1.3} alt={'Walkedo logo'}/>
+                            <Image src={'/images/logo.svg'} width={69 / 1.3} height={100 / 1.3} alt={'Walkedo logo'}/>
                             <div className={Styles.brandingWrapper} onClick={() => brandingPressed()}>
                                 <span className={Styles.brandingText}>Walkedo</span>
                                 <span className={Styles.subBrandingText}>Hondenservice</span>
