@@ -27,10 +27,18 @@ export async function POST(request: any) {
         console.log(body);
         const mail = await transporter.sendMail({
             from: myEmail,
-            to: myEmail,
+            to: body.email,
+            bcc: myEmail,
             respondTo: body.email,
             subject: 'Walkedo Puppy - Aanmelding',
             html: `
+             <p>Beste ${body.firstName},</p>
+                <p>Bedankt voor je aanmelding. Ik zal zo spoedig mogelijk contact met je opnemen.</p>
+                <p>Met vriendelijke groet,</p>
+                <p>Walkedo</p>
+                
+                <p>---</p>
+                
             <p>Naam: ${body.firstName} ${body.lastName} </p>
             <p>Email: ${body.email} </p>
             <p>Telefoon: ${body.phoneNr} </p>

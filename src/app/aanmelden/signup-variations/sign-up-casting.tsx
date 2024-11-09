@@ -35,6 +35,7 @@ export default function SignUpCasting() {
 
     const submitForm = async (event: any) => {
         event.preventDefault();
+        setError(false);
         // Collect the form inputs and send using node-mailer
         setLoading(true);
         const response = await fetch('/api/aanmelden/casting', {
