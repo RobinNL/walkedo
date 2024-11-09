@@ -6,13 +6,13 @@ image: /images/berichten/introductie-abonnementen.jpg
 
 In de laatste nieuwsbrief is de mededeling geweest dat ik vanaf 1 januari ga beginnen met abonnementen.
 
-Wat betekend dat nu voor jullie?
+Wat betekent dat nu voor jullie?
 
 Geen strippenkaarten meer. Dus ook geen gedoe met ophangen, neerleggen en bijhouden.
 
 Geen betaalverzoeken meer. Een bomvolle mail? Nou van Walkedo krijgt u alleen nog maar zo nu en dan een nieuwsbrief.
 
-Geen onoverzichtelijke vrije dagen. Vanaf januari is er bij elke klant 6 weken op jaarbasis  in mindering gebracht van het maandbedrag.
+Geen onoverzichtelijke vrije dagen. Vanaf januari is er bij elke klant 6 weken op jaarbasis in mindering gebracht van het maandbedrag.
 
 Er zullen dus geen nieuwe kaarten vanaf 2025 geschreven gaan worden.
 
