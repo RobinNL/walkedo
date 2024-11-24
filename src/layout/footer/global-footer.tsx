@@ -35,15 +35,23 @@ export const GlobalFooter = (props: GlobalFooterProps) => {
                     <ul className={Styles.footerList}>
                         <li>
                             <p className={Styles.footerLabel}>Adres</p>
-                            <a target={'_blank'} href={'https://www.google.nl/maps/place/Walkedo/@52.0084452,5.8730795,17z/data=!3m1!4b1!4m6!3m5!1s0x47c7a5a334f48edf:0xee9a916b22e0d222!8m2!3d52.0084452!4d5.8756598!16s%2Fg%2F11c1tbzw9c?entry=ttu&g_ep=EgoyMDI0MDgyNy4wIKXMDSoASAFQAw%3D%3D'} className={Styles.footerValue}>Karmelitessenlaan 26, 6816PK Arnhem</a>
+                            <a target={'_blank'}
+                               href={'https://www.google.nl/maps/place/Walkedo/@52.0084452,5.8730795,17z/data=!3m1!4b1!4m6!3m5!1s0x47c7a5a334f48edf:0xee9a916b22e0d222!8m2!3d52.0084452!4d5.8756598!16s%2Fg%2F11c1tbzw9c?entry=ttu&g_ep=EgoyMDI0MDgyNy4wIKXMDSoASAFQAw%3D%3D'}
+                               className={Styles.footerValue}>Karmelitessenlaan 26, 6816PK Arnhem</a>
                         </li>
                         <li>
                             <p className={Styles.footerLabel}>KVK</p>
-                            <a href={"https://www.kvk.nl/bestellen/#/91522765000057195412"} target={'_blank'} className={Styles.footerValue}>91522765</a>
+                            <a href={"https://www.kvk.nl/bestellen/#/91522765000057195412"} target={'_blank'}
+                               className={Styles.footerValue}>91522765</a>
+                        </li>
+                        <li>
+                            <p className={Styles.footerLabel}>Bankgegevens</p>
+                            <p className={Styles.footerValue}>NL04 KNAB 0617 6989 37</p>
                         </li>
                         <li>
                             <p className={Styles.footerLabel}>Email</p>
-                            <a href={"mailto:woof@walkedo.com"} target={'_blank'} className={Styles.footerValue}>woof@walkedo.com</a>
+                            <a href={"mailto:woof@walkedo.com"} target={'_blank'}
+                               className={Styles.footerValue}>woof@walkedo.com</a>
                         </li>
                     </ul>
 

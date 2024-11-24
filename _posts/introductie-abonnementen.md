@@ -16,7 +16,7 @@ Geen onoverzichtelijke vrije dagen. Vanaf januari is er bij elke klant 6 weken o
 
 Er zullen dus geen nieuwe kaarten vanaf 2025 geschreven gaan worden.
 
-Aan u vraag ik om per 1 januari een automatische betaling in orde te maken. Hieronder kunt u het bedrag kiezen wat voor u van toepassing is.
+Aan u vraag ik om per 1 januari een automatische betaling in orde te maken aan bankrekeningnummer: NL04 KNAB 0617 6989 37. Hieronder kunt u het bedrag kiezen wat voor u van toepassing is.
 
 | Wandelingen | Bedrag     |
 |-------------|------------|
