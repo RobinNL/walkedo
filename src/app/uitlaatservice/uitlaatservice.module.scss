@@ -40,6 +40,56 @@
   padding-bottom: 64px;
 }
 
+.subscriptionRow {
+  display: flex;
+  flex-direction: column;
+}
+
+.subscriptionBlock {
+  padding: spacing(4);
+  margin-top: spacing(20);
+  background-color: color(contrast-50);
+  text-align: center;
+  height: 140px;
+  width: 100%;
+  border-radius: radius(regular);
+  border: 1px solid color(accent);
+}
+
+.calendarIcon {
+  color: color(accent);
+}
+
+.calendarLink {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  color: color(accent);
+  margin: spacing(8) spacing(12);
+}
+
+@media screen and (min-width: 768px) {
+
+  .subscriptionRow {
+    display: flex;
+    justify-content: space-between;
+    margin-left: -12px;
+    margin-right: -12px;
+    flex-direction: row;
+  }
+
+  .subscriptionBlock {
+    padding: spacing(12);
+    margin: spacing(12);
+    height: 160px;
+    text-align: center;
+    width: 100%;
+    border-radius: radius(regular);
+    border: 1px solid color(accent);
+  }
+
+}
+
 .header {
   margin-top: spacing(64);
   text-align: center;

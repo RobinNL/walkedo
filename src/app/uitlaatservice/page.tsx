@@ -90,7 +90,10 @@ export default function Page() {
                 <div className={Styles.heroIntroBlock}>
                     <h1 className={Styles.header}>Honden uitlaatservice</h1>
 
-                    <p>Voor een vast bedrag van 13.50 per wandeling loop ik èèn of meerdere keren met je hond in een van de leuke Walkedo groepen. We reserveren van tevoren vaste tijdslots zodat je zeker weet wanneer je hond wordt opgehaald. Minder zorgen voor jou en een blije hond die thuis op je wacht of je thuis weer begroet. Ontdek alle voordelen van de uitlaatservice.
+                    <p>Al vanaf 13,50 per week loop ik èèn of meerdere keren met je hond in een van
+                        de leuke Walkedo groepen. We reserveren van tevoren vaste tijdslots zodat je zeker weet wanneer
+                        je hond wordt opgehaald. Minder zorgen voor jou en een blije hond die thuis op je wacht of je
+                        thuis weer begroet. Ontdek alle voordelen van de uitlaatservice.
                     </p>
                 </div>
 
@@ -107,7 +110,7 @@ export default function Page() {
                             'Speciale puppygroepen',
                             'Zorgvuldig samengestelde groepen waaronder de walkedoodle',
                             'Extra services zoals opvang als je op vakantie gaat'
-                        ]} />
+                        ]}/>
                     </div>
 
                     <div className={Styles.arnhemMapBlock}>
@@ -117,6 +120,42 @@ export default function Page() {
                                alt={'kaart van Arnhem'}/>
                     </div>
 
+                </div>
+
+                <div className={Styles.contentHero}>
+
+                    <div className={Styles.contentBlock}>
+                        <h3>Eenvoudig en betrouwbaar</h3>
+                        <p>Walkedo werkt met overzichtelijke abonnementen op basis van het aantal wandelingen. Zo hoef je niet te letten op spradische facturen of strippenkaarten die wel of niet zijn verlopen.
+                            De maandbedragen zijn berekend met een voordeel van zes weken. Hoe dit werkt lees je hier: <a href={'/berichten/introductie-abonnementen'}>uitleg abonnementen</a> </p>
+                    </div>
+                        <div className={Styles.subscriptionRow}>
+                            <div className={Styles.subscriptionBlock}>
+                                <h3>€51,75</h3>
+                                <p>1x p/w</p>
+                            </div>
+                            <div className={Styles.subscriptionBlock}>
+                                <h3>€103,50</h3>
+                                <p>2x p/w</p>
+                            </div>
+                            <div className={Styles.subscriptionBlock}>
+                                <h3>€155,25</h3>
+                                <p>3x p/w</p>
+                            </div>
+                            <div className={Styles.subscriptionBlock}>
+                                <h3>€207,00</h3>
+                                <p>4x p/w</p>
+                            </div>
+                            <div className={Styles.subscriptionBlock}>
+                                <h3>€257,75</h3>
+                                <p>5x p/w</p>
+                            </div>
+                    </div>
+                    <div className={Styles.calendarLink}>
+                        <Image src={'/images/calendar.svg'} className={Styles.calendarIcon}
+                               alt={'kalender'} width={20} height={20}/>
+                        <a href={'/berichten/vrije-dagen-2025'} className={Styles.calendarLink}>Overzicht vrije dagen van 2025</a>
+                    </div>
                 </div>
 
                 <div className={Styles.contentHero}>
@@ -180,7 +219,8 @@ export default function Page() {
                                 voor
                                 een proefwandeling zodat we samen alvast
                                 een band kunnen opbouwen. Deze wandeling kost een klein eenmalig bedrag. Als het na de
-                                wandeling aan beide kanten goed klikt dan kan je lid worden en kunnen we een sleutelcontract opstellen.
+                                wandeling aan beide kanten goed klikt dan kan je lid worden en kunnen we een
+                                sleutelcontract opstellen.
                             </p>
 
                         </div>
@@ -194,7 +234,8 @@ export default function Page() {
                                 Abonnement
                             </h3>
 
-                            <p>Vanaf dit moment is je hond een vast onderdeel van de groep! Aan het begin van de maand zal er een vast bedrag afgeschreven worden afhankelijk
+                            <p>Vanaf dit moment is je hond een vast onderdeel van de groep! Aan het begin van de maand
+                                zal er een vast bedrag afgeschreven worden afhankelijk
                                 van het aantal wandelingen per maand.
                             </p>
 

@@ -12,7 +12,7 @@ Geen strippenkaarten meer. Dus ook geen gedoe met ophangen, neerleggen en bijhou
 
 Geen betaalverzoeken meer. Een bomvolle mail? Nou van Walkedo krijgt u alleen nog maar zo nu en dan een nieuwsbrief.
 
-Geen onoverzichtelijke vrije dagen. Vanaf januari is er bij elke klant 6 weken op jaarbasis in mindering gebracht van het maandbedrag.
+Geen onoverzichtelijke vrije dagen. Vanaf januari is er bij elke klant 6 weken op jaarbasis in mindering gebracht van het maandbedrag. **
 
 Er zullen dus geen nieuwe kaarten vanaf 2025 geschreven gaan worden.
 
@@ -25,3 +25,9 @@ Aan u vraag ik om per 1 januari een automatische betaling in orde te maken aan b
 | 3x p/w      | 155,25 p/m |
 | 4x p/w      | 207,00 p/m |
 | 5x p/w      | 257,75 p/m |
+
+
+**
+De 6 weken in mindering werkt als volgt. Voor een enkele wandeling wordt in 2025 13,50 gerekend. Met dit bedrag zou het goedkoopste abonnement uitkomen op: 13,50 * 52 weken = 702 euro per jaar. Gedeeld door 12 maanden = 58,50. Omdat
+iedereen recht heeft op vrije dagen, reken ik 6 weken minder, namelijk: 13,50 * 46 weken / 12 maanden = 51,75. Hiervan staan drie weken vast, de overige drie weken (feestdagen uitgezonderd),
+kan je opnemen door je hond af te melden gedurende je vakantie(s).
