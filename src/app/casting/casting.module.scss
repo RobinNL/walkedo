@@ -27,8 +27,8 @@
 }
 
 .carouselImage {
-  display: flex;
-  border-radius: radius(regular);
+  width: 100%;
+  padding: spacing(20) spacing(20) 100% spacing(20);
   align-items: center;
   background-color: color(card);
   flex-direction: column;
@@ -57,6 +57,7 @@
 
 .expoArtistRow {
   display: flex;
+  flex-direction: column;
 }
 
 .carouselBanner {
@@ -78,6 +79,8 @@
   margin-bottom: spacing(32);
 }
 
+
+
 .heroImage {
   height: 700px;
   position: relative;
@@ -95,6 +98,13 @@
   .contentRow {
     flex-direction: row;
   }
+
+
+  .expoArtistRow {
+    display: flex;
+    flex-direction: row;
+  }
+
 }
 
 .opvangHondImage {

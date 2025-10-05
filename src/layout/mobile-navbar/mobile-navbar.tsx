@@ -20,6 +20,7 @@ export const MobileNavbar = (props: GlobalNavbarProps) => {
     const [mobileMenuActive, setMobileMenuActive] = useState(false);
 
     const brandingPressed = () => {
+        setActiveItem('');
         router.push('/');
     }
 

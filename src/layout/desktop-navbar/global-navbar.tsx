@@ -18,6 +18,7 @@ export const GlobalNavbar = (props: GlobalNavbarProps) => {
     const [activeItem, setActiveItem] = useState('');
 
     const brandingPressed = () => {
+        setActiveItem('');
         router.push('/');
     }
 

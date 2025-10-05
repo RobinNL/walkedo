@@ -92,6 +92,13 @@ $animationMobileDuration: 0.5s;
         align-items: center;
         list-style-type: none;
     }
+
+  a {
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
 }
 
 .navbarList > .navbarNoMargin {

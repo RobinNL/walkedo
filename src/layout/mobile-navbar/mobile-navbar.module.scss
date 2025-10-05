@@ -120,6 +120,8 @@ $animationMobileDuration: 0.5s;
         align-items: center;
         list-style-type: none;
     }
+
+
 }
 
 .navbarListSection {
@@ -128,6 +130,13 @@ $animationMobileDuration: 0.5s;
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+  a {
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
 }
 
 /**

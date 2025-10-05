@@ -187,8 +187,7 @@ export default function Home() {
 
             <div className={Styles.castingImageBackdrop}>
                 <div className={Styles.northernInuitDogImage}>
-                    <Image objectFit={'cover'} fill={true}
-                           objectPosition={'65%'}
+                    <Image objectFit={'fit'} fill={true}
                            src={'/images/casting/koda-casting-highfive.jpg'}
                            alt={'Northern Inuit dog die poseert naast roodkapje in een fotoproductie'}/>
                 </div>

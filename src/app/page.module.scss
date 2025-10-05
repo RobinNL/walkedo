@@ -149,11 +149,8 @@
 
 .northernInuitDogImage {
   display: flex;
-  max-width: 1920px;
   position: relative;
-  max-height: 1080px;
-  height: 1080px;
-  width: 100%;
+  aspect-ratio: 3840 / 2976;
   margin: 0 auto;
 }
 
@@ -222,6 +219,7 @@
   border-radius: radius(regular);
 
   &:hover {
+    text-decoration: none;
 
     .learnMoreLinkIcon {
       transform: translateX(4px);
