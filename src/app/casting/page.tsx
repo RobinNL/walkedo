@@ -35,8 +35,8 @@ export default function Page() {
             <div className={Styles.expoWrapper}>
                 <h4 className={Styles.expoTitle}>Roodkapje, 2025</h4>
                 <div className={Styles.expoArtistRow}>
-                    <p className={Styles.expoArtist}>Artiest: <a target={'_blank'} href={''}>José ter Haar</a></p>
-                    <p className={Styles.expoArtist}>Fotograaf: <a target={'_blank'} href={''}>Camera Gijs</a></p>
+                    <p className={Styles.expoArtist}>Artiest: <a target={'_blank'} href={'https://www.instagram.com/jose_ter_haar'}>José ter Haar</a></p>
+                    <p className={Styles.expoArtist}>Fotograaf: <a target={'_blank'} href={'https://www.instagram.com/cameragijs'}>Camera Gijs</a></p>
                     <p className={Styles.expoArtist}>Model: <a target={'_blank'}
                                                                href={'https://www.instagram.com/suzevantende'}>Suze van
                         ‘t Ende</a> & <a href={'/northern-Inuit-dog'}>Koda</a></p>
