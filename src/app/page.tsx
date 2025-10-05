@@ -149,7 +149,7 @@ export default function Home() {
                                 <p className={Styles.serviceTextBlock}>Dit unieke ras is bij de Walkedo kennel als eerste in Nederland. Leer dit prachtige ras kennen. We verwachten een roedel pups in de toekomst, schrijf je vrijblijvend in voor de wachtlijst. Zodra het concreet wordt heb je als eerste de kans om een plekje te reserveren en eigenaar te worden van een beste vriend uit dit unieke prachtige ras.</p>
                                 <Link className={Styles.learnMoreLink} href={'/northern-Inuit-dog'}>
                                      <span className={Styles.learnMoreLinkText}>
-                                        Northern Inuit Dog
+                                        Meld je aan voor een pup
                                     </span>
                                     <Image className={Styles.learnMoreLinkIcon} src={'/fonts/icons/arrow-right.svg'}
                                            alt={'pijl naar rechts'}
@@ -160,14 +160,40 @@ export default function Home() {
                     </div>
                 </div>
 
+
+                <div className={Styles.container}>
+
+                    <div className={Styles.serviceSection}>
+
+                        <div className={Styles.serviceTextSection}>
+                            <div className={Styles.indexServiceDescription}>
+                                <h2 className={Styles.serviceHeader}>Casting</h2>
+                                <h3>Een wolf look-alike voor op de foto of video</h3>
+
+                                <p className={Styles.serviceTextBlock}>Northern Inuit dogs lijken erg op een wolf en zijn erg geduldig en pakken instructies erg snel op. Dit maakt ze een ideale match voor film of fotoproducties klein en groot.</p>
+                                <Link className={Styles.learnMoreLink} href={'/casting'}>
+<span className={Styles.learnMoreLinkText}>
+                                        Casting
+                                    </span>
+                                    <Image className={Styles.learnMoreLinkIcon} src={'/fonts/icons/arrow-right.svg'}
+                                           alt={'pijl naar rechts'}
+                                           height={20} width={20}/>
+                                </Link>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div className={Styles.castingImageBackdrop}>
                 <div className={Styles.northernInuitDogImage}>
                     <Image objectFit={'cover'} fill={true}
                            objectPosition={'65%'}
-                           src={'/images/inuit-dog/northern-inuit-grass.jpeg'}
-                           alt={'Northern Inuit dog in front of a christmas tree'}/>
+                           src={'/images/casting/koda-casting-highfive.jpg'}
+                           alt={'Northern Inuit dog die poseert naast roodkapje in een fotoproductie'}/>
                 </div>
-
             </div>
+            <p className={Styles.expoLink}>Expo: Roodkapje 2025. <a href={'/casting'}>Ontdek de artiesten</a></p>
 
         </div>
     );

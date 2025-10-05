@@ -26,12 +26,56 @@
   padding-top: spacing(32);
 }
 
+.carouselImage {
+  display: flex;
+  border-radius: radius(regular);
+  align-items: center;
+  background-color: color(card);
+  flex-direction: column;
+
+  img {
+    transition: all 0.2s ease-in-out;
+    &:hover {
+      scale: 1.1;
+    }
+  }
+
+}
+
 .header {
   margin-top: spacing(64);
   text-align: center;
   background-image: conic-gradient(#f3ec78, #af4261);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.expoTitle {
+  font-weight: 700;
+  margin: 0 0 spacing(4) 0;
+}
+
+.expoArtistRow {
+  display: flex;
+}
+
+.carouselBanner {
+  padding: spacing(32) 0;
+  background-color: black;
+}
+
+.expoArtist {
+  margin: spacing(4) spacing(12) 0 0;
+  font-size: font-size(h6);
+
+  a {
+    font-size: font-size(h6);
+  }
+}
+
+.expoWrapper {
+  padding: spacing(12) spacing(32);
+  margin-bottom: spacing(32);
 }
 
 .heroImage {

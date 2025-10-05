@@ -74,3 +74,12 @@ p, li, ul, a, span, table, tr, td {
   font-size: font-size(p);
   line-height: line-height(p);
 }
+
+a {
+
+  &:hover {
+    color: color(accent);
+    text-decoration : underline;
+  }
+
+}

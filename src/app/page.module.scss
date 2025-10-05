@@ -157,11 +157,27 @@
   margin: 0 auto;
 }
 
+.castingImageBackdrop {
+  background-color: black;
+}
+
 .serviceSectionImage {
   width: 100%;
   display: flex;
   position: relative;
   height: 600px;
+}
+
+.expoLink {
+  float: right;
+  margin-right: 12px;
+  font-style: italic;
+  font-size: 12px;
+
+  a {
+    font-style: italic;
+    font-size: 12px;
+  }
 }
 
 @media screen and (min-width: 768px) {
