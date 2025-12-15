@@ -3,9 +3,9 @@ import { NextResponse } from "next/server";
 const nodemailer = require('nodemailer');
 
 export async function POST(request: any) {
-    const username = process.env.NEXT_PUBLIC_EMAIL_USERNAME;
-    const password = process.env.NEXT_PUBLIC_EMAIL_PASSWORD;
-    const myEmail = process.env.NEXT_PUBLIC_PERSONAL_EMAIL;
+    const username = process.env.EMAIL_USERNAME;
+    const password = process.env.EMAIL_PASSWORD;
+    const myEmail = process.env.PERSONAL_EMAIL;
 
     const transporter = nodemailer.createTransport({
         host: "smtp.mail.me.com",
