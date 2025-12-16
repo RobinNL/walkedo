@@ -102,13 +102,13 @@ export default function Page() {
                     <div className={Styles.contentBlock}>
                         <h3>Alle voordelen op een rijtje</h3>
                         <p>Walkedo is een exclusieve hondenuitlaatservice. Wij hanteren kleinere groepen dan de meeste
-                            partijen zodat je hond minder lang in de auto zit en meer persoonlijke aandacht krijgt
+                            partijen zodat je hond minder lang in de bus zit en meer persoonlijke aandacht krijgt
                             tijdens de wandeling. Ontdek alle voordelen van de Walkedo hondenuitlaatservice.</p>
                         <WalkedoList items={[
                             'Kleine groepen van 6 tot 8 honden',
                             'Korte reistijden',
                             'Speciale puppygroepen',
-                            'Zorgvuldig samengestelde groepen waaronder de walkedoodle',
+                            'Zorgvuldig samengestelde groepen waaronder de walkedoodles',
                             'Extra services zoals opvang als je op vakantie gaat'
                         ]}/>
                     </div>
@@ -126,7 +126,7 @@ export default function Page() {
 
                     <div className={Styles.contentBlock}>
                         <h3>Eenvoudig en betrouwbaar</h3>
-                        <p>Walkedo werkt met overzichtelijke abonnementen op basis van het aantal wandelingen. Zo hoef je niet te letten op spradische facturen of strippenkaarten die wel of niet zijn verlopen.
+                        <p>Walkedo werkt met overzichtelijke abonnementen op basis van het aantal wandelingen. Zo hoef je niet te letten op sporadische facturen of strippenkaarten die wel of niet zijn verlopen.
                             De maandbedragen zijn berekend met een voordeel van zes weken. Hoe dit werkt lees je hier: <a href={'/berichten/introductie-abonnementen'}>uitleg abonnementen</a> </p>
                     </div>
                         <div className={Styles.subscriptionRow}>
