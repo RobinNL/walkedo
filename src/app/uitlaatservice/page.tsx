@@ -154,7 +154,7 @@ export default function Page() {
                     <div className={Styles.calendarLink}>
                         <Image src={'/images/calendar.svg'} className={Styles.calendarIcon}
                                alt={'kalender'} width={20} height={20}/>
-                        <a href={'/berichten/vrije-dagen-2025'} className={Styles.calendarLink}>Overzicht vrije dagen van 2025</a>
+                        <a href={'/berichten/vrije-dagen-2026'} className={Styles.calendarLink}>Overzicht vrije dagen van 2026</a>
                     </div>
                 </div>
 

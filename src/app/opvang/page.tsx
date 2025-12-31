@@ -16,7 +16,7 @@ export default function Page() {
             <div className={'container'}>
 
                 <div className={Styles.heroIntroBlock}>
-                    <h1 className={Styles.header}>Honden Opvang</h1>
+                    <h1 className={Styles.header}>Hondendagopvang in Arnhem</h1>
 
                     <p>
                         Een hond is een vriend voor het leven. Maar soms moet of wil je ook even ver weg van huis en dan is het niet altijd mogelijk om je hond mee te nemen. Speciaal voor klanten van de Walkedo uitlaatservice,
@@ -36,7 +36,6 @@ export default function Page() {
                                 'Je hond heeft voldoende gezelschap',
                                 'Je hond gaat automatisch elke werkdag mee met de uitlaatgroep',
                                 'Je hond kan zowel buiten als binnen verblijven'
-
                             ]
                         } />
                     </div>
@@ -52,12 +51,72 @@ export default function Page() {
 
                 </div>
 
-                <div className={Styles.opvangDisclaimer}>
-                    <h3>Let op</h3>
-                    <p>De honden opvang service is slechts beperkt beschikbaar. Voor een kwalitatief goede service dient elke hond een eigen plekje te hebben om zich terug te trekken. Ik ben hard bezig om meer van dit
-                    soort plekjes, zowel binnen als buiten te realiseren, zodat er meer honden kunnen logeren. Neem contact op voor de actuele beschikbaarheid.</p>
-                </div>
+                <div>
+                    <h3>De tarieven</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>
+                                    Opvang tarieven
+                                </th>
+                                <th>
+                                    Hoogseizoen
+                                </th>
+                                <th>
+                                    Laagseizoen
+                                </th>
+                                <th>
+                                    Dagopvang
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>
+                                Dag 1 t/m dag 6
+                            </td>
+                            <td>
+                                €30,-
+                            </td>
+                            <td>
+                                €25,-
+                            </td>
+                            <td>
 
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Dag 6 t/m ...
+                            </td>
+                            <td>
+                                €25,-
+                            </td>
+                            <td>
+                                €20,-
+                            </td>
+                            <td>
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Dagopvang los
+                            </td>
+                            <td>
+                            </td>
+                            <td>
+                            </td>
+                            <td>
+                                €30,-
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                    <p>Voor een gezond en gezellig verblijf van uw hond bij de hondenopvang Walkedo Arnhem hebben wij verblijfregels opgesteld. <a className={Styles.rulesLink} href={'files/voorwaarden-hondenopvang-walkedo-arnhem.pdf'} target={'_blank'}>Klik hier om ze te Bekijken</a></p>
+
+                </div>
 
             </div>
 
