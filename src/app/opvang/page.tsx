@@ -114,7 +114,7 @@ export default function Page() {
                         </tbody>
                     </table>
 
-                    <p>Voor een gezond en gezellig verblijf van uw hond bij de hondenopvang Walkedo Arnhem hebben wij verblijfregels opgesteld. <a className={Styles.rulesLink} href={'files/voorwaarden-hondenopvang-walkedo-arnhem.pdf'} target={'_blank'}>Klik hier om ze te Bekijken</a></p>
+                    <p>Voor een gezond en gezellig verblijf van uw hond bij de hondenopvang Walkedo Arnhem hebben wij verblijfregels opgesteld. <a className={Styles.rulesLink} href={'/opvang/voorwaarden'} target={'_blank'}>Klik hier om ze te Bekijken</a></p>
 
                 </div>
 
