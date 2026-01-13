@@ -17,7 +17,7 @@ Op vele verzoek een overzichtje van de vrije dagen die Walkedo hanteert. Uw abon
 - Woensdag 13 mei herkansing theorie-examen ( ovb)
 - Maandag 25 mei tweede pinksterdag
 - Dinsdag 26 mei vaardigheidsexamen (ovb)
-- Donderdag 29 mei vaardigheid (ovb)
+- Vrijdag 29 mei vaardigheid (ovb)
 - Vrijdag 5 juni vaardigheid examen (ovb)
 - Maandag 20 juli t/m 9 augustus zomervakantie
 - Maandag 21 december t/m 1 januari 2027
