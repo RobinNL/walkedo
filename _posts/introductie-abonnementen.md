@@ -28,6 +28,5 @@ Aan u vraag ik om per 1 januari een automatische betaling in orde te maken aan b
 
 
 **
-De 6 weken in mindering werkt als volgt. Voor een enkele wandeling wordt in 2025 13,50 gerekend. Met dit bedrag zou het goedkoopste abonnement uitkomen op: 13,50 * 52 weken = 702 euro per jaar. Gedeeld door 12 maanden = 58,50. Omdat
-iedereen recht heeft op vrije dagen, reken ik 6 weken minder, namelijk: 13,50 * 46 weken / 12 maanden = 51,75. Hiervan staan drie weken vast, de overige drie weken (feestdagen uitgezonderd),
-kan je opnemen door je hond af te melden gedurende je vakantie(s).
+De 6 weken in mindering werkt als volgt. Voor een enkele wandeling wordt 13,50 gerekend. Met dit bedrag zou het goedkoopste abonnement uitkomen op: 13,50 * 52 weken = 702 euro per jaar. Gedeeld door 12 maanden = 58,50. Omdat
+iedereen recht heeft op vrije dagen, reken ik 6 weken minder, namelijk: 13,50 * 46 weken / 12 maanden = 51,75.
