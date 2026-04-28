@@ -87,7 +87,7 @@ export default function Page() {
                         </tr>
                         <tr>
                             <td>
-                                Dag 6 t/m ...
+                                Dag 7 t/m ...
                             </td>
                             <td>
                                 €25,-
