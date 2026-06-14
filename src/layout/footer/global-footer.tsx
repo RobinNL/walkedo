@@ -16,7 +16,6 @@ export const GlobalFooter = (props: GlobalFooterProps) => {
             <Image src={'/images/dog-silhouette/dog-silhouette-group.svg'} className={Styles.footerDogImage} width={1920 / 3} height={787 / 3}
                    alt={'silhouette van honden'}/>
 
-
             <div className={Styles.footerMainSection}>
 
                 <h3>Neem vrijblijvend contact op</h3>
@@ -27,6 +26,18 @@ export const GlobalFooter = (props: GlobalFooterProps) => {
 
             <div className={Styles.footerWrapper}>
 
+                <div className={Styles.footerSection}>
+
+                    <h3>Certificaten</h3>
+                    <div className={Styles.footerCertificateArea}>
+                        <a href={'https://dibevo.nl/kenniscentrum/alles-over-het-dierbaar-keurmerk'} target={'_blank'}>
+                            <img src={'images/keurmerken/dierbaar-keurmerk-klein.png'} width={152 / 2.2 } height={152 / 2.2} />
+                        </a>
+                        <a href={'https://keurmerk.edupet.nl'} target={'_blank'}>
+                            <img src={'images/keurmerken/dierenwelzijn-keurmerk-klein.png'} width={152 / 2.2} height={152 / 2.2} />
+                        </a>
+                    </div>
+                </div>
 
                 <div className={Styles.footerSection}>
 
@@ -104,6 +115,7 @@ export const GlobalFooter = (props: GlobalFooterProps) => {
                 <div className={Styles.footerSection}>
 
                     <h3>Privacy</h3>
+
                     <p>Walkedo bewaard geen online gegevens. Wij gaan met uiterste zorg om met uw persoonlijke gegevens
                         en bezittingen. Deze website maakt geen gebruik van cookies met uitzondering van Google
                         Analytics voor het beheren van statistieken.</p>

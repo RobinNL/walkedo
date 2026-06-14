@@ -10,13 +10,19 @@
     color: color(white);
 }
 
+.footerCertificateArea {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: spacing(20);
+}
+
 .footerMainSection {
     width: 100%;
     text-align: center;
     margin-bottom: spacing(12);
     padding-bottom: spacing(32);
     border-bottom: 1px solid color(background-accent);
-
 }
 
 .footerContainer {
