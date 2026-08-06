@@ -36,11 +36,11 @@ export default function Home() {
                     <h2 className={Styles.heroSignupTitle}>Met hart voor je hond</h2>
                     <p className={Styles.heroSignupDescription}>Laat je viervoeter de mooiste plekjes van Arnhem ontdekken met een groep waar hij zich helemaal thuis voelt. En ga met een gerust hart op vakantie met de opvangservice.</p>
                     <div className={Styles.heroSignupIconWrapper}>
-                        <Image className={Styles.heroSignupIconIcon} alt={'pijl naar beneden'} src={'fonts/icons/chevron-down.svg'} width={30}
+                        <Image className={Styles.heroSignupIconIcon} alt={'pijl naar beneden'} src={'/fonts/icons/chevron-down.svg'} width={30}
                                height={30}/>
                         <Image className={`${Styles.heroSignupIconIcon} ${Styles.heroSignupIconIconBottom}`}
                                alt={'pijl naar beneden'}
-                               src={'fonts/icons/chevron-down.svg'} width={30} height={30}/>
+                               src={'/fonts/icons/chevron-down.svg'} width={30} height={30}/>
                     </div>
                 </div>
             </div>

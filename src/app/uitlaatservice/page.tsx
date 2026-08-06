@@ -13,31 +13,31 @@ export default function Page() {
 
     const images = [
         {
-            src: 'images/uitlaatservice/honden-1.png',
+            src: '/images/uitlaatservice/honden-1.png',
             width: 1826,
             alt: 'honden rennen en spelen op een veld in arnhem',
             height: 1645
         },
         {
-            src: 'images/uitlaatservice/honden-2.png',
+            src: '/images/uitlaatservice/honden-2.png',
             width: 1452,
             alt: 'honden rennen en spelen op een veld in arnhem',
             height: 1816
         },
         {
-            src: 'images/uitlaatservice/honden-3.png',
+            src: '/images/uitlaatservice/honden-3.png',
             width: 1454,
             alt: 'honden rennen en spelen op een veld in arnhem',
             height: 1822
         },
         {
-            src: 'images/uitlaatservice/honden-4.png',
+            src: '/images/uitlaatservice/honden-4.png',
             width: 1820,
             alt: 'honden rennen en spelen op een veld in arnhem',
             height: 1360
         },
         {
-            src: 'images/uitlaatservice/honden-5.png',
+            src: '/images/uitlaatservice/honden-5.png',
             width: 1457,
             alt: 'honden rennen en spelen op een veld in arnhem',
             height: 1820
