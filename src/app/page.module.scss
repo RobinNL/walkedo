@@ -11,9 +11,10 @@
   background-image: linear-gradient(color(accent), color(accentDark));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: font-size(h2);
-  line-height: line-height(h2);
   text-align: center;
+  hyphens: auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .heroImage {
@@ -26,13 +27,9 @@
   overflow: hidden;
 }
 
-@media (screen and min-width: 768px) {
+@media screen and (min-width: 768px) {
     .heroImage {
       padding-top: 0;
-    }
-
-    .indexHeader {
-      font-size: font-size(h1);
     }
 }
 
