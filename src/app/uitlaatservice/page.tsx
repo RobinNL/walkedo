@@ -115,7 +115,7 @@ export default function Page() {
 
                     <div className={Styles.arnhemMapBlock}>
                         <h3>Arnhem, de natuurgebieden waar ik graag kom</h3>
-                        <p>Samen met de groep van Walkedo heb ik de mooiste plekken van Arnhem ontdekt!</p>
+                        <p>Samen met de groep van Walkedo heb ik de mooiste plekken van Arnhem en Oosterbeek ontdekt!</p>
                         <Image width={624 / 2} height={516 / 2} src={'/images/arnhem-map.svg'}
                                alt={'kaart van Arnhem'}/>
                     </div>
