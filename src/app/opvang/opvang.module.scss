@@ -11,6 +11,16 @@
   color: color(accent);
 }
 
+@media screen and (max-width: 560px) {
+
+  .tablePricingRow {
+    overflow-y: scroll;
+    margin-left: spacing(20) * -1;
+    margin-right: spacing(20) * -1;
+  }
+
+}
+
 .opvangDisclaimer {
   padding: spacing(12) spacing(32);
   max-width: 768px;
@@ -40,8 +50,10 @@
 
 .header {
   margin-top: spacing(64);
+  font-size: font-size(h2);
+  line-height: line-height(h2);
   text-align: center;
-  background-image: conic-gradient(#f3ec78, #af4261);
+  background-image: linear-gradient(color(accent), color(accentDark));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

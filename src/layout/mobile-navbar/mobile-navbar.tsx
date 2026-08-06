@@ -35,6 +35,10 @@ export const MobileNavbar = (props: GlobalNavbarProps) => {
         router.push(uri);
     }
 
+    const walkedoBrandingDivider = 15;
+    const spiritbornBrandingDivider = 14;
+    const walkedoLogoDivider = 20;
+
     return (
         <>
 
@@ -44,10 +48,13 @@ export const MobileNavbar = (props: GlobalNavbarProps) => {
 
                     <a href={'/'}>
                         <div className={Styles.brandingWrapperOuter}>
-                            <Image src={'/images/logo.svg'} width={69 / 1.3} height={100 / 1.3} alt={'Walkedo logo'}/>
+                            <Image src={'/images/brand/walkedo-logo.svg'} width={1592 / walkedoLogoDivider} height={1677 / walkedoLogoDivider} alt={'Walkedo logo'}/>
                             <div className={Styles.brandingWrapper} onClick={() => brandingPressed()}>
-                                <span className={Styles.brandingText}>Walkedo</span>
-                                <span className={Styles.subBrandingText}>Hondenservice</span>
+                                {
+                                    activeItem !== '/northern-Inuit-dog' ?
+                                        <Image src={'/images/brand/walkedo-text.svg'} className={Styles.navbarBrandingText}  width={2572 / walkedoBrandingDivider} height={272 / walkedoBrandingDivider} alt={'Walkedo logo'}/> :
+                                        <Image src={'/images/brand/spiritborn-text.svg'} className={Styles.navbarBrandingText}  width={2695 / spiritbornBrandingDivider} height={245 / spiritbornBrandingDivider} alt={'Spiritborn logo'}/>
+                                }
                             </div>
                         </div>
                     </a>

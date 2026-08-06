@@ -4,7 +4,7 @@ $colors: (
         warning: #f6b73c,
         error: #eb3223,
   // Color scheme
-        primary: rgb(57, 75, 65),
+        primary: #395049,
         primaryTranslucent: rgba(57, 75, 65, .85),
   // Neutral colors
         text: #fff,
@@ -16,7 +16,8 @@ $colors: (
         contrast-150: #cccccc,
         contrast-100: #ececec,
         contrast-50: rgb(57, 80, 73),
-        accent: #f3ec78,
-        background: rgb(36, 49, 43),
+        accent: #fc8dc1,
+        accentDark: #c24c85,
+        background: #32443b,
         accentBackground: rgb(30, 42, 30),
 );

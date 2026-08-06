@@ -30,9 +30,20 @@ export const GlobalFooter = (props: GlobalFooterProps) => {
 
                     <h3>Certificaten</h3>
                     <div className={Styles.footerCertificateArea}>
-                        <a href={'https://groenenorm.nl'} target={'_blank'}>
-                            <img src={'images/keurmerken/groene-norm-logo.png'} width={1134 / 6 } height={644 / 6} />
-                        </a>
+                        <div>
+                            <a href={'https://groenenorm.nl'} target={'_blank'}>
+                                <img src={'images/keurmerken/groene-norm-logo.png'} width={200} height={114}
+                                     alt={'Groene Norm keurmerk'}/>
+                            </a>
+                        </div>
+                        <div>
+                            <img src={'images/keurmerken/puppy-culture.png'} width={200} height={156}
+                                 alt={'Puppy Culture keurmerk'}/>
+                        </div>
+                        <div>
+                            <img src={'images/keurmerken/aeres.png'} width={200} height={60}
+                                 alt={'Aeres keurmerk'}/>
+                        </div>
                     </div>
                 </div>
 

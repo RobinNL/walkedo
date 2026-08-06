@@ -60,7 +60,8 @@ $animationMobileDuration: 0.5s;
 
     a {
         color: color(text);
-        font-weight: 500;
+        font-weight: 300;
+        font-size: font-size(h4);
         text-decoration: none;
     }
 }
@@ -73,7 +74,8 @@ $animationMobileDuration: 0.5s;
 .navbarItemActive {
     a {
         color: color(accent);
-        font-weight: 500;
+        font-weight: 400;
+        font-size: font-size(h4);
         text-decoration: none;
     }
 }
@@ -108,6 +110,14 @@ $animationMobileDuration: 0.5s;
 .navbarListSection {
     display: flex;
     justify-content: center;
+}
+
+.navbarLogoSection {
+    min-width: 344px;
+}
+
+.navbarBrandingText {
+    color: color(text);
 }
 
 .navbarSignupSection {

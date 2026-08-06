@@ -14,7 +14,7 @@ export default function Page() {
         <main>
             <div className={Styles.docWrapper}>
 
-                <h1>Hondendagopvang voorwaarden</h1>
+                <h1 className={Styles.docTitle}>Hondendagopvang voorwaarden</h1>
                 <p>Publicatiedatum: 12-1-2026. Versie 1.0</p>
 
                 <a className={Styles.downloadLink} href={'/files/voorwaarden-hondenopvang-walkedo-arnhem.pdf'} target={'_blank'}>Download de voorwaarden</a>

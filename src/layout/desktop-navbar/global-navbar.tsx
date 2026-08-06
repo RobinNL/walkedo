@@ -27,25 +27,32 @@ export const GlobalNavbar = (props: GlobalNavbarProps) => {
         router.push('/aanmelden?service=uitlaten');
     }
 
+    const walkedoBrandingDivider = 15;
+    const spiritbornBrandingDivider = 14;
+    const walkedoLogoDivider = 20;
+
     return (
         <>
             <nav className={`${Styles.navbar} ${props.className}`}>
 
                 <div className={Styles.navbarContainer}>
 
-                    <div className={Styles.navbarListSection}>
+                    <div className={`${Styles.navbarListSection} ${Styles.navbarLogoSection}`}>
                         <ul className={Styles.navbarList}>
                             <li>
                                 <a href={'/'}>
                                     <div>
-                                        <Image src={'/images/logo.svg'} width={48} height={70} alt={'Walkedo logo'}/>
+                                        <Image src={'/images/brand/walkedo-logo.svg'} width={1592 / walkedoLogoDivider} height={1677 / walkedoLogoDivider} alt={'Walkedo logo'}/>
                                     </div>
                                 </a>
                             </li>
                             <li className={Styles.navbarNoMargin}>
                                 <div className={Styles.brandingWrapper} onClick={() => brandingPressed()}>
-                                    <span className={Styles.brandingText}>Walkedo</span>
-                                    <span className={Styles.subBrandingText}>Hondenservice</span>
+                                    {
+                                        activeItem !== '/northern-Inuit-dog' ?
+                                            <Image src={'/images/brand/walkedo-text.svg'} className={Styles.navbarBrandingText}  width={2572 / walkedoBrandingDivider} height={272 / walkedoBrandingDivider} alt={'Walkedo logo'}/> :
+                                            <Image src={'/images/brand/spiritborn-text.svg'} className={Styles.navbarBrandingText}  width={2695 / spiritbornBrandingDivider} height={245 / spiritbornBrandingDivider} alt={'Spiritborn logo'}/>
+                                    }
                                 </div>
                             </li>
                         </ul>

@@ -53,8 +53,9 @@ export default function Page() {
 
                 <div>
                     <h3>De tarieven</h3>
-                    <table>
-                        <thead>
+                    <div  className={Styles.tablePricingRow}>
+                        <table>
+                            <thead>
                             <tr>
                                 <th>
                                     Opvang tarieven
@@ -69,51 +70,52 @@ export default function Page() {
                                     Dagopvang
                                 </th>
                             </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>
-                                Dag 1 t/m dag 6
-                            </td>
-                            <td>
-                                €30,-
-                            </td>
-                            <td>
-                                €25,-
-                            </td>
-                            <td>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>
+                                    Dag 1 t/m dag 6
+                                </td>
+                                <td>
+                                    €30,-
+                                </td>
+                                <td>
+                                    €25,-
+                                </td>
+                                <td>
 
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Dag 7 t/m ...
-                            </td>
-                            <td>
-                                €25,-
-                            </td>
-                            <td>
-                                €20,-
-                            </td>
-                            <td>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Dag 7 t/m ...
+                                </td>
+                                <td>
+                                    €25,-
+                                </td>
+                                <td>
+                                    €20,-
+                                </td>
+                                <td>
 
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Dagopvang los
-                            </td>
-                            <td>
-                            </td>
-                            <td>
-                            </td>
-                            <td>
-                                €30,-
-                            </td>
-                        </tr>
-                        </tbody>
-                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Dagopvang los
+                                </td>
+                                <td>
+                                </td>
+                                <td>
+                                </td>
+                                <td>
+                                    €30,-
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
 
+                    </div>
                     <p>Voor een gezond en gezellig verblijf van uw hond bij de hondenopvang Walkedo Arnhem hebben wij verblijfregels opgesteld. <a className={Styles.rulesLink} href={'/opvang/voorwaarden'} target={'_blank'}>Klik hier om ze te Bekijken</a></p>
 
                 </div>

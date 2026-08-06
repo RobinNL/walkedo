@@ -4,11 +4,11 @@
 
 .heroImageInner {
   object-fit: cover;
-  object-position: 0% 60%;
+  object-position: 0% 0%;
 }
 
 .indexHeader {
-  background-image: linear-gradient(#f3ec78, #af4261);
+  background-image: linear-gradient(color(accent), color(accentDark));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: font-size(h2);
@@ -21,7 +21,6 @@
   position: relative;
   display: flex;
   margin: 0 auto;
-  padding-top: $global-navbar-height;
   align-items: center;
   justify-content: center;
   overflow: hidden;

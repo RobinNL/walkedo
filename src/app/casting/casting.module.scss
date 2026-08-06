@@ -45,7 +45,7 @@
 .header {
   margin-top: spacing(64);
   text-align: center;
-  background-image: conic-gradient(#f3ec78, #af4261);
+  background-image: linear-gradient(color(accent), color(accentDark));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
