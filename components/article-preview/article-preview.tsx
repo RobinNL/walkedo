@@ -14,7 +14,7 @@ export const ArticlePreview: FunctionComponent<ArticlePreviewProps> = ({ post, c
 
     return (
         <div className={`${Styles.blogCard} ${className ? className : ''}`}>
-            <Link href={`/berichten/${post.slug}`} className={Styles.blogCardInner}>
+            <Link href={`/posts/${post.slug}`} className={Styles.blogCardInner}>
                 <span className={Styles.blogCardInner}>
                     <Image src={'/images/dog-paw.svg'} className={Styles.blogPostImagePreview}
                            alt={pawAlt} width={20} height={20}/>

@@ -8,7 +8,7 @@ export async function generateMetadata(
     return pageMetadata({
         locale: params.locale as Locale,
         key: 'nieuws',
-        path: '/nieuws',
+        path: '/news',
     });
 }
 

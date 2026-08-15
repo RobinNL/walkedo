@@ -1,4 +1,4 @@
-import Styles from "@/app/[locale]/nieuws/nieuws.module.scss";
+import Styles from "@/app/[locale]/news/news.module.scss";
 import Image from "next/image";
 import React from "react";
 import { getTranslations, setRequestLocale } from "next-intl/server";

@@ -78,7 +78,7 @@ export default function Page() {
                         <p>
                             {t.rich('subscriptionBody', {
                                 link: (chunks) => (
-                                    <Link href={'/berichten/introductie-abonnementen'}>{chunks}</Link>
+                                    <Link href={'/posts/introductie-abonnementen'}>{chunks}</Link>
                                 ),
                             })}
                         </p>
@@ -94,7 +94,7 @@ export default function Page() {
                     <div className={Styles.calendarLink}>
                         <Image src={'/images/calendar.svg'} className={Styles.calendarIcon}
                                alt={t('calendarAlt')} width={20} height={20}/>
-                        <Link href={'/berichten/vrije-dagen-2026'} className={Styles.calendarLink}>
+                        <Link href={'/posts/vrije-dagen-2026'} className={Styles.calendarLink}>
                             {t('calendarLink')}
                         </Link>
                     </div>

@@ -4,7 +4,7 @@ import Image from "next/image";
 import React from "react";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
-import Styles from "@/app/[locale]/nieuws/nieuws.module.scss";
+import Styles from "@/app/[locale]/news/news.module.scss";
 import InnerStyle from "./page.module.scss";
 import { Link } from "@/i18n/navigation";
 import { WalkedoButton } from "../../../../../components/button/button";
@@ -44,7 +44,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
         };
     }
 
-    const path = `/berichten/${post.slug}`;
+    const path = `/posts/${post.slug}`;
     return {
         title: post.title,
         description: post.description,
@@ -83,13 +83,13 @@ export default async function Post({ params }: Params) {
                     <h1 className={InnerStyle.articleHeader}>{t('notAvailableTitle')}</h1>
                     <p>{t('notAvailable')}</p>
                     <p>
-                        <a href={`/${other}/berichten/${params.slug}`} hrefLang={other} lang={other}>
+                        <a href={`/${other}/posts/${params.slug}`} hrefLang={other} lang={other}>
                             {t('readInOther')}
                         </a>
                     </p>
                 </article>
                 <div className={InnerStyle.articleFooterCard}>
-                    <Link href={'/nieuws'}>
+                    <Link href={'/news'}>
                         <WalkedoButton label={t('back')}/>
                     </Link>
                 </div>
@@ -112,7 +112,7 @@ export default async function Post({ params }: Params) {
                     <div dangerouslySetInnerHTML={{ __html: post.html }}/>
                 </article>
                 <div className={InnerStyle.articleFooterCard}>
-                    <Link href={'/nieuws'}>
+                    <Link href={'/news'}>
                         <WalkedoButton label={t('back')}/>
                     </Link>
                 </div>

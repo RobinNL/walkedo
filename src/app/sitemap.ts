@@ -14,7 +14,7 @@ const STATIC_PATHS = [
     "/opvang/voorwaarden",
     "/northern-Inuit-dog",
     "/casting",
-    "/nieuws",
+    "/news",
     "/aanmelden",
     "/documenten",
 ];
@@ -59,7 +59,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     // untranslated post never advertises a URL that renders a fallback.
     for (const locale of locales) {
         for (const post of await getAllPosts(locale)) {
-            const path = `/berichten/${post.slug}`;
+            const path = `/posts/${post.slug}`;
             entries.push({
                 url: url(locale, path),
                 lastModified: post.date,
