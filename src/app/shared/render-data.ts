@@ -1,23 +1,26 @@
-const months = [
-    '',
-    'Januari',
-    'Februari',
-    'Maart',
-    'April',
-    'Mei',
-    'Juni',
-    'Juli',
-    'Augustus',
-    'September',
-    'Oktober',
-    'November',
-    'December'
-];
+import type { Locale } from "@/i18n/routing";
 
-export const RenderDate = ({date, short}: { date: any; short: boolean }) => {
-    const month = Number(date.toString().split('-')[1]);
-    if (short) {
-        return `${date.toString().split('-')[2]}-${month}-${date.toString().split('-')[0]}`
-    }
-    return `${date.toString().split('-')[2]} ${months[month]} ${date.toString().split('-')[0]}`
+const LOCALE_TAG: Record<Locale, string> = {
+    nl: "nl-NL",
+    en: "en-GB",
+};
+
+/**
+ * `date` is an ISO yyyy-mm-dd string. `short` gives a numeric date, otherwise
+ * the month is spelled out in the active locale.
+ */
+export const RenderDate = ({ date, short, locale }: {
+    date: string;
+    short: boolean;
+    locale: Locale;
+}) => {
+    const [year, month, day] = date.split('-').map(Number);
+    const value = new Date(Date.UTC(year, month - 1, day));
+
+    return new Intl.DateTimeFormat(LOCALE_TAG[locale], {
+        day: 'numeric',
+        month: short ? 'numeric' : 'long',
+        year: 'numeric',
+        timeZone: 'UTC',
+    }).format(value);
 }

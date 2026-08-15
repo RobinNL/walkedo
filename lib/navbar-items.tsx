@@ -1,22 +1,11 @@
-export const NavbarItems: { label: string; uri: string; }[] = [
-    {
-        label: 'Uitlaatservice',
-        uri: '/uitlaatservice'
-    },
-    {
-        label: 'Opvang',
-        uri: '/opvang'
-    },
-    {
-        label: 'Northern Inuit',
-        uri: '/northern-Inuit-dog'
-    },
-    {
-        label: 'Casting',
-        uri: '/casting'
-    },
-    {
-        label: 'Nieuws',
-        uri: '/nieuws'
-    }
+/**
+ * `key` indexes into the `nav` namespace of the message catalogues; `uri` is
+ * the locale-agnostic path (the Link from @/i18n/navigation adds the prefix).
+ */
+export const NavbarItems: { key: string; uri: string; }[] = [
+    { key: 'uitlaatservice', uri: '/uitlaatservice' },
+    { key: 'opvang', uri: '/opvang' },
+    { key: 'northernInuit', uri: '/northern-Inuit-dog' },
+    { key: 'casting', uri: '/casting' },
+    { key: 'news', uri: '/news' },
 ]

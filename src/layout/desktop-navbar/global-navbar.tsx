@@ -2,10 +2,10 @@
 
 import Styles from './global-navbar.module.scss';
 import Image from 'next/image';
-import { useRouter } from 'next/navigation'
-import React, { useRef, useState } from "react";
+import React from "react";
+import { useTranslations } from "next-intl";
 import { WalkedoButton } from "../../../components/button/button";
-import Link from "next/link";
+import { Link, usePathname } from "@/i18n/navigation";
 import { NavbarItems } from "../../../lib/navbar-items";
 
 export interface GlobalNavbarProps {
@@ -13,79 +13,73 @@ export interface GlobalNavbarProps {
 }
 
 export const GlobalNavbar = (props: GlobalNavbarProps) => {
-
-    const router = useRouter();
-    const [activeItem, setActiveItem] = useState('');
-
-    const brandingPressed = () => {
-        setActiveItem('');
-        router.push('/');
-    }
-
-    const signup = () => {
-        setActiveItem('');
-        router.push('/aanmelden?service=uitlaten');
-    }
+    const t = useTranslations('nav');
+    // usePathname from next-intl returns the path without the locale prefix,
+    // so these comparisons stay locale-agnostic.
+    const pathname = usePathname();
 
     const walkedoBrandingDivider = 15;
     const spiritbornBrandingDivider = 14;
     const walkedoLogoDivider = 20;
 
+    const isSpiritborn = pathname === '/northern-Inuit-dog';
+
     return (
         <>
             <nav className={`${Styles.navbar} ${props.className}`}>
-
                 <div className={Styles.navbarContainer}>
-
                     <div className={`${Styles.navbarListSection} ${Styles.navbarLogoSection}`}>
                         <ul className={Styles.navbarList}>
                             <li>
-                                <a href={'/'}>
+                                <Link href={'/'} aria-label={t('home')}>
                                     <div>
-                                        <Image src={'/images/brand/walkedo-logo.svg'} width={1592 / walkedoLogoDivider} height={1677 / walkedoLogoDivider} alt={'Walkedo logo'}/>
+                                        <Image src={'/images/brand/walkedo-logo.svg'} width={1592 / walkedoLogoDivider}
+                                               height={1677 / walkedoLogoDivider} alt={t('logoAlt')}/>
                                     </div>
-                                </a>
+                                </Link>
                             </li>
                             <li className={Styles.navbarNoMargin}>
-                                <div className={Styles.brandingWrapper} onClick={() => brandingPressed()}>
-                                    {
-                                        activeItem !== '/northern-Inuit-dog' ?
-                                            <Image src={'/images/brand/walkedo-text.svg'} className={Styles.navbarBrandingText}  width={2572 / walkedoBrandingDivider} height={272 / walkedoBrandingDivider} alt={'Walkedo logo'}/> :
-                                            <Image src={'/images/brand/spiritborn-text.svg'} className={Styles.navbarBrandingText}  width={2695 / spiritbornBrandingDivider} height={245 / spiritbornBrandingDivider} alt={'Spiritborn logo'}/>
-                                    }
-                                </div>
+                                <Link href={'/'} className={Styles.brandingWrapper} aria-label={t('home')}>
+                                    {!isSpiritborn ?
+                                        <Image src={'/images/brand/walkedo-text.svg'}
+                                               className={Styles.navbarBrandingText}
+                                               width={2572 / walkedoBrandingDivider}
+                                               height={272 / walkedoBrandingDivider}
+                                               alt={t('logoAlt')}/> :
+                                        <Image src={'/images/brand/spiritborn-text.svg'}
+                                               className={Styles.navbarBrandingText}
+                                               width={2695 / spiritbornBrandingDivider}
+                                               height={245 / spiritbornBrandingDivider}
+                                               alt={t('spiritbornLogoAlt')}/>}
+                                </Link>
                             </li>
                         </ul>
                     </div>
 
                     <div className={Styles.navbarListSection}>
                         <ul className={Styles.navbarList}>
-                            {
-                                NavbarItems.map(item => (
-                                    <li key={item.label} className={`${activeItem === item.uri ? Styles.navbarItemActive : Styles.navbarItem}`}
-                                        onClick={() => setActiveItem(item.uri)}>
-                                        <Link href={item.uri}>{item.label}</Link>
-                                    </li>
-                                ))
-                            }
+                            {NavbarItems.map(item => (
+                                <li key={item.key}
+                                    className={`${pathname === item.uri ? Styles.navbarItemActive : Styles.navbarItem}`}>
+                                    <Link href={item.uri}
+                                          aria-current={pathname === item.uri ? 'page' : undefined}>
+                                        {t(item.key)}
+                                    </Link>
+                                </li>
+                            ))}
                         </ul>
                     </div>
 
-                    <div className={Styles.navbarSignupSection} onClick={() => signup()}>
-                        <WalkedoButton label={'Aanmelden'}/>
+                    <div className={Styles.navbarSignupSection}>
+                        <Link href={'/aanmelden?service=uitlaten'}>
+                            <WalkedoButton label={t('signup')}/>
+                        </Link>
                     </div>
-
                 </div>
-
-                {/**/}
             </nav>
-
-            <div className={Styles.navbarShadow}>
-
-            </div>
+            <div className={Styles.navbarShadow}></div>
         </>
     )
-
 }
 
 export default GlobalNavbar

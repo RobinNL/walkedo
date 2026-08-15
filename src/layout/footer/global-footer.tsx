@@ -1,139 +1,112 @@
-'use client'
-
 import Styles from './global-footer.module.scss';
 import Image from 'next/image';
-import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
+import LanguageSwitcher from "./language-switcher";
 
-export interface GlobalFooterProps {
-
-}
+export interface GlobalFooterProps {}
 
 export const GlobalFooter = (props: GlobalFooterProps) => {
+    const t = useTranslations('footer');
 
     return (
         <footer className={Styles.footer}>
-
-            <Image src={'/images/dog-silhouette/dog-silhouette-group.svg'} className={Styles.footerDogImage} width={1920 / 3} height={787 / 3}
-                   alt={'silhouette van honden'}/>
+            <Image src={'/images/dog-silhouette/dog-silhouette-group.svg'} className={Styles.footerDogImage}
+                   width={1920 / 3} height={787 / 3} alt={t('dogSilhouetteAlt')}/>
 
             <div className={Styles.footerMainSection}>
-
-                <h3>Neem vrijblijvend contact op</h3>
-
-                <Image src={'/images/whatsapp-walkedo.png'} width={200} height={200} alt={'whatsapp QR code'}/>
-
+                <h3>{t('contactHeading')}</h3>
+                <Image src={'/images/whatsapp-walkedo.png'} width={200} height={200} alt={t('whatsappAlt')}/>
             </div>
 
             <div className={Styles.footerWrapper}>
 
                 <div className={Styles.footerSection}>
-
-                    <h3>Certificaten</h3>
+                    <h3>{t('certificates')}</h3>
                     <div className={Styles.footerCertificateArea}>
                         <div>
-                            <a href={'https://groenenorm.nl'} target={'_blank'}>
-                                <img src={'/images/keurmerken/groene-norm-logo.png'} width={200} height={114}
-                                     alt={'Groene Norm keurmerk'}/>
+                            <a href={'https://groenenorm.nl'} target={'_blank'} rel={'noopener noreferrer'}>
+                                <Image src={'/images/keurmerken/groene-norm-logo.png'} width={200} height={114}
+                                       alt={t('certificateAlt.groeneNorm')}/>
                             </a>
                         </div>
                         <div>
-                            <img src={'/images/keurmerken/puppy-culture.png'} width={200} height={156}
-                                 alt={'Puppy Culture keurmerk'}/>
+                            <Image src={'/images/keurmerken/puppy-culture.png'} width={200} height={156}
+                                   alt={t('certificateAlt.puppyCulture')}/>
                         </div>
                         <div>
-                            <img src={'/images/keurmerken/aeres.png'} width={200} height={60}
-                                 alt={'Aeres keurmerk'}/>
+                            <Image src={'/images/keurmerken/aeres.png'} width={200} height={60}
+                                   alt={t('certificateAlt.aeres')}/>
                         </div>
                     </div>
                 </div>
 
                 <div className={Styles.footerSection}>
-
-                    <h3>Gegevens</h3>
-
+                    <h3>{t('details')}</h3>
                     <ul className={Styles.footerList}>
                         <li>
-                            <p className={Styles.footerLabel}>Adres</p>
-                            <a target={'_blank'}
-                               href={'https://www.google.nl/maps/place/Walkedo/@52.0084452,5.8730795,17z/data=!3m1!4b1!4m6!3m5!1s0x47c7a5a334f48edf:0xee9a916b22e0d222!8m2!3d52.0084452!4d5.8756598!16s%2Fg%2F11c1tbzw9c?entry=ttu&g_ep=EgoyMDI0MDgyNy4wIKXMDSoASAFQAw%3D%3D'}
+                            <p className={Styles.footerLabel}>{t('address')}</p>
+                            <a target={'_blank'} rel={'noopener noreferrer'}
+                               href={'https://www.google.nl/maps/place/Walkedo/@52.0084452,5.8862349,17z'}
                                className={Styles.footerValue}>Karmelitessenlaan 26, 6816PK Arnhem</a>
                         </li>
                         <li>
-                            <p className={Styles.footerLabel}>KVK</p>
+                            <p className={Styles.footerLabel}>{t('kvk')}</p>
                             <a href={"https://www.kvk.nl/bestellen/#/91522765000057195412"} target={'_blank'}
+                               rel={'noopener noreferrer'}
                                className={Styles.footerValue}>91522765</a>
                         </li>
                         <li>
-                            <p className={Styles.footerLabel}>Bankgegevens</p>
+                            <p className={Styles.footerLabel}>{t('bank')}</p>
                             <p className={Styles.footerValue}>NL04 KNAB 0617 6989 37</p>
                         </li>
                         <li>
-                            <p className={Styles.footerLabel}>Email</p>
-                            <a href={"mailto:woof@walkedo.com"} target={'_blank'}
+                            <p className={Styles.footerLabel}>{t('email')}</p>
+                            <a href={"mailto:woof@walkedo.com"}
                                className={Styles.footerValue}>woof@walkedo.com</a>
                         </li>
                     </ul>
-
                 </div>
 
                 <div className={Styles.footerSection}>
-
-                    <h3>Links</h3>
-
+                    <h3>{t('links')}</h3>
                     <ul className={Styles.linksList}>
-                        <li>
-                            <Link href={'/uitlaatservice'}>
-                                Honden Uitlaatservice
-                            </Link>
-                        </li>
-                        <li>
-                            <Link href={'/opvang'}>
-                                Opvang
-                            </Link>
-                        </li>
-                        <li>
-                            <Link href={'/documenten'}>
-                                Documenten
-                            </Link>
-                        </li>
+                        <li><Link href={'/uitlaatservice'}>{t('linkUitlaatservice')}</Link></li>
+                        <li><Link href={'/opvang'}>{t('linkOpvang')}</Link></li>
+                        <li><Link href={'/documenten'}>{t('linkDocumenten')}</Link></li>
                     </ul>
                 </div>
 
                 <div className={Styles.footerSection}>
-
-                    <h3>Volg ons</h3>
-
+                    <h3>{t('follow')}</h3>
                     <ul className={Styles.socialMediaList}>
                         <li>
-                            <a href={"https://www.instagram.com/walkedohus"} target={"_blank"}>
+                            <a href={"https://www.instagram.com/walkedohus"} target={"_blank"}
+                               rel={'noopener noreferrer'}>
                                 <Image src={'/images/socials/instagram.svg'} width={60} height={60}
-                                       alt={'instagram afbeelding'}/>
+                                       alt={t('instagramAlt')}/>
                             </a>
                         </li>
                         <li>
-                            <a href={"https://www.facebook.com/walkedo"} target={"_blank"}>
+                            <a href={"https://www.facebook.com/walkedo"} target={"_blank"}
+                               rel={'noopener noreferrer'}>
                                 <Image src={'/images/socials/facebook.svg'} width={60} height={60}
-                                       alt={'facebook afbeelding'}/>
+                                       alt={t('facebookAlt')}/>
                             </a>
                         </li>
                     </ul>
-
                 </div>
 
+                <LanguageSwitcher/>
+
                 <div className={Styles.footerSection}>
-
-                    <h3>Privacy</h3>
-
-                    <p>Walkedo bewaard geen online gegevens. Wij gaan met uiterste zorg om met uw persoonlijke gegevens
-                        en bezittingen. Deze website maakt geen gebruik van cookies met uitzondering van Google
-                        Analytics voor het beheren van statistieken.</p>
+                    <h3>{t('privacy')}</h3>
+                    <p>{t('privacyText')}</p>
                 </div>
 
             </div>
-
         </footer>
     )
-
 }
 
 export default GlobalFooter
