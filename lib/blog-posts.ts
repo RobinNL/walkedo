@@ -20,13 +20,11 @@ function getPostFiles() {
 function getParser() {
     return unified()
         .use(remarkParse)
-        .use(remarkRehype)
         .use(remarkGfm)
+        .use(remarkRehype)
         .use(rehypePrettyCode, {
             theme: "one-dark-pro",
         })
-        .use(rehypeStringify)
-        .use(rehypeStringify)
         .use(rehypeSlug)
         .use(rehypeAutolinkHeadings, {
             content: (arg) => ({
@@ -38,7 +36,8 @@ function getParser() {
                 },
                 children: [{ type: "text", value: "#" }],
             }),
-        });
+        })
+        .use(rehypeStringify);
 }
 
 // small speedup from caching this parser
@@ -67,18 +66,6 @@ export async function getPostById(id: string) {
     } catch {
         return notFound();
     }
-}
-
-export async function getPageMarkdown(string_: string) {
-    const { data, content } = matter(
-        fs.readFileSync(path.join("_pages", string_), "utf8"),
-    );
-    const html = await parser.process(content);
-
-    return {
-        ...data,
-        html: html.value,
-    };
 }
 
 export async function getAllPosts() {

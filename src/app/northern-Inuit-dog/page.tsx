@@ -1,8 +1,6 @@
-import getPostMetadata from "../../../utils/getPostMetaData";
 import Styles from "@/app/northern-Inuit-dog/norhern-inuit.module.scss";
 import Image from "next/image";
 import React from "react";
-import { ArticlePreview } from "../../../components/article-preview/article-preview";
 import { WalkedoList } from "../../../components/list/list";
 import Link from "next/link";
 import { WalkedoButton } from "../../../components/button/button";

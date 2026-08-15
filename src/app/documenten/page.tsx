@@ -1,6 +1,4 @@
-import Image from "next/image";
 import Styles from "./documenten.module.scss";
-import { useRouter } from "next/navigation";
 import Link from "next/link";
 
 export default function Page() {
