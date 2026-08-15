@@ -24,7 +24,7 @@
       "title": "Casting a Wolf-Lookalike Dog",
       "description": "Need a dog that looks like a wolf for a production, photo shoot, or other media? Walkedo can help with a well-trained Northern Inuit Dog."
     },
-    "nieuws": {
+    "news": {
       "title": "News",
       "description": "Keep up with the latest Walkedo news."
     },
@@ -43,7 +43,7 @@
     "opvang": "Boarding",
     "northernInuit": "Northern Inuit",
     "casting": "Casting",
-    "nieuws": "News",
+    "news": "News",
     "signup": "Sign up",
     "menu": "Menu",
     "signupIntro": "Sign up for an introduction, so we can work out together what suits your dog best.",
@@ -269,7 +269,7 @@
     "keyContract": "Key agreement (.pdf)"
   },
 
-  "nieuws": {
+  "news": {
     "heroAlt": "dogs in Arnhem",
     "title": "News",
     "intro": "Keep up with the latest Walkedo news",
@@ -277,7 +277,7 @@
     "pawAlt": "dog paw"
   },
 
-  "bericht": {
+  "post": {
     "postedOn": "Posted on",
     "back": "See more news",
     "heroAlt": "Photo illustrating the post",

@@ -14,7 +14,7 @@ export default async function Page({ params }: { params: { locale: string } }) {
     const locale = params.locale as Locale;
     setRequestLocale(locale);
 
-    const t = await getTranslations('nieuws');
+    const t = await getTranslations('news');
     const posts = await getAllPosts(locale);
 
     return (

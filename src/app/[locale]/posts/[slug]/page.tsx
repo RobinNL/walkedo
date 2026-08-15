@@ -36,7 +36,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
         // the locale that does have the article. Alternates are cleared
         // explicitly, otherwise this URL inherits the layout's home-page
         // hreflang set and claims to be a translation of the home page.
-        const t = await getTranslations({ locale, namespace: "bericht" });
+        const t = await getTranslations({ locale, namespace: "post" });
         return {
             title: t("notAvailableTitle"),
             robots: { index: false, follow: true },
@@ -64,7 +64,7 @@ export default async function Post({ params }: Params) {
     const locale = params.locale as Locale;
     setRequestLocale(locale);
 
-    const t = await getTranslations('bericht');
+    const t = await getTranslations('post');
     const post = await getPostBySlug(locale, params.slug);
     const available = localesForPost(params.slug);
 

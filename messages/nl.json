@@ -24,7 +24,7 @@
       "title": "Casting Hond Wolf uiterlijk",
       "description": "Heb je een hond nodig die lijkt op een wolf voor je productie, een fotoshoot of andere vorm van Media? Walkedo helpt je graag met een Northern Inuit Dog die goed getraind is."
     },
-    "nieuws": {
+    "news": {
       "title": "Nieuws",
       "description": "Blijf op de hoogte van het laatste Walkedo nieuws."
     },
@@ -43,7 +43,7 @@
     "opvang": "Opvang",
     "northernInuit": "Northern Inuit",
     "casting": "Casting",
-    "nieuws": "Nieuws",
+    "news": "Nieuws",
     "signup": "Aanmelden",
     "menu": "Menu",
     "signupIntro": "Meld je aan voor een kennismaking waarin we samen kunnen kijken wat het beste past bij je hond.",
@@ -269,7 +269,7 @@
     "keyContract": "Sleutelcontract (.pdf)"
   },
 
-  "nieuws": {
+  "news": {
     "heroAlt": "honden in arnhem",
     "title": "Nieuws",
     "intro": "Blijf op de hoogte van het laatste Walkedo nieuws",
@@ -277,7 +277,7 @@
     "pawAlt": "honden poot"
   },
 
-  "bericht": {
+  "post": {
     "postedOn": "Geplaatst op",
     "back": "Meer nieuws bekijken",
     "heroAlt": "Foto die het bericht beschrijft",

@@ -7,7 +7,7 @@ export async function generateMetadata(
 ): Promise<Metadata> {
     return pageMetadata({
         locale: params.locale as Locale,
-        key: 'nieuws',
+        key: 'news',
         path: '/news',
     });
 }
