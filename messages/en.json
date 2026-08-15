@@ -1,0 +1,326 @@
+{
+  "metadata": {
+    "home": {
+      "title": "Dog Services in Arnhem",
+      "description": "Walkedo is a complete dog service in Arnhem North. Book a dog walker, find boarding for your dog, or cast a wolf-lookalike dog for photo and video productions."
+    },
+    "uitlaatservice": {
+      "title": "Dog Walking in Arnhem North & Oosterbeek",
+      "description": "Have your dog walked in small, carefully matched groups so they can burn off energy and socialise properly, in Arnhem North and Oosterbeek."
+    },
+    "opvang": {
+      "title": "Dog Boarding & Daycare in Arnhem",
+      "description": "A dog is a friend for life. But sometimes you need to travel, and taking your dog along is not always possible. Walkedo looks after them while you are away."
+    },
+    "voorwaarden": {
+      "title": "Dog Boarding Terms & Conditions",
+      "description": "Read the house rules for a healthy and happy stay at Walkedo dog boarding in Arnhem."
+    },
+    "northernInuit": {
+      "title": "Northern Inuit Dog",
+      "description": "A rare breed known from Game of Thrones, and now in the Netherlands. The Walkedo kennel is the first in the country. Get to know this beautiful breed."
+    },
+    "casting": {
+      "title": "Casting a Wolf-Lookalike Dog",
+      "description": "Need a dog that looks like a wolf for a production, photo shoot, or other media? Walkedo can help with a well-trained Northern Inuit Dog."
+    },
+    "nieuws": {
+      "title": "News",
+      "description": "Keep up with the latest Walkedo news."
+    },
+    "aanmelden": {
+      "title": "Sign Up",
+      "description": "Sign up with Walkedo for dog walking and boarding in Arnhem North, or get in touch about the Northern Inuit Dog."
+    },
+    "documenten": {
+      "title": "Documents",
+      "description": "Download and read all the documents we go through during your dog's intake."
+    }
+  },
+
+  "nav": {
+    "uitlaatservice": "Dog Walking",
+    "opvang": "Boarding",
+    "northernInuit": "Northern Inuit",
+    "casting": "Casting",
+    "nieuws": "News",
+    "signup": "Sign up",
+    "menu": "Menu",
+    "signupIntro": "Sign up for an introduction, so we can work out together what suits your dog best.",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "home": "Go to the homepage",
+    "logoAlt": "Walkedo logo",
+    "spiritbornLogoAlt": "Spiritborn logo"
+  },
+
+  "footer": {
+    "contactHeading": "Get in touch, no strings attached",
+    "whatsappAlt": "WhatsApp QR code",
+    "dogSilhouetteAlt": "silhouette of a group of dogs",
+    "certificates": "Certifications",
+    "certificateAlt": {
+      "groeneNorm": "Groene Norm certification",
+      "puppyCulture": "Puppy Culture certification",
+      "aeres": "Aeres certification"
+    },
+    "details": "Details",
+    "address": "Address",
+    "kvk": "Chamber of Commerce",
+    "bank": "Bank details",
+    "email": "Email",
+    "links": "Links",
+    "linkUitlaatservice": "Dog Walking",
+    "linkOpvang": "Boarding",
+    "linkDocumenten": "Documents",
+    "follow": "Follow us",
+    "instagramAlt": "Instagram",
+    "facebookAlt": "Facebook",
+    "privacy": "Privacy",
+    "privacyText": "Walkedo does not store any data online. We treat your personal details and belongings with the greatest care. This website uses no cookies other than Google Analytics for basic statistics.",
+    "language": "Language",
+    "languageNl": "Nederlands",
+    "languageEn": "English"
+  },
+
+  "home": {
+    "heroVideoFallbackAlt": "dogs running in a field",
+    "heroTitle": "Looking after your dog, wholeheartedly",
+    "heroDescription": "Let your dog discover the best spots around Arnhem with a group where they feel completely at home. And head off on holiday with peace of mind thanks to our boarding service.",
+    "scrollAlt": "arrow pointing down",
+    "arrowAlt": "arrow pointing right",
+    "title": "Dog Services in Arnhem North",
+    "intro": "Find the service you are looking for and sign up for an introduction, no strings attached. Your dog is my client, and together we will make it a great experience.",
+    "uitlaatservice": {
+      "heading": "Dog Walking",
+      "subheading": "Burn off energy and socialise with other dogs.",
+      "body": "Have your dog picked up once or several times a week. Dogs walk for at least an hour and never spend more than an hour in the van. Each group has six fixed slots, plus two kept free for dogs staying in boarding or for clients whose schedule does not fit the regular rounds. Groups are put together with care — there is a puppy group on Fridays and even a full doodle group. To keep travel time short, my service area is limited to Arnhem North, Schaarsbergen and the surrounding area.",
+      "cta": "Dog walking in Arnhem North",
+      "imageAlt": "dog in the grass"
+    },
+    "opvang": {
+      "heading": "Boarding",
+      "subheading": "For a day, a week, or a full holiday.",
+      "body": "Everyone gets away now and then, and however nice it is to take your dog along, sometimes you want something different. Since January 2025, Walkedo clients can use the boarding service. Let your dog run and play in a 25 square metre kennel while you and your family enjoy your holiday. Boarding dogs automatically join the walking groups.",
+      "cta": "Boarding service",
+      "imageAlt": "dog in the grass"
+    },
+    "northernInuit": {
+      "heading": "Northern Inuit Dog",
+      "subheading": "A rare breed known from Game of Thrones, now in the Netherlands.",
+      "body": "The Walkedo kennel is the first in the Netherlands to keep this rare breed. Get to know it. We expect a litter of pups in the coming years — join the waiting list without obligation. Once plans firm up, you will be first in line to reserve a place and become the owner of a best friend from this beautiful breed.",
+      "cta": "Join the puppy waiting list"
+    },
+    "casting": {
+      "heading": "Casting",
+      "subheading": "A wolf lookalike for photo or video",
+      "body": "Northern Inuit dogs look strikingly like wolves, are very patient, and pick up instructions quickly. That makes them an ideal match for film and photo productions, large and small.",
+      "cta": "Casting"
+    },
+    "castingImageAlt": "Northern Inuit dog posing beside Little Red Riding Hood in a photo production",
+    "expo": "Expo: Little Red Riding Hood 2025. <link>Meet the artists</link>"
+  },
+
+  "uitlaatservice": {
+    "heroAlt": "dogs walking in Arnhem",
+    "title": "Dog walking service",
+    "intro": "From €13.50 a week, I walk your dog once or several times a week in one of the Walkedo groups. Time slots are booked in advance, so you always know when your dog will be picked up. Less to worry about for you, and a happy dog waiting at home or greeting you at the door. Discover everything the walking service offers.",
+    "benefitsHeading": "The benefits at a glance",
+    "benefitsIntro": "Walkedo is an exclusive dog walking service. We keep groups smaller than most, so your dog spends less time in the van and gets more personal attention on the walk. Here is what that means in practice.",
+    "benefits": {
+      "smallGroups": "Small groups of 6 to 8 dogs",
+      "shortTravel": "Short travel times",
+      "puppyGroups": "Dedicated puppy groups",
+      "curatedGroups": "Carefully matched groups, including the walkedoodles",
+      "extraServices": "Extra services such as boarding while you are away"
+    },
+    "mapHeading": "Arnhem & Oosterbeek, the nature reserves I love",
+    "mapBody": "Together with the Walkedo group I have found the finest spots in Arnhem and Oosterbeek.",
+    "mapAlt": "map of Arnhem",
+    "subscriptionHeading": "Simple and dependable",
+    "subscriptionBody": "Walkedo works with straightforward subscriptions based on the number of walks. No occasional invoices to keep track of, and no strip cards that may or may not have expired. Monthly amounts are calculated with six weeks' allowance built in. Here is how it works: <link>subscriptions explained</link>",
+    "perWeek": "{count}x per week",
+    "calendarAlt": "calendar",
+    "calendarLink": "Days off in 2026",
+    "galleryHeading": "Fancy joining us for a walk?",
+    "galleryAlt": {
+      "1": "A group of dogs running across an open field in Arnhem",
+      "2": "Dog looking up at the camera during the walk",
+      "3": "Two dogs playing together in the woods",
+      "4": "Dogs walking in a line along a forest path",
+      "5": "Dog sniffing through tall grass",
+      "6": "A group of dogs waiting together for the off",
+      "7": "Dog running eagerly through autumn leaves",
+      "8": "Two dogs greeting each other on the walking round",
+      "9": "Dogs resting in the shade after the walk",
+      "10": "A group of dogs posing together at the end of the walk"
+    },
+    "stepsHeading": "The first steps",
+    "stepsIntro": "Your dog can join sooner than you might think. Four small steps and you are a member.",
+    "steps": {
+      "signup": {
+        "title": "Sign up",
+        "body": "Get in touch through the <link>sign-up form</link>. Write a short note about your dogs so I get a sense of the type of dog and which groups would suit them."
+      },
+      "meet": {
+        "title": "Introduction",
+        "body": "I will call or email you about your sign-up to arrange a free introduction, with no obligation. This takes place at your home. I like to get to know your dog a little, and during the conversation we can work out together when and how often they can join the group."
+      },
+      "trial": {
+        "title": "Trial walk",
+        "body": "The first walk can be a little daunting for a dog. I take your dog out for a trial walk so we can start building a bond. There is a small one-off fee for this walk. If it feels right on both sides afterwards, you can become a member and we can draw up a key agreement."
+      },
+      "subscription": {
+        "title": "Subscription",
+        "body": "From this point your dog is a fixed part of the group. At the start of each month a set amount is debited, depending on the number of walks per month."
+      }
+    }
+  },
+
+  "opvang": {
+    "heroAlt": "dogs in Arnhem",
+    "title": "Dog boarding in Arnhem",
+    "intro": "A dog is a friend for life. But sometimes you need or want to travel, and taking your dog along is not always possible. Clients of the Walkedo walking service can have their dog stay with me at home. Your dog gets a spacious green garden and a spot of their own for the duration of the stay, so they can retreat when they want to. And when they are in the mood, there is plenty of company from my own dogs and sometimes other guests.",
+    "benefitsHeading": "The benefits at a glance",
+    "benefitsIntro": "Board your dog for a short stay or a longer one. They automatically join the walking group, and can spend time both indoors and outdoors during the stay.",
+    "benefits": {
+      "weekendOrHoliday": "A weekend or your entire holiday",
+      "fixedRate": "A fixed rate per day",
+      "company": "Plenty of company for your dog",
+      "joinsWalks": "Your dog joins the walking group every weekday",
+      "insideOutside": "Your dog can stay both indoors and outdoors"
+    },
+    "dogImageAlt": "Dog resting on the sofa",
+    "pricingHeading": "Rates",
+    "table": {
+      "rates": "Boarding rates",
+      "highSeason": "High season",
+      "lowSeason": "Low season",
+      "dayCare": "Daycare",
+      "daysOneToSix": "Day 1 to day 6",
+      "daysSevenPlus": "Day 7 onwards",
+      "dayCareSingle": "Daycare, single day"
+    },
+    "rulesText": "For a healthy and enjoyable stay at Walkedo dog boarding in Arnhem, we have set out house rules. <link>Click here to read them</link>"
+  },
+
+  "voorwaarden": {
+    "title": "Dog boarding terms & conditions",
+    "published": "Published: 12-1-2026. Version 1.0",
+    "download": "Download the terms & conditions",
+    "note": "This is a translation for convenience. The Dutch version of these terms is the binding one.",
+    "p1": "Please note: available only to dogs of Walkedo daycare, Walkedo dog walking, and Walkedo Northern Inuit Kennel clients.",
+    "p2": "- Please bear in mind that if the Walkedo walking service, the daycare, or the puppy application ends, you are no longer a Walkedo client and can therefore no longer use the holiday boarding.",
+    "p3": "- The discount for a second and third dog with the same owner is two euros per day. Each new day starts in the morning.",
+    "p4": "Dogs can be dropped off and/or collected before 08:30 in the morning. Dogs can be dropped off and/or collected between 17:00 and 21:00.",
+    "p5": "The dog joins the walking service twice (two one-hour walks) and is also walked separately once. (For puppies and older dogs we tailor this to their needs.)",
+    "p6": "If a dog comes into season during the stay, a surcharge of five euros per day applies.",
+    "p7": "Dogs that have not been neutered or spayed cannot board.",
+    "p8": "Dogs must be vaccinated against kennel cough one month before their stay.",
+    "p9": "Owners are asked to bring their own food and to explain how it should be given. Medication is no problem, but the dog must not be contagious.",
+    "p10": "You are also asked to leave the pet passport with us. At handover the passport is checked for all vaccinations.",
+    "p11": "* High season covers all school holidays and national public holidays."
+  },
+
+  "casting": {
+    "heroAlt": "The set of a film production",
+    "title": "Casting",
+    "subtitle": "Lights, camera, Walkedo!",
+    "body1": "Do you need a dog with the look of a wolf for a production, film, music video, photo shoot, or marketing campaign? Walkedo can help with the Northern Inuit Dog. These dogs have a striking presence because of how closely they resemble a wolf — the breed was used in the production of Game of Thrones for exactly that reason.",
+    "body2": "The Northern Inuit Dog is well trained and ideal for productions with a fantasy or medieval direction. They have a gentle character and can project it, but when a scene calls for it they can also look sharp and menacing. They stand around 60cm at the shoulder and are fast and dynamic for action-driven scenes.",
+    "cta": "Get in touch",
+    "expoTitle": "Little Red Riding Hood, 2025",
+    "artist": "Artist",
+    "photographer": "Photographer",
+    "model": "Model",
+    "carouselAlt": {
+      "walk": "Wolf-lookalike dog walking through the forest during a casting shoot",
+      "highfive": "Wolf-lookalike dog walking away alongside Little Red Riding Hood, seen from behind",
+      "portrait": "Wolf-lookalike dog looking away from the camera",
+      "together": "Wolf-lookalike dog together with Little Red Riding Hood",
+      "solo": "Northern Inuit dog posing as a wolf in the forest"
+    }
+  },
+
+  "northernInuit": {
+    "heroAlt": "Northern Inuit dog in the dunes",
+    "title": "Northern Inuit Dog",
+    "intro": "This beautiful breed is still little known worldwide, and even less so in the Netherlands. These dogs are highly social and do well in groups and around other dogs. The breed is best known from the TV series Game of Thrones. The Northern Inuit Dog is a cross of Siberian Husky, German Shepherd, Samoyed and Alaskan Malamute. There is no wolf DNA in the Northern Inuit Dog, which is what makes them well suited to life as a family pet.",
+    "traitsHeading": "Breed characteristics",
+    "traits": {
+      "family": "Devoted to the family",
+      "alone": "Companion dogs that can also be left alone",
+      "guard": "Not a guard dog",
+      "intelligent": "Intelligent dogs",
+      "walks": "Love long walks",
+      "pack": "Fit easily into a pack"
+    },
+    "pupsAlt": "Northern Inuit puppies playing together outside",
+    "puppyHeading": "Interested in a puppy?",
+    "puppyBody": "We expect a litter of Northern Inuits within the next few years. If you are interested in a Northern Inuit, put your name down without obligation — the final list is still to come. If you would simply like to experience the breed, feel free to get in touch.",
+    "puppyCta": "Join the Northern Inuit puppy list"
+  },
+
+  "documenten": {
+    "title": "Documents",
+    "intro": "During the intake we go through a few documents that matter for a safe and successful arrangement for you and your dog. You can read them here in advance. If anything is unclear, just get in touch.",
+    "intake": "Intake form (.pdf)",
+    "terms": "Terms of service (.pdf)",
+    "keyContract": "Key agreement (.pdf)"
+  },
+
+  "nieuws": {
+    "heroAlt": "dogs in Arnhem",
+    "title": "News",
+    "intro": "Keep up with the latest Walkedo news",
+    "empty": "There are no posts in this language yet.",
+    "pawAlt": "dog paw"
+  },
+
+  "bericht": {
+    "postedOn": "Posted on",
+    "back": "See more news",
+    "heroAlt": "Photo illustrating the post",
+    "notAvailableTitle": "Not translated yet",
+    "notAvailable": "This post is not available in English yet.",
+    "readInOther": "Read it in Dutch"
+  },
+
+  "signup": {
+    "title": "Sign up",
+    "intro": {
+      "uitlaten": "I cannot wait to meet your dog. Sign up for an introduction with no obligation. I will walk you calmly through every step, and together we will look at the services that suit you and your dog best.",
+      "casting": "Sign up for casting. I handle the dog on your production. The Northern Inuit Dog suits a fantasy setting particularly well, and the breed has been used before on Game of Thrones.",
+      "puppy": "Register your interest in a Northern Inuit puppy. You are not committing to anything — the final list is still to come."
+    },
+    "firstName": "First name",
+    "lastName": "Last name",
+    "email": "Email",
+    "phone": "Phone number",
+    "address": "Address",
+    "addressPlaceholder": "For example Hondenlaan 2, 1111HD Arnhem",
+    "detailLabel": {
+      "uitlaten": "Brief description of your dog(s)",
+      "casting": "Project description",
+      "puppy": "Describe your situation"
+    },
+    "detailPlaceholder": {
+      "uitlaten": "What makes your dog unique?",
+      "casting": "Briefly describe the project you need a dog for",
+      "puppy": "Why would you be a good owner for a pup?"
+    },
+    "submit": "Send",
+    "loading": "Loading, one moment",
+    "error": "Something went wrong. Please try again, or send a message to woof@walkedo.com",
+    "success": {
+      "uitlaten": "Woof! We have received your sign-up. Hopefully see you soon :)",
+      "casting": "Woof! The script practically writes itself. We have received your sign-up and will be in touch.",
+      "puppy": "Woof! That is what your puppy will sound like when you come home in a few years. We have received your sign-up and will be in touch."
+    }
+  },
+
+  "notFound": {
+    "title": "Oh no! A dog has lost the ball",
+    "body": "We could not find that page. But we have asked a labradoodle to help look for it."
+  }
+}

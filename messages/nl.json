@@ -1,0 +1,326 @@
+{
+  "metadata": {
+    "home": {
+      "title": "Hondenservice",
+      "description": "Walkedo is een alles omvattende hondenservice in Arnhem Noord. Laat je hond uitlaten, vind opvang voor je hond, of cast een wolf lookalike hond voor op de foto of video."
+    },
+    "uitlaatservice": {
+      "title": "Uitlaatservice Arnhem Noord & Oosterbeek",
+      "description": "Laat je hond uitgelaten worden met zorg samengestelde speciale kleine groepen. Zo kunnen ze de energie kwijt en lekker socialiseren in Arnhem Noord en Oosterbeek"
+    },
+    "opvang": {
+      "title": "Hondendagopvang in Arnhem",
+      "description": "Een hond is een vriend voor het leven. Maar soms moet of wil je ook even ver weg van huis en dan is het niet altijd mogelijk om je hond mee te nemen."
+    },
+    "voorwaarden": {
+      "title": "Hondendagopvang voorwaarden",
+      "description": "Bekijk de voorwaarden voor een gezond en vrolijk verblijf van je hond bij Walkedo Arnhem, hondenopvang."
+    },
+    "northernInuit": {
+      "title": "Northern Inuit Dog",
+      "description": "Een uniek ras bekend uit Game of Thrones en nu in Nederland. Dit unieke ras is bij de Walkedo kennel als eerste in Nederland. Leer dit prachtige ras kennen."
+    },
+    "casting": {
+      "title": "Casting Hond Wolf uiterlijk",
+      "description": "Heb je een hond nodig die lijkt op een wolf voor je productie, een fotoshoot of andere vorm van Media? Walkedo helpt je graag met een Northern Inuit Dog die goed getraind is."
+    },
+    "nieuws": {
+      "title": "Nieuws",
+      "description": "Blijf op de hoogte van het laatste Walkedo nieuws."
+    },
+    "aanmelden": {
+      "title": "Aanmelden",
+      "description": "Meld je aan bij Walkedo voor de uitlaatservice en opvangservice in Arnhem Noord. Of neem contact op over de Northern Inuit Dog."
+    },
+    "documenten": {
+      "title": "Documenten",
+      "description": "Download en lees alle documenten die ter sprake komen tijdens de intake voor je hond."
+    }
+  },
+
+  "nav": {
+    "uitlaatservice": "Uitlaatservice",
+    "opvang": "Opvang",
+    "northernInuit": "Northern Inuit",
+    "casting": "Casting",
+    "nieuws": "Nieuws",
+    "signup": "Aanmelden",
+    "menu": "Menu",
+    "signupIntro": "Meld je aan voor een kennismaking waarin we samen kunnen kijken wat het beste past bij je hond.",
+    "openMenu": "Menu openen",
+    "closeMenu": "Menu sluiten",
+    "home": "Naar de homepagina",
+    "logoAlt": "Walkedo logo",
+    "spiritbornLogoAlt": "Spiritborn logo"
+  },
+
+  "footer": {
+    "contactHeading": "Neem vrijblijvend contact op",
+    "whatsappAlt": "whatsapp QR code",
+    "dogSilhouetteAlt": "silhouette van honden",
+    "certificates": "Certificaten",
+    "certificateAlt": {
+      "groeneNorm": "Groene Norm keurmerk",
+      "puppyCulture": "Puppy Culture keurmerk",
+      "aeres": "Aeres keurmerk"
+    },
+    "details": "Gegevens",
+    "address": "Adres",
+    "kvk": "KVK",
+    "bank": "Bankgegevens",
+    "email": "Email",
+    "links": "Links",
+    "linkUitlaatservice": "Honden Uitlaatservice",
+    "linkOpvang": "Opvang",
+    "linkDocumenten": "Documenten",
+    "follow": "Volg ons",
+    "instagramAlt": "instagram afbeelding",
+    "facebookAlt": "facebook afbeelding",
+    "privacy": "Privacy",
+    "privacyText": "Walkedo bewaard geen online gegevens. Wij gaan met uiterste zorg om met uw persoonlijke gegevens en bezittingen. Deze website maakt geen gebruik van cookies met uitzondering van Google Analytics voor het beheren van statistieken.",
+    "language": "Taal",
+    "languageNl": "Nederlands",
+    "languageEn": "English"
+  },
+
+  "home": {
+    "heroVideoFallbackAlt": "honden op een veld",
+    "heroTitle": "Met hart voor je hond",
+    "heroDescription": "Laat je viervoeter de mooiste plekjes van Arnhem ontdekken met een groep waar hij zich helemaal thuis voelt. En ga met een gerust hart op vakantie met de opvangservice.",
+    "scrollAlt": "pijl naar beneden",
+    "arrowAlt": "pijl naar rechts",
+    "title": "Hondenservice Arnhem Noord",
+    "intro": "Ontdek waar je interesse in hebt en meld je aan voor een vrijblijvend kennismakingsgesprek. Jouw hond is mijn klant en laten we er samen een mooie ervaring van maken.",
+    "uitlaatservice": {
+      "heading": "Uitlaatservice",
+      "subheading": "Lekker de energie kwijt en socialiseren met andere honden.",
+      "body": "Laat je hond èèn of meerdere malen per week door mij ophalen. Honden lopen minimaal een uur en zitten maximaal een uur in de bus. Per groep zijn er zes vaste slots beschikbaar. En zijn er twee slots beschikbaar voor honden die in de opvang zitten of voor klanten die niet uitkomen met het reguliere uitlaten van de hond. De honden groepen worden zorgvuldig samengesteld. Zo is een puppygroep op vrijdag en zelfs een volledige doodle groep. Om die reistijd klein te houden is mijn werkgebied beperkt tot Arnhem Noord, Schaarsbergen en omstreken.",
+      "cta": "Uitlaatservice Arnhem Noord",
+      "imageAlt": "hond in het gras"
+    },
+    "opvang": {
+      "heading": "Opvangservice",
+      "subheading": "Voor een dag, een week of een vakantieperiode.",
+      "body": "Iedereen gaat er wel eens op uit en hoe leuk het ook is om op vakantie te gaan met je hond, toch wil je wel eens even wat anders. Klanten van Walkedo kunnen gebruik per januari 2025 gebruik maken van de opvangservice. Laat je honden lekker razen en spelen in een kennel van 25 vierkante meter terwijl jij en je gezin van een vakantie geniet. De honden van de opvang gaan automatisch mee met de uitlaatservice.",
+      "cta": "Opvangservice",
+      "imageAlt": "hond in het gras"
+    },
+    "northernInuit": {
+      "heading": "Northern Inuit Dog",
+      "subheading": "Een uniek ras bekend uit Game of Thrones en nu in Nederland.",
+      "body": "Dit unieke ras is bij de Walkedo kennel als eerste in Nederland. Leer dit prachtige ras kennen. We verwachten een roedel pups in de toekomst, schrijf je vrijblijvend in voor de wachtlijst. Zodra het concreet wordt heb je als eerste de kans om een plekje te reserveren en eigenaar te worden van een beste vriend uit dit unieke prachtige ras.",
+      "cta": "Meld je aan voor een pup"
+    },
+    "casting": {
+      "heading": "Casting",
+      "subheading": "Een wolf look-alike voor op de foto of video",
+      "body": "Northern Inuit dogs lijken erg op een wolf en zijn erg geduldig en pakken instructies erg snel op. Dit maakt ze een ideale match voor film of fotoproducties klein en groot.",
+      "cta": "Casting"
+    },
+    "castingImageAlt": "Northern Inuit dog die poseert naast roodkapje in een fotoproductie",
+    "expo": "Expo: Roodkapje 2025. <link>Ontdek de artiesten</link>"
+  },
+
+  "uitlaatservice": {
+    "heroAlt": "honden in arnhem",
+    "title": "Honden uitlaatservice",
+    "intro": "Al vanaf 13,50 per week loop ik èèn of meerdere keren met je hond in een van de leuke Walkedo groepen. We reserveren van tevoren vaste tijdslots zodat je zeker weet wanneer je hond wordt opgehaald. Minder zorgen voor jou en een blije hond die thuis op je wacht of je thuis weer begroet. Ontdek alle voordelen van de uitlaatservice.",
+    "benefitsHeading": "Alle voordelen op een rijtje",
+    "benefitsIntro": "Walkedo is een exclusieve hondenuitlaatservice. Wij hanteren kleinere groepen dan de meeste partijen zodat je hond minder lang in de bus zit en meer persoonlijke aandacht krijgt tijdens de wandeling. Ontdek alle voordelen van de Walkedo hondenuitlaatservice.",
+    "benefits": {
+      "smallGroups": "Kleine groepen van 6 tot 8 honden",
+      "shortTravel": "Korte reistijden",
+      "puppyGroups": "Speciale puppygroepen",
+      "curatedGroups": "Zorgvuldig samengestelde groepen waaronder de walkedoodles",
+      "extraServices": "Extra services zoals opvang als je op vakantie gaat"
+    },
+    "mapHeading": "Arnhem & Oosterbeek, de natuurgebieden waar ik graag kom",
+    "mapBody": "Samen met de groep van Walkedo heb ik de mooiste plekken van Arnhem en Oosterbeek ontdekt!",
+    "mapAlt": "kaart van Arnhem",
+    "subscriptionHeading": "Eenvoudig en betrouwbaar",
+    "subscriptionBody": "Walkedo werkt met overzichtelijke abonnementen op basis van het aantal wandelingen. Zo hoef je niet te letten op sporadische facturen of strippenkaarten die wel of niet zijn verlopen. De maandbedragen zijn berekend met een voordeel van zes weken. Hoe dit werkt lees je hier: <link>uitleg abonnementen</link>",
+    "perWeek": "{count}x p/w",
+    "calendarAlt": "kalender",
+    "calendarLink": "Overzicht vrije dagen van 2026",
+    "galleryHeading": "Kom je lekker met ons wandelen?",
+    "galleryAlt": {
+      "1": "Groepje honden rent over een open veld in Arnhem",
+      "2": "Hond kijkt omhoog naar de camera tijdens de wandeling",
+      "3": "Twee honden spelen samen in het bos",
+      "4": "Honden wandelen in een rij over een bospad",
+      "5": "Hond snuffelt tussen het hoge gras",
+      "6": "Groep honden wacht samen op het startsein",
+      "7": "Hond rent enthousiast door de herfstbladeren",
+      "8": "Twee honden begroeten elkaar tijdens de uitlaatronde",
+      "9": "Honden rusten uit in de schaduw na de wandeling",
+      "10": "Groep honden poseert samen aan het einde van de wandeling"
+    },
+    "stepsHeading": "De eerste stappen",
+    "stepsIntro": "Je hond kan al eerder mee dan je misschien denkt. Binnen vier kleine stappen ben je al lid.",
+    "steps": {
+      "signup": {
+        "title": "Aanmelden",
+        "body": "Neem contact met mij op via het <link>aanmeldformulier</link>. Schrijf een kort bericht over je honden zodat ik een indruk krijg van het type hond en in welke groepen hij of zij goed zou passen."
+      },
+      "meet": {
+        "title": "Kennis maken",
+        "body": "Ik zal je bellen of mailen naar aanleiding van je aanmelding om een gratis vrijblijvende kennismaking met je in te plannen. Dit gebeurd bij jouw thuis. Ik leer graag je hond een beetje beter kennen en tijdens dit gesprek kunnen we samen kijken wanneer en hoe vaak de hond mee kan met de groep."
+      },
+      "trial": {
+        "title": "Proef wandeling",
+        "body": "De eerste wandeling is voor de hond misschien een beetje spannend. Ik neem je hond mee voor een proefwandeling zodat we samen alvast een band kunnen opbouwen. Deze wandeling kost een klein eenmalig bedrag. Als het na de wandeling aan beide kanten goed klikt dan kan je lid worden en kunnen we een sleutelcontract opstellen."
+      },
+      "subscription": {
+        "title": "Abonnement",
+        "body": "Vanaf dit moment is je hond een vast onderdeel van de groep! Aan het begin van de maand zal er een vast bedrag afgeschreven worden afhankelijk van het aantal wandelingen per maand."
+      }
+    }
+  },
+
+  "opvang": {
+    "heroAlt": "honden in arnhem",
+    "title": "Hondendagopvang in Arnhem",
+    "intro": "Een hond is een vriend voor het leven. Maar soms moet of wil je ook even ver weg van huis en dan is het niet altijd mogelijk om je hond mee te nemen. Speciaal voor klanten van de Walkedo uitlaatservice, kan je je hond door mij thuis laten opvangen. Je hond krijgt de beschikking over een ruimte groene tuin en een eigen plekje gedurende het verblijf zodat hij of zij zich kan terugtrekken. Maar als de hond het leuk vind zijn er zijn genoeg momenten met lekker veel gezelschap van mijn eigen honden en soms andere logés.",
+    "benefitsHeading": "Alle voordelen op een rijtje",
+    "benefitsIntro": "Laat je hond voor een korte of langere tijdsduur logeren. Je hond gaat dan automatisch ook mee met de groep, en kan zowel buiten als binnen verblijven tijdens het verblijf.",
+    "benefits": {
+      "weekendOrHoliday": "Een weekend of je gehele vakantie",
+      "fixedRate": "Voor een vast bedrag per dag",
+      "company": "Je hond heeft voldoende gezelschap",
+      "joinsWalks": "Je hond gaat automatisch elke werkdag mee met de uitlaatgroep",
+      "insideOutside": "Je hond kan zowel buiten als binnen verblijven"
+    },
+    "dogImageAlt": "Hond op de bank",
+    "pricingHeading": "De tarieven",
+    "table": {
+      "rates": "Opvang tarieven",
+      "highSeason": "Hoogseizoen",
+      "lowSeason": "Laagseizoen",
+      "dayCare": "Dagopvang",
+      "daysOneToSix": "Dag 1 t/m dag 6",
+      "daysSevenPlus": "Dag 7 t/m ...",
+      "dayCareSingle": "Dagopvang los"
+    },
+    "rulesText": "Voor een gezond en gezellig verblijf van uw hond bij de hondenopvang Walkedo Arnhem hebben wij verblijfregels opgesteld. <link>Klik hier om ze te bekijken</link>"
+  },
+
+  "voorwaarden": {
+    "title": "Hondendagopvang voorwaarden",
+    "published": "Publicatiedatum: 12-1-2026. Versie 1.0",
+    "download": "Download de voorwaarden",
+    "note": "Dit is de bindende Nederlandse versie van de voorwaarden.",
+    "p1": "Let op! Alleen voor klanten honden van Walkedo honden dagopvang - Walkedo hondenuitlaatservice - Walkedo Northen Inuit Kennel!",
+    "p2": "- Hou er rekening mee dat als de uitlaatservice van Walkedo, de dagopvang of pup aanvraag komt te vervallen dat u dan geen klant meer bent van Walkedo en dus geen gebruik maar kan maken van de vakantie opvang.",
+    "p3": "- Korting op de 2e en 3e hond met dezelfde eigenaar is twee euro per dag. Elke nieuwe dag gaat in op de ochtend.",
+    "p4": "Honden kunnen opgehaald en/of weggebracht worden voor 08:30 s’ochtends. Honden kunnen opgehaald en/of weggebracht worden tussen 17:00 uur en 21:00 uur",
+    "p5": "De hond gaat 2 x mee op de uitlaatservice ( 2 x uur wandelen) en zal daarnaast nog èèn maal apart worden uitgelaten. ( voor pups en oude honden zal maatwerk geleverd worden)",
+    "p6": "Wordt de hond loops tijdens het verblijf dan komt er een toeslag van 5 euro per dag.",
+    "p7": "Ongecastreerde honden kunnen niet komen logeren.",
+    "p8": "Honden moeten verplicht ingeënt zijn voor kennel hoest een maand voordat ze komen logeren.",
+    "p9": "Eigenaren wordt gevraagd om zelf voer mee te brengen en aan te geven hoe deze moet worden toegediend. Moet de hond medicatie hebben dan is dat geen probleem echter mag de hond niet besmettelijk zijn.",
+    "p10": "Daarnaast word gevraagd om het dierenpaspoort achter te laten. Tijdens deze overdracht word het paspoort gecontroleerd op alle vaccinaties.",
+    "p11": "* Onder het hoogseizoen vallen alle kindervakanties en nationale feestdagen."
+  },
+
+  "casting": {
+    "heroAlt": "De set van een film productie",
+    "title": "Casting",
+    "subtitle": "Licht, Camera, Walkedo!",
+    "body1": "Heb je een hond nodig met het uiterlijk van een wolf voor je productie, film, muziekvideo, foto of marketing campagne? Walkedo kan je helpen met de Northern Inuit Dog. Deze honden hebben een hele aantrekkelijke look omdat ze op een wolf lijken. Zo zijn ze ook gebruikt bij de productie van de TV Series Game Of Thrones.",
+    "body2": "De Northern Inuit Dog is goed getraind en zijn ideaal voor producties waarbij je een fantasy of middeleeuwse richting op wilt. Ze hebben een lief karakter en kunnen dit ook uitstralen, maar indien nodig kunnen ze ook vijandig en scherp uit de ogen kijken. De honden zijn ongeveer 60cm schofthoogte en heel snel en dynamisch voor actie gedreven scenes.",
+    "cta": "Contact opnemen",
+    "expoTitle": "Roodkapje, 2025",
+    "artist": "Artiest",
+    "photographer": "Fotograaf",
+    "model": "Model",
+    "carouselAlt": {
+      "walk": "Wolf uiterlijk voor casting, lopend door het bos",
+      "highfive": "Wolf achteraanzicht weglopend samen met roodkapje",
+      "portrait": "Wolf uiterlijk voor casting, wegkijkend van de camera",
+      "together": "Wolf uiterlijk samen met roodkapje",
+      "solo": "Northern Inuit dog die als wolf poseert in het bos"
+    }
+  },
+
+  "northernInuit": {
+    "heroAlt": "honden in arnhem",
+    "title": "Northern Inuit Dog",
+    "intro": "Dit prachtige ras is nog heel onbekend wereldwijd en al helemaal in Nederland. De honden zijn heel sociaal, gaan goed in groepen en andere honden. Het ras is bekend van de TV serie Game of Thrones. De Northern Inuit Dog bestaat uit een kruising van een Siberisch Huskey, Duitse Herder, Samojeed en Alaskan Malamute. Er zit geen wolf DNA in de Northern Inuit Dog waardoor ze makkelijk de rol van een familie huisdier kunnen vervullen.",
+    "traitsHeading": "Eigenschappen ras",
+    "traits": {
+      "family": "Toegewijd aan de familie",
+      "alone": "Gezelschapshonden die wel alleen kunnen zijn",
+      "guard": "Geen waakhond",
+      "intelligent": "Intelligente honden",
+      "walks": "Genieten van lange wandelingen",
+      "pack": "Passen makkelijk in een roedel"
+    },
+    "pupsAlt": "Northern Inuit pups spelen samen buiten",
+    "puppyHeading": "Interesse in een puppy?",
+    "puppyBody": "Wij verwachten binnen een aantal jaar een nestje te krijgen van Northern Inuits. Heb je interesse in een Northern Inuit schrijf je dan alvast vrijblijvend in (de definitieve lijst volgt nog). Ook als je het ras wilt ervaren kan je contact met mij opnemen.",
+    "puppyCta": "Aanmelden voor een Northern Inuit puppy"
+  },
+
+  "documenten": {
+    "title": "Documenten",
+    "intro": "Bij de intake zullen we enkele documenten doornemen die van belang zijn voor een veilige en succesvolle samenwerking voor jou en je hond. Hier kan je deze documenten alvast bekijken. Bij vragen kan je altijd contact met mij opnemen.",
+    "intake": "Intake formulier (.pdf)",
+    "terms": "Leveringsvoorwaarden (.pdf)",
+    "keyContract": "Sleutelcontract (.pdf)"
+  },
+
+  "nieuws": {
+    "heroAlt": "honden in arnhem",
+    "title": "Nieuws",
+    "intro": "Blijf op de hoogte van het laatste Walkedo nieuws",
+    "empty": "Er zijn nog geen berichten in deze taal.",
+    "pawAlt": "honden poot"
+  },
+
+  "bericht": {
+    "postedOn": "Geplaatst op",
+    "back": "Meer nieuws bekijken",
+    "heroAlt": "Foto die het bericht beschrijft",
+    "notAvailableTitle": "Nog niet vertaald",
+    "notAvailable": "Dit bericht is nog niet in het Nederlands beschikbaar.",
+    "readInOther": "Lees het in het Engels"
+  },
+
+  "signup": {
+    "title": "Aanmelden",
+    "intro": {
+      "uitlaten": "Ik kan niet wachten om je hond te leren kennen. Meld je vrijblijvend aan voor een kennismakingsgesprek. Dan loop ik je rustig door alle stappen en kijken we samen naar de services die het beste bij jou en je hond passen.",
+      "casting": "Schrijf je in voor de casting. Ik begeleid de hond bij je productie. De Northern Inuit dog past heel goed bij een fantasy setting en het ras is eerder ingezet bij de series Game of Thrones.",
+      "puppy": "Meld je interesse in een Northern Inuit puppy. Je zit nergens aan vast, de definitieve lijst volgt nog."
+    },
+    "firstName": "Voornaam",
+    "lastName": "Achternaam",
+    "email": "Email",
+    "phone": "Telefoon nummer",
+    "address": "Adres",
+    "addressPlaceholder": "Bijvoorbeeld hondenlaan 2, 1111HD Arnhem",
+    "detailLabel": {
+      "uitlaten": "Korte beschrijving hond(en)",
+      "casting": "Beschrijving project",
+      "puppy": "Beschrijf je situatie"
+    },
+    "detailPlaceholder": {
+      "uitlaten": "Wat maakt jouw hond uniek",
+      "casting": "Beschrijf kort het project waar je een hond voor zoekt",
+      "puppy": "Waarom zou je een goede eigenaar(esse) zijn voor een pup?"
+    },
+    "submit": "Verzenden",
+    "loading": "Laden.. een momentje",
+    "error": "Oeps, er is iets misgegaan. Probeer het nogmaals of stuur een bericht naar woof@walkedo.com",
+    "success": {
+      "uitlaten": "Woef! We hebben je aanmelding ontvangen. Hopelijk tot snel :)",
+      "casting": "Woef! Het script is al praktisch geschreven. We hebben je aanmelding ontvangen en nemen contact met je op",
+      "puppy": "Woef! Zo klinkt jouw puppy als je over een paar jaar thuis komt. We hebben je aanmelding ontvangen en nemen contact met je op."
+    }
+  },
+
+  "notFound": {
+    "title": "Oh nee! Een hond is de bal kwijt",
+    "body": "Wij konden de pagina helaas niet vinden. Maar we hebben een labradoodle om hulp gevraagd."
+  }
+}
