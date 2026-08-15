@@ -33,8 +33,15 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
 
     if (!post) {
         // Untranslated: keep it out of the index rather than competing with
-        // the locale that does have the article.
-        return { robots: { index: false, follow: true } };
+        // the locale that does have the article. Alternates are cleared
+        // explicitly, otherwise this URL inherits the layout's home-page
+        // hreflang set and claims to be a translation of the home page.
+        const t = await getTranslations({ locale, namespace: "bericht" });
+        return {
+            title: t("notAvailableTitle"),
+            robots: { index: false, follow: true },
+            alternates: { canonical: null, languages: {} },
+        };
     }
 
     const path = `/berichten/${post.slug}`;
