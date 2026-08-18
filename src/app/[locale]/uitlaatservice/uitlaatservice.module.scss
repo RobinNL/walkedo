@@ -151,3 +151,43 @@
 .contentBlock {
   max-width: 768px;
 }
+/**
+ * Replaces react-grid-gallery, which rendered its <img> tags only after mount.
+ * A plain grid of next/image server-renders the markup, so the photographs are
+ * in the HTML a crawler sees and are served resized rather than at source size.
+ */
+.galleryGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: spacing(8);
+  margin-top: spacing(24);
+}
+
+.galleryItem {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: radius(regular);
+}
+
+.galleryImage {
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+@media screen and (min-width: 768px) {
+
+  .galleryGrid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: spacing(12);
+  }
+
+}
+
+@media screen and (min-width: 1200px) {
+
+  .galleryGrid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+}

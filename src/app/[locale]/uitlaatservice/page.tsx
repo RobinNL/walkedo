@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import Styles from "./uitlaatservice.module.scss";
-import { Gallery } from "react-grid-gallery";
 import React from "react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
@@ -28,15 +27,10 @@ const STEPS = ['signup', 'meet', 'trial', 'subscription'] as const;
 export default function Page() {
     const t = useTranslations('uitlaatservice');
 
-    const images = GALLERY_IMAGES.map((image, index) => ({
-        ...image,
-        alt: t(`galleryAlt.${index + 1}`),
-    }));
-
     return (
         <main>
             <div className={Styles.heroImage}>
-                <Image sizes='max-width: 100vw' className={Styles.heroImageInner} fill={true}
+                <Image priority sizes='100vw' className={Styles.heroImageInner} fill={true}
                        alt={t('heroAlt')}
                        src={'/images/uitlaatservice/walkedo-uitlaatservice.jpg'}/>
             </div>
@@ -103,7 +97,17 @@ export default function Page() {
                 <div className={Styles.contentHero}>
                     <h3>{t('galleryHeading')}</h3>
 
-                    <Gallery enableImageSelection={false} images={images}/>
+                    <div className={Styles.galleryGrid}>
+                        {GALLERY_IMAGES.map((image, index) => (
+                            <div className={Styles.galleryItem} key={image.src}>
+                                <Image src={image.src}
+                                       alt={t(`galleryAlt.${index + 1}`)}
+                                       className={Styles.galleryImage}
+                                       fill={true}
+                                       sizes="(max-width: 767px) 50vw, (max-width: 1199px) 33vw, 20vw"/>
+                            </div>
+                        ))}
+                    </div>
                 </div>
 
 

@@ -11,7 +11,9 @@ import GlobalNavbar from "@/layout/desktop-navbar/global-navbar";
 import GlobalFooter from "@/layout/footer/global-footer";
 import MobileNavbar from "@/layout/mobile-navbar/mobile-navbar";
 import { routing, type Locale } from "@/i18n/routing";
-import { SITE_URL, alternates } from "@/i18n/metadata";
+import { SITE_URL, alternates, ogImage, ogImages } from "@/i18n/metadata";
+import { JsonLd } from "@/app/shared/json-ld";
+import { localBusiness, website } from "@/app/shared/structured-data";
 
 const GTM_ID = "GTM-N4V9NTB9";
 
@@ -28,15 +30,35 @@ export async function generateMetadata({
 }): Promise<Metadata> {
     const locale = params.locale as Locale;
     const t = await getTranslations({ locale, namespace: "metadata" });
+    const title = `Walkedo | ${t("home.title")}`;
+    const description = t("home.description");
 
     return {
         metadataBase: new URL(SITE_URL),
         title: {
-            default: `Walkedo | ${t("home.title")}`,
+            default: title,
             template: "%s | Walkedo",
         },
-        description: t("home.description"),
+        description,
         alternates: alternates(locale, ""),
+        // The home page has no layout beneath it to call pageMetadata(), so it
+        // needs its own Open Graph block or it ships without one entirely.
+        // Next fills the Twitter tags from these.
+        openGraph: {
+            title,
+            description,
+            url: `${SITE_URL}/${locale}`,
+            siteName: "Walkedo",
+            locale: locale === "nl" ? "nl_NL" : "en_GB",
+            type: "website",
+            images: ogImages(ogImage("home")),
+        },
+        twitter: {
+            card: "summary_large_image",
+            title,
+            description,
+            images: [ogImage("home")],
+        },
         manifest: "/favicon/site.webmanifest",
         icons: {
             icon: [
@@ -77,6 +99,8 @@ export default async function LocaleLayout({
     return (
         <html lang={locale}>
         <body className={inter.className}>
+        <JsonLd data={localBusiness(locale)} />
+        <JsonLd data={website(locale)} />
         <GoogleTagManager gtmId={GTM_ID} />
         <noscript>
             <iframe src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}

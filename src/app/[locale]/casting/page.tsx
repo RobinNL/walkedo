@@ -40,7 +40,7 @@ export default function Page() {
     return (
         <main>
             <div className={Styles.heroImage}>
-                <Image sizes='max-width: 100vw' className={Styles.heroImageInner} fill={true}
+                <Image priority sizes='100vw' className={Styles.heroImageInner} fill={true}
                        objectPosition={'50% 50%'}
                        alt={t('heroAlt')}
                        src={'/images/casting/film-productie.jpg'}/>

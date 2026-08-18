@@ -1,7 +1,7 @@
 import Styles from './voorwaarden.module.scss';
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { pageMetadata } from "@/i18n/metadata";
+import { ogImage, pageMetadata } from "@/i18n/metadata";
 import type { Locale } from "@/i18n/routing";
 
 export async function generateMetadata(
@@ -11,6 +11,7 @@ export async function generateMetadata(
         locale: params.locale as Locale,
         key: 'voorwaarden',
         path: '/opvang/voorwaarden',
+        image: ogImage('voorwaarden'),
     });
 }
 

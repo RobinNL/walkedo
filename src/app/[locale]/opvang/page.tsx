@@ -12,7 +12,7 @@ export default async function Page({ params }: { params: { locale: string } }) {
     return (
         <main>
             <div className={Styles.heroImage}>
-                <Image sizes='max-width: 100vw' className={Styles.heroImageInner} fill={true}
+                <Image priority sizes='100vw' className={Styles.heroImageInner} fill={true}
                        alt={t('heroAlt')}
                        objectPosition={'80% 90%'}
                        src={'/images/opvang/hond-op-bank.png'}/>

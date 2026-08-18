@@ -10,6 +10,18 @@ const OG_LOCALE: Record<Locale, string> = {
 };
 
 /**
+ * Share cards, pre-cropped to the 1200x630 that Facebook, WhatsApp, LinkedIn
+ * and X all render at. Generated from each page's own hero photo; see
+ * public/images/og.
+ */
+export const ogImage = (name: string) => `/images/og/${name}.jpg`;
+
+/** Declaring the dimensions saves scrapers a round trip to measure the file. */
+export function ogImages(image: string) {
+    return [{ url: image, width: 1200, height: 630, alt: "Walkedo" }];
+}
+
+/**
  * Canonical + hreflang for a path, where `path` is the route *without* the
  * locale prefix (e.g. "/opvang" or "" for the home page).
  *
@@ -47,6 +59,9 @@ export async function pageMetadata({
     const title = t(`${key}.title`);
     const description = t(`${key}.description`);
     const url = `${SITE_URL}/${locale}${path === "/" ? "" : path}`;
+    // Every page gets a card. Falling back to the home one is still better
+    // than declaring summary_large_image with nothing to fill it.
+    const card = image ?? ogImage("home");
 
     return {
         title,
@@ -59,13 +74,13 @@ export async function pageMetadata({
             siteName: "Walkedo",
             locale: OG_LOCALE[locale],
             type: "website",
-            images: image ? [{ url: image }] : undefined,
+            images: ogImages(card),
         },
         twitter: {
             card: "summary_large_image",
             title: `${title} | Walkedo`,
             description,
-            images: image ? [image] : undefined,
+            images: [card],
         },
     };
 }

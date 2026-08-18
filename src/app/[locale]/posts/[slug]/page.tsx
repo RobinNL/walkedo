@@ -12,6 +12,8 @@ import { RenderDate } from "@/app/shared/render-data";
 import { getPostBySlug, getPostSlugs, localesForPost } from "../../../../../lib/blog-posts";
 import { alternates, SITE_URL } from "@/i18n/metadata";
 import { routing, type Locale } from "@/i18n/routing";
+import { JsonLd } from "@/app/shared/json-ld";
+import { article, breadcrumbs } from "@/app/shared/structured-data";
 
 type Params = { params: { locale: string; slug: string } };
 
@@ -65,6 +67,7 @@ export default async function Post({ params }: Params) {
     setRequestLocale(locale);
 
     const t = await getTranslations('post');
+    const nav = await getTranslations('nav');
     const post = await getPostBySlug(locale, params.slug);
     const available = localesForPost(params.slug);
 
@@ -99,8 +102,13 @@ export default async function Post({ params }: Params) {
 
     return (
         <div>
+            <JsonLd data={article(post, locale)} />
+            <JsonLd data={breadcrumbs(locale, "Walkedo", [
+                { name: nav('news'), path: '/news' },
+                { name: post.title, path: `/posts/${post.slug}` },
+            ])} />
             <div className={Styles.heroImage}>
-                <Image sizes='max-width: 100vw' className={Styles.heroImageInner} fill={true}
+                <Image priority sizes='100vw' className={Styles.heroImageInner} fill={true}
                        alt={post.imageAlt ?? t('heroAlt')} src={post.image}/>
             </div>
             <div className={'container'}>

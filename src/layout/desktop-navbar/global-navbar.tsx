@@ -33,7 +33,7 @@ export const GlobalNavbar = (props: GlobalNavbarProps) => {
                             <li>
                                 <Link href={'/'} aria-label={t('home')}>
                                     <div>
-                                        <Image src={'/images/brand/walkedo-logo.svg'} width={1592 / walkedoLogoDivider}
+                                        <Image src={'/images/brand/walkedo-logo.svg'} className={Styles.navbarIcon} width={1592 / walkedoLogoDivider}
                                                height={1677 / walkedoLogoDivider} alt={t('logoAlt')}/>
                                     </div>
                                 </Link>
