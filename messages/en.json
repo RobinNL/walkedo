@@ -41,7 +41,6 @@
       "description": "Download and read all the documents we go through during your dog's intake."
     }
   },
-
   "nav": {
     "uitlaatservice": "Dog Walking",
     "opvang": "Boarding",
@@ -58,7 +57,6 @@
     "logoAlt": "Walkedo logo",
     "spiritbornLogoAlt": "Spiritborn logo"
   },
-
   "footer": {
     "contactHeading": "Get in touch, no strings attached",
     "whatsappAlt": "WhatsApp QR code",
@@ -88,7 +86,6 @@
     "languageNl": "Nederlands",
     "languageEn": "English"
   },
-
   "home": {
     "heroVideoFallbackAlt": "dogs running in a field",
     "heroTitle": "Looking after your dog, wholeheartedly",
@@ -109,7 +106,8 @@
       "subheading": "For a day, a week, or a full holiday.",
       "body": "Everyone gets away now and then, and however nice it is to take your dog along, sometimes you want something different. Since January 2025, Walkedo clients can use the boarding service. Let your dog run and play in a 25 square metre kennel while you and your family enjoy your holiday. Boarding dogs automatically join the walking groups.",
       "cta": "Boarding service",
-      "imageAlt": "dog in the grass"
+      "imageAlt": "dog in the grass",
+      "dagOpvangCta": "Daycare (for busy days)"
     },
     "northernInuit": {
       "heading": "Northern Inuit Dog",
@@ -126,7 +124,6 @@
     "castingImageAlt": "Northern Inuit dog posing beside Little Red Riding Hood in a photo production",
     "expo": "Expo: Little Red Riding Hood 2025. <link>Meet the artists</link>"
   },
-
   "uitlaatservice": {
     "heroAlt": "dogs walking in Arnhem",
     "title": "Dog walking service",
@@ -182,7 +179,6 @@
       }
     }
   },
-
   "opvang": {
     "heroAlt": "dogs in Arnhem",
     "title": "Dog boarding in Arnhem",
@@ -208,9 +204,9 @@
       "daysSevenPlus": "Day 7 onwards",
       "dayCareSingle": "Daycare, single day"
     },
-    "rulesText": "For a healthy and enjoyable stay at Walkedo dog boarding in Arnhem, we have set out house rules. <link>Click here to read them</link>"
+    "rulesText": "For a healthy and enjoyable stay at Walkedo dog boarding in Arnhem, we have set out house rules. <link>Click here to read them</link>",
+    "cta": "Sign up for boarding"
   },
-
   "dagopvang": {
     "heroAlt": "dogs in Arnhem",
     "title": "Dog daycare in Arnhem",
@@ -236,9 +232,10 @@
       "daysSevenPlus": "Day 7 onwards",
       "dayCareSingle": "Daycare, single day"
     },
-    "rulesText": "For a healthy and enjoyable stay at Walkedo dog daycare in Arnhem, we have set out house rules. <link>Click here to read them</link>"
+    "rulesText": "For a healthy and enjoyable stay at Walkedo dog daycare in Arnhem, we have set out house rules. <link>Click here to read them</link>",
+    "cta": "Sign up for daycare",
+    "perWeek": "{count}x per week"
   },
-
   "voorwaarden": {
     "title": "Dog boarding terms & conditions",
     "published": "Published: 12-1-2026. Version 1.0",
@@ -256,7 +253,6 @@
     "p10": "You are also asked to leave the pet passport with us. At handover the passport is checked for all vaccinations.",
     "p11": "* High season covers all school holidays and national public holidays."
   },
-
   "casting": {
     "heroAlt": "The set of a film production",
     "title": "Casting",
@@ -276,7 +272,6 @@
       "solo": "Northern Inuit dog posing as a wolf in the forest"
     }
   },
-
   "northernInuit": {
     "heroAlt": "Northern Inuit dog in the dunes",
     "title": "Northern Inuit Dog",
@@ -295,7 +290,6 @@
     "puppyBody": "We expect a litter of Northern Inuits within the next few years. If you are interested in a Northern Inuit, put your name down without obligation — the final list is still to come. If you would simply like to experience the breed, feel free to get in touch.",
     "puppyCta": "Join the Northern Inuit puppy list"
   },
-
   "documenten": {
     "title": "Documents",
     "intro": "During the intake we go through a few documents that matter for a safe and successful arrangement for you and your dog. You can read them here in advance. If anything is unclear, just get in touch.",
@@ -303,7 +297,6 @@
     "terms": "Terms of service (.pdf)",
     "keyContract": "Key agreement (.pdf)"
   },
-
   "news": {
     "heroAlt": "dogs in Arnhem",
     "title": "News",
@@ -311,7 +304,6 @@
     "empty": "There are no posts in this language yet.",
     "pawAlt": "dog paw"
   },
-
   "post": {
     "postedOn": "Posted on",
     "back": "See more news",
@@ -320,40 +312,134 @@
     "notAvailable": "This post is not available in English yet.",
     "readInOther": "Read it in Dutch"
   },
-
   "signup": {
     "title": "Sign up",
-    "intro": {
-      "uitlaten": "I cannot wait to meet your dog. Sign up for an introduction with no obligation. I will walk you calmly through every step, and together we will look at the services that suit you and your dog best.",
-      "casting": "Sign up for casting. I handle the dog on your production. The Northern Inuit Dog suits a fantasy setting particularly well, and the breed has been used before on Game of Thrones.",
-      "puppy": "Register your interest in a Northern Inuit puppy. You are not committing to anything — the final list is still to come."
+    "intro": "Sign up with no obligation. Choose what you are interested in below — you can pick more than one — then fill in your details. I will get in touch as soon as possible.",
+    "sections": {
+      "services": {
+        "title": "What are you interested in?",
+        "description": "Choose one or more services. The questions below adapt to your choice."
+      },
+      "person": {
+        "title": "Your details"
+      },
+      "address": {
+        "title": "Address"
+      },
+      "dog": {
+        "title": "About your dog",
+        "description": "These questions are about the dog you want to sign up."
+      },
+      "casting": {
+        "title": "Your project"
+      },
+      "puppy": {
+        "title": "Your motivation"
+      }
     },
-    "firstName": "First name",
-    "lastName": "Last name",
-    "email": "Email",
-    "phone": "Phone number",
-    "address": "Address",
-    "addressPlaceholder": "For example Hondenlaan 2, 1111HD Arnhem",
-    "detailLabel": {
-      "uitlaten": "Brief description of your dog(s)",
-      "casting": "Project description",
-      "puppy": "Describe your situation"
+    "services": {
+      "uitlaten": {
+        "label": "Dog walking",
+        "description": "Out and about together every day in Arnhem Noord."
+      },
+      "opvang": {
+        "label": "Boarding & daycare",
+        "description": "Care for a day, a weekend or a holiday."
+      },
+      "casting": {
+        "label": "Casting",
+        "description": "A dog for your film, photo or video production."
+      },
+      "puppy": {
+        "label": "Northern Inuit puppy",
+        "description": "Interest in a pup from a future litter."
+      }
     },
-    "detailPlaceholder": {
-      "uitlaten": "What makes your dog unique?",
-      "casting": "Briefly describe the project you need a dog for",
-      "puppy": "Why would you be a good owner for a pup?"
+    "fields": {
+      "firstName": {
+        "label": "First name",
+        "placeholder": "First name"
+      },
+      "lastName": {
+        "label": "Last name",
+        "placeholder": "Last name"
+      },
+      "email": {
+        "label": "Email address",
+        "placeholder": "name@example.com"
+      },
+      "phoneNr": {
+        "label": "Phone number",
+        "placeholder": "+31 6 12345678"
+      },
+      "street": {
+        "label": "Street and number",
+        "placeholder": "Hondenlaan 2"
+      },
+      "postcode": {
+        "label": "Postcode",
+        "placeholder": "1111 HD"
+      },
+      "city": {
+        "label": "City",
+        "placeholder": "Arnhem"
+      },
+      "dogName": {
+        "label": "Your dog's name",
+        "placeholder": "Koda"
+      },
+      "breed": {
+        "label": "Breed",
+        "placeholder": "Northern Inuit"
+      },
+      "age": {
+        "label": "Age",
+        "placeholder": "3 years"
+      },
+      "sex": {
+        "label": "Sex"
+      },
+      "neutered": {
+        "label": "Neutered or spayed"
+      },
+      "dogSummary": {
+        "label": "Tell us about your dog",
+        "placeholder": "What makes your dog unique? Think character, energy and anything special."
+      },
+      "projectSummary": {
+        "label": "Describe your project",
+        "placeholder": "What kind of production is it, and when does it take place?"
+      },
+      "motivation": {
+        "label": "Tell us about your situation",
+        "placeholder": "Why do you think a Northern Inuit puppy would be a good fit for you?"
+      }
+    },
+    "options": {
+      "sex": {
+        "male": "Male",
+        "female": "Female"
+      },
+      "neutered": {
+        "yes": "Yes",
+        "no": "No"
+      }
+    },
+    "required": "Required",
+    "errors": {
+      "required": "This field is required",
+      "invalidEmail": "Please enter a valid email address",
+      "chooseOne": "Choose at least one service",
+      "summary": "Please check the highlighted fields above."
     },
     "submit": "Send",
     "loading": "Loading, one moment",
     "error": "Something went wrong. Please try again, or send a message to woof@walkedo.com",
     "success": {
-      "uitlaten": "Woof! We have received your sign-up. Hopefully see you soon :)",
-      "casting": "Woof! The script practically writes itself. We have received your sign-up and will be in touch.",
-      "puppy": "Woof! That is what your puppy will sound like when you come home in a few years. We have received your sign-up and will be in touch."
+      "title": "Woof! We have received your sign-up.",
+      "body": "You will get a confirmation by email. I will get in touch as soon as possible."
     }
   },
-
   "notFound": {
     "title": "Oh no! A dog has lost the ball",
     "body": "We could not find that page. But we have asked a labradoodle to help look for it."

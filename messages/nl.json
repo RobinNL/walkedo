@@ -41,7 +41,6 @@
       "description": "Download en lees alle documenten die ter sprake komen tijdens de intake voor je hond."
     }
   },
-
   "nav": {
     "uitlaatservice": "Uitlaatservice",
     "opvang": "Opvang",
@@ -58,7 +57,6 @@
     "logoAlt": "Walkedo logo",
     "spiritbornLogoAlt": "Spiritborn logo"
   },
-
   "footer": {
     "contactHeading": "Neem vrijblijvend contact op",
     "whatsappAlt": "whatsapp QR code",
@@ -88,7 +86,6 @@
     "languageNl": "Nederlands",
     "languageEn": "English"
   },
-
   "home": {
     "heroVideoFallbackAlt": "honden op een veld",
     "heroTitle": "Met hart voor je hond",
@@ -127,7 +124,6 @@
     "castingImageAlt": "Northern Inuit dog die poseert naast roodkapje in een fotoproductie",
     "expo": "Expo: Roodkapje 2025. <link>Ontdek de artiesten</link>"
   },
-
   "uitlaatservice": {
     "heroAlt": "honden in arnhem",
     "title": "Honden uitlaatservice",
@@ -183,7 +179,6 @@
       }
     }
   },
-
   "opvang": {
     "heroAlt": "honden in arnhem",
     "title": "Hondenopvang in Arnhem",
@@ -209,9 +204,9 @@
       "daysSevenPlus": "Dag 7 t/m ...",
       "dayCareSingle": "Dagopvang los"
     },
-    "rulesText": "Voor een gezond en gezellig verblijf van uw hond bij de hondenopvang Walkedo Arnhem hebben wij verblijfregels opgesteld. <link>Klik hier om ze te bekijken</link>"
+    "rulesText": "Voor een gezond en gezellig verblijf van uw hond bij de hondenopvang Walkedo Arnhem hebben wij verblijfregels opgesteld. <link>Klik hier om ze te bekijken</link>",
+    "cta": "Aanmelden voor de opvang"
   },
-
   "dagopvang": {
     "heroAlt": "honden in arnhem",
     "title": "Hondendagopvang in Arnhem",
@@ -238,9 +233,9 @@
       "daysSevenPlus": "Dag 7 t/m ...",
       "dayCareSingle": "Dagopvang los"
     },
-    "rulesText": "Voor een gezond en gezellig verblijf van uw hond bij de hondendagopvang Walkedo Arnhem hebben wij verblijfregels opgesteld. <link>Klik hier om ze te bekijken</link>"
+    "rulesText": "Voor een gezond en gezellig verblijf van uw hond bij de hondendagopvang Walkedo Arnhem hebben wij verblijfregels opgesteld. <link>Klik hier om ze te bekijken</link>",
+    "cta": "Aanmelden voor de dagopvang"
   },
-
   "voorwaarden": {
     "title": "Hondendagopvang voorwaarden",
     "published": "Publicatiedatum: 12-1-2026. Versie 1.0",
@@ -258,7 +253,6 @@
     "p10": "Daarnaast word gevraagd om het dierenpaspoort achter te laten. Tijdens deze overdracht word het paspoort gecontroleerd op alle vaccinaties.",
     "p11": "* Onder het hoogseizoen vallen alle kindervakanties en nationale feestdagen."
   },
-
   "casting": {
     "heroAlt": "De set van een film productie",
     "title": "Casting",
@@ -278,7 +272,6 @@
       "solo": "Northern Inuit dog die als wolf poseert in het bos"
     }
   },
-
   "northernInuit": {
     "heroAlt": "honden in arnhem",
     "title": "Northern Inuit Dog",
@@ -297,7 +290,6 @@
     "puppyBody": "Wij verwachten binnen een aantal jaar een nestje te krijgen van Northern Inuits. Heb je interesse in een Northern Inuit schrijf je dan alvast vrijblijvend in (de definitieve lijst volgt nog). Ook als je het ras wilt ervaren kan je contact met mij opnemen.",
     "puppyCta": "Aanmelden voor een Northern Inuit puppy"
   },
-
   "documenten": {
     "title": "Documenten",
     "intro": "Bij de intake zullen we enkele documenten doornemen die van belang zijn voor een veilige en succesvolle samenwerking voor jou en je hond. Hier kan je deze documenten alvast bekijken. Bij vragen kan je altijd contact met mij opnemen.",
@@ -305,7 +297,6 @@
     "terms": "Leveringsvoorwaarden (.pdf)",
     "keyContract": "Sleutelcontract (.pdf)"
   },
-
   "news": {
     "heroAlt": "honden in arnhem",
     "title": "Nieuws",
@@ -313,7 +304,6 @@
     "empty": "Er zijn nog geen berichten in deze taal.",
     "pawAlt": "honden poot"
   },
-
   "post": {
     "postedOn": "Geplaatst op",
     "back": "Meer nieuws bekijken",
@@ -322,40 +312,134 @@
     "notAvailable": "Dit bericht is nog niet in het Nederlands beschikbaar.",
     "readInOther": "Lees het in het Engels"
   },
-
   "signup": {
     "title": "Aanmelden",
-    "intro": {
-      "uitlaten": "Ik kan niet wachten om je hond te leren kennen. Meld je vrijblijvend aan voor een kennismakingsgesprek. Dan loop ik je rustig door alle stappen en kijken we samen naar de services die het beste bij jou en je hond passen.",
-      "casting": "Schrijf je in voor de casting. Ik begeleid de hond bij je productie. De Northern Inuit dog past heel goed bij een fantasy setting en het ras is eerder ingezet bij de series Game of Thrones.",
-      "puppy": "Meld je interesse in een Northern Inuit puppy. Je zit nergens aan vast, de definitieve lijst volgt nog."
+    "intro": "Meld je vrijblijvend aan. Kies hieronder waar je interesse in hebt — dat mogen er meerdere zijn — en vul daarna je gegevens in. Ik neem zo snel mogelijk contact met je op.",
+    "sections": {
+      "services": {
+        "title": "Waar heb je interesse in?",
+        "description": "Kies één of meer services. De vragen daaronder passen zich aan op je keuze."
+      },
+      "person": {
+        "title": "Jouw gegevens"
+      },
+      "address": {
+        "title": "Adres"
+      },
+      "dog": {
+        "title": "Over je hond",
+        "description": "Deze vragen gaan over de hond die je wilt aanmelden."
+      },
+      "casting": {
+        "title": "Je project"
+      },
+      "puppy": {
+        "title": "Jouw motivatie"
+      }
     },
-    "firstName": "Voornaam",
-    "lastName": "Achternaam",
-    "email": "Email",
-    "phone": "Telefoon nummer",
-    "address": "Adres",
-    "addressPlaceholder": "Bijvoorbeeld hondenlaan 2, 1111HD Arnhem",
-    "detailLabel": {
-      "uitlaten": "Korte beschrijving hond(en)",
-      "casting": "Beschrijving project",
-      "puppy": "Beschrijf je situatie"
+    "services": {
+      "uitlaten": {
+        "label": "Uitlaatservice",
+        "description": "Elke dag samen op pad in Arnhem Noord."
+      },
+      "opvang": {
+        "label": "(Dag)opvang",
+        "description": "Opvang voor een dag, een weekend of een vakantie."
+      },
+      "casting": {
+        "label": "Casting",
+        "description": "Een hond voor je film-, foto- of videoproductie."
+      },
+      "puppy": {
+        "label": "Northern Inuit puppy",
+        "description": "Interesse in een pup uit een volgend nestje."
+      }
     },
-    "detailPlaceholder": {
-      "uitlaten": "Wat maakt jouw hond uniek",
-      "casting": "Beschrijf kort het project waar je een hond voor zoekt",
-      "puppy": "Waarom zou je een goede eigenaar(esse) zijn voor een pup?"
+    "fields": {
+      "firstName": {
+        "label": "Voornaam",
+        "placeholder": "Voornaam"
+      },
+      "lastName": {
+        "label": "Achternaam",
+        "placeholder": "Achternaam"
+      },
+      "email": {
+        "label": "E-mailadres",
+        "placeholder": "naam@voorbeeld.nl"
+      },
+      "phoneNr": {
+        "label": "Telefoonnummer",
+        "placeholder": "06 12345678"
+      },
+      "street": {
+        "label": "Straat en huisnummer",
+        "placeholder": "Hondenlaan 2"
+      },
+      "postcode": {
+        "label": "Postcode",
+        "placeholder": "1111 HD"
+      },
+      "city": {
+        "label": "Woonplaats",
+        "placeholder": "Arnhem"
+      },
+      "dogName": {
+        "label": "Naam van je hond",
+        "placeholder": "Koda"
+      },
+      "breed": {
+        "label": "Ras",
+        "placeholder": "Northern Inuit"
+      },
+      "age": {
+        "label": "Leeftijd",
+        "placeholder": "3 jaar"
+      },
+      "sex": {
+        "label": "Geslacht"
+      },
+      "neutered": {
+        "label": "Gecastreerd of gesteriliseerd"
+      },
+      "dogSummary": {
+        "label": "Vertel over je hond",
+        "placeholder": "Wat maakt jouw hond uniek? Denk aan karakter, energie en bijzonderheden."
+      },
+      "projectSummary": {
+        "label": "Beschrijf je project",
+        "placeholder": "Wat voor productie is het, en wanneer speelt het?"
+      },
+      "motivation": {
+        "label": "Vertel iets over je situatie",
+        "placeholder": "Waarom denk je dat een Northern Inuit Puppy goed bij je past?"
+      }
+    },
+    "options": {
+      "sex": {
+        "male": "Reu",
+        "female": "Teef"
+      },
+      "neutered": {
+        "yes": "Ja",
+        "no": "Nee"
+      }
+    },
+    "required": "Verplicht",
+    "errors": {
+      "required": "Dit veld is verplicht",
+      "invalidEmail": "Vul een geldig e-mailadres in",
+      "chooseOne": "Kies minimaal één service",
+      "summary": "Controleer de gemarkeerde velden hierboven."
     },
     "submit": "Verzenden",
     "loading": "Laden.. een momentje",
     "error": "Oeps, er is iets misgegaan. Probeer het nogmaals of stuur een bericht naar woof@walkedo.com",
     "success": {
-      "uitlaten": "Woef! We hebben je aanmelding ontvangen. Hopelijk tot snel :)",
-      "casting": "Woef! Het script is al praktisch geschreven. We hebben je aanmelding ontvangen en nemen contact met je op",
-      "puppy": "Woef! Zo klinkt jouw puppy als je over een paar jaar thuis komt. We hebben je aanmelding ontvangen en nemen contact met je op."
+      "title": "Woef! We hebben je aanmelding ontvangen.",
+      "body": "Je krijgt een bevestiging per e-mail. Ik neem zo snel mogelijk contact met je op."
     }
   },
-
   "notFound": {
     "title": "Oh nee! Een hond is de bal kwijt",
     "body": "Wij konden de pagina helaas niet vinden. Maar we hebben een labradoodle om hulp gevraagd."

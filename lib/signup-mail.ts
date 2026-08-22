@@ -1,75 +1,119 @@
 import nodemailer from "nodemailer";
-
-export const SIGNUP_SERVICES = ["uitlaten", "casting", "puppy"] as const;
-export type SignupService = (typeof SIGNUP_SERVICES)[number];
+import {
+    activeSections,
+    activeFields,
+    isSignupService,
+    isValidEmail,
+    type FieldName,
+    type SectionKey,
+    type SignupService,
+} from "./signup-fields";
 
 export const MAIL_LOCALES = ["nl", "en"] as const;
 export type MailLocale = (typeof MAIL_LOCALES)[number];
 
 /**
- * The three signup forms differ only in their free-text field and subject line.
- * Everything else — the greeting, the sign-off, the contact details block — is shared.
+ * One template for every signup. The services the visitor chose are a data
+ * point in the body rather than a reason to send a different mail, and the
+ * blocks that follow are the ones their choice made relevant — so a walking
+ * enquiry carries the dog details and a casting enquiry does not.
+ *
+ * This copy is deliberately not in the next-intl catalogues: those are loaded
+ * per request for the browser, whereas the mail layer picks its language from
+ * the submitted body and has no request context to read from.
  */
-const SERVICE_CONFIG: Record<
-    SignupService,
-    {
-        field: string;
-        subject: Record<MailLocale, string>;
-        fieldLabel: Record<MailLocale, string>;
-    }
-> = {
-    uitlaten: {
-        field: "dogSummary",
-        subject: {
-            nl: "Walkedo Uitlaatservice - Aanmelding",
-            en: "Walkedo Dog Walking - Sign-up",
-        },
-        fieldLabel: { nl: "Over de honden", en: "About the dog(s)" },
-    },
-    casting: {
-        field: "projectSummary",
-        subject: {
-            nl: "Walkedo Casting - Aanmelding",
-            en: "Walkedo Casting - Sign-up",
-        },
-        fieldLabel: { nl: "Project", en: "Project" },
-    },
-    puppy: {
-        field: "owner",
-        subject: {
-            nl: "Walkedo Puppy - Aanmelding",
-            en: "Walkedo Puppy - Sign-up",
-        },
-        fieldLabel: { nl: "Eigenaar", en: "Owner" },
-    },
-};
-
 const COPY: Record<MailLocale, {
+    subject: string;
     greeting: (name: string) => string;
     body: string;
     signOff: string;
-    name: string;
-    email: string;
-    phone: string;
-    address: string;
+    interestedIn: string;
+    sections: Record<SectionKey, string>;
+    labels: Record<FieldName, string>;
+    services: Record<SignupService, string>;
+    options: Record<string, Record<string, string>>;
 }> = {
     nl: {
+        subject: "Walkedo Aanmelding",
         greeting: (name) => `Beste ${name},`,
         body: "Bedankt voor je aanmelding. Ik zal zo spoedig mogelijk contact met je opnemen.",
         signOff: "Met vriendelijke groet,",
-        name: "Naam",
-        email: "Email",
-        phone: "Telefoon",
-        address: "Adres",
+        interestedIn: "Interesse in",
+        sections: {
+            person: "Contactgegevens",
+            address: "Adres",
+            dog: "Over de hond",
+            casting: "Project",
+            puppy: "Motivatie",
+        },
+        labels: {
+            firstName: "Voornaam",
+            lastName: "Achternaam",
+            email: "Email",
+            phoneNr: "Telefoon",
+            street: "Straat en huisnummer",
+            postcode: "Postcode",
+            city: "Woonplaats",
+            dogName: "Naam hond",
+            breed: "Ras",
+            age: "Leeftijd",
+            sex: "Geslacht",
+            neutered: "Gecastreerd/gesteriliseerd",
+            dogSummary: "Omschrijving",
+            projectSummary: "Omschrijving",
+            motivation: "Omschrijving",
+        },
+        services: {
+            uitlaten: "Uitlaatservice",
+            opvang: "(Dag)opvang",
+            casting: "Casting",
+            puppy: "Northern Inuit puppy",
+        },
+        options: {
+            sex: { male: "Reu", female: "Teef" },
+            neutered: { yes: "Ja", no: "Nee" },
+        },
     },
     en: {
+        subject: "Walkedo Sign-up",
         greeting: (name) => `Dear ${name},`,
         body: "Thank you for your sign-up. I will get in touch with you as soon as possible.",
         signOff: "Kind regards,",
-        name: "Name",
-        email: "Email",
-        phone: "Phone",
-        address: "Address",
+        interestedIn: "Interested in",
+        sections: {
+            person: "Contact details",
+            address: "Address",
+            dog: "About the dog",
+            casting: "Project",
+            puppy: "Motivation",
+        },
+        labels: {
+            firstName: "First name",
+            lastName: "Last name",
+            email: "Email",
+            phoneNr: "Phone",
+            street: "Street and number",
+            postcode: "Postcode",
+            city: "City",
+            dogName: "Dog's name",
+            breed: "Breed",
+            age: "Age",
+            sex: "Sex",
+            neutered: "Neutered/spayed",
+            dogSummary: "Description",
+            projectSummary: "Description",
+            motivation: "Description",
+        },
+        services: {
+            uitlaten: "Dog walking",
+            opvang: "Boarding & daycare",
+            casting: "Casting",
+            puppy: "Northern Inuit puppy",
+        },
+        options: {
+            sex: { male: "Male", female: "Female" },
+            neutered: { yes: "Yes", no: "No" },
+        },
     },
 };
 
@@ -81,10 +125,6 @@ function escapeHtml(value: unknown): string {
         .replace(/>/g, "&gt;")
         .replace(/"/g, "&quot;")
         .replace(/'/g, "&#39;");
-}
-
-function isValidEmail(value: unknown): value is string {
-    return typeof value === "string" && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value) && value.length <= 254;
 }
 
 /**
@@ -117,9 +157,43 @@ function resolveLocale(value: unknown): MailLocale {
     return MAIL_LOCALES.includes(value as MailLocale) ? (value as MailLocale) : "nl";
 }
 
-export async function handleSignup(request: Request, service: SignupService): Promise<Response> {
-    const config = SERVICE_CONFIG[service];
+function resolveServices(value: unknown): SignupService[] {
+    return Array.isArray(value) ? value.filter(isSignupService) : [];
+}
 
+/**
+ * Renders the submitted answers, grouped exactly as the visitor saw them.
+ * Driven by the same section table the form renders from, so a field added
+ * there appears here without a second edit.
+ */
+function detailsHtml(
+    services: SignupService[],
+    values: Record<string, unknown>,
+    copy: (typeof COPY)[MailLocale],
+): string {
+    return activeSections(services)
+        .map((section) => {
+            const rows = section.fields
+                .map((field) => {
+                    const raw = String(values[field.name] ?? "").trim();
+                    if (!raw) return "";
+                    // Radios travel as stable keys, so the readable word is
+                    // chosen here rather than trusting whatever was posted.
+                    const display = field.options
+                        ? copy.options[field.name]?.[raw] ?? raw
+                        : raw;
+                    return `<p>${escapeHtml(copy.labels[field.name])}: ${escapeHtml(display)}</p>`;
+                })
+                .filter(Boolean)
+                .join("\n");
+
+            return rows ? `<h3>${escapeHtml(copy.sections[section.key])}</h3>\n${rows}` : "";
+        })
+        .filter(Boolean)
+        .join("\n");
+}
+
+export async function handleSignup(request: Request): Promise<Response> {
     if (isRateLimited(clientIp(request))) {
         return Response.json({ message: "Too many requests" }, { status: 429 });
     }
@@ -136,19 +210,30 @@ export async function handleSignup(request: Request, service: SignupService): Pr
         return Response.json({ message: "Success" }, { status: 200 });
     }
 
+    const services = resolveServices(body.services);
+    if (services.length === 0) {
+        return Response.json({ message: "No service selected" }, { status: 400 });
+    }
+
     if (!isValidEmail(body.email)) {
         return Response.json({ message: "Invalid email" }, { status: 400 });
+    }
+
+    // The browser blocks an incomplete submit, but it is not the only way to
+    // reach this route, so the same rule is applied again here.
+    const missing = activeFields(services)
+        .filter((field) => String(body[field.name] ?? "").trim() === "")
+        .map((field) => field.name);
+
+    if (missing.length > 0) {
+        return Response.json({ message: "Missing fields", fields: missing }, { status: 400 });
     }
 
     const locale = resolveLocale(body.locale);
     const copy = COPY[locale];
 
     const firstName = escapeHtml(body.firstName);
-    const lastName = escapeHtml(body.lastName);
-    const email = escapeHtml(body.email);
-    const phoneNr = escapeHtml(body.phoneNr);
-    const address = escapeHtml(body.address);
-    const detail = escapeHtml(body[config.field]);
+    const serviceList = services.map((service) => copy.services[service]).join(", ");
 
     const transporter = nodemailer.createTransport({
         host: "smtp.mail.me.com",
@@ -166,7 +251,7 @@ export async function handleSignup(request: Request, service: SignupService): Pr
             to: body.email as string,
             bcc: process.env.PERSONAL_EMAIL,
             replyTo: process.env.PERSONAL_EMAIL,
-            subject: config.subject[locale],
+            subject: `${copy.subject} - ${serviceList}`,
             html: `
                 <p>${copy.greeting(firstName)}</p>
                 <p>${copy.body}</p>
@@ -175,17 +260,15 @@ export async function handleSignup(request: Request, service: SignupService): Pr
 
                 <p>---</p>
 
-                <p>${copy.name}: ${firstName} ${lastName}</p>
-                <p>${copy.email}: ${email}</p>
-                <p>${copy.phone}: ${phoneNr}</p>
-                <p>${copy.address}: ${address}</p>
-                <p>${config.fieldLabel[locale]}: ${detail}</p>
+                <p><strong>${escapeHtml(copy.interestedIn)}: ${escapeHtml(serviceList)}</strong></p>
+
+                ${detailsHtml(services, body, copy)}
             `,
         });
         return Response.json({ message: "Success" }, { status: 200 });
     } catch (error) {
         // Log the failure, never the submitted body — it contains customer PII.
-        console.error(`Signup mail failed for service "${service}"`, error);
+        console.error(`Signup mail failed for services "${services.join(",")}"`, error);
         return Response.json({ message: "Error" }, { status: 500 });
     }
 }

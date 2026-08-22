@@ -1,14 +1,17 @@
 import Image from "next/image";
-import Styles from "./opvang.module.scss";
+import Styles from "./dagopvang.module.scss";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { WalkedoList } from "../../../../components/list/list";
 import { WalkedoButton } from "../../../../components/button/button";
 import { Link } from "@/i18n/navigation";
 import type { Locale } from "@/i18n/routing";
+import React from "react";
 
 export default async function Page({ params }: { params: { locale: string } }) {
     setRequestLocale(params.locale as Locale);
-    const t = await getTranslations('opvang');
+    const t = await getTranslations('dagopvang');
+
+    const PRICES = ['€71,10', '€134,15', '€201,25', '€268,35', '€335,50'];
 
     return (
         <main>
@@ -41,11 +44,11 @@ export default async function Page({ params }: { params: { locale: string } }) {
                         ]}/>
                     </div>
 
-                    <div className={Styles.opvangHondImage}>
+                    <div className={Styles.dagopvangHondImage}>
                         <Image sizes='max-width: 100vw'
                                objectPosition={'50% 50%'}
                                fill={true}
-                               className={Styles.opvangHondImageInner}
+                               className={Styles.dagopvangHondImageInner}
                                src={'/images/opvang/koda-christmas-northern-inuit-dog.jpeg'}
                                alt={t('dogImageAlt')}/>
                     </div>
@@ -54,39 +57,16 @@ export default async function Page({ params }: { params: { locale: string } }) {
 
                 <div>
                     <h3>{t('pricingHeading')}</h3>
-                    <div className={Styles.tablePricingRow}>
-                        <table>
-                            <thead>
-                            <tr>
-                                <th>{t('table.rates')}</th>
-                                <th>{t('table.highSeason')}</th>
-                                <th>{t('table.lowSeason')}</th>
-                                <th>{t('table.dayCare')}</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td>{t('table.daysOneToSix')}</td>
-                                <td>€30,-</td>
-                                <td>€25,-</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>{t('table.daysSevenPlus')}</td>
-                                <td>€25,-</td>
-                                <td>€20,-</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>{t('table.dayCareSingle')}</td>
-                                <td></td>
-                                <td></td>
-                                <td>€30,-</td>
-                            </tr>
-                            </tbody>
-                        </table>
 
+                    <div className={Styles.subscriptionRow}>
+                        {PRICES.map((price, index) => (
+                            <div className={Styles.subscriptionBlock} key={price}>
+                                <h3>{price}</h3>
+                                <p>{t('perWeek', { count: index + 1 })}</p>
+                            </div>
+                        ))}
                     </div>
+
                     <p>
                         {t.rich('rulesText', {
                             link: (chunks) => (
