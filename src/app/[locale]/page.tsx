@@ -102,6 +102,13 @@ export default function Home() {
                                     <Image className={Styles.learnMoreLinkIcon} src={'/fonts/icons/arrow-right.svg'}
                                            alt={t('arrowAlt')} height={20} width={20}/>
                                 </Link>
+                                <Link className={Styles.learnMoreLink} href={'/dagopvang'}>
+                                     <span className={Styles.learnMoreLinkText}>
+                                        {t('opvang.dagOpvangCta')}
+                                    </span>
+                                    <Image className={Styles.learnMoreLinkIcon} src={'/fonts/icons/arrow-right.svg'}
+                                           alt={t('arrowAlt')} height={20} width={20}/>
+                                </Link>
                             </div>
                         </div>
                     </div>

@@ -22,6 +22,7 @@ export default async function Page({ params }: { params: { locale: string } }) {
 
                 <div className={Styles.heroIntroBlock}>
                     <h1 className={Styles.header}>{t('title')}</h1>
+                    <h2 className={Styles.subheader}>{t('subtitle')}</h2>
                     <p>{t('intro')}</p>
                 </div>
 

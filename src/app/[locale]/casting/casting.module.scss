@@ -27,13 +27,17 @@
 }
 
 .carouselImage {
-  width: 100%;
-  padding: spacing(20) spacing(20) 100% spacing(20);
-  align-items: center;
+  position: relative;
+  margin: 0 spacing(20);
+  // Matches the 2:3 portrait ratio of the source images, so `cover` never crops
+  // or distorts them at any viewport width.
+  aspect-ratio: 2 / 3;
+  overflow: hidden;
   background-color: color(card);
-  flex-direction: column;
 
   img {
+    object-fit: cover;
+    object-position: center;
     transition: all 0.2s ease-in-out;
     &:hover {
       scale: 1.1;

@@ -14,4 +14,8 @@ $common-widths: (
         full: 100%,
 );
 
-$navbar-breakpoint-to-desktop: 1221px;
+// Width at which the horizontal bar replaces the hamburger. The six labels
+// only fit here with the tightened spacing in global-navbar.module.scss; once
+// the viewport can show the whole container they fit at their full spacing.
+$navbar-breakpoint-to-desktop: 1300px;
+$navbar-breakpoint-to-desktop-roomy: $container-width;

@@ -5,6 +5,7 @@
 export const NavbarItems: { key: string; uri: string; }[] = [
     { key: 'uitlaatservice', uri: '/uitlaatservice' },
     { key: 'opvang', uri: '/opvang' },
+    { key: 'dagopvang', uri: '/dagopvang' },
     { key: 'northernInuit', uri: '/northern-Inuit-dog' },
     { key: 'casting', uri: '/casting' },
     { key: 'news', uri: '/news' },

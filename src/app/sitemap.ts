@@ -12,6 +12,7 @@ const STATIC_PATHS = [
     "/uitlaatservice",
     "/opvang",
     "/opvang/voorwaarden",
+    "/dagopvang",
     "/northern-Inuit-dog",
     "/casting",
     "/news",

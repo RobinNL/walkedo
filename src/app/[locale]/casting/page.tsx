@@ -95,7 +95,8 @@ export default function Page() {
                 >
                     {CAROUSEL_IMAGES.map((image) => (
                         <div className={Styles.carouselImage} key={image.key}>
-                            <Image src={image.src} fill={true} objectPosition={'center'}
+                            <Image src={image.src} fill={true}
+                                   sizes={'(min-width: 1024px) 33vw, (min-width: 600px) 50vw, 100vw'}
                                    alt={t(`carouselAlt.${image.key}`)}/>
                         </div>
                     ))}

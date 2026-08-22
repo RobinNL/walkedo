@@ -9,8 +9,12 @@
       "description": "Laat je hond uitgelaten worden met zorg samengestelde speciale kleine groepen. Zo kunnen ze de energie kwijt en lekker socialiseren in Arnhem Noord en Oosterbeek"
     },
     "opvang": {
-      "title": "Hondendagopvang in Arnhem",
+      "title": "Hondenopvang in Arnhem",
       "description": "Een hond is een vriend voor het leven. Maar soms moet of wil je ook even ver weg van huis en dan is het niet altijd mogelijk om je hond mee te nemen."
+    },
+    "dagopvang": {
+      "title": "Hondendagopvang in Arnhem",
+      "description": "Overdag ben je vaak van huis. Laat je hond de dag doorbrengen bij Walkedo in Arnhem, met een ruime tuin, een eigen plekje en gezelschap van de vaste groep."
     },
     "voorwaarden": {
       "title": "Hondendagopvang voorwaarden",
@@ -41,6 +45,7 @@
   "nav": {
     "uitlaatservice": "Uitlaatservice",
     "opvang": "Opvang",
+    "dagopvang": "Dagopvang",
     "northernInuit": "Northern Inuit",
     "casting": "Casting",
     "news": "Nieuws",
@@ -72,6 +77,7 @@
     "links": "Links",
     "linkUitlaatservice": "Honden Uitlaatservice",
     "linkOpvang": "Opvang",
+    "linkDagopvang": "Dagopvang",
     "linkDocumenten": "Documenten",
     "follow": "Volg ons",
     "instagramAlt": "instagram afbeelding",
@@ -102,7 +108,8 @@
       "heading": "Opvangservice",
       "subheading": "Voor een dag, een week of een vakantieperiode.",
       "body": "Iedereen gaat er wel eens op uit en hoe leuk het ook is om op vakantie te gaan met je hond, toch wil je wel eens even wat anders. Klanten van Walkedo kunnen gebruik per januari 2025 gebruik maken van de opvangservice. Laat je honden lekker razen en spelen in een kennel van 25 vierkante meter terwijl jij en je gezin van een vakantie geniet. De honden van de opvang gaan automatisch mee met de uitlaatservice.",
-      "cta": "Opvangservice",
+      "cta": "Opvangservice met overnachting (voor vakanties of weekenden)",
+      "dagOpvangCta": "Dagopvang (voor drukke dagen)",
       "imageAlt": "hond in het gras"
     },
     "northernInuit": {
@@ -179,7 +186,8 @@
 
   "opvang": {
     "heroAlt": "honden in arnhem",
-    "title": "Hondendagopvang in Arnhem",
+    "title": "Hondenopvang in Arnhem",
+    "subtitle": "Met het gezin naar de zon, en je hond met leuk gezelschap lekker in de bossen.",
     "intro": "Een hond is een vriend voor het leven. Maar soms moet of wil je ook even ver weg van huis en dan is het niet altijd mogelijk om je hond mee te nemen. Speciaal voor klanten van de Walkedo uitlaatservice, kan je je hond door mij thuis laten opvangen. Je hond krijgt de beschikking over een ruimte groene tuin en een eigen plekje gedurende het verblijf zodat hij of zij zich kan terugtrekken. Maar als de hond het leuk vind zijn er zijn genoeg momenten met lekker veel gezelschap van mijn eigen honden en soms andere logés.",
     "benefitsHeading": "Alle voordelen op een rijtje",
     "benefitsIntro": "Laat je hond voor een korte of langere tijdsduur logeren. Je hond gaat dan automatisch ook mee met de groep, en kan zowel buiten als binnen verblijven tijdens het verblijf.",
@@ -202,6 +210,35 @@
       "dayCareSingle": "Dagopvang los"
     },
     "rulesText": "Voor een gezond en gezellig verblijf van uw hond bij de hondenopvang Walkedo Arnhem hebben wij verblijfregels opgesteld. <link>Klik hier om ze te bekijken</link>"
+  },
+
+  "dagopvang": {
+    "heroAlt": "honden in arnhem",
+    "title": "Hondendagopvang in Arnhem",
+    "subtitle": "Jij overdag aan het werk, en je hond met leuk gezelschap lekker in de bossen.",
+    "intro": "Een hond is een vriend voor het leven. Maar overdag ben je vaak van huis, en dan blijft je hond alleen achter. Speciaal voor klanten van de Walkedo uitlaatservice, kan je je hond overdag bij mij thuis laten opvangen. Je hond krijgt de beschikking over een ruime groene tuin en een eigen plekje gedurende de dag zodat hij of zij zich kan terugtrekken. Maar als de hond het leuk vindt zijn er genoeg momenten met lekker veel gezelschap van mijn eigen honden en soms andere logés.",
+    "benefitsHeading": "Alle voordelen op een rijtje",
+    "perWeek": "{count}x p/w",
+    "benefitsIntro": "Laat je hond een losse dag of op vaste dagen per week komen. Je hond gaat dan automatisch ook mee met de groep, en kan zowel buiten als binnen verblijven gedurende de dag.",
+    "benefits": {
+      "weekendOrHoliday": "Een losse dag of vaste dagen per week",
+      "fixedRate": "Voor een vast bedrag per dag",
+      "company": "Je hond heeft voldoende gezelschap",
+      "joinsWalks": "Je hond gaat automatisch elke werkdag mee met de uitlaatgroep",
+      "insideOutside": "Je hond kan zowel buiten als binnen verblijven"
+    },
+    "dogImageAlt": "Hond op de bank",
+    "pricingHeading": "De tarieven",
+    "table": {
+      "rates": "Dagopvang tarieven",
+      "highSeason": "Hoogseizoen",
+      "lowSeason": "Laagseizoen",
+      "dayCare": "Dagopvang",
+      "daysOneToSix": "Dag 1 t/m dag 6",
+      "daysSevenPlus": "Dag 7 t/m ...",
+      "dayCareSingle": "Dagopvang los"
+    },
+    "rulesText": "Voor een gezond en gezellig verblijf van uw hond bij de hondendagopvang Walkedo Arnhem hebben wij verblijfregels opgesteld. <link>Klik hier om ze te bekijken</link>"
   },
 
   "voorwaarden": {

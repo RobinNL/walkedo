@@ -141,3 +141,19 @@ $animationMobileDuration: 0.5s;
 .navbarList {
     display: flex;
 }
+
+/**
+ * The Dutch labels are the widest set, and six of them do not fit at the full
+ * spacing until $navbar-breakpoint-to-desktop-roomy. Below that the bar is
+ * shown with smaller gaps and no reserved width on the logo section, rather
+ * than falling back to the hamburger on every laptop-sized screen.
+ */
+@media screen and (min-width: $navbar-breakpoint-to-desktop) and (max-width: $navbar-breakpoint-to-desktop-roomy - 1px) {
+    .navbarList li {
+        margin-right: spacing(16);
+    }
+
+    .navbarLogoSection {
+        min-width: auto;
+    }
+}

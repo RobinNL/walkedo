@@ -12,6 +12,10 @@
       "title": "Dog Boarding & Daycare in Arnhem",
       "description": "A dog is a friend for life. But sometimes you need to travel, and taking your dog along is not always possible. Walkedo looks after them while you are away."
     },
+    "dagopvang": {
+      "title": "Dog Daycare in Arnhem",
+      "description": "You are out during the day. Let your dog spend it at Walkedo in Arnhem, with a spacious garden, a spot of their own and the company of the regular group."
+    },
     "voorwaarden": {
       "title": "Dog Boarding Terms & Conditions",
       "description": "Read the house rules for a healthy and happy stay at Walkedo dog boarding in Arnhem."
@@ -41,6 +45,7 @@
   "nav": {
     "uitlaatservice": "Dog Walking",
     "opvang": "Boarding",
+    "dagopvang": "Daycare",
     "northernInuit": "Northern Inuit",
     "casting": "Casting",
     "news": "News",
@@ -72,6 +77,7 @@
     "links": "Links",
     "linkUitlaatservice": "Dog Walking",
     "linkOpvang": "Boarding",
+    "linkDagopvang": "Daycare",
     "linkDocumenten": "Documents",
     "follow": "Follow us",
     "instagramAlt": "Instagram",
@@ -180,6 +186,7 @@
   "opvang": {
     "heroAlt": "dogs in Arnhem",
     "title": "Dog boarding in Arnhem",
+    "subtitle": "Off to the sun with the family, while your dog enjoys the woods in good company.",
     "intro": "A dog is a friend for life. But sometimes you need or want to travel, and taking your dog along is not always possible. Clients of the Walkedo walking service can have their dog stay with me at home. Your dog gets a spacious green garden and a spot of their own for the duration of the stay, so they can retreat when they want to. And when they are in the mood, there is plenty of company from my own dogs and sometimes other guests.",
     "benefitsHeading": "The benefits at a glance",
     "benefitsIntro": "Board your dog for a short stay or a longer one. They automatically join the walking group, and can spend time both indoors and outdoors during the stay.",
@@ -202,6 +209,34 @@
       "dayCareSingle": "Daycare, single day"
     },
     "rulesText": "For a healthy and enjoyable stay at Walkedo dog boarding in Arnhem, we have set out house rules. <link>Click here to read them</link>"
+  },
+
+  "dagopvang": {
+    "heroAlt": "dogs in Arnhem",
+    "title": "Dog daycare in Arnhem",
+    "subtitle": "You at work during the day, while your dog enjoys the woods in good company.",
+    "intro": "A dog is a friend for life. But you are often out during the day, and your dog is left on their own. Clients of the Walkedo walking service can have their dog spend the day with me at home. Your dog gets a spacious green garden and a spot of their own for the day, so they can retreat when they want to. And when they are in the mood, there is plenty of company from my own dogs and sometimes other guests.",
+    "benefitsHeading": "The benefits at a glance",
+    "benefitsIntro": "Book a single day or fixed days every week. Your dog automatically joins the walking group, and can spend time both indoors and outdoors during the day.",
+    "benefits": {
+      "weekendOrHoliday": "A single day or fixed days every week",
+      "fixedRate": "A fixed rate per day",
+      "company": "Plenty of company for your dog",
+      "joinsWalks": "Your dog joins the walking group every weekday",
+      "insideOutside": "Your dog can stay both indoors and outdoors"
+    },
+    "dogImageAlt": "Dog resting on the sofa",
+    "pricingHeading": "Rates",
+    "table": {
+      "rates": "Daycare rates",
+      "highSeason": "High season",
+      "lowSeason": "Low season",
+      "dayCare": "Daycare",
+      "daysOneToSix": "Day 1 to day 6",
+      "daysSevenPlus": "Day 7 onwards",
+      "dayCareSingle": "Daycare, single day"
+    },
+    "rulesText": "For a healthy and enjoyable stay at Walkedo dog daycare in Arnhem, we have set out house rules. <link>Click here to read them</link>"
   },
 
   "voorwaarden": {
