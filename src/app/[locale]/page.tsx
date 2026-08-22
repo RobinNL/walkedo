@@ -118,7 +118,8 @@ export default function Home() {
                 <div className={Styles.serviceSectionImageRow}>
                     <div className={Styles.serviceSectionImage}>
                         <Image objectFit={'cover'} fill={true}
-                               src={'/images/opvang/opvang-1.jpeg'}
+                               objectPosition={'50% 40%'}
+                               src={'/images/opvang/opvang-1.jpg'}
                                alt={t('opvang.imageAlt.1')}/>
                     </div>
                     <div className={Styles.serviceSectionImage}>
