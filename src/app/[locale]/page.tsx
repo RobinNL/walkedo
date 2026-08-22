@@ -72,12 +72,12 @@ export default function Home() {
                 <div className={Styles.serviceSectionImageRow}>
                     <div className={Styles.serviceSectionImage}>
                         <Image objectFit={'cover'} fill={true}
-                               src={'/images/uitlaatservice/uitlaatservice-arnhem.jpeg'}
+                               src={'/images/uitlaatservice/uitlaatservice-arnhem-1.jpg'}
                                alt={t('uitlaatservice.imageAlt')}/>
                     </div>
                     <div className={Styles.serviceSectionImage}>
                         <Image objectFit={'cover'} fill={true}
-                               src={'/images/uitlaatservice/uitlaatservice-arnhem-2.jpeg'}
+                               src={'/images/uitlaatservice/uitlaatservice-arnhem-02.jpg'}
                                alt={t('uitlaatservice.imageAlt')} className={Styles.serviceSectionImage}/>
                     </div>
                     <div className={Styles.serviceSectionImage}>

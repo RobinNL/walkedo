@@ -142,7 +142,6 @@
     "mapAlt": "map of Arnhem",
     "subscriptionHeading": "Simple and dependable",
     "subscriptionBody": "Walkedo works with straightforward subscriptions based on the number of walks. No occasional invoices to keep track of, and no strip cards that may or may not have expired. Monthly amounts are calculated with six weeks' allowance built in. Here is how it works: <link>subscriptions explained</link>",
-    "perWeek": "{count}x per week",
     "calendarAlt": "calendar",
     "calendarLink": "Days off in 2026",
     "galleryHeading": "Fancy joining us for a walk?",
@@ -233,7 +232,14 @@
       "dayCareSingle": "Daycare, single day"
     },
     "rulesText": "For a healthy and enjoyable stay at Walkedo dog daycare in Arnhem, we have set out house rules. <link>Click here to read them</link>",
-    "cta": "Sign up for daycare",
+    "cta": "Sign up for daycare"
+  },
+  "pricing": {
+    "toggleLabel": "Choose a service",
+    "services": {
+      "uitlaatservice": "Dog Walking",
+      "dagopvang": "Daycare"
+    },
     "perWeek": "{count}x per week"
   },
   "voorwaarden": {

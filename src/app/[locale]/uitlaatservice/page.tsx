@@ -6,6 +6,7 @@ import React from "react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { WalkedoList } from "../../../../components/list/list";
+import { WalkedoPricing } from "../../../../components/pricing/pricing";
 
 const GALLERY_IMAGES = [
     { src: '/images/uitlaatservice/honden-1.png', width: 1826, height: 1645 },
@@ -19,8 +20,6 @@ const GALLERY_IMAGES = [
     { src: '/images/uitlaatservice/honden-9.png', width: 1811, height: 1024 },
     { src: '/images/uitlaatservice/honden-10.png', width: 1818, height: 1366 },
 ];
-
-const PRICES = ['€51,75', '€103,50', '€155,25', '€207,00', '€257,75'];
 
 const STEPS = ['signup', 'meet', 'trial', 'subscription'] as const;
 
@@ -77,14 +76,7 @@ export default function Page() {
                             })}
                         </p>
                     </div>
-                    <div className={Styles.subscriptionRow}>
-                        {PRICES.map((price, index) => (
-                            <div className={Styles.subscriptionBlock} key={price}>
-                                <h3>{price}</h3>
-                                <p>{t('perWeek', { count: index + 1 })}</p>
-                            </div>
-                        ))}
-                    </div>
+                    <WalkedoPricing defaultService={'uitlaatservice'}/>
                     <div className={Styles.calendarLink}>
                         <Image src={'/images/calendar.svg'} className={Styles.calendarIcon}
                                alt={t('calendarAlt')} width={20} height={20}/>
