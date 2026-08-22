@@ -2,33 +2,29 @@
 @import "styles/maps";
 @import "styles/functions";
 
-.form-group {
-  display: inline-flex;
-  flex-direction: column;
+.formWrapper {
+  // Wider than the old single-column form: the grouped sections need the room,
+  // and postcode/city sit side by side above the small breakpoint.
+  max-width: 720px;
+  margin: 0 auto;
+  padding-top: $global-navbar-height * 1.5;
+  padding-bottom: spacing(64);
+}
+
+.formHeader {
+  background-image: linear-gradient(color(accent), color(accentDark));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  hyphens: auto;
+  overflow-wrap: break-word;
+}
+
+.formIntro {
+  margin-bottom: spacing(32);
 }
 
 .formElement {
   padding-bottom: spacing(32);
-}
-
-.formWrapper {
-  max-width: 480px;
-  margin: 0 auto;
-  padding-top: $global-navbar-height * 1.5;
-}
-
-.checkbox {
-
-}
-
-.formLabel {
-  display: block;
-  color: color(text);
-  margin-bottom: spacing(12);
-}
-
-.formField {
-  margin-bottom: spacing(20);
 }
 
 .formResultErrorWrapper {
@@ -37,76 +33,26 @@
   color: color(white);
   border-radius: radius(regular);
   margin-top: spacing(20);
+
+  p {
+    color: color(white);
+    margin: 0;
+  }
 }
 
-/**
-Checkmarks
- */
+.formSuccess {
+  background-color: color(primary);
+  border: 1px solid color(accent);
+  border-radius: radius(regular);
+  padding: spacing(32);
+  margin-bottom: spacing(64);
+  outline: 0;
 
+  h2 {
+    margin-top: 0;
+  }
 
-.checkmarkContainer {
-  display: block;
-  position: relative;
-  padding-left: 35px;
-  margin-bottom: 12px;
-  cursor: pointer;
-  font-size: 22px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-/* Hide the browser's default checkbox */
-.checkmarkContainer input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
-}
-
-/* Create a custom checkbox */
-.checkmark {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 25px;
-  width: 25px;
-  background-color: #eee;
-}
-
-/* On mouse-over, add a grey background color */
-.checkmarkContainer:hover input ~ .checkmark {
-  background-color: #ccc;
-}
-
-/* When the checkbox is checked, add a blue background */
-.checkmarkContainer input:checked ~ .checkmark {
-  background-color: #2196F3;
-}
-
-/* Create the checkmark/indicator (hidden when not checked) */
-.checkmarkContainer:after {
-  content: "";
-  position: absolute;
-  display: none;
-}
-
-/* Show the checkmark when checked */
-.checkmarkContainer input:checked ~ .checkmark:after {
-  display: block;
-}
-
-/* Style the checkmark/indicator */
-.checkmarkContainer .checkmark:after {
-  left: 9px;
-  top: 5px;
-  width: 5px;
-  height: 10px;
-  border: solid white;
-  border-width: 0 3px 3px 0;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
+  p {
+    margin-bottom: 0;
+  }
 }

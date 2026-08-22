@@ -21,7 +21,7 @@ export default async function Page({ params }: { params: { locale: string } }) {
         <main>
             <div className={Styles.heroImage}>
                 <Image priority sizes='100vw' className={Styles.heroImageInner} fill={true}
-                       alt={t('heroAlt')} src={'/images/news/news.jpeg'}/>
+                       alt={t('heroAlt')} src={'/images/news/news-header.jpg'}/>
             </div>
             <div className={'container'}>
                 <h1 className={Styles.header}>{t('title')}</h1>

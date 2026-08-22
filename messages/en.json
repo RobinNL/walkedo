@@ -9,8 +9,12 @@
       "description": "Have your dog walked in small, carefully matched groups so they can burn off energy and socialise properly, in Arnhem North and Oosterbeek."
     },
     "opvang": {
-      "title": "Dog Boarding & Daycare in Arnhem",
+      "title": "Dog Boarding in Arnhem",
       "description": "A dog is a friend for life. But sometimes you need to travel, and taking your dog along is not always possible. Walkedo looks after them while you are away."
+    },
+    "dagopvang": {
+      "title": "Dog Daycare in Arnhem",
+      "description": "You are out during the day. Let your dog spend it at Walkedo in Arnhem, with a spacious garden, a spot of their own and the company of the regular group."
     },
     "voorwaarden": {
       "title": "Dog Boarding Terms & Conditions",
@@ -37,10 +41,10 @@
       "description": "Download and read all the documents we go through during your dog's intake."
     }
   },
-
   "nav": {
     "uitlaatservice": "Dog Walking",
     "opvang": "Boarding",
+    "dagopvang": "Daycare",
     "northernInuit": "Northern Inuit",
     "casting": "Casting",
     "news": "News",
@@ -53,7 +57,6 @@
     "logoAlt": "Walkedo logo",
     "spiritbornLogoAlt": "Spiritborn logo"
   },
-
   "footer": {
     "contactHeading": "Get in touch, no strings attached",
     "whatsappAlt": "WhatsApp QR code",
@@ -72,6 +75,7 @@
     "links": "Links",
     "linkUitlaatservice": "Dog Walking",
     "linkOpvang": "Boarding",
+    "linkDagopvang": "Daycare",
     "linkDocumenten": "Documents",
     "follow": "Follow us",
     "instagramAlt": "Instagram",
@@ -82,7 +86,6 @@
     "languageNl": "Nederlands",
     "languageEn": "English"
   },
-
   "home": {
     "heroVideoFallbackAlt": "dogs running in a field",
     "heroTitle": "Looking after your dog, wholeheartedly",
@@ -96,14 +99,23 @@
       "subheading": "Burn off energy and socialise with other dogs.",
       "body": "Have your dog picked up once or several times a week. Dogs walk for at least an hour and never spend more than an hour in the van. Each group has six fixed slots, plus two kept free for dogs staying in boarding or for clients whose schedule does not fit the regular rounds. Groups are put together with care — there is a puppy group on Fridays and even a full doodle group. To keep travel time short, my service area is limited to Arnhem North, Schaarsbergen and the surrounding area.",
       "cta": "Dog walking in Arnhem North",
-      "imageAlt": "dog in the grass"
+      "imageAlt": {
+        "1": "Red-brown dog lying in the sun against a brick wall, waiting to be picked up",
+        "2": "Two dogs on the heath at sunrise during the walking round in Arnhem North",
+        "3": "Shadow of the dog walker and a dog on the lead along a forest path"
+      }
     },
     "opvang": {
       "heading": "Boarding",
       "subheading": "For a day, a week, or a full holiday.",
       "body": "Everyone gets away now and then, and however nice it is to take your dog along, sometimes you want something different. Since January 2025, Walkedo clients can use the boarding service. Let your dog run and play in a 25 square metre kennel while you and your family enjoy your holiday. Boarding dogs automatically join the walking groups.",
       "cta": "Boarding service",
-      "imageAlt": "dog in the grass"
+      "imageAlt": {
+        "1": "Two boarding dogs resting together on a dog bed indoors",
+        "2": "Black and white dog on the sofa during a stay at Walkedo",
+        "3": "Dog relaxing in the green garden of the boarding home"
+      },
+      "dagOpvangCta": "Daycare (for busy days)"
     },
     "northernInuit": {
       "heading": "Northern Inuit Dog",
@@ -120,7 +132,6 @@
     "castingImageAlt": "Northern Inuit dog posing beside Little Red Riding Hood in a photo production",
     "expo": "Expo: Little Red Riding Hood 2025. <link>Meet the artists</link>"
   },
-
   "uitlaatservice": {
     "heroAlt": "dogs walking in Arnhem",
     "title": "Dog walking service",
@@ -139,7 +150,6 @@
     "mapAlt": "map of Arnhem",
     "subscriptionHeading": "Simple and dependable",
     "subscriptionBody": "Walkedo works with straightforward subscriptions based on the number of walks. No occasional invoices to keep track of, and no strip cards that may or may not have expired. Monthly amounts are calculated with six weeks' allowance built in. Here is how it works: <link>subscriptions explained</link>",
-    "perWeek": "{count}x per week",
     "calendarAlt": "calendar",
     "calendarLink": "Days off in 2026",
     "galleryHeading": "Fancy joining us for a walk?",
@@ -176,11 +186,12 @@
       }
     }
   },
-
   "opvang": {
-    "heroAlt": "dogs in Arnhem",
+    "heroAlt": "Boarding dog resting its head on a lap in the living room",
     "title": "Dog boarding in Arnhem",
+    "subtitle": "Off to the sun with the family, while your dog enjoys the woods in good company.",
     "intro": "A dog is a friend for life. But sometimes you need or want to travel, and taking your dog along is not always possible. Clients of the Walkedo walking service can have their dog stay with me at home. Your dog gets a spacious green garden and a spot of their own for the duration of the stay, so they can retreat when they want to. And when they are in the mood, there is plenty of company from my own dogs and sometimes other guests.",
+    "crossLinkText": "Looking for care during the day only, while you are at work? <link>See dog daycare in Arnhem</link>",
     "benefitsHeading": "The benefits at a glance",
     "benefitsIntro": "Board your dog for a short stay or a longer one. They automatically join the walking group, and can spend time both indoors and outdoors during the stay.",
     "benefits": {
@@ -190,20 +201,48 @@
       "joinsWalks": "Your dog joins the walking group every weekday",
       "insideOutside": "Your dog can stay both indoors and outdoors"
     },
-    "dogImageAlt": "Dog resting on the sofa",
+    "dogImageAlt": "Northern Inuit dog relaxing in an armchair by the Christmas tree during a boarding stay",
     "pricingHeading": "Rates",
     "table": {
       "rates": "Boarding rates",
       "highSeason": "High season",
       "lowSeason": "Low season",
-      "dayCare": "Daycare",
       "daysOneToSix": "Day 1 to day 6",
-      "daysSevenPlus": "Day 7 onwards",
-      "dayCareSingle": "Daycare, single day"
+      "daysSevenPlus": "Day 7 onwards"
     },
-    "rulesText": "For a healthy and enjoyable stay at Walkedo dog boarding in Arnhem, we have set out house rules. <link>Click here to read them</link>"
+    "rulesText": "For a healthy and enjoyable stay at Walkedo dog boarding in Arnhem, we have set out house rules. <link>Click here to read them</link>",
+    "dayCarePricingText": "Looking for care during the day only? Daycare has its own rates. <link>See the daycare rates</link>",
+    "cta": "Sign up for boarding"
   },
-
+  "dagopvang": {
+    "heroAlt": "Dog walker with a group of dogs in a sunny meadow near Arnhem",
+    "title": "Dog daycare in Arnhem",
+    "subtitle": "You at work during the day, while your dog enjoys the woods in good company.",
+    "intro": "A dog is a friend for life. But you are often out during the day, and your dog is left on their own. Clients of the Walkedo walking service can have their dog spend the day with me at home. Your dog gets a spacious green garden and a spot of their own for the day, so they can retreat when they want to. And when they are in the mood, there is plenty of company from my own dogs and sometimes other guests.",
+    "crossLinkText": "Going on holiday or away for a weekend, and need a stay with overnights? <link>See dog boarding in Arnhem</link>",
+    "benefitsHeading": "The benefits at a glance",
+    "benefitsIntro": "Book a single day or fixed days every week. Your dog automatically joins the walking group, and can spend time both indoors and outdoors during the day.",
+    "benefits": {
+      "weekendOrHoliday": "A single day or fixed days every week",
+      "fixedRate": "A fixed rate per day",
+      "company": "Plenty of company for your dog",
+      "joinsWalks": "Your dog joins the walking group every weekday",
+      "insideOutside": "Your dog can stay both indoors and outdoors"
+    },
+    "dogImageAlt": "Dog asleep on the sofa during a day at the dog daycare in Arnhem",
+    "pricingHeading": "Rates",
+    "singleDayText": "Prefer a single day to a subscription? A single day of daycare costs {price} per day.",
+    "rulesText": "For a healthy and enjoyable stay at Walkedo dog daycare in Arnhem, we have set out house rules. <link>Click here to read them</link>",
+    "cta": "Sign up for daycare"
+  },
+  "pricing": {
+    "toggleLabel": "Choose a service",
+    "services": {
+      "uitlaatservice": "Dog Walking",
+      "dagopvang": "Daycare"
+    },
+    "perWeek": "{count}x per week"
+  },
   "voorwaarden": {
     "title": "Dog boarding terms & conditions",
     "published": "Published: 12-1-2026. Version 1.0",
@@ -221,7 +260,6 @@
     "p10": "You are also asked to leave the pet passport with us. At handover the passport is checked for all vaccinations.",
     "p11": "* High season covers all school holidays and national public holidays."
   },
-
   "casting": {
     "heroAlt": "The set of a film production",
     "title": "Casting",
@@ -241,7 +279,6 @@
       "solo": "Northern Inuit dog posing as a wolf in the forest"
     }
   },
-
   "northernInuit": {
     "heroAlt": "Northern Inuit dog in the dunes",
     "title": "Northern Inuit Dog",
@@ -260,7 +297,6 @@
     "puppyBody": "We expect a litter of Northern Inuits within the next few years. If you are interested in a Northern Inuit, put your name down without obligation — the final list is still to come. If you would simply like to experience the breed, feel free to get in touch.",
     "puppyCta": "Join the Northern Inuit puppy list"
   },
-
   "documenten": {
     "title": "Documents",
     "intro": "During the intake we go through a few documents that matter for a safe and successful arrangement for you and your dog. You can read them here in advance. If anything is unclear, just get in touch.",
@@ -268,15 +304,13 @@
     "terms": "Terms of service (.pdf)",
     "keyContract": "Key agreement (.pdf)"
   },
-
   "news": {
-    "heroAlt": "dogs in Arnhem",
+    "heroAlt": "Two dogs on the heathland under a blue sky near Arnhem",
     "title": "News",
     "intro": "Keep up with the latest Walkedo news",
     "empty": "There are no posts in this language yet.",
     "pawAlt": "dog paw"
   },
-
   "post": {
     "postedOn": "Posted on",
     "back": "See more news",
@@ -285,40 +319,134 @@
     "notAvailable": "This post is not available in English yet.",
     "readInOther": "Read it in Dutch"
   },
-
   "signup": {
     "title": "Sign up",
-    "intro": {
-      "uitlaten": "I cannot wait to meet your dog. Sign up for an introduction with no obligation. I will walk you calmly through every step, and together we will look at the services that suit you and your dog best.",
-      "casting": "Sign up for casting. I handle the dog on your production. The Northern Inuit Dog suits a fantasy setting particularly well, and the breed has been used before on Game of Thrones.",
-      "puppy": "Register your interest in a Northern Inuit puppy. You are not committing to anything — the final list is still to come."
+    "intro": "Sign up with no obligation. Choose what you are interested in below — you can pick more than one — then fill in your details. I will get in touch as soon as possible.",
+    "sections": {
+      "services": {
+        "title": "What are you interested in?",
+        "description": "Choose one or more services. The questions below adapt to your choice."
+      },
+      "person": {
+        "title": "Your details"
+      },
+      "address": {
+        "title": "Address"
+      },
+      "dog": {
+        "title": "About your dog",
+        "description": "These questions are about the dog you want to sign up."
+      },
+      "casting": {
+        "title": "Your project"
+      },
+      "puppy": {
+        "title": "Your motivation"
+      }
     },
-    "firstName": "First name",
-    "lastName": "Last name",
-    "email": "Email",
-    "phone": "Phone number",
-    "address": "Address",
-    "addressPlaceholder": "For example Hondenlaan 2, 1111HD Arnhem",
-    "detailLabel": {
-      "uitlaten": "Brief description of your dog(s)",
-      "casting": "Project description",
-      "puppy": "Describe your situation"
+    "services": {
+      "uitlaten": {
+        "label": "Dog walking",
+        "description": "Out and about together every day in Arnhem Noord."
+      },
+      "opvang": {
+        "label": "Boarding & daycare",
+        "description": "Care for a day, a weekend or a holiday."
+      },
+      "casting": {
+        "label": "Casting",
+        "description": "A dog for your film, photo or video production."
+      },
+      "puppy": {
+        "label": "Northern Inuit puppy",
+        "description": "Interest in a pup from a future litter."
+      }
     },
-    "detailPlaceholder": {
-      "uitlaten": "What makes your dog unique?",
-      "casting": "Briefly describe the project you need a dog for",
-      "puppy": "Why would you be a good owner for a pup?"
+    "fields": {
+      "firstName": {
+        "label": "First name",
+        "placeholder": "First name"
+      },
+      "lastName": {
+        "label": "Last name",
+        "placeholder": "Last name"
+      },
+      "email": {
+        "label": "Email address",
+        "placeholder": "name@example.com"
+      },
+      "phoneNr": {
+        "label": "Phone number",
+        "placeholder": "+31 6 12345678"
+      },
+      "street": {
+        "label": "Street and number",
+        "placeholder": "Hondenlaan 2"
+      },
+      "postcode": {
+        "label": "Postcode",
+        "placeholder": "1111 HD"
+      },
+      "city": {
+        "label": "City",
+        "placeholder": "Arnhem"
+      },
+      "dogName": {
+        "label": "Your dog's name",
+        "placeholder": "Koda"
+      },
+      "breed": {
+        "label": "Breed",
+        "placeholder": "Northern Inuit"
+      },
+      "age": {
+        "label": "Age",
+        "placeholder": "3 years"
+      },
+      "sex": {
+        "label": "Sex"
+      },
+      "neutered": {
+        "label": "Neutered or spayed"
+      },
+      "dogSummary": {
+        "label": "Tell us about your dog",
+        "placeholder": "What makes your dog unique? Think character, energy and anything special."
+      },
+      "projectSummary": {
+        "label": "Describe your project",
+        "placeholder": "What kind of production is it, and when does it take place?"
+      },
+      "motivation": {
+        "label": "Tell us about your situation",
+        "placeholder": "Why do you think a Northern Inuit puppy would be a good fit for you?"
+      }
+    },
+    "options": {
+      "sex": {
+        "male": "Male",
+        "female": "Female"
+      },
+      "neutered": {
+        "yes": "Yes",
+        "no": "No"
+      }
+    },
+    "required": "Required",
+    "errors": {
+      "required": "This field is required",
+      "invalidEmail": "Please enter a valid email address",
+      "chooseOne": "Choose at least one service",
+      "summary": "Please check the highlighted fields above."
     },
     "submit": "Send",
     "loading": "Loading, one moment",
     "error": "Something went wrong. Please try again, or send a message to woof@walkedo.com",
     "success": {
-      "uitlaten": "Woof! We have received your sign-up. Hopefully see you soon :)",
-      "casting": "Woof! The script practically writes itself. We have received your sign-up and will be in touch.",
-      "puppy": "Woof! That is what your puppy will sound like when you come home in a few years. We have received your sign-up and will be in touch."
+      "title": "Woof! We have received your sign-up.",
+      "body": "You will get a confirmation by email. I will get in touch as soon as possible."
     }
   },
-
   "notFound": {
     "title": "Oh no! A dog has lost the ball",
     "body": "We could not find that page. But we have asked a labradoodle to help look for it."

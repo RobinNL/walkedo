@@ -4,23 +4,24 @@ import Styles from "./aanmelden.module.scss";
 import React from "react";
 import { useSearchParams } from "next/navigation";
 import { useTranslations } from "next-intl";
-import SignupForm, { type SignupService } from "./signup-form";
-
-const SERVICES: SignupService[] = ['uitlaten', 'casting', 'puppy'];
+import SignupForm from "./signup-form";
+import { parseServices } from "../../../../lib/signup-fields";
 
 export default function SignupPage() {
     const t = useTranslations('signup');
 
-    const requested = useSearchParams().get('service');
-    const service: SignupService =
-        SERVICES.includes(requested as SignupService) ? (requested as SignupService) : 'uitlaten';
+    // ?service= no longer picks a form — there is only one — it pre-ticks the
+    // matching box, so every link that used to point at a variant still lands
+    // the visitor on the right starting point.
+    const initialServices = parseServices(useSearchParams().get('service'));
 
     return (
-        <main className={'container'}>
+        <div className={'container'}>
             <div className={Styles.formWrapper}>
-                <h1>{t('title')}</h1>
-                <SignupForm service={service}/>
+                <h1 className={Styles.formHeader}>{t('title')}</h1>
+                <p className={Styles.formIntro}>{t('intro')}</p>
+                <SignupForm initialServices={initialServices}/>
             </div>
-        </main>
+        </div>
     );
 }

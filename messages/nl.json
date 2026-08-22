@@ -9,8 +9,12 @@
       "description": "Laat je hond uitgelaten worden met zorg samengestelde speciale kleine groepen. Zo kunnen ze de energie kwijt en lekker socialiseren in Arnhem Noord en Oosterbeek"
     },
     "opvang": {
-      "title": "Hondendagopvang in Arnhem",
+      "title": "Hondenopvang in Arnhem",
       "description": "Een hond is een vriend voor het leven. Maar soms moet of wil je ook even ver weg van huis en dan is het niet altijd mogelijk om je hond mee te nemen."
+    },
+    "dagopvang": {
+      "title": "Hondendagopvang in Arnhem",
+      "description": "Overdag ben je vaak van huis. Laat je hond de dag doorbrengen bij Walkedo in Arnhem, met een ruime tuin, een eigen plekje en gezelschap van de vaste groep."
     },
     "voorwaarden": {
       "title": "Hondendagopvang voorwaarden",
@@ -37,10 +41,10 @@
       "description": "Download en lees alle documenten die ter sprake komen tijdens de intake voor je hond."
     }
   },
-
   "nav": {
     "uitlaatservice": "Uitlaatservice",
     "opvang": "Opvang",
+    "dagopvang": "Dagopvang",
     "northernInuit": "Northern Inuit",
     "casting": "Casting",
     "news": "Nieuws",
@@ -53,7 +57,6 @@
     "logoAlt": "Walkedo logo",
     "spiritbornLogoAlt": "Spiritborn logo"
   },
-
   "footer": {
     "contactHeading": "Neem vrijblijvend contact op",
     "whatsappAlt": "whatsapp QR code",
@@ -72,6 +75,7 @@
     "links": "Links",
     "linkUitlaatservice": "Honden Uitlaatservice",
     "linkOpvang": "Opvang",
+    "linkDagopvang": "Dagopvang",
     "linkDocumenten": "Documenten",
     "follow": "Volg ons",
     "instagramAlt": "instagram afbeelding",
@@ -82,7 +86,6 @@
     "languageNl": "Nederlands",
     "languageEn": "English"
   },
-
   "home": {
     "heroVideoFallbackAlt": "honden op een veld",
     "heroTitle": "Met hart voor je hond",
@@ -96,14 +99,23 @@
       "subheading": "Lekker de energie kwijt en socialiseren met andere honden.",
       "body": "Laat je hond èèn of meerdere malen per week door mij ophalen. Honden lopen minimaal een uur en zitten maximaal een uur in de bus. Per groep zijn er zes vaste slots beschikbaar. En zijn er twee slots beschikbaar voor honden die in de opvang zitten of voor klanten die niet uitkomen met het reguliere uitlaten van de hond. De honden groepen worden zorgvuldig samengesteld. Zo is een puppygroep op vrijdag en zelfs een volledige doodle groep. Om die reistijd klein te houden is mijn werkgebied beperkt tot Arnhem Noord, Schaarsbergen en omstreken.",
       "cta": "Uitlaatservice Arnhem Noord",
-      "imageAlt": "hond in het gras"
+      "imageAlt": {
+        "1": "Roodbruine hond ligt in de zon tegen een bakstenen muur, klaar om opgehaald te worden",
+        "2": "Twee honden op de heide bij zonsopkomst tijdens de uitlaatronde in Arnhem Noord",
+        "3": "Schaduw van de hondenuitlater en een hond aan de lijn op een bospad"
+      }
     },
     "opvang": {
       "heading": "Opvangservice",
       "subheading": "Voor een dag, een week of een vakantieperiode.",
       "body": "Iedereen gaat er wel eens op uit en hoe leuk het ook is om op vakantie te gaan met je hond, toch wil je wel eens even wat anders. Klanten van Walkedo kunnen gebruik per januari 2025 gebruik maken van de opvangservice. Laat je honden lekker razen en spelen in een kennel van 25 vierkante meter terwijl jij en je gezin van een vakantie geniet. De honden van de opvang gaan automatisch mee met de uitlaatservice.",
-      "cta": "Opvangservice",
-      "imageAlt": "hond in het gras"
+      "cta": "Opvangservice met overnachting (voor vakanties of weekenden)",
+      "dagOpvangCta": "Dagopvang (voor drukke dagen)",
+      "imageAlt": {
+        "1": "Twee logeerhonden liggen samen op een hondenkussen binnen",
+        "2": "Zwart-witte hond op de bank tijdens het logeren bij Walkedo",
+        "3": "Hond ligt ontspannen in de groene tuin van de opvang"
+      }
     },
     "northernInuit": {
       "heading": "Northern Inuit Dog",
@@ -120,7 +132,6 @@
     "castingImageAlt": "Northern Inuit dog die poseert naast roodkapje in een fotoproductie",
     "expo": "Expo: Roodkapje 2025. <link>Ontdek de artiesten</link>"
   },
-
   "uitlaatservice": {
     "heroAlt": "honden in arnhem",
     "title": "Honden uitlaatservice",
@@ -139,7 +150,6 @@
     "mapAlt": "kaart van Arnhem",
     "subscriptionHeading": "Eenvoudig en betrouwbaar",
     "subscriptionBody": "Walkedo werkt met overzichtelijke abonnementen op basis van het aantal wandelingen. Zo hoef je niet te letten op sporadische facturen of strippenkaarten die wel of niet zijn verlopen. De maandbedragen zijn berekend met een voordeel van zes weken. Hoe dit werkt lees je hier: <link>uitleg abonnementen</link>",
-    "perWeek": "{count}x p/w",
     "calendarAlt": "kalender",
     "calendarLink": "Overzicht vrije dagen van 2026",
     "galleryHeading": "Kom je lekker met ons wandelen?",
@@ -176,11 +186,12 @@
       }
     }
   },
-
   "opvang": {
-    "heroAlt": "honden in arnhem",
-    "title": "Hondendagopvang in Arnhem",
+    "heroAlt": "Logeerhond ligt met zijn kop op schoot in de woonkamer",
+    "title": "Hondenopvang in Arnhem",
+    "subtitle": "Met het gezin naar de zon, en je hond met leuk gezelschap lekker in de bossen.",
     "intro": "Een hond is een vriend voor het leven. Maar soms moet of wil je ook even ver weg van huis en dan is het niet altijd mogelijk om je hond mee te nemen. Speciaal voor klanten van de Walkedo uitlaatservice, kan je je hond door mij thuis laten opvangen. Je hond krijgt de beschikking over een ruimte groene tuin en een eigen plekje gedurende het verblijf zodat hij of zij zich kan terugtrekken. Maar als de hond het leuk vind zijn er zijn genoeg momenten met lekker veel gezelschap van mijn eigen honden en soms andere logés.",
+    "crossLinkText": "Zoek je opvang voor alleen overdag, terwijl jij aan het werk bent? <link>Bekijk de hondendagopvang in Arnhem</link>",
     "benefitsHeading": "Alle voordelen op een rijtje",
     "benefitsIntro": "Laat je hond voor een korte of langere tijdsduur logeren. Je hond gaat dan automatisch ook mee met de groep, en kan zowel buiten als binnen verblijven tijdens het verblijf.",
     "benefits": {
@@ -190,20 +201,48 @@
       "joinsWalks": "Je hond gaat automatisch elke werkdag mee met de uitlaatgroep",
       "insideOutside": "Je hond kan zowel buiten als binnen verblijven"
     },
-    "dogImageAlt": "Hond op de bank",
+    "dogImageAlt": "Northern Inuit hond ontspannen in een stoel bij de kerstboom tijdens het logeren",
     "pricingHeading": "De tarieven",
     "table": {
       "rates": "Opvang tarieven",
       "highSeason": "Hoogseizoen",
       "lowSeason": "Laagseizoen",
-      "dayCare": "Dagopvang",
       "daysOneToSix": "Dag 1 t/m dag 6",
-      "daysSevenPlus": "Dag 7 t/m ...",
-      "dayCareSingle": "Dagopvang los"
+      "daysSevenPlus": "Dag 7 t/m ..."
     },
-    "rulesText": "Voor een gezond en gezellig verblijf van uw hond bij de hondenopvang Walkedo Arnhem hebben wij verblijfregels opgesteld. <link>Klik hier om ze te bekijken</link>"
+    "rulesText": "Voor een gezond en gezellig verblijf van uw hond bij de hondenopvang Walkedo Arnhem hebben wij verblijfregels opgesteld. <link>Klik hier om ze te bekijken</link>",
+    "dayCarePricingText": "Zoek je opvang voor alleen overdag? De dagopvang heeft eigen tarieven. <link>Bekijk de tarieven van de dagopvang</link>",
+    "cta": "Aanmelden voor de opvang"
   },
-
+  "dagopvang": {
+    "heroAlt": "Hondenuitlater met een groep honden in een zonnig weiland bij Arnhem",
+    "title": "Hondendagopvang in Arnhem",
+    "subtitle": "Jij overdag aan het werk, en je hond met leuk gezelschap lekker in de bossen.",
+    "intro": "Een hond is een vriend voor het leven. Maar overdag ben je vaak van huis, en dan blijft je hond alleen achter. Speciaal voor klanten van de Walkedo uitlaatservice, kan je je hond overdag bij mij thuis laten opvangen. Je hond krijgt de beschikking over een ruime groene tuin en een eigen plekje gedurende de dag zodat hij of zij zich kan terugtrekken. Maar als de hond het leuk vindt zijn er genoeg momenten met lekker veel gezelschap van mijn eigen honden en soms andere logés.",
+    "crossLinkText": "Ga je op vakantie of een weekend weg, en zoek je opvang met overnachting? <link>Bekijk de hondenopvang in Arnhem</link>",
+    "benefitsHeading": "Alle voordelen op een rijtje",
+    "benefitsIntro": "Laat je hond een losse dag of op vaste dagen per week komen. Je hond gaat dan automatisch ook mee met de groep, en kan zowel buiten als binnen verblijven gedurende de dag.",
+    "benefits": {
+      "weekendOrHoliday": "Een losse dag of vaste dagen per week",
+      "fixedRate": "Voor een vast bedrag per dag",
+      "company": "Je hond heeft voldoende gezelschap",
+      "joinsWalks": "Je hond gaat automatisch elke werkdag mee met de uitlaatgroep",
+      "insideOutside": "Je hond kan zowel buiten als binnen verblijven"
+    },
+    "dogImageAlt": "Hond slaapt op de bank tijdens een dag bij de hondendagopvang in Arnhem",
+    "pricingHeading": "De tarieven",
+    "singleDayText": "Liever een losse dag dan een abonnement? Een losse dag dagopvang kost {price} per dag.",
+    "rulesText": "Voor een gezond en gezellig verblijf van uw hond bij de hondendagopvang Walkedo Arnhem hebben wij verblijfregels opgesteld. <link>Klik hier om ze te bekijken</link>",
+    "cta": "Aanmelden voor de dagopvang"
+  },
+  "pricing": {
+    "toggleLabel": "Kies een dienst",
+    "services": {
+      "uitlaatservice": "Uitlaatservice",
+      "dagopvang": "Dagopvang"
+    },
+    "perWeek": "{count}x p/w"
+  },
   "voorwaarden": {
     "title": "Hondendagopvang voorwaarden",
     "published": "Publicatiedatum: 12-1-2026. Versie 1.0",
@@ -221,7 +260,6 @@
     "p10": "Daarnaast word gevraagd om het dierenpaspoort achter te laten. Tijdens deze overdracht word het paspoort gecontroleerd op alle vaccinaties.",
     "p11": "* Onder het hoogseizoen vallen alle kindervakanties en nationale feestdagen."
   },
-
   "casting": {
     "heroAlt": "De set van een film productie",
     "title": "Casting",
@@ -241,7 +279,6 @@
       "solo": "Northern Inuit dog die als wolf poseert in het bos"
     }
   },
-
   "northernInuit": {
     "heroAlt": "honden in arnhem",
     "title": "Northern Inuit Dog",
@@ -260,7 +297,6 @@
     "puppyBody": "Wij verwachten binnen een aantal jaar een nestje te krijgen van Northern Inuits. Heb je interesse in een Northern Inuit schrijf je dan alvast vrijblijvend in (de definitieve lijst volgt nog). Ook als je het ras wilt ervaren kan je contact met mij opnemen.",
     "puppyCta": "Aanmelden voor een Northern Inuit puppy"
   },
-
   "documenten": {
     "title": "Documenten",
     "intro": "Bij de intake zullen we enkele documenten doornemen die van belang zijn voor een veilige en succesvolle samenwerking voor jou en je hond. Hier kan je deze documenten alvast bekijken. Bij vragen kan je altijd contact met mij opnemen.",
@@ -268,15 +304,13 @@
     "terms": "Leveringsvoorwaarden (.pdf)",
     "keyContract": "Sleutelcontract (.pdf)"
   },
-
   "news": {
-    "heroAlt": "honden in arnhem",
+    "heroAlt": "Twee honden op de heide onder een blauwe lucht bij Arnhem",
     "title": "Nieuws",
     "intro": "Blijf op de hoogte van het laatste Walkedo nieuws",
     "empty": "Er zijn nog geen berichten in deze taal.",
     "pawAlt": "honden poot"
   },
-
   "post": {
     "postedOn": "Geplaatst op",
     "back": "Meer nieuws bekijken",
@@ -285,40 +319,134 @@
     "notAvailable": "Dit bericht is nog niet in het Nederlands beschikbaar.",
     "readInOther": "Lees het in het Engels"
   },
-
   "signup": {
     "title": "Aanmelden",
-    "intro": {
-      "uitlaten": "Ik kan niet wachten om je hond te leren kennen. Meld je vrijblijvend aan voor een kennismakingsgesprek. Dan loop ik je rustig door alle stappen en kijken we samen naar de services die het beste bij jou en je hond passen.",
-      "casting": "Schrijf je in voor de casting. Ik begeleid de hond bij je productie. De Northern Inuit dog past heel goed bij een fantasy setting en het ras is eerder ingezet bij de series Game of Thrones.",
-      "puppy": "Meld je interesse in een Northern Inuit puppy. Je zit nergens aan vast, de definitieve lijst volgt nog."
+    "intro": "Meld je vrijblijvend aan. Kies hieronder waar je interesse in hebt — dat mogen er meerdere zijn — en vul daarna je gegevens in. Ik neem zo snel mogelijk contact met je op.",
+    "sections": {
+      "services": {
+        "title": "Waar heb je interesse in?",
+        "description": "Kies één of meer services. De vragen daaronder passen zich aan op je keuze."
+      },
+      "person": {
+        "title": "Jouw gegevens"
+      },
+      "address": {
+        "title": "Adres"
+      },
+      "dog": {
+        "title": "Over je hond",
+        "description": "Deze vragen gaan over de hond die je wilt aanmelden."
+      },
+      "casting": {
+        "title": "Je project"
+      },
+      "puppy": {
+        "title": "Jouw motivatie"
+      }
     },
-    "firstName": "Voornaam",
-    "lastName": "Achternaam",
-    "email": "Email",
-    "phone": "Telefoon nummer",
-    "address": "Adres",
-    "addressPlaceholder": "Bijvoorbeeld hondenlaan 2, 1111HD Arnhem",
-    "detailLabel": {
-      "uitlaten": "Korte beschrijving hond(en)",
-      "casting": "Beschrijving project",
-      "puppy": "Beschrijf je situatie"
+    "services": {
+      "uitlaten": {
+        "label": "Uitlaatservice",
+        "description": "Elke dag samen op pad in Arnhem Noord."
+      },
+      "opvang": {
+        "label": "(Dag)opvang",
+        "description": "Opvang voor een dag, een weekend of een vakantie."
+      },
+      "casting": {
+        "label": "Casting",
+        "description": "Een hond voor je film-, foto- of videoproductie."
+      },
+      "puppy": {
+        "label": "Northern Inuit puppy",
+        "description": "Interesse in een pup uit een volgend nestje."
+      }
     },
-    "detailPlaceholder": {
-      "uitlaten": "Wat maakt jouw hond uniek",
-      "casting": "Beschrijf kort het project waar je een hond voor zoekt",
-      "puppy": "Waarom zou je een goede eigenaar(esse) zijn voor een pup?"
+    "fields": {
+      "firstName": {
+        "label": "Voornaam",
+        "placeholder": "Voornaam"
+      },
+      "lastName": {
+        "label": "Achternaam",
+        "placeholder": "Achternaam"
+      },
+      "email": {
+        "label": "E-mailadres",
+        "placeholder": "naam@voorbeeld.nl"
+      },
+      "phoneNr": {
+        "label": "Telefoonnummer",
+        "placeholder": "06 12345678"
+      },
+      "street": {
+        "label": "Straat en huisnummer",
+        "placeholder": "Hondenlaan 2"
+      },
+      "postcode": {
+        "label": "Postcode",
+        "placeholder": "1111 HD"
+      },
+      "city": {
+        "label": "Woonplaats",
+        "placeholder": "Arnhem"
+      },
+      "dogName": {
+        "label": "Naam van je hond",
+        "placeholder": "Koda"
+      },
+      "breed": {
+        "label": "Ras",
+        "placeholder": "Northern Inuit"
+      },
+      "age": {
+        "label": "Leeftijd",
+        "placeholder": "3 jaar"
+      },
+      "sex": {
+        "label": "Geslacht"
+      },
+      "neutered": {
+        "label": "Gecastreerd of gesteriliseerd"
+      },
+      "dogSummary": {
+        "label": "Vertel over je hond",
+        "placeholder": "Wat maakt jouw hond uniek? Denk aan karakter, energie en bijzonderheden."
+      },
+      "projectSummary": {
+        "label": "Beschrijf je project",
+        "placeholder": "Wat voor productie is het, en wanneer speelt het?"
+      },
+      "motivation": {
+        "label": "Vertel iets over je situatie",
+        "placeholder": "Waarom denk je dat een Northern Inuit Puppy goed bij je past?"
+      }
+    },
+    "options": {
+      "sex": {
+        "male": "Reu",
+        "female": "Teef"
+      },
+      "neutered": {
+        "yes": "Ja",
+        "no": "Nee"
+      }
+    },
+    "required": "Verplicht",
+    "errors": {
+      "required": "Dit veld is verplicht",
+      "invalidEmail": "Vul een geldig e-mailadres in",
+      "chooseOne": "Kies minimaal één service",
+      "summary": "Controleer de gemarkeerde velden hierboven."
     },
     "submit": "Verzenden",
     "loading": "Laden.. een momentje",
     "error": "Oeps, er is iets misgegaan. Probeer het nogmaals of stuur een bericht naar woof@walkedo.com",
     "success": {
-      "uitlaten": "Woef! We hebben je aanmelding ontvangen. Hopelijk tot snel :)",
-      "casting": "Woef! Het script is al praktisch geschreven. We hebben je aanmelding ontvangen en nemen contact met je op",
-      "puppy": "Woef! Zo klinkt jouw puppy als je over een paar jaar thuis komt. We hebben je aanmelding ontvangen en nemen contact met je op."
+      "title": "Woef! We hebben je aanmelding ontvangen.",
+      "body": "Je krijgt een bevestiging per e-mail. Ik neem zo snel mogelijk contact met je op."
     }
   },
-
   "notFound": {
     "title": "Oh nee! Een hond is de bal kwijt",
     "body": "Wij konden de pagina helaas niet vinden. Maar we hebben een labradoodle om hulp gevraagd."

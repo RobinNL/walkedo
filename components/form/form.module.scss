@@ -1,0 +1,227 @@
+@import "styles/variables";
+@import "styles/maps";
+@import "styles/functions";
+
+/**
+Sections
+ */
+
+.formSection {
+  border: 0;
+  margin: 0 0 spacing(24) 0;
+  padding: spacing(24);
+  background-color: color(primary);
+  border-radius: radius(regular);
+}
+
+.formSectionLegend {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  // A legend is not a flex child of the fieldset, so the gap below it has to
+  // come from the legend itself rather than from a parent gap.
+  margin-bottom: spacing(20);
+}
+
+.formSectionStep {
+  background: color(accent);
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  display: inline-flex;
+  margin-right: spacing(12);
+  border-radius: radius(round);
+  align-items: center;
+  justify-content: center;
+  color: color(black);
+  font-weight: 700;
+}
+
+.formSectionTitle {
+  font-family: sora, sans-serif;
+  font-size: font-size(h4);
+  line-height: line-height(h4);
+  font-weight: 700;
+  color: color(text);
+}
+
+.formSectionDescription {
+  margin-top: 0;
+  margin-bottom: spacing(20);
+  color: color(contrast-150);
+  font-size: font-size(h5);
+}
+
+/**
+Fields
+ */
+
+// Two columns on wider screens; paired fields (first/last name, postcode/city)
+// opt in with .formGroupHalf, everything else spans the full width.
+.fieldGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: spacing(20);
+}
+
+.formGroup {
+  display: block;
+  min-width: 0;
+}
+
+.formLabel {
+  display: block;
+  color: color(text);
+  margin-bottom: spacing(8);
+  font-family: sora, sans-serif;
+}
+
+.formRequired {
+  color: color(accent);
+  margin-left: spacing(4);
+}
+
+.formField {
+  // The global input rule already sets padding, radius and full width; only
+  // the invalid ring and the focus outline are added here.
+  outline: 0;
+
+  &:focus-visible {
+    box-shadow: 0 0 0 2px color(accent);
+  }
+}
+
+.formFieldInvalid {
+  box-shadow: 0 0 0 2px color(error);
+
+  &:focus-visible {
+    box-shadow: 0 0 0 2px color(error);
+  }
+}
+
+.fieldError {
+  color: color(error);
+  font-size: font-size(h6);
+  line-height: line-height(h6);
+  margin: spacing(8) 0 0 0;
+}
+
+/**
+Checkboxes and radios
+ */
+
+.choiceList {
+  display: flex;
+  flex-direction: column;
+  gap: spacing(8);
+}
+
+.choice {
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+  padding: spacing(12);
+  border-radius: radius(regular);
+  background-color: color(contrast-50);
+  cursor: pointer;
+  transition: background-color 0.15s ease-in-out;
+
+  &:hover {
+    background-color: color(accentBackground);
+  }
+}
+
+// Kept in the accessibility tree and focusable; only visually replaced.
+.choiceInput {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  margin: 0;
+}
+
+.choiceIndicator {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  margin-right: spacing(12);
+  border: 2px solid color(contrast-150);
+  border-radius: 6px;
+  background-color: color(white);
+  position: relative;
+}
+
+.choiceIndicatorRound {
+  border-radius: radius(round);
+}
+
+.choiceInput:checked + .choiceIndicator {
+  background-color: color(accent);
+  border-color: color(accent);
+}
+
+// The tick, drawn as a rotated corner so it needs no icon asset.
+.choiceInput:checked + .choiceIndicator::after {
+  content: "";
+  position: absolute;
+  left: 7px;
+  top: 2px;
+  width: 5px;
+  height: 11px;
+  border: solid color(black);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.choiceInput:focus-visible + .choiceIndicator {
+  outline: 2px solid color(accent);
+  outline-offset: 2px;
+}
+
+.choiceText {
+  display: flex;
+  flex-direction: column;
+}
+
+.choiceLabel {
+  color: color(text);
+  font-family: sora, sans-serif;
+}
+
+.choiceDescription {
+  color: color(contrast-150);
+  font-size: font-size(h6);
+  line-height: line-height(h6);
+}
+
+.visuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media screen and (min-width: 662px) {
+
+  .formSection {
+    padding: spacing(32);
+  }
+
+  .fieldGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .formGroup {
+    grid-column: span 2;
+  }
+
+  .formGroupHalf {
+    grid-column: span 1;
+  }
+
+}

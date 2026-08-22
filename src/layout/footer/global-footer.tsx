@@ -73,6 +73,7 @@ export const GlobalFooter = (props: GlobalFooterProps) => {
                     <ul className={Styles.linksList}>
                         <li><Link href={'/uitlaatservice'}>{t('linkUitlaatservice')}</Link></li>
                         <li><Link href={'/opvang'}>{t('linkOpvang')}</Link></li>
+                        <li><Link href={'/dagopvang'}>{t('linkDagopvang')}</Link></li>
                         <li><Link href={'/documenten'}>{t('linkDocumenten')}</Link></li>
                     </ul>
                 </div>

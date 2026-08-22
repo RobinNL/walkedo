@@ -28,3 +28,9 @@
     color: color(contrast-150);
     cursor: not-allowed;
 }
+// The rule above clears the outline, which would otherwise leave keyboard
+// users with no visible focus at all.
+.button:focus-visible {
+    outline: 2px solid color(accent);
+    outline-offset: 3px;
+}
