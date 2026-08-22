@@ -72,6 +72,7 @@ export default function Home() {
                 <div className={Styles.serviceSectionImageRow}>
                     <div className={Styles.serviceSectionImage}>
                         <Image objectFit={'cover'} fill={true}
+                               objectPosition={'50% 30%'}
                                src={'/images/uitlaatservice/uitlaatservice-arnhem-1.jpg'}
                                alt={t('uitlaatservice.imageAlt.1')}/>
                     </div>

@@ -52,7 +52,7 @@ export default async function Page({ params }: { params: { locale: string } }) {
 
                     <div className={Styles.dagopvangHondImage}>
                         <Image sizes='max-width: 100vw'
-                               objectPosition={'50% 50%'}
+                               objectPosition={'80% 50%'}
                                fill={true}
                                className={Styles.dagopvangHondImageInner}
                                src={'/images/opvang/dagopvang-walkedo-arnhem.png'}
@@ -65,8 +65,6 @@ export default async function Page({ params }: { params: { locale: string } }) {
                     <h3>{t('pricingHeading')}</h3>
 
                     <WalkedoPricing defaultService={'dagopvang'}/>
-
-                    <p className={Styles.priceNote}>{t('singleDayText', { price: '€30,-' })}</p>
 
                     <p>
                         {t.rich('rulesText', {
