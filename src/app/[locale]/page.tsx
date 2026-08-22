@@ -73,17 +73,17 @@ export default function Home() {
                     <div className={Styles.serviceSectionImage}>
                         <Image objectFit={'cover'} fill={true}
                                src={'/images/uitlaatservice/uitlaatservice-arnhem-1.jpg'}
-                               alt={t('uitlaatservice.imageAlt')}/>
+                               alt={t('uitlaatservice.imageAlt.1')}/>
                     </div>
                     <div className={Styles.serviceSectionImage}>
                         <Image objectFit={'cover'} fill={true}
-                               src={'/images/uitlaatservice/uitlaatservice-arnhem-02.jpg'}
-                               alt={t('uitlaatservice.imageAlt')} className={Styles.serviceSectionImage}/>
+                               src={'/images/uitlaatservice/uitlaatservice-arnhem-2.jpg'}
+                               alt={t('uitlaatservice.imageAlt.2')} className={Styles.serviceSectionImage}/>
                     </div>
                     <div className={Styles.serviceSectionImage}>
                         <Image objectFit={'cover'} fill={true}
                                src={'/images/uitlaatservice/uitlaatservice-arnhem-3.jpeg'}
-                               alt={t('uitlaatservice.imageAlt')} className={Styles.serviceSectionImage}/>
+                               alt={t('uitlaatservice.imageAlt.3')} className={Styles.serviceSectionImage}/>
                     </div>
                 </div>
 
@@ -118,17 +118,17 @@ export default function Home() {
                     <div className={Styles.serviceSectionImage}>
                         <Image objectFit={'cover'} fill={true}
                                src={'/images/opvang/opvang-1.jpeg'}
-                               alt={t('opvang.imageAlt')}/>
+                               alt={t('opvang.imageAlt.1')}/>
                     </div>
                     <div className={Styles.serviceSectionImage}>
                         <Image objectFit={'cover'} fill={true}
                                src={'/images/opvang/opvang-2.jpeg'}
-                               alt={t('opvang.imageAlt')} className={Styles.serviceSectionImage}/>
+                               alt={t('opvang.imageAlt.2')} className={Styles.serviceSectionImage}/>
                     </div>
                     <div className={Styles.serviceSectionImage}>
                         <Image objectFit={'cover'} fill={true}
                                src={'/images/opvang/opvang-3.jpeg'}
-                               alt={t('opvang.imageAlt')} className={Styles.serviceSectionImage}/>
+                               alt={t('opvang.imageAlt.3')} className={Styles.serviceSectionImage}/>
                     </div>
                 </div>
 

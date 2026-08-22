@@ -27,6 +27,13 @@ export default async function Page({ params }: { params: { locale: string } }) {
                     <h1 className={Styles.header}>{t('title')}</h1>
                     <h2 className={Styles.subheader}>{t('subtitle')}</h2>
                     <p>{t('intro')}</p>
+                    <p className={Styles.crossLink}>
+                        {t.rich('crossLinkText', {
+                            link: (chunks) => (
+                                <Link className={Styles.rulesLink} href={'/opvang'}>{chunks}</Link>
+                            ),
+                        })}
+                    </p>
                 </div>
 
                 <div className={Styles.contentRow}>
@@ -58,6 +65,8 @@ export default async function Page({ params }: { params: { locale: string } }) {
                     <h3>{t('pricingHeading')}</h3>
 
                     <WalkedoPricing defaultService={'dagopvang'}/>
+
+                    <p className={Styles.priceNote}>{t('singleDayText', { price: '€30,-' })}</p>
 
                     <p>
                         {t.rich('rulesText', {

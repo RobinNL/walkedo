@@ -25,6 +25,13 @@ export default async function Page({ params }: { params: { locale: string } }) {
                     <h1 className={Styles.header}>{t('title')}</h1>
                     <h2 className={Styles.subheader}>{t('subtitle')}</h2>
                     <p>{t('intro')}</p>
+                    <p className={Styles.crossLink}>
+                        {t.rich('crossLinkText', {
+                            link: (chunks) => (
+                                <Link className={Styles.rulesLink} href={'/dagopvang'}>{chunks}</Link>
+                            ),
+                        })}
+                    </p>
                 </div>
 
                 <div className={Styles.contentRow}>
@@ -61,7 +68,6 @@ export default async function Page({ params }: { params: { locale: string } }) {
                                 <th>{t('table.rates')}</th>
                                 <th>{t('table.highSeason')}</th>
                                 <th>{t('table.lowSeason')}</th>
-                                <th>{t('table.dayCare')}</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -69,24 +75,23 @@ export default async function Page({ params }: { params: { locale: string } }) {
                                 <td>{t('table.daysOneToSix')}</td>
                                 <td>€30,-</td>
                                 <td>€25,-</td>
-                                <td></td>
                             </tr>
                             <tr>
                                 <td>{t('table.daysSevenPlus')}</td>
                                 <td>€25,-</td>
                                 <td>€20,-</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>{t('table.dayCareSingle')}</td>
-                                <td></td>
-                                <td></td>
-                                <td>€30,-</td>
                             </tr>
                             </tbody>
                         </table>
 
                     </div>
+                    <p className={Styles.priceNote}>
+                        {t.rich('dayCarePricingText', {
+                            link: (chunks) => (
+                                <Link className={Styles.rulesLink} href={'/dagopvang'}>{chunks}</Link>
+                            ),
+                        })}
+                    </p>
                     <p>
                         {t.rich('rulesText', {
                             link: (chunks) => (

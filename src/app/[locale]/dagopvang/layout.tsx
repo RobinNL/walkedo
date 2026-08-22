@@ -23,18 +23,18 @@ export default async function Layout(
     const locale = params.locale as Locale;
     const t = await getTranslations({ locale, namespace: 'metadata' });
 
-    // The rate table on the page: €20 a day off-season from day seven, up to
-    // €30 a day in high season and for a single day of daycare.
+    // The subscription prices the page shows: five monthly tiers, from one day
+    // a week at €71,10 up to five days a week at €335,50.
     const schema = service({
         locale,
         name: t('dagopvang.title'),
         description: t('dagopvang.description'),
         path: '/dagopvang',
         image: '/images/og/opvang.jpg',
-        lowPrice: 20,
-        highPrice: 30,
-        offerCount: 3,
-        unitCode: 'DAY',
+        lowPrice: 71.10,
+        highPrice: 335.50,
+        offerCount: 5,
+        unitCode: 'MON',
     });
 
     return (
