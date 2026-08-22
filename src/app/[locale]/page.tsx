@@ -124,12 +124,14 @@ export default function Home() {
                     </div>
                     <div className={Styles.serviceSectionImage}>
                         <Image objectFit={'cover'} fill={true}
+                               objectPosition={'60% 50%'}
                                src={'/images/opvang/opvang-2.jpeg'}
                                alt={t('opvang.imageAlt.2')} className={Styles.serviceSectionImage}/>
                     </div>
                     <div className={Styles.serviceSectionImage}>
                         <Image objectFit={'cover'} fill={true}
-                               src={'/images/opvang/opvang-3.jpeg'}
+                               objectPosition={'50% 50%'}
+                               src={'/images/opvang/opvang-3.jpg'}
                                alt={t('opvang.imageAlt.3')} className={Styles.serviceSectionImage}/>
                     </div>
                 </div>
