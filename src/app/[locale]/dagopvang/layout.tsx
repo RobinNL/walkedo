@@ -12,8 +12,7 @@ export async function generateMetadata(
         locale: params.locale as Locale,
         key: 'dagopvang',
         path: '/dagopvang',
-        // No dedicated share card yet; the boarding one shows the same setting.
-        image: ogImage('opvang'),
+        image: ogImage('dagopvang'),
     });
 }
 
@@ -30,7 +29,7 @@ export default async function Layout(
         name: t('dagopvang.title'),
         description: t('dagopvang.description'),
         path: '/dagopvang',
-        image: '/images/og/opvang.jpg',
+        image: '/images/og/dagopvang.jpg',
         lowPrice: 71.10,
         highPrice: 335.50,
         offerCount: 5,
