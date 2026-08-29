@@ -100,6 +100,13 @@ $animationMobileDuration: 0.5s;
     align-items: center;
 }
 
+.navbarBrandingText {
+    // next/image renders svgs as an external <img>, so the `currentColor`
+    // strokes/fills in the svg can't inherit `color` from here — force
+    // white with a filter instead.
+    filter: brightness(0) invert(1);
+}
+
 .navbarItemActive {
     a {
         color: color(primary);

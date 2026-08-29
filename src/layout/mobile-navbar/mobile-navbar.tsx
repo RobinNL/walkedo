@@ -43,7 +43,7 @@ export const MobileNavbar = (props: GlobalNavbarProps) => {
                                    height={1677 / walkedoLogoDivider} alt={t('logoAlt')}/>
                             <div className={Styles.brandingWrapper}>
                                 {!isSpiritborn ?
-                                    <Image src={'/images/brand/walkedo-text.svg'}
+                                    <Image src={'/images/brand/walkedo-text-revised.svg'}
                                            className={Styles.navbarBrandingText}
                                            width={2572 / walkedoBrandingDivider}
                                            height={272 / walkedoBrandingDivider}

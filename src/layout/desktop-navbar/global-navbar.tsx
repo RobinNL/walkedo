@@ -41,7 +41,7 @@ export const GlobalNavbar = (props: GlobalNavbarProps) => {
                             <li className={Styles.navbarNoMargin}>
                                 <Link href={'/'} className={Styles.brandingWrapper} aria-label={t('home')}>
                                     {!isSpiritborn ?
-                                        <Image src={'/images/brand/walkedo-text.svg'}
+                                        <Image src={'/images/brand/walkedo-text-revised.svg'}
                                                className={Styles.navbarBrandingText}
                                                width={2572 / walkedoBrandingDivider}
                                                height={272 / walkedoBrandingDivider}
