@@ -240,7 +240,15 @@
       "uitlaatservice": "Uitlaatservice",
       "dagopvang": "Dagopvang"
     },
-    "perWeek": "{count}x p/w"
+    "intro": {
+      "uitlaatservice": "Kies hoe vaak je hond per week meeloopt. Daarvoor betaal je een vast bedrag per maand.",
+      "dagopvang": "Kies hoeveel dagen per week je hond komt. Daarvoor betaal je een vast bedrag per maand."
+    },
+    "frequency": {
+      "uitlaatservice": "{count, plural, =1 {# wandeling} other {# wandelingen}} per week",
+      "dagopvang": "{count, plural, =1 {# opvangdag} other {# opvangdagen}} per week"
+    },
+    "perMonth": "per maand"
   },
   "voorwaarden": {
     "title": "Hondendagopvang voorwaarden",

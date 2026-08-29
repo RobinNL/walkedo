@@ -23,6 +23,10 @@ export interface PricingProps {
  * The subscription prices for both services, with a toggle to switch between
  * them, so a visitor on either page can compare without navigating away.
  *
+ * Every block names what the subscription buys (the visits per week) before the
+ * amount, and repeats the billing period next to it, so the weekly frequency is
+ * never mistaken for the frequency of the payment.
+ *
  * The toggle follows the ARIA tabs pattern: one tab stop for the whole strip,
  * arrow keys move between the two options.
  */
@@ -84,18 +88,24 @@ export const WalkedoPricing = ({ defaultService }: PricingProps) => {
             </div>
 
             <div
-                className={Styles.subscriptionRow}
                 role="tabpanel"
                 id={`pricing-panel-${service}`}
                 aria-labelledby={`pricing-tab-${service}`}
                 tabIndex={0}
             >
-                {PRICES[service].map((price, index) => (
-                    <div className={Styles.subscriptionBlock} key={price}>
-                        <h3>{price}</h3>
-                        <p>{t('perWeek', { count: index + 1 })}</p>
-                    </div>
-                ))}
+                <p className={Styles.subscriptionIntro}>{t(`intro.${service}`)}</p>
+
+                <div className={Styles.subscriptionRow}>
+                    {PRICES[service].map((price, index) => (
+                        <div className={Styles.subscriptionBlock} key={price}>
+                            <h3 className={Styles.frequency}>{t(`frequency.${service}`, { count: index + 1 })}</h3>
+                            <p className={Styles.amount}>
+                                {price}
+                                <span className={Styles.period}>{t('perMonth')}</span>
+                            </p>
+                        </div>
+                    ))}
+                </div>
             </div>
         </div>
     );

@@ -33,6 +33,11 @@
   color: color(black);
 }
 
+.subscriptionIntro {
+  margin: 0;
+  text-align: center;
+}
+
 .subscriptionRow {
   display: flex;
   flex-direction: column;
@@ -45,14 +50,44 @@
 }
 
 .subscriptionBlock {
-  padding: spacing(4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: spacing(8);
+  padding: spacing(16) spacing(12);
   margin-top: spacing(20);
   background-color: color(contrast-50);
   text-align: center;
-  height: 140px;
+  min-height: 140px;
   width: 100%;
   border-radius: radius(regular);
   border: 1px solid color(accent);
+}
+
+/** What the subscription buys: the visits per week. */
+.frequency {
+  margin: 0;
+  font-size: font-size(h5);
+  line-height: line-height(h5);
+}
+
+/** What it costs, with the billing period tied to the amount. */
+.amount {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  font-size: font-size(h2);
+  line-height: line-height(h4);
+  font-weight: font-weight(bold);
+}
+
+.period {
+  font-size: font-size(h6);
+  line-height: line-height(h6);
+  font-weight: font-weight(normal);
+  color: color(contrast-150);
 }
 
 @media screen and (min-width: 768px) {
@@ -65,6 +100,10 @@
     min-width: 200px;
   }
 
+  .subscriptionIntro {
+    margin-bottom: spacing(8);
+  }
+
   .subscriptionRow {
     justify-content: space-between;
     margin-left: -12px;
@@ -73,9 +112,9 @@
   }
 
   .subscriptionBlock {
-    padding: spacing(12);
+    padding: spacing(16) spacing(12);
     margin: spacing(12);
-    height: 160px;
+    min-height: 160px;
   }
 
 }

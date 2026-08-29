@@ -240,7 +240,15 @@
       "uitlaatservice": "Dog Walking",
       "dagopvang": "Daycare"
     },
-    "perWeek": "{count}x per week"
+    "intro": {
+      "uitlaatservice": "Choose how often your dog joins a walk each week. You pay a fixed amount for it every month.",
+      "dagopvang": "Choose how many days a week your dog comes over. You pay a fixed amount for it every month."
+    },
+    "frequency": {
+      "uitlaatservice": "{count, plural, =1 {# walk} other {# walks}} per week",
+      "dagopvang": "{count, plural, =1 {# day} other {# days}} per week"
+    },
+    "perMonth": "per month"
   },
   "voorwaarden": {
     "title": "Dog boarding terms & conditions",
