@@ -1,0 +1,98 @@
+@import "styles/variables";
+@import "styles/maps";
+@import "styles/functions";
+
+.carousel {
+  position: relative;
+}
+
+/**
+ * The track is a native horizontal scroller with snap points. Doing it this way
+ * rather than animating a transform is what gives touch swipe, momentum and
+ * keyboard scrolling without any script.
+ */
+.track {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+
+  // The scrollbar would sit across the bottom of the photographs on every
+  // platform that draws a persistent one.
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &:focus-visible {
+    outline: 2px solid color(accent);
+    outline-offset: 4px;
+  }
+}
+
+/**
+ * Items per view, matching the breakpoints the page previously passed to
+ * react-multi-carousel: 1 below 600, 2 to 1024, 3 above.
+ */
+.slide {
+  flex: 0 0 100%;
+  scroll-snap-align: center;
+  // The script measures a slide as scrollWidth / slide count, so any gutter has
+  // to be inside this box rather than a flex `gap`, which that maths would miss.
+  box-sizing: border-box;
+}
+
+@media screen and (min-width: 600px) {
+  .slide {
+    flex-basis: 50%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .slide {
+    flex-basis: 33.3333%;
+  }
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 28px;
+  line-height: 1;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.55);
+  transition: background-color 0.2s ease-in-out;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  &:focus-visible {
+    outline: 2px solid color(accent);
+    outline-offset: 2px;
+  }
+}
+
+.arrowPrev {
+  left: spacing(12);
+}
+
+.arrowNext {
+  right: spacing(12);
+}
