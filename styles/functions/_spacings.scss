@@ -1,3 +1,5 @@
+@use "sass:map";
+
 /// Usage color(orange)
 @function spacing($spacing-key) {
     @each $spacing-symbol, $spacing in $spacings {
@@ -5,5 +7,5 @@
             @return $spacing;
         }
     }
-    @return map-get($spacings, 0);
+    @return map.get($spacings, 0);
 }

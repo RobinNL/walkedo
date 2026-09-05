@@ -9,7 +9,8 @@ import { Link, usePathname } from "@/i18n/navigation";
 import { NavbarItems } from "../../../lib/navbar-items";
 
 export interface GlobalNavbarProps {
-    className: any;
+    /** CSS module class that decides at which width this navbar is shown. */
+    className: string;
 }
 
 export const GlobalNavbar = (props: GlobalNavbarProps) => {

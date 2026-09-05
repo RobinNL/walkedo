@@ -84,7 +84,7 @@ function detectLocale(request: NextRequest): Locale {
     return fromAcceptLanguage(request) ?? "en";
 }
 
-export default function middleware(request: NextRequest) {
+export default function proxy(request: NextRequest) {
     const { pathname, search } = request.nextUrl;
 
     const current = localeFromPath(pathname);

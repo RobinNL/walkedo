@@ -15,7 +15,7 @@ import { routing, type Locale } from "@/i18n/routing";
 import { JsonLd } from "@/app/shared/json-ld";
 import { article, breadcrumbs } from "@/app/shared/structured-data";
 
-type Params = { params: { locale: string; slug: string } };
+type Params = { params: Promise<{ locale: string; slug: string }> };
 
 export function generateStaticParams() {
     // Union of every slug across locales, so the "not translated yet" page is
@@ -29,9 +29,10 @@ export function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: Params): Promise<Metadata> {
-    const locale = params.locale as Locale;
-    const post = await getPostBySlug(locale, params.slug);
-    const available = localesForPost(params.slug);
+    const { locale: localeParam, slug } = await params;
+    const locale = localeParam as Locale;
+    const post = await getPostBySlug(locale, slug);
+    const available = localesForPost(slug);
 
     if (!post) {
         // Untranslated: keep it out of the index rather than competing with
@@ -63,13 +64,14 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
 }
 
 export default async function Post({ params }: Params) {
-    const locale = params.locale as Locale;
+    const { locale: localeParam, slug } = await params;
+    const locale = localeParam as Locale;
     setRequestLocale(locale);
 
     const t = await getTranslations('post');
     const nav = await getTranslations('nav');
-    const post = await getPostBySlug(locale, params.slug);
-    const available = localesForPost(params.slug);
+    const post = await getPostBySlug(locale, slug);
+    const available = localesForPost(slug);
 
     // Exists in no locale at all — a genuinely wrong URL.
     if (!post && available.length === 0) {
@@ -86,7 +88,7 @@ export default async function Post({ params }: Params) {
                     <h1 className={InnerStyle.articleHeader}>{t('notAvailableTitle')}</h1>
                     <p>{t('notAvailable')}</p>
                     <p>
-                        <a href={`/${other}/posts/${params.slug}`} hrefLang={other} lang={other}>
+                        <a href={`/${other}/posts/${slug}`} hrefLang={other} lang={other}>
                             {t('readInOther')}
                         </a>
                     </p>

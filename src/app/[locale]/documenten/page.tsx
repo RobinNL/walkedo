@@ -2,8 +2,8 @@ import Styles from "./documenten.module.scss";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import type { Locale } from "@/i18n/routing";
 
-export default async function Page({ params }: { params: { locale: string } }) {
-    setRequestLocale(params.locale as Locale);
+export default async function Page({ params }: { params: Promise<{ locale: string }> }) {
+    setRequestLocale((await params).locale as Locale);
     const t = await getTranslations('documenten');
 
     return (

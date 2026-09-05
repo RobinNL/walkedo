@@ -10,8 +10,8 @@ export function generateStaticParams() {
     return routing.locales.map((locale) => ({ locale }));
 }
 
-export default async function Page({ params }: { params: { locale: string } }) {
-    const locale = params.locale as Locale;
+export default async function Page({ params }: { params: Promise<{ locale: string }> }) {
+    const locale = (await params).locale as Locale;
     setRequestLocale(locale);
 
     const t = await getTranslations('news');

@@ -5,10 +5,10 @@ import { ogImage, pageMetadata } from "@/i18n/metadata";
 import type { Locale } from "@/i18n/routing";
 
 export async function generateMetadata(
-    { params }: { params: { locale: string } },
+    { params }: { params: Promise<{ locale: string }> },
 ): Promise<Metadata> {
     return pageMetadata({
-        locale: params.locale as Locale,
+        locale: (await params).locale as Locale,
         key: 'voorwaarden',
         path: '/opvang/voorwaarden',
         image: ogImage('voorwaarden'),
@@ -17,8 +17,8 @@ export async function generateMetadata(
 
 const PARAGRAPHS = ['p1', 'p2', 'p3', 'p4', 'p5', 'p6', 'p7', 'p8', 'p9', 'p10', 'p11'] as const;
 
-export default async function Page({ params }: { params: { locale: string } }) {
-    const locale = params.locale as Locale;
+export default async function Page({ params }: { params: Promise<{ locale: string }> }) {
+    const locale = (await params).locale as Locale;
     setRequestLocale(locale);
     const t = await getTranslations('voorwaarden');
 

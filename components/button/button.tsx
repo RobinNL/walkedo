@@ -1,7 +1,6 @@
 export interface ButtonProps {
     label: string;
     disabled?: boolean;
-    onPress?: Function;
     type?: "submit" | 'reset' | 'button' | undefined;
     fullWidth?: boolean;
 }

@@ -1,4 +1,9 @@
+import { fileURLToPath } from 'node:url';
+import { dirname } from 'node:path';
+
 import createNextIntlPlugin from 'next-intl/plugin';
+
+const projectRoot = dirname(fileURLToPath(import.meta.url));
 
 const withNextIntl = createNextIntlPlugin('./src/i18n/request.ts');
 
@@ -11,42 +16,33 @@ const withNextIntl = createNextIntlPlugin('./src/i18n/request.ts');
 // English segments rather than a straight prefixing.
 //
 // ---------------------------------------------------------------------------
-// KNOWN, UNFIXABLE ON NEXT 14.2.4 -- read before "improving" this.
+// HISTORY: these redirects used to poison page URLs with RSC flight payloads.
+// FIXED by the Next 16 upgrade -- kept here so nobody reintroduces it.
 //
-// These redirects drop Next's own RSC cache-buster. Verified against
-// production: /opvang?_rsc=abc&foo=bar -> 301 Location: /nl/opvang?foo=bar.
-// `foo` survives; only `_rsc` is removed, by
-//   shared/lib/router/utils/prepare-destination.js
-//   `delete query[NEXT_RSC_UNION_QUERY]`
+// On 14.2.4 a redirect dropped Next's own RSC cache-buster:
+//   prepare-destination.js -> `delete query[NEXT_RSC_UNION_QUERY]`
+// Verified then: /opvang?_rsc=abc&foo=bar -> 301 /nl/opvang?foo=bar. The client
+// re-sent `RSC: 1` to the bare destination, the origin answered with a flight
+// payload (content-type text/x-component), and DigitalOcean's bundled
+// Cloudflare -- which ignores `Vary: RSC` -- cached that under the plain page
+// URL. Four pages were found serving raw RSC to browsers.
 //
-// The client then re-sends `RSC: 1` to the bare destination, the origin answers
-// with a flight payload (content-type text/x-component), and DigitalOcean's
-// bundled Cloudflare -- which ignores `Vary: RSC` -- caches that payload under
-// the plain page URL. Every later visitor gets raw RSC instead of HTML: a blank
-// or garbled page that refreshing does not clear. Four pages (/nl/news,
-// /nl/opvang, /nl/uitlaatservice, /nl/casting) were found in exactly this state,
-// with ages of 2-3 days, against the old one-year s-maxage.
+// Re-tested on 16.3.4, both halves of the chain are gone:
+//   1. /opvang?_rsc=abc&foo=bar -> 301 /nl/opvang?_rsc=abc&foo=bar
+//      (the cache-buster now survives the redirect)
+//   2. `RSC: 1` on /nl/opvang    -> 307 /nl/opvang?_rsc
+//      (Next refuses to serve a flight payload at a bare page URL at all)
+// Vary is now `rsc, next-router-state-tree, next-router-prefetch,
+// next-router-segment-prefetch, Accept-Encoding`.
 //
-// Three fixes were tried against a real build. ALL THREE FAIL -- do not retry:
+// Three workarounds were tried against a real Next 14 build and ALL FAILED
+// (middleware cannot see `_rsc` -- stripInternalSearchParams(); middleware
+// cannot see the RSC headers; and headers() could not override Cache-Control on
+// 14). None of that is needed now, but do not spend time re-deriving it.
 //
-//  1. Move these redirects into middleware so `${search}` carries `_rsc`
-//     across. Fails: server/web/adapter.js builds the NextRequest with
-//     stripInternalSearchParams(), and INTERNAL_QUERY_NAMES includes
-//     NEXT_RSC_UNION_QUERY. Middleware never sees `_rsc`, in nextUrl or in
-//     request.url.
-//  2. Detect the RSC request in middleware and mark it no-store. Fails: Next
-//     strips the flight headers before middleware runs. Confirmed by echoing
-//     the received header names back on a request that demonstrably returned a
-//     flight response -- `rsc`, `next-router-state-tree` and
-//     `next-router-prefetch` were all absent.
-//  3. A headers() rule with `has: [{ type: 'header', key: 'RSC' }]`. Fails:
-//     base-server overwrites Cache-Control after headers() has run, for every
-//     prerendered route. (Other headers set this way do survive.)
-//
-// What actually contains the damage is `export const revalidate` in
-// src/app/[locale]/layout.tsx, which caps how long a mis-cached variant can
-// survive. It was one year; it is now one hour. If broken pages are still
-// reported, lower that value -- it is the only lever that works.
+// `export const revalidate = 3600` in src/app/[locale]/layout.tsx is kept as
+// defence-in-depth, now paired with `expireTime` below so the stale window is
+// bounded too.
 // ---------------------------------------------------------------------------
 const legacyPaths = [
     ['/uitlaatservice', '/nl/uitlaatservice'],
@@ -72,6 +68,80 @@ const renamedSegments = [
 const nextConfig = {
     reactStrictMode: true,
 
+    /**
+     * Turbopack is the default builder from Next 16, and it resolves the
+     * "project root" by walking up from cwd looking for a lockfile. There is a
+     * stray package-lock.json in the home directory above this repo, which made
+     * it pick that as the root and warn about it. Pinning it here is the fix;
+     * the file above us belongs to whoever put it there.
+     */
+    turbopack: {
+        root: projectRoot,
+    },
+
+    /**
+     * Webpack's sass-loader put the project root on Sass's load path, so every
+     * stylesheet could write `@import "styles/variables"` and have it resolve
+     * from the repo root. Turbopack -- the default builder from Next 16 -- does
+     * not do that, and all 21 .scss files in this repo are written that way, so
+     * without this the build fails on the first module stylesheet it reaches.
+     *
+     * It must be `loadPaths`. The older `includePaths` name is a node-sass-ism
+     * that modern Dart Sass ignores silently: it will not error, the imports
+     * will simply still not resolve.
+     */
+    sassOptions: {
+        loadPaths: [projectRoot],
+
+        /**
+         * Every stylesheet here uses `@import`, which Dart Sass deprecated in
+         * 1.80 in favour of `@use`/`@forward`. Migrating 21 files to the module
+         * system is a real refactor -- no more global scope, explicit
+         * namespacing -- and does not belong in a dependency upgrade, so the
+         * warning is silenced instead.
+         */
+        silenceDeprecations: ['import'],
+    },
+
+    experimental: {
+        /**
+         * sharp sizes libvips' thread pool from the CPUs it can *see*, which in
+         * a container is the host's core count rather than the vCPU share the
+         * instance is actually allowed. On a small App Platform instance that
+         * means it spawns far more threads than it can run, and each one holds
+         * its own decode buffers -- the reason a cold optimise of a large source
+         * PNG measured 10.3s in production.
+         *
+         * Next 16 added this option to pin the pool (image-optimizer.js passes
+         * it straight to sharp.concurrency()). Next 14 had no such lever.
+         *
+         * Set to match the instance's real vCPU count. 1 is correct for a basic
+         * App Platform instance; raise it in step with the instance size.
+         */
+        imgOptConcurrency: 1,
+    },
+
+    /**
+     * Caps `stale-while-revalidate` on page HTML.
+     *
+     * Next 14 emitted a bare `stale-while-revalidate` with no value alongside
+     * `s-maxage`, and gave no way to change it -- which meant a shared cache was
+     * entitled to serve a stale object for its own default, effectively forever.
+     * That is the wrong pairing for the RSC-poisoning failure documented above:
+     * the whole containment strategy is "a bad cached object must expire
+     * quickly", and an unbounded SWR window undoes it.
+     *
+     * This is the TOTAL lifetime, not the stale window: Next emits
+     * `stale-while-revalidate = expireTime - revalidate`. Setting it equal to
+     * `revalidate` therefore removes stale serving altogether, which trades the
+     * availability that SWR buys for nothing. At 7200 against the layout's
+     * `revalidate = 3600` the emitted header is
+     *     s-maxage=3600, stale-while-revalidate=3600
+     * so a mis-cached object can survive at most an hour fresh plus an hour
+     * stale, and a slow origin is still covered by a real grace window.
+     */
+    expireTime: 7200,
+
     images: {
         // Next's default ladder ends at 2048 and 3840. Those two rungs were
         // responsible for the slowest responses on the site: a cold optimise of
@@ -87,50 +157,62 @@ const nextConfig = {
         deviceSizes: [640, 750, 828, 1080, 1200, 1920],
 
         // ---------------------------------------------------------------
-        // TRAP: this value and the `public/` Cache-Control below are coupled
-        // and must be changed together.
+        // Coupled with the `public/` Cache-Control in headers() below. Read
+        // both before changing either.
         //
         // The optimiser computes the TTL it puts on /_next/image as
-        //     Math.max(getMaxAge(upstream Cache-Control), minimumCacheTTL)
-        // (node_modules/next/dist/server/image-optimizer.js, ~line 674), and it
-        // fetches its source *through this app's own routing*
-        // (next-server.js `fetchInternalImage` -> this.routerServerHandler), so
+        //     Math.max(minimumCacheTTL, getMaxAge(upstream Cache-Control))
+        // (node_modules/next/dist/server/image-optimizer.js, ~line 1081 on 16.x),
+        // and it fetches its source *through this app's own routing*
+        // (next-server.js `fetchInternalImage` -> routerServerHandler), so
         // "upstream" here is literally the headers() rule below.
         //
-        // Consequence: a long max-age on /images/** silently becomes the TTL on
-        // every optimised image and overrides whatever is written here. They are
-        // set to the same 7 days deliberately, so the effective value is never a
-        // surprise.
+        // Because it is a max(), the LARGER of the two always wins. With 30 days
+        // here and 7 days on public/, this value dominates and the effective TTL
+        // on every optimised image is unambiguously 30 days. The trap only bites
+        // the other way round -- if the public/ header were ever raised above
+        // this number it would silently take over. Keep this one the larger.
         //
-        // Left at the default 60 previously, which is why the CDN re-requested
-        // every image once a minute and the origin re-ran sharp.
+        // Raised from 7 days to 30 only because Next 16 fixes the bug that made
+        // a long image TTL dangerous on 14.2.4: fetchInternalImage() there
+        // copied the *incoming* request method into the internal fetch for the
+        // source file, so a HEAD request stored a zero-byte cache entry and
+        // every later GET for that url+w+q served a blank image until it
+        // expired. Crawlers HEAD srcset URLs, so this happened by itself. Two
+        // separate guards in 16.x close it: the method is coerced to GET
+        // ("Coerce HEAD to GET to avoid issues with the image optimizer",
+        // image-optimizer.js ~line 1023) and an empty upstream body is now a
+        // hard error rather than a cacheable result (~line 1040).
+        //
+        // Do not raise this on a Next 14 deployment. There, a poisoned entry
+        // simply lasts however long this number says.
         // ---------------------------------------------------------------
-        minimumCacheTTL: 604800, // 7 days
+        minimumCacheTTL: 2592000, // 30 days
 
-        // Deliberately NOT adding 'image/avif'. AVIF encodes far slower in sharp,
-        // and Next 14 calls imageOptimizer() straight from the request handler
-        // with no request-level queue (only sharp's libvips pool is capped, at
-        // image-optimizer.js ~line 149). On a small instance that would make the
-        // cold-transform problem worse, not better.
+        // Deliberately NOT adding 'image/avif'. AVIF encodes far slower in
+        // sharp, and there is still no request-level queue in front of the
+        // optimiser -- only sharp's libvips pool is capped, which is what
+        // experimental.imgOptConcurrency below now sets explicitly. On a small
+        // instance AVIF would make the cold-transform problem worse, not
+        // better.
         formats: ['image/webp'],
     },
 
     /**
-     * NOTE: this hook CANNOT set the Cache-Control of page HTML on Next 14.
-     * For a prerendered/SSG route, base-server.js overwrites it unconditionally
-     * with formatRevalidate() (server/lib/revalidate.js) at ~lines 1690/1710.
-     * The only lever for HTML is `export const revalidate` in the route segment
-     * -- see src/app/[locale]/layout.tsx.
+     * CAREFUL: on Next 16 this hook CAN set the Cache-Control of page HTML,
+     * which is a reversal of Next 14 and the opposite hazard.
      *
-     * Tested, not assumed: a rule scoped to the RSC header
-     *     { source: '/:path*', has: [{ type: 'header', key: 'RSC' }],
-     *       headers: [{ key: 'Cache-Control', value: 'private, no-store' }] }
-     * still came back as `s-maxage=3600, stale-while-revalidate`. A `has`
-     * condition does not help; base-server overwrites the header after this
-     * hook has run, for every prerendered route. Do not try it again.
+     * On 14, base-server.js overwrote it unconditionally for any prerendered
+     * route via formatRevalidate(), so `headers()` was simply ignored for HTML.
+     * Re-tested on 16.3.4 by adding
+     *     { source: '/:path*', headers: [{ key: 'Cache-Control',
+     *       value: 'private, no-store, TRAP1PROBE' }] }
+     * and rebuilding: /nl came back carrying exactly that, probe token and all.
      *
-     * It does work for static files in public/, which is what it is used for
-     * here. Everything under public/ was being served `public, max-age=0`,
+     * So a broad rule here will now silently clobber the caching that
+     * `export const revalidate` (src/app/[locale]/layout.tsx) and `expireTime`
+     * set up. Every rule below is scoped to a specific asset prefix on purpose.
+     * Do not add a `/:path*` catch-all. Everything under public/ was being served `public, max-age=0`,
      * so the CDN reported BYPASS and the origin served every raw byte on every
      * request -- 63 KB of SVG per page view on /news alone, before any photo.
      */

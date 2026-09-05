@@ -6,8 +6,8 @@ import { WalkedoButton } from "../../../../components/button/button";
 import { Link } from "@/i18n/navigation";
 import type { Locale } from "@/i18n/routing";
 
-export default async function Page({ params }: { params: { locale: string } }) {
-    setRequestLocale(params.locale as Locale);
+export default async function Page({ params }: { params: Promise<{ locale: string }> }) {
+    setRequestLocale((await params).locale as Locale);
     const t = await getTranslations('opvang');
 
     return (

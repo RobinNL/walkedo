@@ -20,16 +20,20 @@ const GTM_ID = "GTM-N4V9NTB9";
 const inter = Inter({ subsets: ["latin"] });
 
 /**
- * Caps how long the CDN may hold a page. This is the ONLY lever for HTML
- * Cache-Control on Next 14 -- `headers()` in next.config.mjs cannot do it,
- * because base-server.js overwrites the header unconditionally for a
- * prerendered route via formatRevalidate() (server/lib/revalidate.js).
+ * Caps how long the CDN may hold a page. Emits `s-maxage=3600`, and paired with
+ * `expireTime: 7200` in next.config.mjs the full header is
+ * `s-maxage=3600, stale-while-revalidate=3600`.
  *
- * Without this, formatRevalidate() falls through to its default and emits
- * `s-maxage=31536000, stale-while-revalidate` -- a full year. That is what
- * turned a transient mis-cache into a year-long outage on four pages: see the
- * RSC trap note in next.config.mjs. An hour bounds the damage of any future
- * mis-cached variant to an hour.
+ * Without this, formatRevalidate() falls through to its default and emits a
+ * one-year s-maxage. That is what turned a transient mis-cache into a year-long
+ * outage on four pages -- see the RSC history note in next.config.mjs. The RSC
+ * bug behind it is fixed in Next 16, but this stays as defence-in-depth: it
+ * bounds the damage of ANY future mis-cached variant to an hour.
+ *
+ * On Next 14 this was the only lever, because `headers()` could not set
+ * Cache-Control on HTML. That is no longer true on 16 -- `headers()` now wins
+ * outright, which means a careless rule there can override this. See the note
+ * on the headers() hook in next.config.mjs.
  *
  * The content here changes on deploy, not on a timer, so a short value costs
  * nothing but a revalidation; it is a safety bound, not a freshness setting.
@@ -43,9 +47,9 @@ export function generateStaticParams() {
 export async function generateMetadata({
     params,
 }: {
-    params: { locale: string };
+    params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
-    const locale = params.locale as Locale;
+    const locale = (await params).locale as Locale;
     const t = await getTranslations({ locale, namespace: "metadata" });
     const title = `Walkedo | ${t("home.title")}`;
     const description = t("home.description");
@@ -103,9 +107,9 @@ export default async function LocaleLayout({
     params,
 }: Readonly<{
     children: React.ReactNode;
-    params: { locale: string };
+    params: Promise<{ locale: string }>;
 }>) {
-    const { locale } = params;
+    const { locale } = await params;
     if (!hasLocale(routing.locales, locale)) {
         notFound();
     }

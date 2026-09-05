@@ -1,3 +1,5 @@
+@use "sass:map";
+
 /// Usage color(orange)
 @function color($color-key) {
     @each $color-symbol, $color in $colors {
@@ -5,5 +7,5 @@
             @return $color;
         }
     }
-    @return map-get($colors, black);
+    @return map.get($colors, black);
 }

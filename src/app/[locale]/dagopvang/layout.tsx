@@ -6,10 +6,10 @@ import { JsonLd } from "@/app/shared/json-ld";
 import { service } from "@/app/shared/structured-data";
 
 export async function generateMetadata(
-    { params }: { params: { locale: string } },
+    { params }: { params: Promise<{ locale: string }> },
 ): Promise<Metadata> {
     return pageMetadata({
-        locale: params.locale as Locale,
+        locale: (await params).locale as Locale,
         key: 'dagopvang',
         path: '/dagopvang',
         image: ogImage('dagopvang'),
@@ -17,9 +17,9 @@ export async function generateMetadata(
 }
 
 export default async function Layout(
-    { children, params }: { children: React.ReactNode; params: { locale: string } },
+    { children, params }: { children: React.ReactNode; params: Promise<{ locale: string }> },
 ) {
-    const locale = params.locale as Locale;
+    const locale = (await params).locale as Locale;
     const t = await getTranslations({ locale, namespace: 'metadata' });
 
     // The subscription prices the page shows: five monthly tiers, from one day
