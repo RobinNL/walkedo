@@ -7,8 +7,8 @@ import { Link } from "@/i18n/navigation";
 import { WalkedoButton } from "../../../../components/button/button";
 import type { Locale } from "@/i18n/routing";
 
-export default async function Page({ params }: { params: { locale: string } }) {
-    setRequestLocale(params.locale as Locale);
+export default async function Page({ params }: { params: Promise<{ locale: string }> }) {
+    setRequestLocale((await params).locale as Locale);
     const t = await getTranslations('northernInuit');
 
     const benefitRace: string[] = [
@@ -42,7 +42,14 @@ export default async function Page({ params }: { params: { locale: string } }) {
                     </div>
 
                     <div className={Styles.asideBlock}>
+                        {/*
+                          * `.contentRow` is a column until 768px and a row above
+                          * it, with `.asideBlock` capped at max-width 768px.
+                          * Without a `sizes`, next/image would assume 100vw and
+                          * fetch the widest variant for a 300px-tall aside.
+                          */}
                         <Image fill={true} className={Styles.asideBlockImage}
+                               sizes={'(min-width: 768px) 50vw, 100vw'}
                                src={'/images/inuit-dog/pups-northern-inuit-dog.jpeg'}
                                alt={t('pupsAlt')}/>
                     </div>

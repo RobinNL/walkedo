@@ -1,3 +1,5 @@
+@use "sass:map";
+
 /// Usage font-size(h2)
 @function font-size($symbol) {
     @each $font-size-symbol, $font-size-value in $font-sizes {
@@ -5,7 +7,7 @@
             @return $font-size-value;
         }
     }
-    @return map-get($font-sizes, p);
+    @return map.get($font-sizes, p);
 }
 
 /// Usage font-weight(bold)
@@ -15,7 +17,7 @@
             @return $font-weight-value;
         }
     }
-    @return map-get($font-weights, normal);
+    @return map.get($font-weights, normal);
 }
 
 /// Usage line-height(h1)
@@ -25,5 +27,5 @@
             @return $line-height-value;
         }
     }
-    @return map-get($font-lineheights, normal);
+    @return map.get($font-lineheights, normal);
 }

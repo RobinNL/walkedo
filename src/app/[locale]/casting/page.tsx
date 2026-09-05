@@ -2,8 +2,7 @@
 import Image from "next/image";
 import Styles from "./casting.module.scss";
 import { WalkedoButton } from "../../../../components/button/button";
-import Carousel from 'react-multi-carousel';
-import 'react-multi-carousel/lib/styles.css';
+import { Carousel } from "../../../../components/carousel/carousel";
 import React from "react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
@@ -19,23 +18,6 @@ const CAROUSEL_IMAGES = [
 export default function Page() {
     const t = useTranslations('casting');
 
-    const responsive = {
-        desktop: {
-            breakpoint: {max: 3000, min: 1024},
-            items: 3,
-            slidesToSlide: 1
-        },
-        tablet: {
-            breakpoint: {max: 1024, min: 600},
-            items: 2,
-            slidesToSlide: 2
-        },
-        mobile: {
-            breakpoint: {max: 600, min: 0},
-            items: 1,
-            slidesToSlide: 1
-        }
-    };
 
     return (
         <main>
@@ -77,30 +59,21 @@ export default function Page() {
                     </div>
                 </div>
                 <Carousel
-                    swipeable={true}
-                    draggable={true}
-                    showDots={false}
-                    responsive={responsive}
-                    ssr={true}
-                    infinite={true}
-                    autoPlay={true}
                     autoPlaySpeed={7000}
-                    keyBoardControl={true}
-                    pauseOnHover={true}
-                    customTransition="all 1.6s"
-                    transitionDuration={1600}
-                    containerClass="carousel-container"
-                    dotListClass="custom-dot-list-style"
-                    itemClass="carousel-item-padding-40-px"
-                >
-                    {CAROUSEL_IMAGES.map((image) => (
-                        <div className={Styles.carouselImage} key={image.key}>
-                            <Image src={image.src} fill={true}
-                                   sizes={'(min-width: 1024px) 33vw, (min-width: 600px) 50vw, 100vw'}
-                                   alt={t(`carouselAlt.${image.key}`)}/>
-                        </div>
-                    ))}
-                </Carousel>
+                    label={t('carouselLabel')}
+                    previousLabel={t('carouselPrevious')}
+                    nextLabel={t('carouselNext')}
+                    slides={CAROUSEL_IMAGES.map((image) => ({
+                        key: image.key,
+                        node: (
+                            <div className={Styles.carouselImage}>
+                                <Image src={image.src} fill={true}
+                                       sizes={'(min-width: 1024px) 33vw, (min-width: 600px) 50vw, 100vw'}
+                                       alt={t(`carouselAlt.${image.key}`)}/>
+                            </div>
+                        ),
+                    }))}
+                />
             </div>
         </main>
     );

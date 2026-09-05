@@ -8,8 +8,8 @@ import { Link } from "@/i18n/navigation";
 import type { Locale } from "@/i18n/routing";
 import React from "react";
 
-export default async function Page({ params }: { params: { locale: string } }) {
-    setRequestLocale(params.locale as Locale);
+export default async function Page({ params }: { params: Promise<{ locale: string }> }) {
+    setRequestLocale((await params).locale as Locale);
     const t = await getTranslations('dagopvang');
 
     return (
@@ -51,8 +51,18 @@ export default async function Page({ params }: { params: { locale: string } }) {
                     </div>
 
                     <div className={Styles.dagopvangHondImage}>
-                        <Image sizes='max-width: 100vw'
-                               objectPosition={'80% 50%'}
+                        {/*
+                          * Same fix as the matching image on /opvang: the
+                          * `sizes` string was invalid media-query syntax.
+                          *
+                          * The 80% 50% crop is unchanged -- it was already being
+                          * applied. Production emits
+                          *   style="...;object-position:80% 50%;..."
+                          * and so does this, byte for byte. Moving it from a
+                          * prop into `style` is spelling, not behaviour.
+                          */}
+                        <Image sizes={'(min-width: 995px) 50vw, 100vw'}
+                               style={{ objectPosition: '80% 50%' }}
                                fill={true}
                                className={Styles.dagopvangHondImageInner}
                                src={'/images/opvang/dagopvang-walkedo-arnhem.png'}

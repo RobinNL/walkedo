@@ -1,3 +1,5 @@
+@use "sass:map";
+
 /// Usage color(orange)
 @function breakpoint($size-key) {
     @each $size-symbol, $size in $breakpoints {
@@ -5,5 +7,5 @@
             @return $size;
         }
     }
-    @return map-get($breakpoints, xs);
+    @return map.get($breakpoints, xs);
 }

@@ -51,7 +51,6 @@ export default function SignupForm({ initialServices }: { initialServices: Signu
 
     const [services, setServices] = useState<SignupService[]>(initialServices);
     const [values, setValues] = useState<Record<FieldName, string>>(EMPTY_VALUES);
-    const [errors, setErrors] = useState<Errors>({});
     // Nothing is flagged until the first submit; validating while someone is
     // still typing their email reads as nagging rather than helping.
     const [submitted, setSubmitted] = useState(false);
@@ -61,30 +60,36 @@ export default function SignupForm({ initialServices }: { initialServices: Signu
 
     const successRef = useRef<HTMLDivElement>(null);
 
-    // Blur and change handlers are created during render, so reading state
-    // through their closure can see a value one render out of date — which
-    // happens whenever a change and a blur land in the same batch, as browser
-    // autofill does. These refs always hold the current answers.
-    const valuesRef = useRef(values);
-    valuesRef.current = values;
-    const servicesRef = useRef(services);
-    servicesRef.current = services;
-
     useEffect(() => {
         if (status === 'success') successRef.current?.focus();
     }, [status]);
+
+    /**
+     * Errors are derived, not stored. Nothing is flagged until the first submit
+     * attempt; after that the list is simply what `validate` says about the
+     * answers currently in the form.
+     *
+     * This was previously `useState` kept in step by a per-field re-check on
+     * blur, which read `values` and `services` through two refs assigned during
+     * render. React 19 rejects that on two counts, and is right on both: a
+     * render-phase ref write is unsafe under concurrent rendering
+     * (`react-hooks/refs`), and syncing state that is a pure function of other
+     * state belongs in render, not an effect (`react-hooks/set-state-in-effect`).
+     *
+     * The refs existed to work around a real bug: a blur handler closes over
+     * the render that created it, so when a change and a blur landed in the
+     * same batch — exactly what browser autofill does — the handler validated
+     * the previous value and left a stale error on screen. Deriving removes
+     * that race at the source rather than racing it back, and an error now
+     * clears as soon as the field is right instead of waiting for a blur that
+     * autofill never sends.
+     */
+    const errors: Errors = submitted ? validate(services, values) : {};
 
     const sections = activeSections(services);
 
     const setField = (field: FieldName) => (value: string) => {
         setValues((current) => ({ ...current, [field]: value }));
-    };
-
-    /** Re-checks one field once the visitor has already tried to submit. */
-    const revalidate = (field: FieldName) => () => {
-        if (!submitted) return;
-        const next = validate(servicesRef.current, valuesRef.current);
-        setErrors((current) => ({ ...current, [field]: next[field] }));
     };
 
     const toggleService = (value: string) => {
@@ -93,9 +98,10 @@ export default function SignupForm({ initialServices }: { initialServices: Signu
             const next = current.includes(service)
                 ? current.filter((s) => s !== service)
                 : SIGNUP_SERVICES.filter((s) => s === service || current.includes(s));
-            // Dropping a service hides its fields, so its errors have to go too
-            // or the summary would count errors nobody can see.
-            if (submitted) setErrors(validate(next, valuesRef.current));
+            // Dropping a service hides its fields, so its errors have to go
+            // too, or the summary would count errors nobody can see. Nothing to
+            // do for that here any more: `errors` is derived from `services`,
+            // so returning the new list is what clears them.
             return next;
         });
     };
@@ -104,8 +110,10 @@ export default function SignupForm({ initialServices }: { initialServices: Signu
         event.preventDefault();
         setSubmitted(true);
 
+        // Computed here as well as in render, because this handler has to act
+        // on the result now -- the re-render that `setSubmitted` schedules has
+        // not happened yet.
         const found = validate(services, values);
-        setErrors(found);
 
         if (Object.keys(found).length > 0) {
             const firstField = activeFields(services).find((field) => found[field.name]);
@@ -177,7 +185,6 @@ export default function SignupForm({ initialServices }: { initialServices: Signu
                 placeholder={t(`fields.${field.name}.placeholder`)}
                 value={values[field.name]}
                 onChange={setField(field.name)}
-                onBlur={revalidate(field.name)}
                 error={errorMessage(errors[field.name])}
                 type={field.kind === 'email' ? 'email' : field.kind === 'tel' ? 'tel' : 'text'}
                 multiline={field.kind === 'textarea'}

@@ -1,3 +1,5 @@
+@use "sass:map";
+
 /// Usage color(orange)
 @function radius($radius-key) {
     @each $radius-symbol, $radius in $radius {
@@ -5,5 +7,5 @@
             @return $radius;
         }
     }
-    @return map-get($radius, regular);
+    @return map.get($radius, regular);
 }

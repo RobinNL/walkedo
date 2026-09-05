@@ -4,9 +4,7 @@ import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import LanguageSwitcher from "./language-switcher";
 
-export interface GlobalFooterProps {}
-
-export const GlobalFooter = (props: GlobalFooterProps) => {
+export const GlobalFooter = () => {
     const t = useTranslations('footer');
 
     return (
