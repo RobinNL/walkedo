@@ -19,6 +19,23 @@ const GTM_ID = "GTM-N4V9NTB9";
 
 const inter = Inter({ subsets: ["latin"] });
 
+/**
+ * Caps how long the CDN may hold a page. This is the ONLY lever for HTML
+ * Cache-Control on Next 14 -- `headers()` in next.config.mjs cannot do it,
+ * because base-server.js overwrites the header unconditionally for a
+ * prerendered route via formatRevalidate() (server/lib/revalidate.js).
+ *
+ * Without this, formatRevalidate() falls through to its default and emits
+ * `s-maxage=31536000, stale-while-revalidate` -- a full year. That is what
+ * turned a transient mis-cache into a year-long outage on four pages: see the
+ * RSC trap note in next.config.mjs. An hour bounds the damage of any future
+ * mis-cached variant to an hour.
+ *
+ * The content here changes on deploy, not on a timer, so a short value costs
+ * nothing but a revalidation; it is a safety bound, not a freshness setting.
+ */
+export const revalidate = 3600;
+
 export function generateStaticParams() {
     return routing.locales.map((locale) => ({ locale }));
 }

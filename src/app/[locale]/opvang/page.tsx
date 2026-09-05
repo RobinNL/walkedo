@@ -49,8 +49,24 @@ export default async function Page({ params }: { params: { locale: string } }) {
                     </div>
 
                     <div className={Styles.opvangHondImage}>
-                        <Image sizes='max-width: 100vw'
-                               objectPosition={'50% 50%'}
+                        {/*
+                          * The fix here is `sizes`. It was 'max-width: 100vw',
+                          * which is not valid media-query syntax -- the browser
+                          * discarded it and fell back to assuming the image
+                          * spans the viewport, so it fetched the widest
+                          * variant. `.contentRow` becomes a row at 995px,
+                          * putting this beside the text block at roughly half
+                          * the width.
+                          *
+                          * `objectPosition` was moved from a prop into `style`
+                          * at the same time. That is cosmetic only: next/image
+                          * still honours it as a legacy prop and folds it into
+                          * the inline style, and the emitted style attribute is
+                          * identical either way (verified against production).
+                          * object-fit: cover comes from the CSS class.
+                          */}
+                        <Image sizes={'(min-width: 995px) 50vw, 100vw'}
+                               style={{ objectPosition: '50% 50%' }}
                                fill={true}
                                className={Styles.opvangHondImageInner}
                                src={'/images/opvang/koda-christmas-northern-inuit-dog.jpeg'}
