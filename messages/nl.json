@@ -81,7 +81,7 @@
         "instagramAlt": "instagram afbeelding",
         "facebookAlt": "facebook afbeelding",
         "privacy": "Privacy",
-        "privacyText": "Walkedo bewaard geen online gegevens. Wij gaan met uiterste zorg om met uw persoonlijke gegevens en bezittingen. Deze website maakt geen gebruik van cookies met uitzondering van Google Analytics voor het beheren van statistieken.",
+        "privacyText": "Walkedo bewaart geen online gegevens. Wij gaan met uiterste zorg om met uw persoonlijke gegevens en bezittingen. Deze website maakt geen gebruik van cookies met uitzondering van Google Analytics voor het beheren van statistieken.",
         "language": "Taal",
         "languageNl": "Nederlands",
         "languageEn": "English"
@@ -97,7 +97,7 @@
         "uitlaatservice": {
             "heading": "Uitlaatservice",
             "subheading": "Lekker de energie kwijt en socialiseren met andere honden.",
-            "body": "Laat je hond èèn of meerdere malen per week door mij ophalen. Honden lopen minimaal een uur en zitten maximaal een uur in de bus. Per groep zijn er zes vaste slots beschikbaar. En zijn er twee slots beschikbaar voor honden die in de opvang zitten of voor klanten die niet uitkomen met het reguliere uitlaten van de hond. De honden groepen worden zorgvuldig samengesteld. Zo is een puppygroep op vrijdag en zelfs een volledige doodle groep. Om die reistijd klein te houden is mijn werkgebied beperkt tot Arnhem Noord, Schaarsbergen en omstreken.",
+            "body": "Laat je hond één of meerdere malen per week door mij ophalen. Honden lopen minimaal een uur en zitten maximaal een uur in de bus. Per groep zijn er zes vaste slots beschikbaar. En zijn er twee slots beschikbaar voor honden die in de opvang zitten of voor klanten die niet uitkomen met het reguliere uitlaten van de hond. De honden groepen worden zorgvuldig samengesteld. Zo is een puppygroep op vrijdag en zelfs een volledige doodle groep. Om die reistijd klein te houden is mijn werkgebied beperkt tot Arnhem Noord, Schaarsbergen en omstreken.",
             "cta": "Uitlaatservice Arnhem Noord",
             "imageAlt": {
                 "1": "Roodbruine hond ligt in de zon tegen een bakstenen muur, klaar om opgehaald te worden",
@@ -108,7 +108,7 @@
         "opvang": {
             "heading": "Opvangservice",
             "subheading": "Voor een dag, een week of een vakantieperiode.",
-            "body": "Iedereen gaat er wel eens op uit en hoe leuk het ook is om op vakantie te gaan met je hond, toch wil je wel eens even wat anders. Klanten van Walkedo kunnen gebruik per januari 2025 gebruik maken van de opvangservice. Laat je honden lekker razen en spelen in een kennel van 25 vierkante meter terwijl jij en je gezin van een vakantie geniet. De honden van de opvang gaan automatisch mee met de uitlaatservice.",
+            "body": "Iedereen gaat er wel eens op uit en hoe leuk het ook is om op vakantie te gaan met je hond, toch wil je wel eens even wat anders. Klanten van Walkedo kunnen per januari 2025 gebruik maken van de opvangservice. Laat je honden lekker razen en spelen in een kennel van 25 vierkante meter terwijl jij en je gezin van een vakantie geniet. De honden van de opvang gaan automatisch mee met de uitlaatservice.",
             "cta": "Opvangservice met overnachting",
             "dagOpvangCta": "Dagopvang",
             "imageAlt": {
@@ -135,7 +135,7 @@
     "uitlaatservice": {
         "heroAlt": "honden in arnhem",
         "title": "Honden uitlaatservice",
-        "intro": "Al vanaf 13,50 per week loop ik èèn of meerdere keren met je hond in een van de leuke Walkedo groepen. We reserveren van tevoren vaste tijdslots zodat je zeker weet wanneer je hond wordt opgehaald. Minder zorgen voor jou en een blije hond die thuis op je wacht of je thuis weer begroet. Ontdek alle voordelen van de uitlaatservice.",
+        "intro": "Al vanaf 13,50 per week loop ik één of meerdere keren met je hond in een van de leuke Walkedo groepen. We reserveren van tevoren vaste tijdslots zodat je zeker weet wanneer je hond wordt opgehaald. Minder zorgen voor jou en een blije hond die thuis op je wacht of je thuis weer begroet. Ontdek alle voordelen van de uitlaatservice.",
         "benefitsHeading": "Alle voordelen op een rijtje",
         "benefitsIntro": "Walkedo is een exclusieve hondenuitlaatservice. Wij hanteren kleinere groepen dan de meeste partijen zodat je hond minder lang in de bus zit en meer persoonlijke aandacht krijgt tijdens de wandeling. Ontdek alle voordelen van de Walkedo hondenuitlaatservice.",
         "benefits": {
@@ -174,7 +174,7 @@
             },
             "meet": {
                 "title": "Kennis maken",
-                "body": "Ik zal je bellen of mailen naar aanleiding van je aanmelding om een gratis vrijblijvende kennismaking met je in te plannen. Dit gebeurd bij jouw thuis. Ik leer graag je hond een beetje beter kennen en tijdens dit gesprek kunnen we samen kijken wanneer en hoe vaak de hond mee kan met de groep."
+                "body": "Ik zal je bellen of mailen naar aanleiding van je aanmelding om een gratis vrijblijvende kennismaking met je in te plannen. Dit gebeurt bij jouw thuis. Ik leer graag je hond een beetje beter kennen en tijdens dit gesprek kunnen we samen kijken wanneer en hoe vaak de hond mee kan met de groep."
             },
             "trial": {
                 "title": "Proef wandeling",
@@ -255,16 +255,16 @@
         "published": "Publicatiedatum: 12-1-2026. Versie 1.0",
         "download": "Download de voorwaarden",
         "note": "Dit is de bindende Nederlandse versie van de voorwaarden.",
-        "p1": "Let op! Alleen voor klanten honden van Walkedo honden dagopvang - Walkedo hondenuitlaatservice - Walkedo Northen Inuit Kennel!",
+        "p1": "Let op! Alleen voor klanten honden van Walkedo honden dagopvang - Walkedo hondenuitlaatservice - Walkedo Northern Inuit Kennel!",
         "p2": "- Hou er rekening mee dat als de uitlaatservice van Walkedo, de dagopvang of pup aanvraag komt te vervallen dat u dan geen klant meer bent van Walkedo en dus geen gebruik maar kan maken van de vakantie opvang.",
         "p3": "- Korting op de 2e en 3e hond met dezelfde eigenaar is twee euro per dag. Elke nieuwe dag gaat in op de ochtend.",
-        "p4": "Honden kunnen opgehaald en/of weggebracht worden voor 08:30 s’ochtends. Honden kunnen opgehaald en/of weggebracht worden tussen 17:00 uur en 21:00 uur",
-        "p5": "De hond gaat 2 x mee op de uitlaatservice ( 2 x uur wandelen) en zal daarnaast nog èèn maal apart worden uitgelaten. ( voor pups en oude honden zal maatwerk geleverd worden)",
+        "p4": "Honden kunnen opgehaald en/of weggebracht worden voor 08:30 ’s ochtends. Honden kunnen opgehaald en/of weggebracht worden tussen 17:00 uur en 21:00 uur",
+        "p5": "De hond gaat 2 x mee op de uitlaatservice ( 2 x uur wandelen) en zal daarnaast nog één maal apart worden uitgelaten. ( voor pups en oude honden zal maatwerk geleverd worden)",
         "p6": "Wordt de hond loops tijdens het verblijf dan komt er een toeslag van 5 euro per dag.",
         "p7": "Ongecastreerde honden kunnen niet komen logeren.",
         "p8": "Honden moeten verplicht ingeënt zijn voor kennel hoest een maand voordat ze komen logeren.",
-        "p9": "Eigenaren wordt gevraagd om zelf voer mee te brengen en aan te geven hoe deze moet worden toegediend. Moet de hond medicatie hebben dan is dat geen probleem echter mag de hond niet besmettelijk zijn.",
-        "p10": "Daarnaast word gevraagd om het dierenpaspoort achter te laten. Tijdens deze overdracht word het paspoort gecontroleerd op alle vaccinaties.",
+        "p9": "Eigenaren worden gevraagd om zelf voer mee te brengen en aan te geven hoe dit moet worden toegediend. Moet de hond medicatie hebben dan is dat geen probleem echter mag de hond niet besmettelijk zijn.",
+        "p10": "Daarnaast wordt gevraagd om het dierenpaspoort achter te laten. Tijdens deze overdracht wordt het paspoort gecontroleerd op alle vaccinaties.",
         "p11": "* Onder het hoogseizoen vallen alle kindervakanties en nationale feestdagen."
     },
     "casting": {
@@ -272,7 +272,7 @@
         "title": "Casting",
         "subtitle": "Licht, Camera, Walkedo!",
         "body1": "Heb je een hond nodig met het uiterlijk van een wolf voor je productie, film, muziekvideo, foto of marketing campagne? Walkedo kan je helpen met de Northern Inuit Dog. Deze honden hebben een hele aantrekkelijke look omdat ze op een wolf lijken. Zo zijn ze ook gebruikt bij de productie van de TV Series Game Of Thrones.",
-        "body2": "De Northern Inuit Dog is goed getraind en zijn ideaal voor producties waarbij je een fantasy of middeleeuwse richting op wilt. Ze hebben een lief karakter en kunnen dit ook uitstralen, maar indien nodig kunnen ze ook vijandig en scherp uit de ogen kijken. De honden zijn ongeveer 60cm schofthoogte en heel snel en dynamisch voor actie gedreven scenes.",
+        "body2": "De Northern Inuit Dog is goed getraind en is ideaal voor producties waarbij je een fantasy of middeleeuwse richting op wilt. Ze hebben een lief karakter en kunnen dit ook uitstralen, maar indien nodig kunnen ze ook vijandig en scherp uit de ogen kijken. De honden zijn ongeveer 60cm schofthoogte en heel snel en dynamisch voor actie gedreven scenes.",
         "cta": "Contact opnemen",
         "expoTitle": "Roodkapje, 2025",
         "artist": "Artiest",
