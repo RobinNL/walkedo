@@ -30,6 +30,19 @@
   -webkit-text-fill-color: transparent;
 }
 
+/**
+ * `traitsHeading` and `puppyHeading` were bare, unclassed <h3>s directly
+ * under the <h1> above -- no <h2> in between. Promoted to <h2> so the
+ * outline doesn't skip a level; this class pins them at the h3 size,
+ * line-height and UA-default margin (1em, resolved against this element's
+ * own pinned font-size) they had before, so nothing moves or resizes.
+ */
+.sectionHeading {
+  font-size: font-size(h3);
+  line-height: line-height(h3);
+  margin: 1em 0;
+}
+
 .heroImage {
   height: 700px;
   position: relative;

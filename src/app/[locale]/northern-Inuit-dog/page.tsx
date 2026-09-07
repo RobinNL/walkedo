@@ -37,7 +37,7 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
                 <div className={Styles.contentRow}>
 
                     <div className={Styles.contentBlock}>
-                        <h3>{t('traitsHeading')}</h3>
+                        <h2 className={Styles.sectionHeading}>{t('traitsHeading')}</h2>
                         <WalkedoList items={benefitRace}/>
                     </div>
 
@@ -57,7 +57,7 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
                 </div>
 
                 <div className={Styles.puppyContainer}>
-                    <h3>{t('puppyHeading')}</h3>
+                    <h2 className={Styles.sectionHeading}>{t('puppyHeading')}</h2>
                     <p>{t('puppyBody')}</p>
                     <Link className={Styles.puppyContainerCta} href={'/aanmelden?service=puppy'}>
                         <WalkedoButton fullWidth={true} label={t('puppyCta')}/>

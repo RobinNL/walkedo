@@ -50,7 +50,7 @@ export default function Home() {
             </div>
             <div className={Styles.heroSignupBtn}>
                 <div className={Styles.heroSignupInner}>
-                    <h2 className={Styles.heroSignupTitle}>{t('heroTitle')}</h2>
+                    <p className={Styles.heroSignupTitle}>{t('heroTitle')}</p>
                     <p className={Styles.heroSignupDescription}>{t('heroDescription')}</p>
                     <div className={Styles.heroSignupIconWrapper}>
                         <Image className={Styles.heroSignupIconIcon} alt={t('scrollAlt')}
@@ -66,7 +66,7 @@ export default function Home() {
 
                     <h1 className={Styles.indexHeader}>{t('title')}</h1>
 
-                    <h3 className={Styles.indexDescriptionWrapper}>{t('intro')}</h3>
+                    <p className={Styles.indexDescriptionWrapper}>{t('intro')}</p>
 
                 </div>
 

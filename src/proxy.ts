@@ -16,6 +16,41 @@ function localeFromPath(pathname: string): Locale | undefined {
 }
 
 /**
+ * The one route segment whose canonical form isn't all-lowercase. App Router
+ * matches directory names case-sensitively, so `/nl/northern-inuit-dog`
+ * 404s even though `/nl/northern-Inuit-dog` (the folder's real name) works.
+ *
+ * This can't be fixed with a `next.config.mjs` redirect: Next's `redirects()`
+ * matches source patterns case-*insensitively* by default (path-to-regexp,
+ * `sensitive: false`), so a rule mapping the lowercase form to this one would
+ * also match requests that already use the correct case -- a 301 to the same
+ * URL, i.e. a redirect loop. Doing the comparison here, against the actual
+ * (case-preserved) request path, avoids that: the check below is false for
+ * an exact match, so a correctly-cased request never gets redirected at all.
+ */
+const CANONICAL_SEGMENT_CASING: Record<string, string> = {
+    "northern-inuit-dog": "northern-Inuit-dog",
+};
+
+/**
+ * Corrects the case of the first path segment after the locale, if it
+ * matches a known route case-insensitively but not exactly. Returns null
+ * when no correction is needed.
+ */
+function caseCorrectedPath(pathname: string): string | null {
+    const segments = pathname.split("/");
+    // segments = ["", locale, firstSegment, ...rest]
+    const firstSegment = segments[2];
+    if (!firstSegment) return null;
+
+    const canonical = CANONICAL_SEGMENT_CASING[firstSegment.toLowerCase()];
+    if (!canonical || canonical === firstSegment) return null;
+
+    segments[2] = canonical;
+    return segments.join("/");
+}
+
+/**
  * Geo headers, in order of preference.
  *
  * This used to read only `x-vercel-ip-country`. That header does not exist on
@@ -99,6 +134,14 @@ export default function proxy(request: NextRequest) {
     // is now written client-side by the footer language switcher, which is the
     // only place a visitor actually expresses a choice.
     if (current) {
+        const corrected = caseCorrectedPath(pathname);
+        if (corrected) {
+            const url = new URL(`${corrected}${search}`, request.url);
+            // Unlike the locale-detection redirect below, this doesn't depend on
+            // the visitor -- the same URL always corrects to the same target --
+            // so it's safe (and desirable) for the CDN to cache it.
+            return NextResponse.redirect(url, 301);
+        }
         return intlMiddleware(request);
     }
 

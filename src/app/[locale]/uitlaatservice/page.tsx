@@ -44,7 +44,7 @@ export default function Page() {
                 <div className={Styles.contentRow}>
 
                     <div className={Styles.contentBlock}>
-                        <h3>{t('benefitsHeading')}</h3>
+                        <h2 className={Styles.sectionHeading}>{t('benefitsHeading')}</h2>
                         <p>{t('benefitsIntro')}</p>
                         <WalkedoList items={[
                             t('benefits.smallGroups'),
@@ -56,7 +56,7 @@ export default function Page() {
                     </div>
 
                     <div className={Styles.arnhemMapBlock}>
-                        <h3>{t('mapHeading')}</h3>
+                        <h2 className={Styles.sectionHeading}>{t('mapHeading')}</h2>
                         <p>{t('mapBody')}</p>
                         <Image width={624 / 2} height={516 / 2} src={'/images/arnhem-map.svg'}
                                alt={t('mapAlt')}/>
@@ -67,7 +67,7 @@ export default function Page() {
                 <div className={Styles.contentHero}>
 
                     <div className={Styles.contentBlock}>
-                        <h3>{t('subscriptionHeading')}</h3>
+                        <h2 className={Styles.sectionHeading}>{t('subscriptionHeading')}</h2>
                         <p>
                             {t.rich('subscriptionBody', {
                                 link: (chunks) => (
@@ -87,7 +87,7 @@ export default function Page() {
                 </div>
 
                 <div className={Styles.contentHero}>
-                    <h3>{t('galleryHeading')}</h3>
+                    <h2 className={Styles.sectionHeading}>{t('galleryHeading')}</h2>
 
                     <div className={Styles.galleryGrid}>
                         {GALLERY_IMAGES.map((image, index) => (
@@ -104,7 +104,7 @@ export default function Page() {
 
 
                 <div className={Styles.contentHero}>
-                    <h3>{t('stepsHeading')}</h3>
+                    <h2 className={Styles.sectionHeading}>{t('stepsHeading')}</h2>
                     <p>{t('stepsIntro')}</p>
 
                     <div className={Styles.stepsContent}>

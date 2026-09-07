@@ -64,6 +64,21 @@
   display: flex;
 }
 
+/**
+ * benefitsHeading, mapHeading, subscriptionHeading, galleryHeading and
+ * stepsHeading were bare, unclassed <h3>s directly under the <h1> above --
+ * no <h2> in between. Promoted to <h2> so the outline doesn't skip a level
+ * (stepHeader, one level below stepsHeading, correctly stays <h3>). This
+ * class pins them at the h3 size, line-height and UA-default margin (1em,
+ * resolved against this element's own pinned font-size) they had before, so
+ * nothing moves or resizes.
+ */
+.sectionHeading {
+  font-size: font-size(h3);
+  line-height: line-height(h3);
+  margin: 1em 0;
+}
+
 .stepCircle {
   top: spacing(12);
   left: spacing(12);
