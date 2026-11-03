@@ -459,6 +459,8 @@
     },
     "notFound": {
         "title": "Oh no! A dog has lost the ball",
-        "body": "We could not find that page. But we have asked a labradoodle to help look for it."
+        "body": "We could not find that page. But we have asked a labradoodle to help look for it.",
+        "ballLabel": "Is this the ball?",
+        "found": "{count, plural, one {Found it! Good dog. 🐾} other {Again! Fetched # times. 🐾}}"
     }
 }

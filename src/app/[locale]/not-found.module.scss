@@ -7,5 +7,63 @@
     padding: spacing(64);
     text-align: center;
     position: relative;
+    overflow: hidden;
+    min-height: 60vh;
+}
 
+// Easter egg: the lost ball, small and faded so it has to be found.
+.ball {
+    position: absolute;
+    transform: translate(-50%, -50%) rotate(-20deg);
+    background: none;
+    border: 0;
+    padding: 4px;
+    font-size: 1.1rem;
+    line-height: 1;
+    cursor: pointer;
+    opacity: 0.35;
+    transition: opacity 0.2s, transform 0.2s;
+
+    &:hover,
+    &:focus-visible {
+        opacity: 1;
+        transform: translate(-50%, -50%) rotate(20deg) scale(1.4);
+    }
+}
+
+// The dog dashes in from the left edge, past the ball, and out on the right.
+// The emoji faces left, so it is mirrored to run rightwards.
+.dog {
+    position: absolute;
+    left: 0;
+    font-size: 2.5rem;
+    line-height: 1;
+    pointer-events: none;
+    animation: dash 1.4s ease-in forwards;
+}
+
+@keyframes dash {
+    0% {
+        transform: translate(-100%, -50%) scaleX(-1);
+    }
+    100% {
+        transform: translate(calc(100vw + 100%), -50%) scaleX(-1);
+    }
+}
+
+.fetchStatus {
+    min-height: 1.5em;
+    font-weight: 600;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .dog {
+        animation: none;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .ball {
+        transition: none;
+    }
 }

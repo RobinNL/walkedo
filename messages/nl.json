@@ -459,6 +459,8 @@
     },
     "notFound": {
         "title": "Oh nee! Een hond is de bal kwijt",
-        "body": "Wij konden de pagina helaas niet vinden. Maar we hebben een labradoodle om hulp gevraagd."
+        "body": "Wij konden de pagina helaas niet vinden. Maar we hebben een labradoodle om hulp gevraagd.",
+        "ballLabel": "Is dit de bal?",
+        "found": "{count, plural, one {Gevonden! Brave hond. 🐾} other {Nog een keer! # keer apport gehaald. 🐾}}"
     }
 }
