@@ -19,6 +19,13 @@ const SPOTS = [
     { left: 50, top: 96 },
 ];
 
+// Touch-target size of the ball button ($ball-target in not-found.module.scss).
+// The container is overflow: hidden, and a clipped part of a button cannot be
+// tapped, so each spot is clamped to keep the whole target inside.
+const TARGET_PX = 48;
+const clampSpot = (pct: number) =>
+    `clamp(${TARGET_PX / 2}px, ${pct}%, calc(100% - ${TARGET_PX / 2}px))`;
+
 // Total duration of the dash animation in not-found.module.scss.
 const DASH_MS = 1400;
 
@@ -49,7 +56,7 @@ export default function FetchEasterEgg() {
                 <button
                     type="button"
                     className={Styles.ball}
-                    style={{ left: `${left}%`, top: `${top}%` }}
+                    style={{ left: clampSpot(left), top: clampSpot(top) }}
                     onClick={fetchBall}
                     aria-label={t("ballLabel")}
                     title={t("ballLabel")}
@@ -61,7 +68,7 @@ export default function FetchEasterEgg() {
             {fetching && (
                 <span
                     className={Styles.dog}
-                    style={{ top: `${top}%` }}
+                    style={{ top: clampSpot(top) }}
                     aria-hidden="true"
                 >
                     🐕

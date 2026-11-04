@@ -12,15 +12,31 @@
 }
 
 // Easter egg: the lost ball, small and faded so it has to be found.
+// The emoji stays small, but the button itself is a 48px touch target
+// (Material's minimum; Apple's is 44px). Keep $ball-target in sync with
+// TARGET_PX in fetch-easter-egg.tsx, which uses it to keep the ball off the
+// container's clipped edges.
+$ball-target: 48px;
+
 .ball {
     position: absolute;
+    // The footer's dog image (.footerDogImage, top: -200px) reaches up into
+    // the bottom of this container and, coming later in the DOM, paints over
+    // it. Without this the bottom hiding spots are covered and untappable.
+    z-index: 1;
     transform: translate(-50%, -50%) rotate(-20deg);
+    display: grid;
+    place-items: center;
+    width: $ball-target;
+    height: $ball-target;
     background: none;
     border: 0;
-    padding: 4px;
+    padding: 0;
     font-size: 1.1rem;
     line-height: 1;
     cursor: pointer;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
     opacity: 0.35;
     transition: opacity 0.2s, transform 0.2s;
 
@@ -35,6 +51,7 @@
 // The emoji faces left, so it is mirrored to run rightwards.
 .dog {
     position: absolute;
+    z-index: 1;
     left: 0;
     font-size: 2.5rem;
     line-height: 1;
